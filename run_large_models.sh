@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 set -eu
 
-mkdir -p ./results/small_models ./logs
+mkdir -p ./results/large_models ./logs
 
-python main_inference.py \
+CUDA_VISIBLE_DEVICES=1,2,3 python main_inference.py \
     --modelNames \
-        "codellama/CodeLlama-7b-Instruct-hf" \
-        "deepseek-ai/deepseek-coder-6.7b-instruct" \
-        "Qwen/Qwen2.5-Coder-7B-Instruct" \
+        "codellama/CodeLlama-34b-Instruct-hf" \
+        "Qwen/Qwen2.5-Coder-32B-Instruct" \
+        "deepseek-ai/deepseek-coder-33b-instruct" \
+        "mistralai/Codestral-22B-v0.1" \
+        "bigcode/starcoder2-15b" \
     --inputFiles \
         "./datasets/humanEval/HumanEval.jsonl" \
         "./mutations/HumanEval_US_with_tests.jsonl" \
@@ -17,10 +19,10 @@ python main_inference.py \
         "./mutations/mbpp_US_with_tests.jsonl" \
         "./mutations/mbpp_LV_with_tests.jsonl" \
         "./mutations/mbpp_SF_with_tests.jsonl" \
-    --outputDir   "./results/small_models" \
+    --outputDir    "./results/large_models" \
+    --dtype        bfloat16 \
     --maxNewTokens 512 \
     --timeout      50 \
     --limit        1000 \
-    --gpus         0 \
     --seed         42 \
-    2>&1 | tee ./logs/small_models.log
+    2>&1 | tee ./logs/large_models.log

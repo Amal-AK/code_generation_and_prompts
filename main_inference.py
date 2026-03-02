@@ -8,6 +8,9 @@ import os
 import random
 import re
 import signal
+import subprocess
+import sys
+import tempfile
 import textwrap
 from typing import Any, Tuple , List, Dict
 import ast
@@ -77,13 +80,15 @@ def build_chat_prompt(prompt: str, model_name: str, tokenizer=None) -> str:
     if "llama" in name:
         return f"<s>[INST] {prompt.strip()} [/INST]"
 
-    # DeepSeek-Coder Instruct
+    # DeepSeek-Coder Instruct (v1/v1.5: ### Instruction format)
+    # Note: deepseek-coder-v2 / deepseek-v2 use apply_chat_template above
     if "deepseek" in name:
-        return f"<|user|>\n{prompt.strip()}\n<|assistant|>\n"
+        return f"### Instruction:\n{prompt.strip()}\n### Response:\n"
 
-    # StarCoder-family (BigCode, SantaCoder) – they expect plain text + <|endoftext|>
+    # StarCoder2 / StarCoder / SantaCoder — base completion models (no chat template)
+    # Just pass the prompt directly; do NOT append eos_token
     if "starcoder" in name or "santacoder" in name:
-        return prompt.strip() + tokenizer.eos_token
+        return prompt.strip()
 
     # Qwen chat / code
     if "qwen" in name:
@@ -190,7 +195,7 @@ def convert_general_check_code_HumanEval(test_code: str,
     for ln in lines:
         ln = re.sub(rf"\b{re.escape(func_name)}\s*\(", "candidate(", ln, count=1)
         body += ["    try:",
-                 f"        {ln.lstrip()[len('assert '):]}",
+                 f"        assert {ln.lstrip()[len('assert '):]}",
                  "        passed += 1",
                  "    except AssertionError:",
                  "        pass"]
@@ -218,7 +223,8 @@ def expected_name(row, default: str = "solution") -> str:
     if ep:                                       
         return ep
     # MBPP: grab the first identifier right after "assert "
-    m = re.match(r"\s*assert\s+(\w+)\s*\(", row["test"])
+    test_str = row.get("test") or (row.get("test_list") or [""])[0]
+    m = re.match(r"\s*assert\s+(\w+)\s*\(", test_str)
     if m:
         return m.group(1)
 
@@ -251,7 +257,10 @@ def _safe_exec(candidate_code: str,
             fns = [fn]                                
         else:
             fns = [v for v in env.values() if callable(v)]
-            
+
+        if not fns:
+            queue.put((0, "Function not found"))
+            return
 
         def run(fn) -> int:
             env['candidate'] = fn
@@ -285,6 +294,75 @@ def evaluate_with_timeout(
         return queue.get_nowait()
     except Exception:
         return 0, "ERROR: Unknown"
+
+
+# ─────────────────── LiveCodeBench sandbox (stdin / stdout) ──────────────────────────
+
+def _safe_exec_lcb(candidate_code: str,
+                   test_cases: list,
+                   queue: mp.Queue,
+                   per_test_timeout: int = 10) -> None:
+    """Run candidate code as a subprocess for each stdin/stdout test case."""
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".py", delete=False,
+                                     encoding="utf-8") as f:
+        f.write(candidate_code)
+        tmp_path = f.name
+
+    passed      = 0
+    total       = len(test_cases)
+    first_error = "OK"
+    try:
+        for tc in test_cases:
+            expected = (tc.get("output") or "").rstrip()
+            stdin_in = tc.get("input", "")
+            try:
+                proc = subprocess.run(
+                    [sys.executable, tmp_path],
+                    input=stdin_in,
+                    capture_output=True,
+                    text=True,
+                    timeout=per_test_timeout,
+                )
+                actual = proc.stdout.rstrip()
+                if actual == expected:
+                    passed += 1
+                elif first_error == "OK":
+                    first_error = f"WrongAnswer: expected {expected!r}, got {actual!r}"
+            except subprocess.TimeoutExpired:
+                if first_error == "OK":
+                    first_error = "Timeout"
+            except Exception as exc:
+                if first_error == "OK":
+                    first_error = f"ERROR: {exc}"
+    finally:
+        os.unlink(tmp_path)
+
+    queue.put((passed, total, "OK" if passed == total else first_error))
+
+
+def evaluate_lcb_with_timeout(
+    candidate_code: str,
+    test_cases: list,
+    *,
+    timeout_seconds: int = 60,
+    per_test_timeout: int = 10,
+) -> Tuple[int, int, str]:
+    """Returns (passed, total, status)."""
+    queue: mp.Queue = mp.Queue()
+    proc = mp.Process(
+        target=_safe_exec_lcb,
+        args=(candidate_code, test_cases, queue, per_test_timeout),
+    )
+    proc.start()
+    proc.join(timeout=timeout_seconds)
+    if proc.is_alive():
+        proc.terminate()
+        proc.join()
+        return 0, len(test_cases), "ERROR: Timeout/Killed"
+    try:
+        return queue.get_nowait()
+    except Exception:
+        return 0, len(test_cases), "ERROR: Unknown"
 
 
 # ─────────────────────────────── dataset loop & evaluation ────────────────────────────
@@ -328,6 +406,7 @@ def generate_from_dataset(args, gen, tokenizer):
             or row.get("prompt")
             or row.get("original_prompt")
             or row.get("prompt_text")
+            or row.get("text")
             or ""
         )
         if not row_prompt:
@@ -368,7 +447,7 @@ def generate_from_dataset(args, gen, tokenizer):
 
             # Prepare the check harness
             if "mbpp" in args.inputFile.lower():
-                check_code, n_tests = convert_general_check_code_MBPP(row["test"], name_for_template)
+                check_code, n_tests = convert_general_check_code_MBPP("\n".join(row["test_list"]), name_for_template)
             else:   # HumanEval
                 check_code, n_tests = convert_general_check_code_HumanEval(row["test"], name_for_template)
 
@@ -394,23 +473,8 @@ def generate_from_dataset(args, gen, tokenizer):
                     continue
                 break
 
-            # Logging / pretty output
-            logger.info(
-                "\n"
-                "Task  : %s\n"
-                "PromptUsed:\n%s\n"
-                "Code  :\n%s\n"
-                "Checks:\n%s\n"
-                "Result: %d / %d tests passed   [%s]\n"
-                "───────────────────────────────────────────────",
-                row.get("task_id", idx),
-                row_prompt,
-                code,
-                check_code,
-                passed,
-                n_tests,
-                status
-            )
+            logger.info("Task %-30s  %d/%d  [%s]",
+                        row.get("task_id", idx), passed, n_tests, status)
 
             pass_at_1 = passed == n_tests and status == "OK"
 
@@ -464,7 +528,107 @@ def generate_from_dataset(args, gen, tokenizer):
     return summary
 
 
-# ─────────────────────────── NEW: memory cleanup helper ───────────────────────────────
+# ─────────────────────────── LiveCodeBench evaluation loop ───────────────────────────
+
+def generate_from_dataset_lcb(args, gen, tokenizer):
+    records = load_records(args.inputFile)[: args.limit]
+
+    total = success_exec = pass1_true = 0
+    pbar  = trange(len(records), desc="evaluating LCB", ncols=80)
+
+    for idx in pbar:
+        row = records[idx]
+        pbar.set_description(f"{row.get('task_id', idx)}")
+
+        row_prompt = (
+            row.get("mutated_prompt")
+            or row.get("original_prompt")
+            or row.get("prompt")
+            or ""
+        ).strip()
+
+        if not row_prompt:
+            logger.warning("No prompt found for %s", row.get("task_id", idx))
+
+        # Parse test cases — stored as a JSON string: [{input, output, testtype}, ...]
+        raw_tests = row.get("test", "[]")
+        try:
+            test_cases = json.loads(raw_tests) if isinstance(raw_tests, str) else raw_tests
+        except Exception:
+            test_cases = []
+        n_tests = len(test_cases)
+
+        prompt = textwrap.dedent(f"""
+            You are a senior competitive programmer.
+
+            Task:
+            {row_prompt}
+
+            Write a **complete Python program** that reads all input from stdin and writes the answer to stdout.
+            Use only the Python standard library. Place all `import` statements at the very top.
+
+            ⚠️ Return *only* valid Python code in a single code block:
+            ```python
+            <your code here>
+            ```
+        """)
+
+        try:
+            response  = generate_response(prompt, gen, args.modelName, tokenizer,
+                                          max_tokens=args.maxNewTokens)
+            code      = extract_code(response)
+
+            passed, n_tests, status = evaluate_lcb_with_timeout(
+                code,
+                test_cases,
+                timeout_seconds=args.timeout,
+            )
+
+            pass_at_1 = passed == n_tests and n_tests > 0 and status == "OK"
+
+        except Exception as exc:
+            passed    = 0
+            status    = f"ERROR: {type(exc).__name__}: {exc}"
+            code      = ""
+            response  = ""
+            n_tests   = len(test_cases)
+            pass_at_1 = False
+            logger.exception("Task %s failed during evaluation", row.get("task_id", idx))
+
+        logger.info("Task %-30s  %d/%d  [%s]",
+                    row.get("task_id", idx), passed, n_tests, status)
+
+        total += 1
+        if status == "OK":
+            success_exec += 1
+        if pass_at_1:
+            pass1_true += 1
+
+        row.update({
+            "GeneratedCode":     code,
+            "GeneratedResponse": response,
+            "PromptUsed":        row_prompt,
+            "n_Tests":           n_tests,
+            "Tests_Passed":      passed,
+            "Pass@1":            pass_at_1,
+            "Eval_Status":       status,
+        })
+
+    output_path = Path(args.outputFile)
+    output_path.write_text(json.dumps(records, indent=2), "utf-8")
+
+    return {
+        "Model":           args.modelName,
+        "Dataset":         args.inputFile,
+        "Samples":         total,
+        "SuccessExec":     success_exec,
+        "Pass@1_TRUE":     pass1_true,
+        "SuccessExecRate": round(success_exec / total, 3) if total else 0.0,
+        "Pass@1_Rate":     round(pass1_true   / total, 3) if total else 0.0,
+    }
+
+
+# ─────────────────────────── memory cleanup helper ────────────────────────────────────
 
 def cleanup_model(model, generator) -> None:
     """Delete model and generator, free GPU and CPU memory."""
@@ -480,15 +644,55 @@ def cleanup_model(model, generator) -> None:
 
 # ───────────────────────────────────────────── main ──────────────────────────────────
 
+_MBPP_HUMANEVAL_FILES = [
+    "./mutations/HumanEval_US_with_tests.jsonl",
+    "./mutations/humanEval_lv_with_tests.jsonl",
+    "./mutations/humanEval_SF_with_tests.jsonl",
+    "./mutations/mbpp_US_with_tests.jsonl",
+    "./mutations/mbpp_LV_with_tests.jsonl",
+    "./mutations/mbpp_SF_with_tests.jsonl",
+]
+
+_LCB_FILES = [
+    "./mutations/livecodebench_US_with_tests.jsonl",
+    "./mutations/livecodebench_LV_with_tests.jsonl",
+    "./mutations/livecodebench_SF_with_tests.jsonl",
+]
+
+_ALL_MUTATION_FILES = _MBPP_HUMANEVAL_FILES + _LCB_FILES
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate LLM code generation on MBPP / HumanEval")
-    parser.add_argument("--inputFiles",  nargs="+", default=["./mutations/humanEval_US_with_tests.jsonl", "./mutations/humanEval_lv_with_tests.jsonl", "./mutations/humanEval_SF_with_tests.jsonl"], help="one or more dataset paths")
-    parser.add_argument("--outputDir",   default="./results", help="directory to write output files")
-    parser.add_argument("--modelNames",  nargs="+", default=["mistralai/Devstral-Small-2-24B-Instruct-2512"], help="one or more HF model ids")
-    parser.add_argument("--timeout",     type=int, default=50,   help="execution timeout")
-    parser.add_argument("--limit",       type=int, default=1000, help="eval on first N samples")
-    parser.add_argument("--seed",        type=int, default=42,   help="random seed")
+    parser = argparse.ArgumentParser(
+        description="Evaluate LLM code generation on MBPP / HumanEval / LiveCodeBench"
+    )
+    parser.add_argument("--inputFiles",   nargs="+", default=_ALL_MUTATION_FILES,
+                        help="one or more mutation dataset paths")
+    parser.add_argument("--outputDir",    default="./results",
+                        help="directory to write output files")
+    parser.add_argument("--modelNames",   nargs="+",
+                        default=["mistralai/Devstral-Small-2505"],
+                        help="one or more HF model IDs")
+    parser.add_argument("--maxNewTokens", type=int, default=512,
+                        help="max new tokens to generate per response")
+    parser.add_argument("--dtype",        default="bfloat16",
+                        choices=["float16", "bfloat16"],
+                        help="model weight dtype (bfloat16 recommended for 20B+ models)")
+    parser.add_argument("--timeout",      type=int, default=50,
+                        help="wall-clock timeout per problem (seconds)")
+    parser.add_argument("--limit",        type=int, default=1000,
+                        help="evaluate on first N samples per file")
+    parser.add_argument("--gpus",         default=None,
+                        help="CUDA_VISIBLE_DEVICES value (e.g. '0' or '1,2,3'); "
+                             "must be set before any CUDA init")
+    parser.add_argument("--seed",         type=int, default=42,
+                        help="random seed")
     args = parser.parse_args()
+
+    # Set GPU visibility before any CUDA call (must come before set_seed)
+    if args.gpus is not None:
+        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpus
+        logger.info("CUDA_VISIBLE_DEVICES=%s", args.gpus)
 
     set_seed(args.seed)
     output_dir = Path(args.outputDir)
@@ -510,17 +714,18 @@ def main():
             if tokenizer.pad_token_id is None:
                 tokenizer.pad_token_id = tokenizer.eos_token_id
 
+            dtype = torch.bfloat16 if args.dtype == "bfloat16" else torch.float16
             model = AutoModelForCausalLM.from_pretrained(
                 model_name,
                 device_map="auto",
-                torch_dtype=torch.float16,
+                torch_dtype=dtype,
                 trust_remote_code=True,
             )
             generator = pipeline(
                 "text-generation",
                 model=model,
                 tokenizer=tokenizer,
-                max_new_tokens=512,
+                max_new_tokens=args.maxNewTokens,
                 do_sample=False,
             )
         except Exception as exc:
@@ -533,18 +738,18 @@ def main():
             logger.info("Dataset: %s", input_file)
             logger.info("-" * 60)
 
-            # Build per-(model, dataset) output filename
             model_slug   = model_name.replace("/", "_")
             dataset_slug = Path(input_file).stem
             output_file  = output_dir / f"{model_slug}__{dataset_slug}.json"
 
-            # Patch args for the existing generate_from_dataset function
             args.modelName  = model_name
             args.inputFile  = input_file
             args.outputFile = str(output_file)
 
             try:
-                summary = generate_from_dataset(args, generator, tokenizer)
+                is_lcb  = "livecodebench" in Path(input_file).stem.lower()
+                summary = (generate_from_dataset_lcb if is_lcb
+                           else generate_from_dataset)(args, generator, tokenizer)
                 all_summaries.append(summary)
                 logger.info("Finished %s on %s → %s", model_name, input_file, output_file)
                 logger.info("Summary: %s", summary)

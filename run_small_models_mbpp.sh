@@ -10,9 +10,6 @@ python main_inference.py \
         "Qwen/Qwen2.5-Coder-7B-Instruct" \
     --inputFiles \
         "./datasets/humanEval/HumanEval.jsonl" \
-        "./mutations/HumanEval_US_with_tests.jsonl" \
-        "./mutations/humanEval_lv_with_tests.jsonl" \
-        "./mutations/humanEval_SF_with_tests.jsonl" \
         "./datasets/mbpp/mbpp.jsonl" \
         "./mutations/mbpp_US_with_tests.jsonl" \
         "./mutations/mbpp_LV_with_tests.jsonl" \
@@ -23,4 +20,4 @@ python main_inference.py \
     --limit        1000 \
     --gpus         0 \
     --seed         42 \
-    2>&1 | tee ./logs/small_models.log
+    2>&1 | tee ./logs/small_models_mbpp.log
