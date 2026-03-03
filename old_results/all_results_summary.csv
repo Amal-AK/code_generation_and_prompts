@@ -1,0 +1,3 @@
+Model,Dataset,Samples,SuccessExec,Pass@1_TRUE,Runnable_FALSE,SuccessExecRate,Pass@1_Rate,Runnable_FALSE_Rate
+mistralai/Devstral-Small-2-24B-Instruct-2512,./humanEval_US_with_tests.jsonl,164,159,102,57,0.97,0.622,0.348
+mistralai/Devstral-Small-2-24B-Instruct-2512,./humanEval_SF_with_tests.jsonl,164,160,132,28,0.976,0.805,0.171

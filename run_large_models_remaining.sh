@@ -4,7 +4,7 @@ set -eu
 # deepseek-33b, Codestral-22B, starcoder2-15b — no results yet, run all inputs
 mkdir -p ./results/large_models ./logs
 
-CUDA_VISIBLE_DEVICES=1,2,3 python main_inference.py \
+CUDA_VISIBLE_DEVICES=0,2 python main_inference.py \
     --modelNames \
         "deepseek-ai/deepseek-coder-33b-instruct" \
         "mistralai/Codestral-22B-v0.1" \
