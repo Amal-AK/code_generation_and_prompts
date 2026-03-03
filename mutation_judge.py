@@ -19,6 +19,7 @@ from tqdm import tqdm
 
 # ──────────────────────────────────── logging ──────────────────────────────────────────
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 transformers.logging.set_verbosity_error()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger("mutant_judge")
@@ -210,13 +211,17 @@ class LocalJudge:
         """
         Score a list of (system, user) pairs in mini-batches.
         Returns a list of integers (0 or 1) or None when extraction fails.
-        max_new_tokens=5 is sufficient: the system prompt asks for a single digit.
+        On CUDA OOM the batch size is halved and the chunk is retried automatically.
+        Falls back to size-1 batches; if a single item still OOMs it is skipped (None).
         """
         all_results: List[Optional[int]] = []
         dev = next(self.model.parameters()).device
+        current_batch_size = batch_size
 
-        for start in tqdm(range(0, len(prompts), batch_size), desc="Scoring batches", unit="batch"):
-            chunk = prompts[start : start + batch_size]
+        pbar = tqdm(total=len(prompts), desc="Scoring batches", unit="prompt")
+        i = 0
+        while i < len(prompts):
+            chunk = prompts[i : i + current_batch_size]
             formatted = [self._format_prompt(sys_p, usr_p) for sys_p, usr_p in chunk]
 
             inputs = self.tokenizer(
@@ -230,24 +235,39 @@ class LocalJudge:
             attn_mask = inputs["attention_mask"].to(dev)
             prefix_len = input_ids.shape[1]
 
-            out = self.model.generate(
-                input_ids,
-                attention_mask=attn_mask,
-                max_new_tokens=16,
-                do_sample=False,
-                pad_token_id=self.tokenizer.pad_token_id,
-                eos_token_id=self.tokenizer.eos_token_id,
-            )
+            try:
+                out = self.model.generate(
+                    input_ids,
+                    attention_mask=attn_mask,
+                    max_new_tokens=5,
+                    do_sample=False,
+                    pad_token_id=self.tokenizer.pad_token_id,
+                    eos_token_id=self.tokenizer.eos_token_id,
+                )
+                for out_ids in out:
+                    generated = self.tokenizer.decode(
+                        out_ids[prefix_len:], skip_special_tokens=True
+                    ).strip()
+                    score = self._parse_score(generated)
+                    if score is None:
+                        logger.warning("No binary score in judge output: %r", generated[:100])
+                    all_results.append(score)
+                pbar.update(len(chunk))
+                i += current_batch_size
 
-            for out_ids in out:
-                generated = self.tokenizer.decode(
-                    out_ids[prefix_len:], skip_special_tokens=True
-                ).strip()
-                score = self._parse_score(generated)
-                if score is None:
-                    logger.warning("No binary score in judge output: %r", generated[:100])
-                all_results.append(score)
+            except torch.cuda.OutOfMemoryError:
+                torch.cuda.empty_cache()
+                gc.collect()
+                if current_batch_size == 1:
+                    logger.warning("OOM on single item at index %d — skipping", i)
+                    all_results.append(None)
+                    pbar.update(1)
+                    i += 1
+                else:
+                    current_batch_size = max(1, current_batch_size // 2)
+                    logger.warning("CUDA OOM — reducing batch size to %d and retrying", current_batch_size)
 
+        pbar.close()
         return all_results
 
     @torch.no_grad()
@@ -269,7 +289,8 @@ SYSTEM_PROMPT = (
     "You will be shown an original coding prompt, a mutation type, and the mutated prompt. "
     "Evaluate the quality of this mutation by answering a specific question with a numeric score. "
     'Return ONLY a JSON object in this exact format: {"score": 0} or {"score": 1}. '
-    "No reasoning, no explanation, no extra text. Just the JSON object."
+    "No reasoning, no explanation, no extra text. Just the JSON object. "
+    "Do NOT reproduce or quote any part of the input prompts."
 )
 
 

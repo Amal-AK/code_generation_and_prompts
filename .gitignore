@@ -9,3 +9,4 @@ full_output/best_full_classifier.pt
 __pycache__/
 *.pyc
 .env
+lora_7b_output/

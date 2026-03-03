@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-4-class prompt mutation classifier — LoRA or full fine-tuned Qwen2.5-Coder-1.5B.
+4-class prompt mutation classifier — LoRA or full fine-tuned causal LM encoder.
 
 Two modes (--mode):
-  lora  (default): LoRA adapters on attention layers + Linear(1536, 4) head
-  full:            all encoder params unfrozen + Linear(1536, 4) head
+  lora  (default): LoRA adapters on attention layers + Linear(hidden, 4) head
+  full:            all encoder params unfrozen + Linear(hidden, 4) head
 
 Classes: LV=0, SF=1, US=2, CLEAN=3
 
 Usage:
-    python train_lora_classifier.py --data_dir . --output_dir ./lora_output --mode lora --tsne
-    python train_lora_classifier.py --data_dir . --output_dir ./full_output --mode full --tsne
+    python train_lora_classifier.py --data_dir . --output_dir ./lora_7b_output --mode lora --gpus 0,1,2,3
+    python train_lora_classifier.py --data_dir . --output_dir ./lora_output --mode lora --model_name Qwen/Qwen2.5-Coder-1.5B
 """
 
 import argparse
@@ -32,14 +32,16 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
 # ── Labels ────────────────────────────────────────────────────────────────────
 
 LABEL2ID = {"LV": 0, "SF": 1, "US": 2, "CLEAN": 3}
 ID2LABEL = {v: k for k, v in LABEL2ID.items()}
 NUM_CLASSES = 4
 
-MODEL_NAME = "Qwen/Qwen2.5-Coder-1.5B"
-HIDDEN_DIM = 1536  # Qwen2.5-Coder-1.5B hidden size
+MODEL_NAME = "Qwen/Qwen2.5-Coder-7B-Instruct"
 
 
 # ── Model ─────────────────────────────────────────────────────────────────────
@@ -235,7 +237,7 @@ def plot_pca(embeddings: np.ndarray, labels: np.ndarray, output_path: str, mode:
     ax.set_xlabel(f"PC1 ({var[0]*100:.1f}% var)", fontsize=11)
     ax.set_ylabel(f"PC2 ({var[1]*100:.1f}% var)", fontsize=11)
     label = "LoRA" if mode == "lora" else "Full Fine-tune"
-    ax.set_title(f"PCA — {label} Qwen2.5-Coder-1.5B embeddings", fontsize=14)
+    ax.set_title(f"PCA — {label} embeddings", fontsize=14)
     plt.tight_layout()
     plt.savefig(output_path, dpi=150)
     print(f"Saved: {output_path}")
@@ -253,7 +255,7 @@ def plot_tsne(embeddings: np.ndarray, labels: np.ndarray, output_path: str, mode
                    c=colors[cls_id], label=ID2LABEL[cls_id], alpha=0.6, s=15)
     ax.legend(fontsize=12)
     label = "LoRA" if mode == "lora" else "Full Fine-tune"
-    ax.set_title(f"t-SNE — {label} Qwen2.5-Coder-1.5B embeddings", fontsize=14)
+    ax.set_title(f"t-SNE — {label} embeddings", fontsize=14)
     plt.tight_layout()
     plt.savefig(output_path, dpi=150)
     print(f"Saved: {output_path}")
@@ -264,10 +266,11 @@ def plot_tsne(embeddings: np.ndarray, labels: np.ndarray, output_path: str, mode
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir",    default=".",                 help="Root dir containing JSONL files")
-    parser.add_argument("--output_dir",  default="./lora_output",     help="Where to save checkpoints and plots")
+    parser.add_argument("--output_dir",  default="./lora_7b_output",  help="Where to save checkpoints and plots")
     parser.add_argument("--model_name",  default=MODEL_NAME)
     parser.add_argument("--max_length",  type=int,   default=512)
-    parser.add_argument("--batch_size",  type=int,   default=16)
+    parser.add_argument("--batch_size",  type=int,   default=4,    help="Per-GPU micro-batch size")
+    parser.add_argument("--grad_accum",  type=int,   default=4,    help="Gradient accumulation steps (eff. batch = batch_size × grad_accum)")
     parser.add_argument("--epochs",      type=int,   default=10)
     parser.add_argument("--lr",          type=float, default=2e-4)
     parser.add_argument("--dropout",     type=float, default=0.1)
@@ -277,20 +280,22 @@ def main():
     parser.add_argument("--mode",        default="lora", choices=["lora", "full"],
                         help="'lora' = LoRA adapters only (default); 'full' = unfreeze all encoder params")
     # LoRA hyperparameters (ignored when --mode full)
-    parser.add_argument("--lora_r",      type=int,   default=8,    help="LoRA rank")
-    parser.add_argument("--lora_alpha",  type=int,   default=16,   help="LoRA alpha scaling")
+    parser.add_argument("--lora_r",      type=int,   default=16,   help="LoRA rank")
+    parser.add_argument("--lora_alpha",  type=int,   default=32,   help="LoRA alpha scaling")
     parser.add_argument("--lora_dropout",type=float, default=0.05, help="LoRA dropout")
     parser.add_argument("--tsne",        action="store_true", help="Save t-SNE and PCA plots after training")
-    parser.add_argument("--device",      default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--gpus",        default=None, help="CUDA_VISIBLE_DEVICES (e.g. '0,1,2,3')")
     args = parser.parse_args()
+
+    if args.gpus is not None:
+        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpus
 
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
     os.makedirs(args.output_dir, exist_ok=True)
 
-    device = torch.device(args.device)
-    print(f"Device: {device}")
+    print(f"n_gpu={torch.cuda.device_count()}")
 
     # ── Load data ─────────────────────────────────────────────────────────────
     print("\nLoading data...")
@@ -312,11 +317,15 @@ def main():
     base_encoder = AutoModel.from_pretrained(
         args.model_name,
         trust_remote_code=True,
-        dtype=torch.float16,
+        torch_dtype=torch.float16,
+        device_map="auto",
     )
-    # Enable gradient checkpointing to trade compute for memory:
-    # activations are recomputed during backward instead of stored → ~60% less activation memory
+    hidden_dim = base_encoder.config.hidden_size
+    print(f"Hidden dim: {hidden_dim}")
+
+    # Enable gradient checkpointing: recompute activations during backward → less GPU memory
     base_encoder.gradient_checkpointing_enable()
+    base_encoder.enable_input_require_grads()
 
     # ── Apply LoRA or full fine-tuning ────────────────────────────────────────
     lora_config = None
@@ -337,11 +346,17 @@ def main():
         encoder = base_encoder
         total_params = sum(p.numel() for p in encoder.parameters())
         print(f"Mode: full fine-tuning — all {total_params:,} encoder params trainable")
-    encoder = encoder.to(device)
+
+    # With device_map="auto" the encoder is already placed across GPUs.
+    # Identify the input device (where embeddings are placed on cuda:0 / first shard).
+    input_device = next(encoder.parameters()).device
+    print(f"Input device: {input_device}")
 
     # ── Classifier ────────────────────────────────────────────────────────────
-    model = LoRAPromptClassifier(encoder, hidden_dim=HIDDEN_DIM, num_classes=NUM_CLASSES, dropout=args.dropout)
-    model = model.to(device)
+    model = LoRAPromptClassifier(encoder, hidden_dim=hidden_dim, num_classes=NUM_CLASSES, dropout=args.dropout)
+    # Only move the classification head; the encoder is already sharded by device_map
+    model.dropout = model.dropout.to(input_device)
+    model.head    = model.head.to(input_device)
 
     trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
     total     = sum(p.numel() for p in model.parameters())
@@ -352,13 +367,13 @@ def main():
     val_ds   = PromptDataset(val_records,   tokenizer, args.max_length)
 
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
-                              collate_fn=train_ds.collate_fn, num_workers=4, pin_memory=True)
+                              collate_fn=train_ds.collate_fn, num_workers=2, pin_memory=True)
     val_loader   = DataLoader(val_ds,   batch_size=args.batch_size, shuffle=False,
-                              collate_fn=val_ds.collate_fn,   num_workers=4, pin_memory=True)
+                              collate_fn=val_ds.collate_fn,   num_workers=2, pin_memory=True)
 
     # ── Loss & optimizer ──────────────────────────────────────────────────────
     print("\nClass distribution (train):")
-    class_weights = compute_class_weights(train_records).to(device)
+    class_weights = compute_class_weights(train_records).to(input_device)
     criterion = nn.CrossEntropyLoss(weight=class_weights)
 
     # Optimize all trainable params: LoRA adapters + classification head
@@ -366,7 +381,8 @@ def main():
         filter(lambda p: p.requires_grad, model.parameters()),
         lr=args.lr, weight_decay=1e-4,
     )
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
+    total_steps = (len(train_loader) // args.grad_accum) * args.epochs
+    scheduler   = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max(total_steps, 1))
 
     # ── Training ──────────────────────────────────────────────────────────────
     best_val_acc  = 0.0
@@ -375,26 +391,41 @@ def main():
     epochs_no_imp = 0
     trainable_keys = {name for name, p in model.named_parameters() if p.requires_grad}
 
-    print("\nTraining...")
+    eff_batch = args.batch_size * args.grad_accum
+    print(f"\nTraining — batch={args.batch_size}  grad_accum={args.grad_accum}  eff_batch={eff_batch}")
     for epoch in range(1, args.epochs + 1):
         model.train()
         total_loss = 0.0
+        optimizer.zero_grad()
 
-        for input_ids, attention_mask, labels in tqdm(train_loader, desc=f"Epoch {epoch}/{args.epochs}", leave=False):
-            input_ids      = input_ids.to(device)
-            attention_mask = attention_mask.to(device)
-            labels         = labels.to(device)
+        pbar = tqdm(enumerate(train_loader), total=len(train_loader),
+                    desc=f"Epoch {epoch}/{args.epochs}", leave=False)
+        for batch_idx, (input_ids, attention_mask, labels) in pbar:
+            input_ids      = input_ids.to(input_device)
+            attention_mask = attention_mask.to(input_device)
+            labels         = labels.to(input_device)
 
-            optimizer.zero_grad()
             logits = model(input_ids, attention_mask)
-            loss   = criterion(logits, labels)
+            loss   = criterion(logits, labels) / args.grad_accum
             loss.backward()
-            optimizer.step()
-            total_loss += loss.item() * len(labels)
+            total_loss += loss.item() * args.grad_accum * len(labels)
 
-        scheduler.step()
+            if (batch_idx + 1) % args.grad_accum == 0:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                optimizer.step()
+                scheduler.step()
+                optimizer.zero_grad()
+
+            pbar.set_postfix(loss=f"{total_loss / ((batch_idx + 1) * args.batch_size):.4f}")
+
+        # flush remaining gradients at end of epoch
+        if (len(train_loader) % args.grad_accum) != 0:
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+            optimizer.step()
+            optimizer.zero_grad()
+
         avg_train_loss = total_loss / len(train_records)
-        val_acc, val_loss, _, _ = evaluate(model, val_loader, device, criterion)
+        val_acc, val_loss, _, _ = evaluate(model, val_loader, input_device, criterion)
 
         marker = " ***" if val_acc > best_val_acc else ""
         print(f"Epoch {epoch:2d} | train_loss={avg_train_loss:.4f} | val_loss={val_loss:.4f} | val_acc={val_acc:.4f}{marker}")
@@ -421,7 +452,7 @@ def main():
     ckpt = torch.load(best_ckpt, weights_only=False)
     model.load_state_dict(ckpt["model_state_dict"], strict=False)
 
-    val_acc, val_loss, val_preds, val_labels = evaluate(model, val_loader, device, criterion)
+    val_acc, val_loss, val_preds, val_labels = evaluate(model, val_loader, input_device, criterion)
 
     mcc = matthews_corrcoef(val_labels, val_preds)
     f1_macro    = f1_score(val_labels, val_preds, average="macro")
@@ -445,7 +476,7 @@ def main():
         all_ds     = PromptDataset(all_records, tokenizer, args.max_length)
         all_loader = DataLoader(all_ds, batch_size=args.batch_size, shuffle=False,
                                 collate_fn=all_ds.collate_fn, num_workers=4)
-        embeddings, labels_np = extract_embeddings(model, all_loader, device)
+        embeddings, labels_np = extract_embeddings(model, all_loader, input_device)
         np.save(os.path.join(args.output_dir, "embeddings.npy"), embeddings)
         np.save(os.path.join(args.output_dir, "labels.npy"),     labels_np)
         plot_pca(embeddings,  labels_np, os.path.join(args.output_dir, "pca.png"),  mode=args.mode)
