@@ -3,10 +3,9 @@ set -eu
 
 mkdir -p ./results/large_models ./logs
 
-CUDA_VISIBLE_DEVICES=1,2,3 python main_inference.py \
+CUDA_VISIBLE_DEVICES=1,2 python main_inference.py \
     --modelNames \
-        "mistralai/Codestral-22B-v0.1" \
-        "bigcode/starcoder2-15b" \
+        "bigcode/starcoder2-15b-instruct-v0.1" \
     --inputFiles \
         "./datasets/humanEval/HumanEval.jsonl" \
         "./mutations/HumanEval_US_with_tests.jsonl" \
@@ -18,7 +17,7 @@ CUDA_VISIBLE_DEVICES=1,2,3 python main_inference.py \
         "./mutations/mbpp_SF_with_tests.jsonl" \
     --outputDir    "./results/large_models" \
     --dtype        bfloat16 \
-    --maxNewTokens 512 \
+    --maxNewTokens 2048 \
     --timeout      50 \
     --limit        1000 \
     --seed         42 \

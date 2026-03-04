@@ -23,3 +23,12 @@ deepseek-ai/deepseek-coder-33b-instruct,./mutations/humanEval_lv_with_tests.json
 deepseek-ai/deepseek-coder-33b-instruct,./mutations/mbpp_LV_with_tests.jsonl,974,754,442,312,0.774,0.454,0.32
 deepseek-ai/deepseek-coder-33b-instruct,./mutations/mbpp_SF_with_tests.jsonl,974,763,452,311,0.783,0.464,0.319
 deepseek-ai/deepseek-coder-33b-instruct,./mutations/mbpp_US_with_tests.jsonl,974,704,388,316,0.723,0.398,0.324
+bigcode/starcoder2-15b,./datasets/humanEval/HumanEval.jsonl,164,2,0,2,0.012,0.0,0.012
+mistralai/Codestral-22B-v0.1,./datasets/humanEval/HumanEval.jsonl,164,159,119,40,0.97,0.726,0.244
+mistralai/Codestral-22B-v0.1,./mutations/HumanEval_US_with_tests.jsonl,164,160,96,64,0.976,0.585,0.39
+mistralai/Codestral-22B-v0.1,./mutations/humanEval_SF_with_tests.jsonl,164,158,116,42,0.963,0.707,0.256
+mistralai/Codestral-22B-v0.1,./mutations/humanEval_lv_with_tests.jsonl,164,158,107,51,0.963,0.652,0.311
+mistralai/Codestral-22B-v0.1,./datasets/mbpp/mbpp.jsonl,974,764,464,300,0.784,0.476,0.308
+mistralai/Codestral-22B-v0.1,./mutations/mbpp_LV_with_tests.jsonl,974,753,438,315,0.773,0.45,0.323
+mistralai/Codestral-22B-v0.1,./mutations/mbpp_SF_with_tests.jsonl,974,762,465,297,0.782,0.477,0.305
+mistralai/Codestral-22B-v0.1,./mutations/mbpp_US_with_tests.jsonl,974,711,379,332,0.73,0.389,0.341

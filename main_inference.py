@@ -85,9 +85,9 @@ def build_chat_prompt(prompt: str, model_name: str, tokenizer=None) -> str:
     if "deepseek" in name:
         return f"### Instruction:\n{prompt.strip()}\n### Response:\n"
 
-    # StarCoder2 / StarCoder / SantaCoder — base completion models (no chat template)
-    # Just pass the prompt directly; do NOT append eos_token
-    if "starcoder" in name or "santacoder" in name:
+    # StarCoder2-base / StarCoder / SantaCoder — base completion models (no chat template)
+    # Instruct variants have a chat template handled above via apply_chat_template
+    if ("starcoder" in name or "santacoder" in name) and "instruct" not in name:
         return prompt.strip()
 
     # Qwen chat / code
@@ -126,9 +126,10 @@ def generate_response(prompt: str,
 
 
 def extract_code(txt: str) -> str:
-    m = re.search(r"```(?:python)?\n(.*?)```", txt, re.DOTALL | re.IGNORECASE)
+    # Accept optional whitespace between language tag and code
+    m = re.search(r"```(?:\w+)?\s*\n(.*?)```", txt, re.DOTALL | re.IGNORECASE)
     code = m.group(1) if m else txt
-    return textwrap.dedent(code).strip()  
+    return textwrap.dedent(code).strip()
 
 
 # ─────────────────────────────── test‑code converters ─────────────────────────────────
@@ -328,6 +329,8 @@ def _safe_exec_lcb(candidate_code: str,
                     passed += 1
                 elif first_error == "OK":
                     first_error = f"WrongAnswer: expected {expected!r}, got {actual!r}"
+                    if not actual and proc.stderr.strip():
+                        first_error += f" [stderr: {proc.stderr.strip()[:200]!r}]"
             except subprocess.TimeoutExpired:
                 if first_error == "OK":
                     first_error = "Timeout"
@@ -673,7 +676,7 @@ def main():
     parser.add_argument("--modelNames",   nargs="+",
                         default=["mistralai/Devstral-Small-2505"],
                         help="one or more HF model IDs")
-    parser.add_argument("--maxNewTokens", type=int, default=512,
+    parser.add_argument("--maxNewTokens", type=int, default=2048,
                         help="max new tokens to generate per response")
     parser.add_argument("--dtype",        default="bfloat16",
                         choices=["float16", "bfloat16"],
