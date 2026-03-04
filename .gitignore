@@ -1,6 +1,8 @@
 # Large model files - too large for GitHub
 *.pt
 !**/best_classifier.pt
+!**/best_lora_classifier.pt
+# best_full_classifier.pt is ~5.8GB, exceeds GitHub's 2GB LFS limit - not tracked
 *.safetensors
 
 # Generated embeddings and labels (can be regenerated)
