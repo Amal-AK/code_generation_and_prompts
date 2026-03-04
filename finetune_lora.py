@@ -124,12 +124,13 @@ def load_sft_pairs(data_dir: Path, mutation_types: Set[str]) -> List[Dict[str, A
             # Full correct code = original signature/docstring + canonical body
             solution_code = orig["prompt"] + orig["canonical_solution"]
             pairs.append({
-                "mutated_prompt": r["mutated_prompt"],
-                "solution_code":  solution_code,
-                "func_name":      orig["entry_point"],
-                "task_id":        r["task_id"],
-                "mutation_type":  mtype,
-                "dataset":        "humaneval",
+                "mutated_prompt":  r["mutated_prompt"],
+                "original_prompt": r["original_prompt"],
+                "solution_code":   solution_code,
+                "func_name":       orig["entry_point"],
+                "task_id":         r["task_id"],
+                "mutation_type":   mtype,
+                "dataset":         "humaneval",
             })
             n += 1
         logger.info("  HumanEval %-3s: %d pairs", mtype, n)
@@ -165,12 +166,13 @@ def load_sft_pairs(data_dir: Path, mutation_types: Set[str]) -> List[Dict[str, A
             if not func_name:
                 continue
             pairs.append({
-                "mutated_prompt": r["mutated_prompt"],
-                "solution_code":  orig["code"],
-                "func_name":      func_name,
-                "task_id":        str(r["task_id"]),
-                "mutation_type":  mtype,
-                "dataset":        "mbpp",
+                "mutated_prompt":  r["mutated_prompt"],
+                "original_prompt": r["original_prompt"],
+                "solution_code":   orig["code"],
+                "func_name":       func_name,
+                "task_id":         str(r["task_id"]),
+                "mutation_type":   mtype,
+                "dataset":         "mbpp",
             })
             n += 1
         logger.info("  MBPP      %-3s: %d pairs", mtype, n)
@@ -196,7 +198,10 @@ class SFTDataset(Dataset):
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         pair        = self.pairs[idx]
         instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
-        solution    = f"```python\n{pair['solution_code'].strip()}\n```"
+        solution    = (
+            f"{pair['original_prompt'].strip()}\n\n"
+            f"```python\n{pair['solution_code'].strip()}\n```"
+        )
 
         # Full conversation: instruction + solution
         full_text = self.tokenizer.apply_chat_template(

@@ -5,9 +5,6 @@ mkdir -p ./results/large_models ./logs
 
 CUDA_VISIBLE_DEVICES=1,2,3 python main_inference.py \
     --modelNames \
-        "codellama/CodeLlama-34b-Instruct-hf" \
-        "Qwen/Qwen2.5-Coder-32B-Instruct" \
-        "deepseek-ai/deepseek-coder-33b-instruct" \
         "mistralai/Codestral-22B-v0.1" \
         "bigcode/starcoder2-15b" \
     --inputFiles \
