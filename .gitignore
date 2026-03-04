@@ -1,5 +1,6 @@
 # Large model files - too large for GitHub
 *.pt
+!**/best_classifier.pt
 *.safetensors
 
 # Generated embeddings and labels (can be regenerated)
