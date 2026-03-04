@@ -1,0 +1,10 @@
+dataset,mutation_type,n,recoverability,naturalness,semantic_preservation,lexical_compliance,formatting_compliance,underspec_compliance
+humaneval,LV,163,0.994,0.988,0.957,1.0,,
+humaneval,SF,164,0.512,0.994,0.53,,1.0,
+humaneval,US,160,0.888,0.806,0.662,,,0.894
+livecodebench,LV,1054,0.98,0.961,0.949,0.999,,
+livecodebench,SF,1055,0.794,0.992,0.74,,0.997,
+livecodebench,US,1055,0.869,0.505,0.6,,,0.853
+mbpp,LV,974,0.979,0.989,0.917,1.0,,
+mbpp,SF,974,0.958,0.997,0.909,,1.0,
+mbpp,US,974,0.704,0.821,0.378,,,0.882

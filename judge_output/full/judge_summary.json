@@ -1,0 +1,113 @@
+{
+  "judge_model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+  "n_mutants": 6573,
+  "per_dataset_mutation_type": [
+    {
+      "dataset": "humaneval",
+      "mutation_type": "LV",
+      "n": 163,
+      "recoverability": 0.994,
+      "naturalness": 0.988,
+      "semantic_preservation": 0.957,
+      "lexical_compliance": 1.0
+    },
+    {
+      "dataset": "humaneval",
+      "mutation_type": "SF",
+      "n": 164,
+      "recoverability": 0.512,
+      "naturalness": 0.994,
+      "semantic_preservation": 0.53,
+      "formatting_compliance": 1.0
+    },
+    {
+      "dataset": "humaneval",
+      "mutation_type": "US",
+      "n": 160,
+      "recoverability": 0.888,
+      "naturalness": 0.806,
+      "semantic_preservation": 0.662,
+      "underspec_compliance": 0.894
+    },
+    {
+      "dataset": "livecodebench",
+      "mutation_type": "LV",
+      "n": 1054,
+      "recoverability": 0.98,
+      "naturalness": 0.961,
+      "semantic_preservation": 0.949,
+      "lexical_compliance": 0.999
+    },
+    {
+      "dataset": "livecodebench",
+      "mutation_type": "SF",
+      "n": 1055,
+      "recoverability": 0.794,
+      "naturalness": 0.992,
+      "semantic_preservation": 0.74,
+      "formatting_compliance": 0.997
+    },
+    {
+      "dataset": "livecodebench",
+      "mutation_type": "US",
+      "n": 1055,
+      "recoverability": 0.869,
+      "naturalness": 0.505,
+      "semantic_preservation": 0.6,
+      "underspec_compliance": 0.853
+    },
+    {
+      "dataset": "mbpp",
+      "mutation_type": "LV",
+      "n": 974,
+      "recoverability": 0.979,
+      "naturalness": 0.989,
+      "semantic_preservation": 0.917,
+      "lexical_compliance": 1.0
+    },
+    {
+      "dataset": "mbpp",
+      "mutation_type": "SF",
+      "n": 974,
+      "recoverability": 0.958,
+      "naturalness": 0.997,
+      "semantic_preservation": 0.909,
+      "formatting_compliance": 1.0
+    },
+    {
+      "dataset": "mbpp",
+      "mutation_type": "US",
+      "n": 974,
+      "recoverability": 0.704,
+      "naturalness": 0.821,
+      "semantic_preservation": 0.378,
+      "underspec_compliance": 0.882
+    }
+  ],
+  "per_mutation_type": [
+    {
+      "mutation_type": "LV",
+      "n": 2191,
+      "recoverability": 0.981,
+      "naturalness": 0.975,
+      "semantic_preservation": 0.935,
+      "lexical_compliance": 1.0
+    },
+    {
+      "mutation_type": "SF",
+      "n": 2193,
+      "recoverability": 0.847,
+      "naturalness": 0.994,
+      "semantic_preservation": 0.8,
+      "formatting_compliance": 0.999
+    },
+    {
+      "mutation_type": "US",
+      "n": 2189,
+      "recoverability": 0.796,
+      "naturalness": 0.67,
+      "semantic_preservation": 0.504,
+      "underspec_compliance": 0.869
+    }
+  ]
+}
