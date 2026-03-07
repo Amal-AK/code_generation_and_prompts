@@ -1,0 +1,18 @@
+INFO: ============================================================
+INFO: Dataset: ./mutations/humanEval_lv_with_tests.jsonl
+INFO: ============================================================
+INFO: Submitting 164 prompts to claude-sonnet-4-20250514 ...
+INFO: HTTP Request: POST https://api.anthropic.com/v1/messages/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: msgbatch_015JDMN4MPC5RvxCHoYg4W63  (164 requests)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_015JDMN4MPC5RvxCHoYg4W63: in_progress  (processing=164  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_015JDMN4MPC5RvxCHoYg4W63: in_progress  (processing=164  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_015JDMN4MPC5RvxCHoYg4W63: in_progress  (processing=164  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_015JDMN4MPC5RvxCHoYg4W63: ended  (processing=0  succeeded=164  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63 "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_015JDMN4MPC5RvxCHoYg4W63/results "HTTP/1.1 200 OK"
+INFO: Batch complete: 164/164 responses
+INFO: Saved 164 responses (no eval) → results/claude/claude-sonnet-4-20250514__humanEval_lv_with_tests.json

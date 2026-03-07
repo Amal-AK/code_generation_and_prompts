@@ -1,0 +1,26 @@
+INFO: ============================================================
+INFO: Dataset: ./mutations/mbpp_US_with_tests.jsonl
+INFO: ============================================================
+INFO: Submitting 974 prompts to claude-sonnet-4-20250514 ...
+INFO: HTTP Request: POST https://api.anthropic.com/v1/messages/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: msgbatch_01WJHrxmy5wQhvBGNmHu8EZw  (974 requests)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: in_progress  (processing=974  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01WJHrxmy5wQhvBGNmHu8EZw: ended  (processing=0  succeeded=974  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01WJHrxmy5wQhvBGNmHu8EZw/results "HTTP/1.1 200 OK"
+INFO: Batch complete: 974/974 responses
+INFO: Saved 974 responses (no eval) → results/claude/claude-sonnet-4-20250514__mbpp_US_with_tests.json

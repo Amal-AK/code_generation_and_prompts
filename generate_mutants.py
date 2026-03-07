@@ -21,10 +21,10 @@ import sys
 # Configuration
 # --------------------
 MODEL_NAME = "gpt-5-mini"
-INPUT_FILE = "./datasets/livecodebench/livecodebench_public.jsonl"
-BATCH_INPUT_FILE = "livecodebench_SF_input.jsonl"
-BATCH_OUTPUT_FILE = "livecodebench_SF_output.jsonl"
-OUTPUT_FILE = "livecodebench_SF_mutated.jsonl"
+INPUT_FILE = "./datasets/humanEval/HumanEval.jsonl"
+BATCH_INPUT_FILE = "HumanEval_LV_input.jsonl"
+BATCH_OUTPUT_FILE = "HumanEval_LV_output.jsonl"
+OUTPUT_FILE = "mutations/variant2/humanEval_LV_v2_mutated.jsonl"
 POLL_INTERVAL = 10  # seconds
 # --------------------
 

@@ -1,0 +1,498 @@
+INFO: ============================================================
+INFO: Dataset: ./mutations/mbpp_US_with_tests.jsonl
+INFO: ============================================================
+INFO: Submitting 974 prompts to gpt-5-mini ...
+INFO: HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+INFO: Uploaded batch input: file-NL6xLocjHiQzBhMP5NWUQ1  (974 requests)
+INFO: HTTP Request: POST https://api.openai.com/v1/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: batch_69aa0a1406e881908b65f1b8ceafe693
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: validating  (0/0 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69aa0a1406e881908b65f1b8ceafe693 "HTTP/1.1 200 OK"
+INFO: Batch batch_69aa0a1406e881908b65f1b8ceafe693: in_progress  (0/974 done)

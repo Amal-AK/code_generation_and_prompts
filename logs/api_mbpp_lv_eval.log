@@ -1,0 +1,998 @@
+INFO: ============================================================
+INFO: Eval-only: results/api/gpt-5-mini__mbpp_LV_with_tests.json
+INFO: ============================================================
+evaluating:   0%|                                       | 0/974 [00:00<?, ?it/s]1:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 1                               0/3  [OK]
+2:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 2                               0/3  [OK]
+3:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 3                               3/3  [OK]
+4:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 4                               3/3  [OK]
+5:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 5                               3/3  [OK]
+6:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 6                               3/3  [OK]
+7:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 7                               3/3  [OK]
+8:   0%|                                                | 0/974 [00:00<?, ?it/s]INFO: Task 8                               3/3  [OK]
+8:   1%|▎                                       | 8/974 [00:00<00:13, 71.72it/s]9:   1%|▎                                       | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 9                               3/3  [OK]
+10:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 10                              3/3  [OK]
+11:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 11                              3/3  [OK]
+12:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 12                              3/3  [OK]
+13:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 13                              0/3  [ERROR: TypeError: count_common expects a dict as input]
+14:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 14                              0/3  [ERROR: TypeError: find_Volume() takes 1 positional argument but 3 were given]
+15:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 15                              0/3  [OK]
+16:   1%|▎                                      | 8/974 [00:00<00:13, 71.72it/s]INFO: Task 16                              0/3  [OK]
+16:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]17:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 17                              3/3  [OK]
+18:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 18                              3/3  [OK]
+19:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 19                              3/3  [OK]
+20:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 20                              3/3  [OK]
+21:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 21                              0/3  [OK]
+22:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 22                              2/3  [OK]
+23:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 23                              3/3  [OK]
+24:   2%|▌                                     | 16/974 [00:00<00:12, 73.72it/s]INFO: Task 24                              0/3  [Function not found]
+24:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]25:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 25                              0/3  [ERROR: TypeError: find_Product() takes 1 positional argument but 2 were given]
+26:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 26                              1/3  [OK]
+27:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 27                              3/3  [OK]
+28:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 28                              3/3  [OK]
+29:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 29                              0/3  [ERROR: TypeError: get_Odd_Occurrence() takes 1 positional argument but 2 were given]
+30:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 30                              3/3  [OK]
+31:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 31                              0/3  [Function not found]
+32:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 32                              3/3  [OK]
+33:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 33                              0/3  [OK]
+34:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 34                              0/3  [ERROR: TypeError: find_missing() takes 1 positional argument but 2 were given]
+35:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 35                              3/3  [OK]
+36:   2%|▉                                     | 24/974 [00:00<00:13, 70.97it/s]INFO: Task 36                              3/3  [OK]
+36:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]37:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 37                              3/3  [OK]
+38:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 38                              3/3  [OK]
+39:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 39                              0/3  [OK]
+40:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 40                              3/3  [OK]
+41:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 41                              3/3  [OK]
+42:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 42                              0/3  [ERROR: TypeError: find_Sum() takes 1 positional argument but 2 were given]
+43:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 43                              0/3  [OK]
+44:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 44                              0/3  [ERROR: TypeError: text_match_string() missing 1 required positional argument: 'term']
+45:   4%|█▍                                    | 36/974 [00:00<00:10, 87.71it/s]INFO: Task 45                              3/3  [OK]
+45:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]46:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 46                              3/3  [OK]
+47:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 47                              3/3  [OK]
+48:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 48                              0/3  [OK]
+49:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 49                              0/3  [OK]
+50:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 50                              0/3  [OK]
+51:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 51                              0/3  [ERROR: ValueError: Provided sides do not form a valid triangle]
+52:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 52                              0/3  [Function not found]
+53:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 53                              0/3  [OK]
+54:   5%|█▊                                    | 45/974 [00:00<00:10, 88.36it/s]INFO: Task 54                              3/3  [OK]
+54:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]55:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 55                              0/3  [OK]
+56:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 56                              3/3  [OK]
+57:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 57                              0/3  [ERROR: TypeError: find_Max_Num() takes 1 positional argument but 2 were given]
+58:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 58                              3/3  [OK]
+59:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 59                              3/3  [OK]
+60:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 60                              0/3  [ERROR: TypeError: max_len_sub() takes 1 positional argument but 2 were given]
+61:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 61                              0/3  [ERROR: TypeError: count_Substrings() takes 1 positional argument but 2 were given]
+62:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 62                              3/3  [OK]
+63:   6%|██                                    | 54/974 [00:00<00:10, 84.52it/s]INFO: Task 63                              3/3  [OK]
+63:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]64:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 64                              0/3  [ERROR: ValueError: Each record must have at least 3 elements: (student, subject, mark)]
+65:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 65                              3/3  [OK]
+66:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 66                              3/3  [OK]
+67:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 67                              3/3  [OK]
+68:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 68                              3/3  [OK]
+69:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 69                              3/3  [OK]
+70:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 70                              0/3  [OK]
+71:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 71                              3/3  [OK]
+72:   6%|██▍                                   | 63/974 [00:00<00:11, 82.20it/s]INFO: Task 72                              3/3  [OK]
+72:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]73:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 73                              0/3  [ERROR: TypeError: multiple_split() missing 1 required positional argument: 'pattern']
+74:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 74                              3/3  [OK]
+75:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 75                              0/3  [OK]
+76:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 76                              3/3  [OK]
+77:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 77                              0/3  [OK]
+78:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 78                              0/3  [Function not found]
+79:   7%|██▊                                   | 72/974 [00:00<00:11, 78.53it/s]INFO: Task 79                              3/3  [OK]
+80:   7%|██▊                                   | 72/974 [00:01<00:11, 78.53it/s]INFO: Task 80                              3/3  [OK]
+80:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]81:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 81                              0/3  [OK]
+82:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 82                              3/3  [OK]
+83:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 83                              0/3  [OK]
+84:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 84                              3/3  [OK]
+85:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 85                              3/3  [OK]
+86:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 86                              3/3  [OK]
+87:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 87                              1/3  [OK]
+88:   8%|███                                   | 80/974 [00:01<00:12, 73.47it/s]INFO: Task 88                              3/3  [OK]
+88:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]89:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 89                              0/3  [ERROR: TypeError: closest_num() missing 1 required positional argument: 'n']
+90:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 90                              3/3  [OK]
+91:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 91                              1/3  [OK]
+92:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 92                              3/3  [OK]
+93:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 93                              0/3  [Function not found]
+94:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 94                              0/3  [OK]
+95:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 95                              0/3  [ERROR: TypeError: Find_Min_Length() missing 1 required positional argument: 'target']
+96:   9%|███▍                                  | 88/974 [00:01<00:12, 73.61it/s]INFO: Task 96                              3/3  [OK]
+96:  10%|███▋                                  | 96/974 [00:01<00:12, 72.99it/s]97:  10%|███▋                                  | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 97                              0/3  [OK]
+98:  10%|███▋                                  | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 98                              3/3  [OK]
+99:  10%|███▋                                  | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 99                              0/3  [Function not found]
+100:  10%|███▋                                 | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 100                             0/3  [Function not found]
+101:  10%|███▋                                 | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 101                             0/3  [ERROR: TypeError: kth_element() takes 2 positional arguments but 3 were given]
+102:  10%|███▋                                 | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 102                             0/3  [OK]
+103:  10%|███▋                                 | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 103                             3/3  [OK]
+104:  10%|███▋                                 | 96/974 [00:01<00:12, 72.99it/s]INFO: Task 104                             3/3  [OK]
+104:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]105:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 105                             3/3  [OK]
+106:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 106                             0/3  [ERROR: ValueError: All sequences must have the same length as base_list]
+107:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 107                             1/3  [OK]
+108:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 108                             0/3  [OK]
+109:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 109                             0/3  [ERROR: TypeError: odd_Equivalent() takes 1 positional argument but 2 were given]
+110:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 110                             0/3  [Function not found]
+111:  11%|███▊                                | 104/974 [00:01<00:12, 68.79it/s]INFO: Task 111                             0/3  [Function not found]
+111:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]112:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 112                             0/3  [OK]
+113:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 113                             3/3  [OK]
+114:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 114                             0/3  [OK]
+115:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 115                             2/3  [OK]
+116:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 116                             3/3  [OK]
+117:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 117                             0/3  [Function not found]
+118:  11%|████                                | 111/974 [00:01<00:13, 66.20it/s]INFO: Task 118                             3/3  [OK]
+118:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]119:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 119                             0/3  [ERROR: TypeError: search() takes 1 positional argument but 2 were given]
+120:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 120                             0/3  [ERROR: TypeError: '>' not supported between instances of 'tuple' and 'float']
+121:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 121                             0/3  [ERROR: TypeError: check_triplet() takes 2 positional arguments but 4 were given]
+122:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 122                             0/3  [OK]
+123:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 123                             3/3  [OK]
+124:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 124                             0/3  [ERROR: TypeError: angle_complex() takes 1 positional argument but 2 were given]
+125:  12%|████▎                               | 118/974 [00:01<00:13, 64.04it/s]INFO: Task 125                             0/3  [ERROR: TypeError: find_length() takes 1 positional argument but 2 were given]
+125:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]126:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 126                             0/3  [ERROR: NameError: name 'check' is not defined]
+127:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 127                             3/3  [OK]
+128:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 128                             0/3  [ERROR: TypeError: n must be an int]
+129:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 129                             3/3  [OK]
+130:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 130                             0/3  [OK]
+131:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 131                             3/3  [OK]
+132:  13%|████▌                               | 125/974 [00:01<00:13, 62.86it/s]INFO: Task 132                             0/3  [OK]
+132:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]133:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 133                             3/3  [OK]
+134:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 134                             0/3  [ERROR: TypeError: operation must be callable]
+135:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 135                             3/3  [OK]
+136:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 136                             0/3  [Function not found]
+137:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 137                             2/3  [OK]
+138:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 138                             3/3  [OK]
+139:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 139                             0/3  [OK]
+140:  14%|████▉                               | 132/974 [00:01<00:13, 64.06it/s]INFO: Task 140                             0/3  [OK]
+140:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]141:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 141                             3/3  [OK]
+142:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 142                             0/3  [OK]
+143:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 143                             0/3  [ERROR: TypeError: find_lists expects a tuple as input]
+144:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 144                             0/3  [ERROR: TypeError: sum_Pairs() takes 1 positional argument but 2 were given]
+145:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 145                             0/3  [ERROR: TypeError: max_Abs_Diff() takes 1 positional argument but 2 were given]
+146:  14%|█████▏                              | 140/974 [00:01<00:12, 66.82it/s]INFO: Task 146                             0/3  [OK]
+147:  14%|█████▏                              | 140/974 [00:02<00:12, 66.82it/s]INFO: Task 147                             0/3  [ERROR: TypeError: max_path_sum() takes 1 positional argument but 3 were given]
+148:  14%|█████▏                              | 140/974 [00:02<00:12, 66.82it/s]INFO: Task 148                             0/3  [Function not found]
+148:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]149:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 149                             0/3  [ERROR: TypeError: longest_subseq_with_diff_one() takes 1 positional argument but 2 were given]
+150:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 150                             0/3  [ERROR: TypeError: does_Contain_B() takes 2 positional arguments but 3 were given]
+151:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 151                             3/3  [OK]
+152:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 152                             3/3  [OK]
+153:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 153                             3/3  [OK]
+154:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 154                             3/3  [OK]
+155:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 155                             0/3  [OK]
+156:  15%|█████▍                              | 148/974 [00:02<00:11, 68.92it/s]INFO: Task 156                             0/3  [ERROR: TypeError: unsupported type for conversion to int: tuple]
+156:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]157:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 157                             0/3  [OK]
+158:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 158                             0/3  [ERROR: TypeError: min_Ops() takes 1 positional argument but 3 were given]
+159:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 159                             3/3  [OK]
+160:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 160                             0/3  [OK]
+161:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 161                             3/3  [OK]
+162:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 162                             3/3  [OK]
+163:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 163                             3/3  [OK]
+164:  16%|█████▊                              | 156/974 [00:02<00:11, 70.51it/s]INFO: Task 164                             2/3  [OK]
+164:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]165:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 165                             3/3  [OK]
+166:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 166                             0/3  [OK]
+167:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 167                             3/3  [OK]
+168:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 168                             3/3  [OK]
+169:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 169                             3/3  [OK]
+170:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 170                             3/3  [OK]
+171:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 171                             0/3  [ERROR: ValueError: Exactly five side lengths are required.]
+172:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 172                             3/3  [OK]
+173:  17%|██████                              | 164/974 [00:02<00:11, 70.90it/s]INFO: Task 173                             3/3  [OK]
+173:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]174:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 174                             3/3  [OK]
+175:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 175                             3/3  [OK]
+176:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 176                             0/3  [ERROR: ValueError: The provided sides do not satisfy the triangle inequality.]
+177:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 177                             0/3  [Function not found]
+178:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 178                             0/3  [ERROR: TypeError: text must be a string]
+179:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 179                             3/3  [OK]
+180:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 180                             0/3  [OK]
+181:  18%|██████▍                             | 173/974 [00:02<00:10, 74.28it/s]INFO: Task 181                             0/3  [ERROR: TypeError: common_prefix() takes 1 positional argument but 2 were given]
+181:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]182:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 182                             0/3  [OK]
+183:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 183                             0/3  [ERROR: TypeError: count_pairs() takes 2 positional arguments but 3 were given]
+184:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 184                             0/3  [OK]
+185:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 185                             0/3  [Function not found]
+186:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 186                             0/3  [OK]
+187:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 187                             0/3  [ERROR: TypeError: longest_common_subsequence() takes 2 positional arguments but 4 were given]
+188:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 188                             2/3  [OK]
+189:  19%|██████▋                             | 181/974 [00:02<00:10, 74.06it/s]INFO: Task 189                             0/3  [ERROR: TypeError: first_Missing_Positive() takes 1 positional argument but 2 were given]
+189:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]190:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 190                             1/3  [OK]
+191:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 191                             3/3  [OK]
+192:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 192                             3/3  [OK]
+193:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 193                             2/3  [OK]
+194:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 194                             3/3  [OK]
+195:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 195                             0/3  [ERROR: TypeError: first() takes 2 positional arguments but 3 were given]
+196:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 196                             3/3  [OK]
+197:  19%|██████▉                             | 189/974 [00:02<00:10, 72.25it/s]INFO: Task 197                             3/3  [OK]
+197:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]198:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 198                             0/3  [OK]
+199:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 199                             3/3  [OK]
+200:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 200                             3/3  [OK]
+201:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 201                             3/3  [OK]
+202:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 202                             0/3  [OK]
+203:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 203                             3/3  [OK]
+204:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 204                             3/3  [OK]
+205:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 205                             0/3  [ERROR: TypeError: 'int' object is not iterable]
+206:  20%|███████▎                            | 197/974 [00:02<00:10, 73.66it/s]INFO: Task 206                             0/3  [OK]
+206:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]207:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 207                             0/3  [OK]
+208:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 208                             3/3  [OK]
+209:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 209                             0/3  [OK]
+210:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 210                             3/3  [OK]
+211:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 211                             0/3  [ERROR: TypeError: count_Num() missing 2 required positional arguments: 'pos1' and 'pos2']
+212:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 212                             0/3  [OK]
+213:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 213                             3/3  [OK]
+214:  21%|███████▌                            | 206/974 [00:02<00:10, 76.59it/s]INFO: Task 214                             3/3  [OK]
+214:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]215:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 215                             0/3  [ERROR: ValueError: Frequency must be a non-negative int, got [2, 1] at index 0.]
+216:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 216                             0/3  [Function not found]
+217:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 217                             2/3  [OK]
+218:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 218                             0/3  [Function not found]
+219:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 219                             0/3  [OK]
+220:  22%|███████▉                            | 214/974 [00:02<00:09, 77.15it/s]INFO: Task 220                             3/3  [OK]
+221:  22%|███████▉                            | 214/974 [00:03<00:09, 77.15it/s]INFO: Task 221                             3/3  [OK]
+222:  22%|███████▉                            | 214/974 [00:03<00:09, 77.15it/s]INFO: Task 222                             3/3  [OK]
+222:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]223:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 223                             0/3  [ERROR: TypeError: is_majority() takes 1 positional argument but 3 were given]
+224:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 224                             3/3  [OK]
+225:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 225                             0/3  [ERROR: TypeError: find_Min() takes 1 positional argument but 3 were given]
+226:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 226                             3/3  [OK]
+227:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 227                             3/3  [OK]
+228:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 228                             1/3  [OK]
+229:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 229                             0/3  [ERROR: TypeError: re_arrange_array() takes 1 positional argument but 2 were given]
+230:  23%|████████▏                           | 222/974 [00:03<00:10, 74.11it/s]INFO: Task 230                             3/3  [OK]
+230:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]231:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 231                             0/3  [ERROR: TypeError: max_sum() takes 1 positional argument but 2 were given]
+232:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 232                             3/3  [OK]
+233:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 233                             0/3  [OK]
+234:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 234                             3/3  [OK]
+235:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 235                             0/3  [OK]
+236:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 236                             0/3  [ERROR: TypeError: No_of_Triangle() takes 1 positional argument but 2 were given]
+237:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 237                             0/3  [OK]
+238:  24%|████████▌                           | 230/974 [00:03<00:10, 73.68it/s]INFO: Task 238                             3/3  [OK]
+238:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]239:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 239                             0/3  [OK]
+240:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 240                             3/3  [OK]
+241:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 241                             0/3  [OK]
+242:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 242                             3/3  [OK]
+243:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 243                             0/3  [OK]
+244:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 244                             1/3  [OK]
+245:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 245                             0/3  [ERROR: TypeError: max_sum() takes 1 positional argument but 2 were given]
+246:  24%|████████▊                           | 238/974 [00:03<00:09, 75.20it/s]INFO: Task 246                             3/3  [OK]
+246:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]247:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 247                             0/3  [OK]
+248:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 248                             0/3  [OK]
+249:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 249                             0/3  [Function not found]
+250:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 250                             3/3  [OK]
+251:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 251                             3/3  [OK]
+252:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 252                             3/3  [OK]
+253:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 253                             3/3  [OK]
+254:  25%|█████████                           | 246/974 [00:03<00:09, 76.44it/s]INFO: Task 254                             0/3  [OK]
+254:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]255:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 255                             0/3  [ERROR: TypeError: colors must be an iterable of three strings]
+256:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 256                             3/3  [OK]
+257:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 257                             3/3  [OK]
+258:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 258                             3/3  [OK]
+259:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 259                             0/3  [OK]
+260:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 260                             0/3  [Function not found]
+261:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 261                             3/3  [OK]
+262:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 262                             3/3  [OK]
+263:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 263                             3/3  [OK]
+264:  26%|█████████▍                          | 254/974 [00:03<00:09, 72.37it/s]INFO: Task 264                             0/3  [OK]
+264:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]265:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 265                             3/3  [OK]
+266:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 266                             3/3  [OK]
+267:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 267                             3/3  [OK]
+268:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 268                             3/3  [OK]
+269:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 269                             3/3  [OK]
+270:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 270                             0/3  [ERROR: TypeError: sum_even_and_even_index() takes 1 positional argument but 2 were given]
+271:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 271                             3/3  [OK]
+272:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 272                             3/3  [OK]
+273:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 273                             3/3  [OK]
+274:  27%|█████████▊                          | 264/974 [00:03<00:09, 78.50it/s]INFO: Task 274                             3/3  [OK]
+274:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]275:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 275                             0/3  [ERROR: TypeError: get_Position() takes 1 positional argument but 3 were given]
+276:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 276                             0/3  [OK]
+277:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 277                             0/3  [ERROR: TypeError: predicate must be callable or None]
+278:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 278                             0/3  [ERROR: TypeError: count_first_elements() missing 1 required positional argument: 'entry']
+279:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 279                             3/3  [OK]
+280:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 280                             0/3  [OK]
+281:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 281                             3/3  [OK]
+282:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 282                             3/3  [OK]
+283:  28%|██████████▏                         | 274/974 [00:03<00:08, 82.53it/s]INFO: Task 283                             3/3  [OK]
+283:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]284:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 284                             3/3  [OK]
+285:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 285                             0/3  [OK]
+286:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 286                             0/3  [ERROR: TypeError: max_sub_array_sum_repeated() takes 2 positional arguments but 3 were given]
+287:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 287                             3/3  [OK]
+288:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 288                             0/3  [ERROR: TypeError: modular_inverse() takes 2 positional arguments but 3 were given]
+289:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 289                             0/3  [OK]
+290:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 290                             0/3  [OK]
+291:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 291                             3/3  [OK]
+292:  29%|██████████▍                         | 283/974 [00:03<00:08, 83.27it/s]INFO: Task 292                             2/3  [OK]
+292:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]293:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 293                             3/3  [OK]
+294:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 294                             3/3  [OK]
+295:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 295                             0/3  [OK]
+296:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 296                             0/3  [ERROR: TypeError: get_Inv_Count() takes 1 positional argument but 2 were given]
+297:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 297                             3/3  [OK]
+298:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 298                             0/3  [ERROR: TypeError: unhashable type: 'list']
+299:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 299                             0/3  [ERROR: TypeError: Non-numeric element 'Juan Whelan' in tuple at position 0]
+300:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 300                             3/3  [OK]
+301:  30%|██████████▊                         | 292/974 [00:03<00:08, 84.52it/s]INFO: Task 301                             3/3  [OK]
+301:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]302:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 302                             0/3  [OK]
+303:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 303                             0/3  [Function not found]
+304:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 304                             0/3  [ERROR: TypeError: unsupported operand type(s) for %: 'list' and 'int']
+305:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 305                             0/3  [ERROR: ValueError: Fewer than two entries starting with 'p' found.]
+306:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 306                             0/3  [ERROR: TypeError: max_sum_increasing_subseq() takes 3 positional arguments but 4 were given]
+307:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 307                             0/3  [ERROR: TypeError: colon_tuplex() takes 2 positional arguments but 3 were given]
+308:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 308                             0/3  [OK]
+309:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 309                             3/3  [OK]
+310:  31%|███████████▏                        | 301/974 [00:04<00:08, 83.65it/s]INFO: Task 310                             1/3  [OK]
+310:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]311:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 311                             2/3  [OK]
+312:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 312                             2/3  [OK]
+313:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]1 2
+3 4
+1
+INFO: Task 313                             0/3  [OK]
+314:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 314                             0/3  [ERROR: TypeError: max_sum_rectangular_grid() takes 1 positional argument but 2 were given]
+315:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 315                             2/3  [OK]
+316:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 316                             3/3  [OK]
+317:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 317                             1/3  [OK]
+318:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 318                             0/3  [OK]
+319:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 319                             3/3  [OK]
+320:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 320                             3/3  [OK]
+321:  32%|███████████▍                        | 310/974 [00:04<00:08, 81.35it/s]INFO: Task 321                             0/3  [ERROR: TypeError: n must be an integer]
+321:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]322:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 322                             3/3  [OK]
+323:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 323                             0/3  [ERROR: TypeError: re_arrange() takes 1 positional argument but 2 were given]
+324:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 324                             0/3  [ERROR: TypeError: 'int' object is not iterable]
+325:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 325                             3/3  [OK]
+326:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 326                             1/3  [OK]
+327:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 327                             0/3  [Function not found]
+328:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 328                             0/3  [ERROR: TypeError: rotate_left() takes 2 positional arguments but 3 were given]
+329:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 329                             3/3  [OK]
+330:  33%|███████████▊                        | 321/974 [00:04<00:07, 87.09it/s]INFO: Task 330                             3/3  [OK]
+330:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]331:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 331                             3/3  [OK]
+332:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 332                             3/3  [OK]
+333:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 333                             3/3  [OK]
+334:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 334                             3/3  [OK]
+335:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 335                             0/3  [Function not found]
+336:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 336                             3/3  [OK]
+337:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 337                             0/3  [ERROR: TypeError: text_match_word() missing 1 required positional argument: 'term']
+338:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 338                             3/3  [OK]
+339:  34%|████████████▏                       | 330/974 [00:04<00:07, 82.16it/s]INFO: Task 339                             0/3  [Function not found]
+339:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]340:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 340                             3/3  [OK]
+341:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 341                             0/3  [OK]
+342:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 342                             3/3  [OK]
+343:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 343                             0/3  [OK]
+344:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 344                             3/3  [OK]
+345:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 345                             2/3  [OK]
+346:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 346                             3/3  [OK]
+347:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 347                             3/3  [OK]
+348:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 348                             0/3  [ERROR: TypeError: find_ways() missing 1 required positional argument: 'length']
+349:  35%|████████████▌                       | 339/974 [00:04<00:08, 79.05it/s]INFO: Task 349                             0/3  [OK]
+349:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]350:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 350                             3/3  [OK]
+351:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 351                             0/3  [ERROR: TypeError: first_Element() takes 2 positional arguments but 3 were given]
+352:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 352                             3/3  [OK]
+353:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 353                             0/3  [Function not found]
+354:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 354                             0/3  [OK]
+355:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 355                             0/3  [Function not found]
+356:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 356                             3/3  [OK]
+357:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 357                             0/3  [OK]
+358:  36%|████████████▉                       | 349/974 [00:04<00:07, 82.37it/s]INFO: Task 358                             0/3  [OK]
+358:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]359:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 359                             0/3  [OK]
+360:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 360                             0/3  [OK]
+361:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 361                             3/3  [OK]
+362:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 362                             3/3  [OK]
+363:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 363                             0/3  [ERROR: TypeError: 'int' object is not iterable]
+364:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 364                             3/3  [OK]
+365:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 365                             3/3  [OK]
+366:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 366                             3/3  [OK]
+367:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 367                             0/3  [ERROR: NameError: name 'root' is not defined]
+368:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 368                             0/3  [OK]
+369:  37%|█████████████▏                      | 358/974 [00:04<00:07, 77.94it/s]INFO: Task 369                             3/3  [OK]
+369:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]370:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 370                             0/3  [ERROR: ValueError: Cannot convert extracted value to float for item ('item1', '12.20'): could not convert string to float: 'item1']
+371:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 371                             0/3  [ERROR: TypeError: smallest_missing() takes 1 positional argument but 3 were given]
+372:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 372                             3/3  [OK]
+373:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 373                             3/3  [OK]
+374:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 374                             1/3  [OK]
+375:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 375                             0/3  [Function not found]
+376:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 376                             0/3  [OK]
+377:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 377                             3/3  [OK]
+378:  38%|█████████████▋                      | 369/974 [00:04<00:07, 86.29it/s]INFO: Task 378                             3/3  [OK]
+378:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]379:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]INFO: Task 379                             3/3  [OK]
+380:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]INFO: Task 380                             0/3  [OK]
+381:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]INFO: Task 381                             3/3  [OK]
+382:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]INFO: Task 382                             3/3  [OK]
+383:  39%|█████████████▉                      | 378/974 [00:04<00:07, 82.81it/s]INFO: Task 383                             0/3  [OK]
+384:  39%|█████████████▉                      | 378/974 [00:05<00:07, 82.81it/s]INFO: Task 384                             0/3  [ERROR: TypeError: frequency_Of_Smallest() takes 1 positional argument but 2 were given]
+385:  39%|█████████████▉                      | 378/974 [00:05<00:07, 82.81it/s]INFO: Task 385                             3/3  [OK]
+386:  39%|█████████████▉                      | 378/974 [00:05<00:07, 82.81it/s]INFO: Task 386                             0/3  [Function not found]
+387:  39%|█████████████▉                      | 378/974 [00:05<00:07, 82.81it/s]INFO: Task 387                             0/3  [OK]
+387:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]388:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 388                             3/3  [OK]
+389:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 389                             3/3  [OK]
+390:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 390                             0/3  [OK]
+391:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 391                             0/3  [ERROR: TypeError: convert_list_dictionary() takes 1 positional argument but 3 were given]
+392:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 392                             3/3  [OK]
+393:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 393                             0/3  [OK]
+394:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 394                             3/3  [OK]
+395:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 395                             3/3  [OK]
+396:  40%|██████████████▎                     | 387/974 [00:05<00:07, 79.41it/s]INFO: Task 396                             0/3  [OK]
+396:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]397:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 397                             3/3  [OK]
+398:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 398                             0/3  [ERROR: TypeError: item at position 0 is not an int: [10, 20, 4, 5, 'b', 70, 'a']]
+399:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 399                             3/3  [OK]
+400:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 400                             0/3  [Function not found]
+401:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 401                             0/3  [Function not found]
+402:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 402                             2/3  [OK]
+403:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 403                             0/3  [Function not found]
+404:  41%|██████████████▋                     | 396/974 [00:05<00:07, 79.14it/s]INFO: Task 404                             3/3  [OK]
+404:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]405:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 405                             3/3  [OK]
+406:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 406                             0/3  [OK]
+407:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 407                             2/3  [OK]
+408:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 408                             0/3  [OK]
+409:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 409                             3/3  [OK]
+410:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 410                             0/3  [Function not found]
+411:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 411                             0/3  [OK]
+412:  41%|██████████████▉                     | 404/974 [00:05<00:07, 75.27it/s]INFO: Task 412                             3/3  [OK]
+412:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]413:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 413                             3/3  [OK]
+414:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 414                             2/3  [OK]
+415:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 415                             0/3  [OK]
+416:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 416                             3/3  [OK]
+417:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 417                             0/3  [OK]
+418:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 418                             0/3  [OK]
+419:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]243
+345
+513
+INFO: Task 419                             3/3  [OK]
+420:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 420                             3/3  [OK]
+421:  42%|███████████████▏                    | 412/974 [00:05<00:07, 74.58it/s]INFO: Task 421                             0/3  [OK]
+421:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]422:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 422                             3/3  [OK]
+423:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 423                             0/3  [ERROR: TypeError: get_maxgold() takes 1 positional argument but 3 were given]
+424:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 424                             3/3  [OK]
+425:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 425                             3/3  [OK]
+426:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 426                             3/3  [OK]
+427:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 427                             3/3  [OK]
+428:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 428                             3/3  [OK]
+429:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 429                             0/3  [OK]
+430:  43%|███████████████▌                    | 421/974 [00:05<00:07, 77.16it/s]INFO: Task 430                             0/3  [Function not found]
+430:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]431:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 431                             2/3  [OK]
+432:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 432                             0/3  [Function not found]
+433:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 433                             0/3  [OK]
+434:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 434                             0/3  [OK]
+435:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 435                             3/3  [OK]
+436:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]Negative values: [-1, -6]
+Negative values: [-1, -2]
+Negative values: [-7, -6]
+INFO: Task 436                             0/3  [OK]
+437:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 437                             0/3  [OK]
+438:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 438                             0/3  [OK]
+439:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 439                             0/3  [Function not found]
+440:  44%|███████████████▉                    | 430/974 [00:05<00:07, 77.16it/s]INFO: Task 440                             0/3  [Function not found]
+440:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]441:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 441                             3/3  [OK]
+442:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 442                             0/3  [OK]
+443:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 443                             1/3  [OK]
+444:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 444                             0/3  [OK]
+445:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 445                             0/3  [ERROR: TypeError: can't multiply sequence by non-int of type 'tuple']
+446:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 446                             0/3  [OK]
+447:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 447                             3/3  [OK]
+448:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 448                             0/3  [OK]
+449:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 449                             0/3  [ERROR: TypeError: check_Triangle() takes 3 positional arguments but 6 were given]
+450:  45%|████████████████▎                   | 440/974 [00:05<00:06, 79.81it/s]INFO: Task 450                             3/3  [OK]
+450:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]451:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 451                             3/3  [OK]
+452:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 452                             0/3  [ERROR: TypeError: loss_amount() takes 1 positional argument but 2 were given]
+453:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 453                             3/3  [OK]
+454:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 454                             0/3  [OK]
+455:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 455                             3/3  [OK]
+456:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 456                             3/3  [OK]
+457:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 457                             0/3  [OK]
+458:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 458                             3/3  [OK]
+459:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 459                             3/3  [OK]
+460:  46%|████████████████▋                   | 450/974 [00:05<00:06, 83.75it/s]INFO: Task 460                             3/3  [OK]
+460:  47%|█████████████████                   | 460/974 [00:05<00:05, 87.01it/s]461:  47%|█████████████████                   | 460/974 [00:05<00:05, 87.01it/s]INFO: Task 461                             1/3  [OK]
+462:  47%|█████████████████                   | 460/974 [00:05<00:05, 87.01it/s]INFO: Task 462                             0/3  [OK]
+463:  47%|█████████████████                   | 460/974 [00:05<00:05, 87.01it/s]INFO: Task 463                             0/3  [Function not found]
+464:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 464                             0/3  [ERROR: TypeError: check_value() takes 1 positional argument but 2 were given]
+465:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 465                             0/3  [Function not found]
+466:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 466                             0/3  [ERROR: TypeError: find_peak() takes 1 positional argument but 2 were given]
+467:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 467                             0/3  [OK]
+468:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 468                             0/3  [ERROR: TypeError: max_product() takes 1 positional argument but 2 were given]
+469:  47%|█████████████████                   | 460/974 [00:06<00:05, 87.01it/s]INFO: Task 469                             3/3  [OK]
+469:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]470:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 470                             0/3  [OK]
+471:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 471                             0/3  [ERROR: TypeError: find_remainder() takes 2 positional arguments but 3 were given]
+472:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 472                             3/3  [OK]
+473:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 473                             0/3  [ERROR: TypeError: tuple_intersection() takes 1 positional argument but 2 were given]
+474:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 474                             3/3  [OK]
+475:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 475                             0/3  [OK]
+476:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 476                             3/3  [OK]
+477:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 477                             3/3  [OK]
+478:  48%|█████████████████▎                  | 469/974 [00:06<00:05, 85.11it/s]INFO: Task 478                             3/3  [OK]
+478:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]479:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 479                             0/3  [Function not found]
+480:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 480                             3/3  [OK]
+481:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 481                             0/3  [ERROR: TypeError: is_subset_sum() takes 2 positional arguments but 3 were given]
+482:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 482                             0/3  [OK]
+483:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 483                             2/3  [OK]
+484:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 484                             0/3  [OK]
+485:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 485                             0/3  [Function not found]
+486:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 486                             3/3  [OK]
+487:  49%|█████████████████▋                  | 478/974 [00:06<00:05, 86.34it/s]INFO: Task 487                             3/3  [OK]
+487:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]488:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 488                             0/3  [ERROR: TypeError: vertices must be an iterable of five (x, y) pairs]
+489:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 489                             0/3  [ERROR: TypeError: frequency_Of_Largest() takes 1 positional argument but 2 were given]
+490:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 490                             0/3  [OK]
+491:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 491                             0/3  [OK]
+492:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 492                             0/3  [OK]
+493:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 493                             0/3  [ERROR: ValueError: orientation must be 'pointy' or 'flat']
+494:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 494                             0/3  [OK]
+495:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 495                             3/3  [OK]
+496:  50%|██████████████████                  | 487/974 [00:06<00:05, 83.59it/s]INFO: Task 496                             3/3  [OK]
+496:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]497:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 497                             3/3  [OK]
+498:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 498                             3/3  [OK]
+499:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 499                             0/3  [ERROR: TypeError: diameter_circle() takes 0 positional arguments but 1 was given]
+500:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 500                             0/3  [OK]
+501:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 501                             3/3  [OK]
+502:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 502                             3/3  [OK]
+503:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 503                             0/3  [OK]
+504:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 504                             3/3  [OK]
+505:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 505                             3/3  [OK]
+506:  51%|██████████████████▎                 | 496/974 [00:06<00:05, 84.20it/s]INFO: Task 506                             3/3  [OK]
+506:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]507:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 507                             3/3  [OK]
+508:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 508                             0/3  [Function not found]
+509:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 509                             3/3  [OK]
+510:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 510                             0/3  [Function not found]
+511:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 511                             3/3  [OK]
+512:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 512                             3/3  [OK]
+513:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 513                             0/3  [OK]
+514:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 514                             3/3  [OK]
+515:  52%|██████████████████▋                 | 506/974 [00:06<00:05, 87.53it/s]INFO: Task 515                             0/3  [ERROR: TypeError: modular_sum() takes 2 positional arguments but 3 were given]
+515:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]516:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 516                             3/3  [OK]
+517:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 517                             3/3  [OK]
+518:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 518                             3/3  [OK]
+519:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 519                             0/3  [ERROR: TypeError: volume_tetrahedron() missing 3 required positional arguments: 'b', 'c', and 'd']
+520:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 520                             3/3  [OK]
+521:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 521                             3/3  [OK]
+522:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 522                             0/3  [OK]
+523:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 523                             0/3  [OK]
+524:  53%|███████████████████                 | 515/974 [00:06<00:05, 85.21it/s]INFO: Task 524                             0/3  [ERROR: TypeError: max_sum_increasing_subsequence() takes 1 positional argument but 2 were given]
+524:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]525:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 525                             0/3  [ERROR: TypeError: Points must be 2-element sequences (x, y)]
+526:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 526                             3/3  [OK]
+527:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 527                             0/3  [ERROR: TypeError: get_pairs_count() takes 2 positional arguments but 3 were given]
+528:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 528                             0/3  [OK]
+529:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 529                             3/3  [OK]
+530:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 530                             0/3  [OK]
+531:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 531                             0/3  [ERROR: TypeError: min_coins() takes 2 positional arguments but 3 were given]
+532:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 532                             3/3  [OK]
+533:  54%|███████████████████▎                | 524/974 [00:06<00:05, 83.19it/s]INFO: Task 533                             0/3  [Function not found]
+533:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]534:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 534                             0/3  [OK]
+535:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 535                             0/3  [OK]
+536:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 536                             3/3  [OK]
+537:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 537                             2/3  [OK]
+538:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 538                             0/3  [OK]
+539:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 539                             3/3  [OK]
+540:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 540                             0/3  [ERROR: TypeError: find_Diff() takes 1 positional argument but 2 were given]
+541:  55%|███████████████████▋                | 533/974 [00:06<00:05, 76.95it/s]INFO: Task 541                             3/3  [OK]
+541:  56%|███████████████████▉                | 541/974 [00:06<00:05, 76.97it/s]542:  56%|███████████████████▉                | 541/974 [00:06<00:05, 76.97it/s]INFO: Task 542                             3/3  [OK]
+543:  56%|███████████████████▉                | 541/974 [00:06<00:05, 76.97it/s]6
+14
+10
+INFO: Task 543                             0/3  [OK]
+544:  56%|███████████████████▉                | 541/974 [00:06<00:05, 76.97it/s]INFO: Task 544                             3/3  [OK]
+545:  56%|███████████████████▉                | 541/974 [00:07<00:05, 76.97it/s]INFO: Task 545                             3/3  [OK]
+546:  56%|███████████████████▉                | 541/974 [00:07<00:05, 76.97it/s]INFO: Task 546                             0/3  [OK]
+547:  56%|███████████████████▉                | 541/974 [00:07<00:05, 76.97it/s]INFO: Task 547                             0/3  [Function not found]
+548:  56%|███████████████████▉                | 541/974 [00:07<00:05, 76.97it/s]INFO: Task 548                             3/3  [OK]
+549:  56%|███████████████████▉                | 541/974 [00:07<00:05, 76.97it/s]INFO: Task 549                             3/3  [OK]
+549:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]550:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 550                             0/3  [ERROR: TypeError: find_Max() takes 1 positional argument but 3 were given]
+551:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 551                             0/3  [Function not found]
+552:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 552                             0/3  [OK]
+553:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 553                             0/3  [Function not found]
+554:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 554                             3/3  [OK]
+555:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 555                             3/3  [OK]
+556:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 556                             0/3  [ERROR: TypeError: find_Odd_Pair() takes 1 positional argument but 2 were given]
+557:  56%|████████████████████▎               | 549/974 [00:07<00:05, 73.92it/s]INFO: Task 557                             3/3  [OK]
+557:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]558:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 558                             3/3  [OK]
+559:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 559                             0/3  [ERROR: TypeError: max_sub_array_sum() takes 1 positional argument but 2 were given]
+560:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 560                             3/3  [OK]
+561:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 561                             0/3  [OK]
+562:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 562                             3/3  [OK]
+563:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 563                             0/3  [ERROR: SyntaxError: invalid syntax (<string>, line 22)]
+564:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 564                             0/3  [Function not found]
+565:  57%|████████████████████▌               | 557/974 [00:07<00:05, 71.01it/s]INFO: Task 565                             3/3  [OK]
+565:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]566:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 566                             3/3  [OK]
+567:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 567                             3/3  [OK]
+568:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 568                             3/3  [OK]
+569:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 569                             3/3  [OK]
+570:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 570                             0/3  [ERROR: AttributeError: 'list' object has no attribute 'lower']
+571:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 571                             0/3  [ERROR: TypeError: max_sum_pair_diff_lessthan_K() takes 2 positional arguments but 3 were given]
+572:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 572                             0/3  [ERROR: TypeError: 'int' object is not iterable]
+573:  58%|████████████████████▉               | 565/974 [00:07<00:05, 71.86it/s]INFO: Task 573                             3/3  [OK]
+573:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]574:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 574                             0/3  [OK]
+575:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 575                             0/3  [ERROR: TypeError: count_no() takes 2 positional arguments but 4 were given]
+576:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 576                             0/3  [ERROR: TypeError: is_Sub_Array() takes 2 positional arguments but 4 were given]
+577:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 577                             3/3  [OK]
+578:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 578                             3/3  [OK]
+579:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 579                             2/3  [OK]
+580:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 580                             0/3  [OK]
+581:  59%|█████████████████████▏              | 573/974 [00:07<00:05, 73.39it/s]INFO: Task 581                             0/3  [OK]
+581:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]582:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 582                             0/3  [ERROR: TypeError: my_dict expects a mapping (collections.abc.Mapping) instance]
+583:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 583                             3/3  [OK]
+584:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 584                             0/3  [Function not found]
+585:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 585                             0/3  [ERROR: TypeError: '>' not supported between instances of 'dict' and 'dict']
+586:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 586                             0/3  [ERROR: TypeError: split_Arr() takes 2 positional arguments but 3 were given]
+587:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 587                             3/3  [OK]
+588:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 588                             3/3  [OK]
+589:  60%|█████████████████████▍              | 581/974 [00:07<00:05, 74.50it/s]INFO: Task 589                             3/3  [OK]
+589:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]590:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 590                             0/3  [OK]
+591:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 591                             3/3  [OK]
+592:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 592                             0/3  [ERROR: TypeError: sum_Of_product() missing 1 required positional argument: 'm']
+593:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 593                             3/3  [OK]
+594:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 594                             3/3  [OK]
+595:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 595                             0/3  [Function not found]
+596:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 596                             0/3  [ERROR: NameError: name 'sys' is not defined]
+597:  60%|█████████████████████▊              | 589/974 [00:07<00:05, 75.68it/s]INFO: Task 597                             0/3  [ERROR: TypeError: find_kth() takes 3 positional arguments but 5 were given]
+597:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]598:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 598                             3/3  [OK]
+599:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 599                             3/3  [OK]
+600:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 600                             3/3  [OK]
+601:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 601                             0/3  [ERROR: NameError: name 'Pair' is not defined]
+602:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 602                             2/3  [OK]
+603:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 603                             0/3  [Function not found]
+604:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 604                             3/3  [OK]
+605:  61%|██████████████████████              | 597/974 [00:07<00:04, 75.49it/s]INFO: Task 605                             3/3  [OK]
+605:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]606:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 606                             3/3  [OK]
+607:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 607                             0/3  [OK]
+608:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 608                             3/3  [OK]
+609:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 609                             0/3  [ERROR: TypeError: floor_Min() takes 0 positional arguments but 3 were given]
+610:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 610                             0/3  [OK]
+611:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 611                             3/3  [OK]
+612:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 612                             2/3  [OK]
+613:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 613                             0/3  [OK]
+614:  62%|██████████████████████▎             | 605/974 [00:07<00:04, 74.36it/s]INFO: Task 614                             0/3  [OK]
+614:  63%|██████████████████████▋             | 614/974 [00:07<00:04, 76.10it/s]615:  63%|██████████████████████▋             | 614/974 [00:07<00:04, 76.10it/s]INFO: Task 615                             0/3  [OK]
+616:  63%|██████████████████████▋             | 614/974 [00:07<00:04, 76.10it/s]INFO: Task 616                             3/3  [OK]
+617:  63%|██████████████████████▋             | 614/974 [00:07<00:04, 76.10it/s]INFO: Task 617                             0/3  [ERROR: TypeError: min_Jumps() takes 2 positional arguments but 3 were given]
+618:  63%|██████████████████████▋             | 614/974 [00:07<00:04, 76.10it/s]INFO: Task 618                             3/3  [OK]
+619:  63%|██████████████████████▋             | 614/974 [00:08<00:04, 76.10it/s]INFO: Task 619                             0/3  [ERROR: TypeError: move_num() missing 1 required positional argument: 'to']
+620:  63%|██████████████████████▋             | 614/974 [00:08<00:04, 76.10it/s]INFO: Task 620                             0/3  [ERROR: TypeError: largest_subset() takes 1 positional argument but 2 were given]
+621:  63%|██████████████████████▋             | 614/974 [00:08<00:04, 76.10it/s]INFO: Task 621                             0/3  [Function not found]
+622:  63%|██████████████████████▋             | 614/974 [00:08<00:04, 76.10it/s]INFO: Task 622                             0/3  [Function not found]
+622:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]623:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 623                             3/3  [OK]
+624:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 624                             3/3  [OK]
+625:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 625                             3/3  [OK]
+626:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 626                             0/3  [ERROR: ValueError: radius must be non-negative]
+627:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 627                             0/3  [ERROR: TypeError: find_First_Missing() takes 1 positional argument but 3 were given]
+628:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 628                             3/3  [OK]
+629:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 629                             3/3  [OK]
+630:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 630                             0/3  [OK]
+631:  64%|██████████████████████▉             | 622/974 [00:08<00:04, 73.55it/s]INFO: Task 631                             3/3  [OK]
+631:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]632:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 632                             3/3  [OK]
+633:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 633                             0/3  [ERROR: TypeError: pair_OR_Sum() takes 1 positional argument but 2 were given]
+634:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 634                             3/3  [OK]
+635:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 635                             3/3  [OK]
+636:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 636                             0/3  [OK]
+637:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 637                             0/3  [ERROR: TypeError: noprofit_noloss() takes 1 positional argument but 2 were given]
+638:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 638                             0/3  [Function not found]
+639:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 639                             3/3  [OK]
+640:  65%|███████████████████████▎            | 631/974 [00:08<00:04, 76.21it/s]INFO: Task 640                             0/3  [ERROR: TypeError: remove_parenthesis expects a string]
+640:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]641:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 641                             3/3  [OK]
+642:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 642                             0/3  [OK]
+643:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 643                             0/3  [OK]
+644:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 644                             3/3  [OK]
+645:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 645                             3/3  [OK]
+646:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 646                             3/3  [OK]
+647:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 647                             3/3  [OK]
+648:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 648                             3/3  [OK]
+649:  66%|███████████████████████▋            | 640/974 [00:08<00:04, 77.60it/s]INFO: Task 649                             3/3  [OK]
+649:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]650:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 650                             0/3  [ERROR: TypeError: are_Equal() takes 2 positional arguments but 4 were given]
+651:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 651                             0/3  [Function not found]
+652:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 652                             0/3  [OK]
+653:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 653                             3/3  [OK]
+654:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 654                             3/3  [OK]
+655:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 655                             3/3  [OK]
+656:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 656                             0/3  [ERROR: TypeError: find_Min_Sum() takes 2 positional arguments but 3 were given]
+657:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 657                             3/3  [OK]
+658:  67%|███████████████████████▉            | 649/974 [00:08<00:04, 79.99it/s]INFO: Task 658                             0/3  [OK]
+658:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]659:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 659                             3/3  [OK]
+660:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 660                             0/3  [Function not found]
+661:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 661                             0/3  [Function not found]
+662:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 662                             1/3  [OK]
+663:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 663                             0/3  [OK]
+664:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 664                             3/3  [OK]
+665:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 665                             3/3  [OK]
+666:  68%|████████████████████████▎           | 658/974 [00:08<00:04, 77.09it/s]INFO: Task 666                             3/3  [OK]
+666:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]667:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 667                             0/3  [ERROR: TypeError: Check_Vow() takes 1 positional argument but 2 were given]
+668:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 668                             3/3  [OK]
+669:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 669                             0/3  [OK]
+670:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 670                             0/3  [Function not found]
+671:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 671                             2/3  [OK]
+672:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 672                             3/3  [OK]
+673:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 673                             3/3  [OK]
+674:  68%|████████████████████████▌           | 666/974 [00:08<00:04, 72.84it/s]INFO: Task 674                             3/3  [OK]
+674:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]675:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 675                             0/3  [ERROR: TypeError: sum_nums() takes 2 positional arguments but 4 were given]
+676:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 676                             3/3  [OK]
+677:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 677                             1/3  [OK]
+678:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 678                             3/3  [OK]
+679:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 679                             0/3  [ERROR: TypeError: access_key() missing 1 required positional argument: 'index']
+680:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 680                             3/3  [OK]
+681:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 681                             3/3  [OK]
+682:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 682                             3/3  [OK]
+683:  69%|████████████████████████▉           | 674/974 [00:08<00:04, 73.20it/s]INFO: Task 683                             3/3  [OK]
+683:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]684:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 684                             0/3  [ERROR: TypeError: count_Char() missing 1 required positional argument: 'n']
+685:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 685                             3/3  [OK]
+686:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 686                             0/3  [OK]
+687:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 687                             3/3  [OK]
+688:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 688                             0/3  [Function not found]
+689:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 689                             0/3  [ERROR: TypeError: min_jumps() takes 1 positional argument but 2 were given]
+690:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 690                             3/3  [OK]
+691:  70%|█████████████████████████▏          | 683/974 [00:08<00:03, 75.68it/s]INFO: Task 691                             3/3  [OK]
+691:  71%|█████████████████████████▌          | 691/974 [00:08<00:03, 75.66it/s]692:  71%|█████████████████████████▌          | 691/974 [00:08<00:03, 75.66it/s]INFO: Task 692                             3/3  [OK]
+693:  71%|█████████████████████████▌          | 691/974 [00:08<00:03, 75.66it/s]INFO: Task 693                             3/3  [OK]
+694:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 694                             0/3  [Function not found]
+695:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 695                             3/3  [OK]
+696:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 696                             0/3  [OK]
+697:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 697                             3/3  [OK]
+698:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 698                             3/3  [OK]
+699:  71%|█████████████████████████▌          | 691/974 [00:09<00:03, 75.66it/s]INFO: Task 699                             2/3  [OK]
+699:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]700:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 700                             3/3  [OK]
+701:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 701                             3/3  [OK]
+702:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 702                             0/3  [ERROR: TypeError: removals() takes 2 positional arguments but 3 were given]
+703:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 703                             3/3  [OK]
+704:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 704                             0/3  [OK]
+705:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 705                             3/3  [OK]
+706:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 706                             0/3  [ERROR: TypeError: is_subset() takes 2 positional arguments but 4 were given]
+707:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 707                             3/3  [OK]
+708:  72%|█████████████████████████▊          | 699/974 [00:09<00:03, 74.61it/s]INFO: Task 708                             0/3  [OK]
+708:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]709:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 709                             0/3  [OK]
+710:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 710                             3/3  [OK]
+711:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 711                             3/3  [OK]
+712:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 712                             2/3  [OK]
+713:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 713                             0/3  [ERROR: TypeError: check_valid() missing 1 required positional argument: 'acceptable']
+714:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 714                             0/3  [OK]
+715:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 715                             3/3  [OK]
+716:  73%|██████████████████████████▏         | 708/974 [00:09<00:03, 77.16it/s]INFO: Task 716                             0/3  [ERROR: TypeError: rombus_perimeter() takes 0 positional arguments but 1 was given]
+716:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]717:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 717                             3/3  [OK]
+718:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 718                             0/3  [ERROR: TypeError: alternate_elements() missing 1 required positional argument: 'interval']
+719:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 719                             0/3  [OK]
+720:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 720                             3/3  [OK]
+721:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 721                             0/3  [ERROR: TypeError: maxAverageOfPath() takes 1 positional argument but 2 were given]
+722:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 722                             0/3  [ERROR: TypeError: filter_data() takes 1 positional argument but 3 were given]
+723:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 723                             3/3  [OK]
+724:  74%|██████████████████████████▍         | 716/974 [00:09<00:03, 77.26it/s]INFO: Task 724                             3/3  [OK]
+724:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]725:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 725                             3/3  [OK]
+726:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 726                             3/3  [OK]
+727:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 727                             3/3  [OK]
+728:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 728                             3/3  [OK]
+729:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 729                             3/3  [OK]
+730:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 730                             3/3  [OK]
+731:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 731                             0/3  [OK]
+732:  74%|██████████████████████████▊         | 724/974 [00:09<00:03, 76.93it/s]INFO: Task 732                             2/3  [OK]
+732:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]733:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 733                             3/3  [OK]
+734:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 734                             0/3  [ERROR: TypeError: sum_Of_Subarray_Prod() takes 1 positional argument but 2 were given]
+735:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 735                             3/3  [OK]
+736:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 736                             3/3  [OK]
+737:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 737                             0/3  [OK]
+738:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 738                             0/3  [OK]
+739:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 739                             0/3  [Function not found]
+740:  75%|███████████████████████████         | 732/974 [00:09<00:03, 77.28it/s]INFO: Task 740                             3/3  [OK]
+740:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]741:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 741                             3/3  [OK]
+742:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 742                             0/3  [ERROR: ValueError: vertices must be an iterable of four 3D points (each with 3 numeric components)]
+743:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 743                             0/3  [ERROR: TypeError: rotate_right() takes 2 positional arguments but 3 were given]
+744:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 744                             3/3  [OK]
+745:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 745                             3/3  [OK]
+746:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 746                             0/3  [OK]
+747:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 747                             0/3  [ERROR: TypeError: lcs_of_three() takes 3 positional arguments but 6 were given]
+748:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 748                             3/3  [OK]
+749:  76%|███████████████████████████▎        | 740/974 [00:09<00:03, 76.56it/s]INFO: Task 749                             0/3  [OK]
+749:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]750:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 750                             0/3  [OK]
+751:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 751                             0/3  [ERROR: TypeError: check_min_heap() takes 1 positional argument but 2 were given]
+752:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 752                             3/3  [OK]
+753:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 753                             2/3  [OK]
+754:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 754                             1/3  [OK]
+755:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 755                             0/3  [ERROR: ValueError: Iterable must contain at least two distinct values]
+756:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 756                             0/3  [OK]
+757:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 757                             0/3  [OK]
+758:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 758                             0/3  [OK]
+759:  77%|███████████████████████████▋        | 749/974 [00:09<00:02, 78.37it/s]INFO: Task 759                             0/3  [Function not found]
+759:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]760:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 760                             0/3  [ERROR: TypeError: unique_Element() takes 1 positional argument but 2 were given]
+761:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 761                             0/3  [OK]
+762:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 762                             3/3  [OK]
+763:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 763                             0/3  [ERROR: TypeError: find_Min_Diff() takes 1 positional argument but 2 were given]
+764:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 764                             0/3  [OK]
+765:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 765                             0/3  [Function not found]
+766:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 766                             0/3  [OK]
+767:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 767                             0/3  [ERROR: TypeError: get_Pairs_Count() takes 2 positional arguments but 3 were given]
+768:  78%|████████████████████████████        | 759/974 [00:09<00:02, 83.36it/s]INFO: Task 768                             3/3  [OK]
+768:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]769:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 769                             0/3  [ERROR: NameError: name 'Diff' is not defined]
+770:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 770                             3/3  [OK]
+771:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 771                             3/3  [OK]
+772:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 772                             3/3  [OK]
+773:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 773                             0/3  [OK]
+774:  79%|████████████████████████████▍       | 768/974 [00:09<00:02, 83.03it/s]INFO: Task 774                             0/3  [OK]
+775:  79%|████████████████████████████▍       | 768/974 [00:10<00:02, 83.03it/s]INFO: Task 775                             0/3  [OK]
+776:  79%|████████████████████████████▍       | 768/974 [00:10<00:02, 83.03it/s]INFO: Task 776                             0/3  [OK]
+777:  79%|████████████████████████████▍       | 768/974 [00:10<00:02, 83.03it/s]INFO: Task 777                             0/3  [ERROR: TypeError: find_Sum() takes 1 positional argument but 2 were given]
+778:  79%|████████████████████████████▍       | 768/974 [00:10<00:02, 83.03it/s]INFO: Task 778                             3/3  [OK]
+778:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]779:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 779                             0/3  [OK]
+780:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 780                             0/3  [OK]
+781:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 781                             0/3  [OK]
+782:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 782                             3/3  [OK]
+783:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 783                             0/3  [OK]
+784:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 784                             3/3  [OK]
+785:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 785                             3/3  [OK]
+786:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 786                             3/3  [OK]
+787:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 787                             0/3  [OK]
+788:  80%|████████████████████████████▊       | 778/974 [00:10<00:02, 87.60it/s]INFO: Task 788                             0/3  [OK]
+788:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]789:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 789                             3/3  [OK]
+790:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 790                             3/3  [OK]
+791:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 791                             0/3  [Function not found]
+792:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 792                             0/3  [OK]
+793:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 793                             0/3  [ERROR: TypeError: last() takes 2 positional arguments but 3 were given]
+794:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 794                             0/3  [OK]
+795:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 795                             0/3  [ERROR: TypeError: key(item) must support numeric negation (e.g., be a number)]
+796:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 796                             3/3  [OK]
+797:  81%|█████████████████████████████▏      | 788/974 [00:10<00:02, 89.65it/s]INFO: Task 797                             3/3  [OK]
+797:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]798:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 798                             3/3  [OK]
+799:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 799                             3/3  [OK]
+800:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 800                             3/3  [OK]
+801:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 801                             3/3  [OK]
+802:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 802                             0/3  [ERROR: TypeError: count_Rotation() takes 1 positional argument but 2 were given]
+803:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 803                             3/3  [OK]
+804:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 804                             0/3  [ERROR: TypeError: is_Product_Even() takes 1 positional argument but 2 were given]
+805:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 805                             3/3  [OK]
+806:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 806                             3/3  [OK]
+807:  82%|█████████████████████████████▍      | 797/974 [00:10<00:02, 86.45it/s]INFO: Task 807                             3/3  [OK]
+807:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]808:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 808                             3/3  [OK]
+809:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 809                             3/3  [OK]
+810:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 810                             0/3  [ERROR: TypeError: count_variable() takes 1 positional argument but 4 were given]
+811:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 811                             3/3  [OK]
+812:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 812                             3/3  [OK]
+813:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 813                             3/3  [OK]
+814:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 814                             0/3  [Function not found]
+815:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 815                             0/3  [ERROR: TypeError: sort_by_dnf() takes 1 positional argument but 2 were given]
+816:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 816                             0/3  [Function not found]
+817:  83%|█████████████████████████████▊      | 807/974 [00:10<00:01, 89.83it/s]INFO: Task 817                             3/3  [OK]
+817:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]818:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 818                             3/3  [OK]
+819:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 819                             0/3  [OK]
+820:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 820                             1/3  [OK]
+821:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 821                             3/3  [OK]
+822:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 822                             3/3  [OK]
+823:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 823                             0/3  [OK]
+824:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 824                             3/3  [OK]
+825:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 825                             3/3  [OK]
+826:  84%|██████████████████████████████▏     | 817/974 [00:10<00:01, 86.33it/s]INFO: Task 826                             0/3  [OK]
+826:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]827:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 827                             3/3  [OK]
+828:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 828                             0/3  [OK]
+829:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 829                             3/3  [OK]
+830:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 830                             0/3  [Function not found]
+831:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 831                             0/3  [ERROR: TypeError: count_Pairs() takes 1 positional argument but 2 were given]
+832:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 832                             3/3  [OK]
+833:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 833                             3/3  [OK]
+834:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 834                             3/3  [OK]
+835:  85%|██████████████████████████████▌     | 826/974 [00:10<00:01, 85.46it/s]INFO: Task 835                             0/3  [ERROR: TypeError: slope() takes 2 positional arguments but 4 were given]
+835:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]836:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 836                             0/3  [ERROR: TypeError: max_sub_array_sum() takes 1 positional argument but 2 were given]
+837:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 837                             3/3  [OK]
+838:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 838                             0/3  [Function not found]
+839:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 839                             3/3  [OK]
+840:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 840                             0/3  [OK]
+841:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 841                             0/3  [ERROR: TypeError: get_inv_count() takes 1 positional argument but 2 were given]
+842:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 842                             0/3  [ERROR: TypeError: get_odd_occurence() takes 1 positional argument but 2 were given]
+843:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 843                             3/3  [OK]
+844:  86%|██████████████████████████████▊     | 835/974 [00:10<00:01, 82.81it/s]INFO: Task 844                             3/3  [OK]
+844:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]845:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 845                             3/3  [OK]
+846:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 846                             0/3  [Function not found]
+847:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 847                             0/3  [ERROR: TypeError: lcopy expects a singleton tuple (one-element tuple)]
+848:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 848                             3/3  [OK]
+849:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 849                             3/3  [OK]
+850:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 850                             3/3  [OK]
+851:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 851                             0/3  [ERROR: TypeError: Sum_of_Inverse_Divisors() takes 1 positional argument but 2 were given]
+852:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 852                             3/3  [OK]
+853:  87%|███████████████████████████████▏    | 844/974 [00:10<00:01, 80.51it/s]INFO: Task 853                             3/3  [OK]
+853:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]854:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]INFO: Task 854                             3/3  [OK]
+855:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]INFO: Task 855                             3/3  [OK]
+856:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]INFO: Task 856                             0/3  [ERROR: TypeError: find_Min_Swaps() takes 1 positional argument but 2 were given]
+857:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]INFO: Task 857                             0/3  [OK]
+858:  88%|███████████████████████████████▌    | 853/974 [00:10<00:01, 79.70it/s]INFO: Task 858                             3/3  [OK]
+859:  88%|███████████████████████████████▌    | 853/974 [00:11<00:01, 79.70it/s]INFO: Task 859                             3/3  [OK]
+860:  88%|███████████████████████████████▌    | 853/974 [00:11<00:01, 79.70it/s]INFO: Task 860                             0/3  [OK]
+861:  88%|███████████████████████████████▌    | 853/974 [00:11<00:01, 79.70it/s]INFO: Task 861                             0/3  [OK]
+862:  88%|███████████████████████████████▌    | 853/974 [00:11<00:01, 79.70it/s]INFO: Task 862                             0/3  [OK]
+862:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]863:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 863                             0/3  [ERROR: TypeError: find_longest_conseq_subseq() takes 1 positional argument but 2 were given]
+864:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 864                             3/3  [OK]
+865:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 865                             0/3  [OK]
+866:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 866                             3/3  [OK]
+867:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 867                             0/3  [ERROR: TypeError: min_Num() takes 1 positional argument but 2 were given]
+868:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 868                             3/3  [OK]
+869:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 869                             0/3  [OK]
+870:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 870                             3/3  [OK]
+871:  89%|███████████████████████████████▊    | 862/974 [00:11<00:01, 80.64it/s]INFO: Task 871                             3/3  [OK]
+871:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]872:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 872                             0/3  [Function not found]
+873:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 873                             3/3  [OK]
+874:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 874                             0/3  [ERROR: TypeError: check_Concat() takes 1 positional argument but 2 were given]
+875:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 875                             3/3  [OK]
+876:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 876                             3/3  [OK]
+877:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 877                             0/3  [OK]
+878:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 878                             0/3  [ERROR: ValueError: k must be a non-negative integer]
+879:  89%|████████████████████████████████▏   | 871/974 [00:11<00:01, 79.51it/s]INFO: Task 879                             0/3  [OK]
+879:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]880:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 880                             0/3  [OK]
+881:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 881                             3/3  [OK]
+882:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 882                             0/3  [OK]
+883:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 883                             0/3  [OK]
+884:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 884                             0/3  [ERROR: ValueError: start must be >= 0 and end must be >= start]
+885:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 885                             3/3  [OK]
+886:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 886                             3/3  [OK]
+887:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 887                             3/3  [OK]
+888:  90%|████████████████████████████████▍   | 879/974 [00:11<00:01, 77.38it/s]INFO: Task 888                             0/3  [Function not found]
+888:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]889:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 889                             3/3  [OK]
+890:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 890                             0/3  [ERROR: TypeError: find_Extra() takes 2 positional arguments but 3 were given]
+891:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 891                             0/3  [Function not found]
+892:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 892                             3/3  [OK]
+893:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 893                             3/3  [OK]
+894:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 894                             0/3  [ERROR: ValueError: Invalid float string: 1.2, 1.3, 2.3, 2.4, 6.5]
+895:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 895                             0/3  [Function not found]
+896:  91%|████████████████████████████████▊   | 888/974 [00:11<00:01, 77.99it/s]INFO: Task 896                             3/3  [OK]
+896:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]897:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 897                             2/3  [OK]
+898:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 898                             0/3  [OK]
+899:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 899                             0/3  [ERROR: TypeError: check() takes 1 positional argument but 2 were given]
+900:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 900                             1/3  [OK]
+901:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 901                             3/3  [OK]
+902:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 902                             3/3  [OK]
+903:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 903                             3/3  [OK]
+904:  92%|█████████████████████████████████   | 896/974 [00:11<00:01, 75.19it/s]INFO: Task 904                             3/3  [OK]
+904:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]905:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 905                             3/3  [OK]
+906:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 906                             0/3  [Function not found]
+907:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 907                             3/3  [OK]
+908:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 908                             0/3  [ERROR: TypeError: find_fixed_point() takes 1 positional argument but 2 were given]
+909:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 909                             0/3  [Function not found]
+910:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 910                             1/3  [OK]
+911:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 911                             0/3  [Function not found]
+912:  93%|█████████████████████████████████▍  | 904/974 [00:11<00:00, 75.87it/s]INFO: Task 912                             0/3  [Function not found]
+912:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]913:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 913                             3/3  [OK]
+914:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 914                             3/3  [OK]
+915:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 915                             0/3  [OK]
+916:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 916                             0/3  [ERROR: TypeError: find_triplet_array() takes 2 positional arguments but 3 were given]
+917:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 917                             0/3  [OK]
+918:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 918                             0/3  [ERROR: TypeError: coin_change() takes from 1 to 2 positional arguments but 3 were given]
+919:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 919                             3/3  [OK]
+920:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 920                             0/3  [OK]
+921:  94%|█████████████████████████████████▋  | 912/974 [00:11<00:00, 70.17it/s]INFO: Task 921                             2/3  [OK]
+921:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]922:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 922                             2/3  [OK]
+923:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 923                             0/3  [ERROR: TypeError: super_seq() takes 2 positional arguments but 4 were given]
+924:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 924                             3/3  [OK]
+925:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 925                             3/3  [OK]
+926:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 926                             3/3  [OK]
+927:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 927                             0/3  [ERROR: NameError: name 'max_height' is not defined]
+928:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 928                             3/3  [OK]
+929:  95%|██████████████████████████████████  | 921/974 [00:11<00:00, 74.49it/s]INFO: Task 929                             0/3  [ERROR: TypeError: count_tuplex() takes 1 positional argument but 2 were given]
+929:  95%|██████████████████████████████████▎ | 929/974 [00:11<00:00, 73.40it/s]930:  95%|██████████████████████████████████▎ | 929/974 [00:11<00:00, 73.40it/s]INFO: Task 930                             0/3  [OK]
+931:  95%|██████████████████████████████████▎ | 929/974 [00:11<00:00, 73.40it/s]INFO: Task 931                             3/3  [OK]
+932:  95%|██████████████████████████████████▎ | 929/974 [00:11<00:00, 73.40it/s]INFO: Task 932                             3/3  [OK]
+933:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 933                             3/3  [OK]
+934:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 934                             0/3  [ERROR: TypeError: dealnnoy_num() takes 1 positional argument but 2 were given]
+935:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 935                             3/3  [OK]
+936:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 936                             2/3  [OK]
+937:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 937                             3/3  [OK]
+938:  95%|██████████████████████████████████▎ | 929/974 [00:12<00:00, 73.40it/s]INFO: Task 938                             0/3  [ERROR: TypeError: find_closet() takes 3 positional arguments but 6 were given]
+938:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]939:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 939                             0/3  [ERROR: TypeError: '<' not supported between instances of 'NoneType' and 'NoneType']
+940:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 940                             3/3  [OK]
+941:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 941                             3/3  [OK]
+942:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 942                             0/3  [ERROR: TypeError: check_element() takes 1 positional argument but 2 were given]
+943:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 943                             3/3  [OK]
+944:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]Number '70' at positions 10-11
+Number '32' at positions 17-18
+Number '79' at positions 9-10
+INFO: Task 944                             0/3  [OK]
+945:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 945                             3/3  [OK]
+946:  96%|██████████████████████████████████▋ | 938/974 [00:12<00:00, 75.49it/s]INFO: Task 946                             0/3  [ERROR: AttributeError: 'int' object has no attribute 'lower']
+946:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]947:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 947                             0/3  [ERROR: TypeError: len_log expects a string]
+948:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 948                             3/3  [OK]
+949:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 949                             0/3  [OK]
+950:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 950                             3/3  [OK]
+951:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 951                             0/3  [Function not found]
+952:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 952                             2/3  [OK]
+953:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 953                             0/3  [ERROR: TypeError: subset() takes 1 positional argument but 2 were given]
+954:  97%|██████████████████████████████████▉ | 946/974 [00:12<00:00, 76.72it/s]INFO: Task 954                             0/3  [ERROR: TypeError: profit_amount() takes 1 positional argument but 2 were given]
+954:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]955:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 955                             3/3  [OK]
+956:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 956                             0/3  [Function not found]
+957:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 957                             3/3  [OK]
+958:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 958                             3/3  [OK]
+959:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 959                             3/3  [OK]
+960:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 960                             0/3  [OK]
+961:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 961                             0/3  [ERROR: ValueError: Invalid or out-of-range Roman numeral: 'MMMM']
+962:  98%|███████████████████████████████████▎| 954/974 [00:12<00:00, 75.47it/s]INFO: Task 962                             3/3  [OK]
+962:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]963:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 963                             0/3  [OK]
+964:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 964                             3/3  [OK]
+965:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 965                             3/3  [OK]
+966:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 966                             3/3  [OK]
+967:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 967                             0/3  [OK]
+968:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 968                             0/3  [Function not found]
+969:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 969                             0/3  [OK]
+970:  99%|███████████████████████████████████▌| 962/974 [00:12<00:00, 75.02it/s]INFO: Task 970                             3/3  [OK]
+970: 100%|███████████████████████████████████▊| 970/974 [00:12<00:00, 74.62it/s]971: 100%|███████████████████████████████████▊| 970/974 [00:12<00:00, 74.62it/s]INFO: Task 971                             3/3  [OK]
+972: 100%|███████████████████████████████████▊| 970/974 [00:12<00:00, 74.62it/s]INFO: Task 972                             0/3  [OK]
+973: 100%|███████████████████████████████████▊| 970/974 [00:12<00:00, 74.62it/s]INFO: Task 973                             3/3  [OK]
+974: 100%|███████████████████████████████████▊| 970/974 [00:12<00:00, 74.62it/s]INFO: Task 974                             3/3  [OK]
+974: 100%|████████████████████████████████████| 974/974 [00:12<00:00, 77.54it/s]
+INFO: Summary: {'Model': 'gpt-5-mini', 'Dataset': 'results/api/gpt-5-mini__mbpp_LV_with_tests.json', 'Samples': 974, 'SuccessExec': 709, 'Pass@1_TRUE': 457, 'Runnable_FALSE': 252, 'SuccessExecRate': 0.728, 'Pass@1_Rate': 0.469, 'Runnable_FALSE_Rate': 0.259}
+INFO: Combined summary saved.
+
+     Model                                         Dataset  Samples  SuccessExec  Pass@1_TRUE  Runnable_FALSE  SuccessExecRate  Pass@1_Rate  Runnable_FALSE_Rate
+gpt-5-mini results/api/gpt-5-mini__mbpp_LV_with_tests.json      974          709          457             252            0.728        0.469                0.259

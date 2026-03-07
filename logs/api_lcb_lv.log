@@ -1,0 +1,69 @@
+INFO: ============================================================
+INFO: Dataset: ./mutations/livecodebench_LV_with_tests.jsonl
+INFO: ============================================================
+INFO: Submitting 1000 prompts to gpt-5-mini ...
+INFO: HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+INFO: Uploaded batch input: file-1WxX33yG8VBWQ6bNuE65wb  (1000 requests)
+INFO: HTTP Request: POST https://api.openai.com/v1/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: batch_69ab8023ee64819092ea90430a34c585
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: validating  (0/0 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: validating  (0/0 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: validating  (0/0 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (0/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (0/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (0/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (0/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (0/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (17/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (17/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (17/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (86/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (132/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (181/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (300/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (413/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (447/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (552/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (641/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (726/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (834/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (906/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (922/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: in_progress  (974/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: finalizing  (999/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: finalizing  (999/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: finalizing  (999/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: finalizing  (999/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/batches/batch_69ab8023ee64819092ea90430a34c585 "HTTP/1.1 200 OK"
+INFO: Batch batch_69ab8023ee64819092ea90430a34c585: completed  (999/1000 done)
+INFO: HTTP Request: GET https://api.openai.com/v1/files/file-NgUwV9YV8zFWqB4XuhKobq/content "HTTP/1.1 200 OK"
+INFO: Batch complete: 999/1000 responses
+INFO: Saved 1000 responses (no eval) → results/api/gpt-5-mini__livecodebench_LV_with_tests.json

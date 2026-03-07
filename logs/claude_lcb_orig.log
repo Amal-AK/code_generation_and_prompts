@@ -1,0 +1,20 @@
+INFO: ============================================================
+INFO: Dataset: ./datasets/livecodebench/livecodebench_public.jsonl
+INFO: ============================================================
+INFO: Submitting 1000 prompts to claude-sonnet-4-20250514 ...
+INFO: HTTP Request: POST https://api.anthropic.com/v1/messages/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: msgbatch_01L1HWfFhZHribETGtnPznqt  (1000 requests)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L1HWfFhZHribETGtnPznqt: in_progress  (processing=1000  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L1HWfFhZHribETGtnPznqt: in_progress  (processing=1000  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L1HWfFhZHribETGtnPznqt: in_progress  (processing=1000  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L1HWfFhZHribETGtnPznqt: in_progress  (processing=1000  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L1HWfFhZHribETGtnPznqt: ended  (processing=0  succeeded=1000  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L1HWfFhZHribETGtnPznqt/results "HTTP/1.1 200 OK"
+INFO: Batch complete: 1000/1000 responses
+INFO: Saved 1000 responses (no eval) → results/claude/claude-sonnet-4-20250514__livecodebench_public.json
