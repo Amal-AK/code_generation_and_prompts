@@ -1,0 +1,21 @@
+{
+  "model_name": "Qwen/Qwen2.5-Coder-7B-Instruct",
+  "mutation_types": [
+    "SF"
+  ],
+  "data_variant": "v1",
+  "train_pairs": 1023,
+  "val_pairs": 113,
+  "best_val_loss": 0.192883725132653,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "epochs_run": 5,
+  "lr": 0.0002,
+  "eff_batch_size": 16,
+  "pass1_eval": {
+    "n_evaluated": 113,
+    "pass1_baseline": 0.5752,
+    "pass1_adapter": 0.5664,
+    "delta": -0.0088
+  }
+}

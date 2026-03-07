@@ -30,9 +30,11 @@ import logging
 import os
 import random
 import re
+import subprocess
+import sys
 import textwrap
 from pathlib import Path
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Optional, Set
 
 import numpy as np
 import torch
@@ -58,6 +60,14 @@ MBPP_MUTATION_FILES: Dict[str, str] = {
     "LV": "mbpp_LV_with_tests.jsonl",
     "SF": "mbpp_SF_with_tests.jsonl",
     "US": "mbpp_US_with_tests.jsonl",
+}
+
+# V2 variants (richer lexical vagueness, different paraphrasing style)
+HE_MUTATION_FILES_V2: Dict[str, str] = {
+    "LV": "variant2/humanEval_LV_V2.jsonl",
+}
+MBPP_MUTATION_FILES_V2: Dict[str, str] = {
+    "LV": "variant2/mbpp_LV_V2.jsonl",
 }
 
 
@@ -92,11 +102,19 @@ def _load_jsonl(path: Path) -> List[Dict[str, Any]]:
     return records
 
 
-def load_sft_pairs(data_dir: Path, mutation_types: Set[str]) -> List[Dict[str, Any]]:
+def load_sft_pairs(
+    data_dir: Path,
+    mutation_types: Set[str],
+    data_variant: str = "v1",
+) -> List[Dict[str, Any]]:
     """
     Join mutation files with canonical solutions.
     Returns list of dicts: {mutated_prompt, solution_code, func_name,
                              task_id, mutation_type, dataset}
+
+    data_variant: 'v1'       → original mutation files
+                  'v2'       → variant2 files (LV only; falls back to v1 for SF/US)
+                  'combined' → v1 + v2 merged (deduped by task_id+mutation_type)
     """
     pairs: List[Dict[str, Any]] = []
 
@@ -107,33 +125,49 @@ def load_sft_pairs(data_dir: Path, mutation_types: Set[str]) -> List[Dict[str, A
     }
     logger.info("Loaded %d HumanEval originals", len(he_orig))
 
-    for mtype, fname in HE_MUTATION_FILES.items():
-        if mtype not in mutation_types:
-            continue
-        path = data_dir / "mutations" / fname
-        if not path.exists():
-            logger.warning("Missing: %s", path)
-            continue
-        n = 0
-        for r in _load_jsonl(path):
-            if not r.get("applicable", True):
+    def _he_file_map(variant: str) -> Dict[str, str]:
+        if variant == "v2":
+            return {**HE_MUTATION_FILES, **HE_MUTATION_FILES_V2}
+        return HE_MUTATION_FILES
+
+    variants_to_load = ["v1", "v2"] if data_variant == "combined" else [data_variant]
+
+    seen_he: Set[tuple] = set()
+    for variant in variants_to_load:
+        fmap = _he_file_map(variant)
+        for mtype, fname in fmap.items():
+            if mtype not in mutation_types:
                 continue
-            orig = he_orig.get(r["task_id"])
-            if orig is None:
+            path = data_dir / "mutations" / fname
+            if not path.exists():
+                logger.warning("Missing: %s", path)
                 continue
-            # Full correct code = original signature/docstring + canonical body
-            solution_code = orig["prompt"] + orig["canonical_solution"]
-            pairs.append({
-                "mutated_prompt":  r["mutated_prompt"],
-                "original_prompt": r["original_prompt"],
-                "solution_code":   solution_code,
-                "func_name":       orig["entry_point"],
-                "task_id":         r["task_id"],
-                "mutation_type":   mtype,
-                "dataset":         "humaneval",
-            })
-            n += 1
-        logger.info("  HumanEval %-3s: %d pairs", mtype, n)
+            n = 0
+            for r in _load_jsonl(path):
+                if not r.get("applicable", True):
+                    continue
+                orig = he_orig.get(r["task_id"])
+                if orig is None:
+                    continue
+                key = (r["task_id"], mtype, r.get("mutated_prompt", ""))
+                if key in seen_he:
+                    continue
+                seen_he.add(key)
+                solution_code = orig["prompt"] + orig["canonical_solution"]
+                pairs.append({
+                    "mutated_prompt":  r["mutated_prompt"],
+                    "original_prompt": r["original_prompt"],
+                    "solution_code":   solution_code,
+                    "func_name":       orig["entry_point"],
+                    "task_id":         r["task_id"],
+                    "mutation_type":   mtype,
+                    "dataset":         "humaneval",
+                    # test fields for pass@1 eval
+                    "test":            orig["test"],
+                    "entry_point":     orig["entry_point"],
+                })
+                n += 1
+            logger.info("  HumanEval %-3s [%s]: %d pairs", mtype, variant, n)
 
     # ── MBPP ──────────────────────────────────────────────────────────────────
     mbpp_orig: Dict[str, Any] = {
@@ -142,40 +176,53 @@ def load_sft_pairs(data_dir: Path, mutation_types: Set[str]) -> List[Dict[str, A
     }
     logger.info("Loaded %d MBPP originals", len(mbpp_orig))
 
-    for mtype, fname in MBPP_MUTATION_FILES.items():
-        if mtype not in mutation_types:
-            continue
-        path = data_dir / "mutations" / fname
-        if not path.exists():
-            logger.warning("Missing: %s", path)
-            continue
-        n = 0
-        for r in _load_jsonl(path):
-            if not r.get("applicable", True):
+    def _mbpp_file_map(variant: str) -> Dict[str, str]:
+        if variant == "v2":
+            return {**MBPP_MUTATION_FILES, **MBPP_MUTATION_FILES_V2}
+        return MBPP_MUTATION_FILES
+
+    seen_mbpp: Set[tuple] = set()
+    for variant in variants_to_load:
+        fmap = _mbpp_file_map(variant)
+        for mtype, fname in fmap.items():
+            if mtype not in mutation_types:
                 continue
-            orig = mbpp_orig.get(str(r["task_id"]))
-            if orig is None:
+            path = data_dir / "mutations" / fname
+            if not path.exists():
+                logger.warning("Missing: %s", path)
                 continue
-            # Extract function name from the first test assertion
-            func_name = None
-            for test in orig.get("test_list", []):
-                m = re.match(r"\s*assert\s+(\w+)\s*\(", test)
-                if m:
-                    func_name = m.group(1)
-                    break
-            if not func_name:
-                continue
-            pairs.append({
-                "mutated_prompt":  r["mutated_prompt"],
-                "original_prompt": r["original_prompt"],
-                "solution_code":   orig["code"],
-                "func_name":       func_name,
-                "task_id":         str(r["task_id"]),
-                "mutation_type":   mtype,
-                "dataset":         "mbpp",
-            })
-            n += 1
-        logger.info("  MBPP      %-3s: %d pairs", mtype, n)
+            n = 0
+            for r in _load_jsonl(path):
+                if not r.get("applicable", True):
+                    continue
+                orig = mbpp_orig.get(str(r["task_id"]))
+                if orig is None:
+                    continue
+                key = (str(r["task_id"]), mtype, r.get("mutated_prompt", ""))
+                if key in seen_mbpp:
+                    continue
+                seen_mbpp.add(key)
+                func_name = None
+                for test in orig.get("test_list", []):
+                    m = re.match(r"\s*assert\s+(\w+)\s*\(", test)
+                    if m:
+                        func_name = m.group(1)
+                        break
+                if not func_name:
+                    continue
+                pairs.append({
+                    "mutated_prompt":  r["mutated_prompt"],
+                    "original_prompt": r["original_prompt"],
+                    "solution_code":   orig["code"],
+                    "func_name":       func_name,
+                    "task_id":         str(r["task_id"]),
+                    "mutation_type":   mtype,
+                    "dataset":         "mbpp",
+                    # test fields for pass@1 eval
+                    "test_list":       orig["test_list"],
+                })
+                n += 1
+            logger.info("  MBPP      %-3s [%s]: %d pairs", mtype, variant, n)
 
     return pairs
 
@@ -271,6 +318,117 @@ def evaluate_loss(model, loader, input_device: torch.device) -> float:
     return total_loss / total_tokens if total_tokens > 0 else float("inf")
 
 
+# ── Pass@1 evaluation ──────────────────────────────────────────────────────────
+def _extract_code_block(text: str) -> str:
+    """Extract the first ```python ... ``` block, or return the raw text."""
+    m = re.search(r"```(?:python)?\s*\n(.*?)```", text, re.DOTALL)
+    return m.group(1).strip() if m else text.strip()
+
+
+def _run_test(code: str, pair: Dict[str, Any], timeout: int = 10) -> bool:
+    """Execute generated code against the pair's test cases; return True if all pass."""
+    dataset = pair["dataset"]
+    try:
+        if dataset == "humaneval":
+            ep        = pair["entry_point"]
+            test_body = pair["test"]          # contains def check(candidate): ...
+            script    = f"{code}\n\n{test_body}\n\ncheck({ep})\n"
+        else:  # mbpp
+            test_body = "\n".join(pair["test_list"])
+            script    = f"{code}\n\n{test_body}\n"
+
+        result = subprocess.run(
+            [sys.executable, "-c", script],
+            capture_output=True, timeout=timeout,
+        )
+        return result.returncode == 0
+    except (subprocess.TimeoutExpired, Exception):
+        return False
+
+
+@torch.no_grad()
+def eval_pass1_on_val(
+    model,
+    tokenizer,
+    val_pairs: List[Dict[str, Any]],
+    input_device: torch.device,
+    ckpt_path: Path,
+    max_new_tokens: int = 512,
+    max_samples: Optional[int] = None,
+) -> Dict[str, Any]:
+    """
+    Evaluate pass@1 on the val split for:
+      - baseline : adapter disabled  (base model)
+      - adapter  : best saved adapter loaded from ckpt_path
+
+    Reloads the best adapter weights from disk so early stopping is respected.
+    """
+    from peft import set_peft_model_state_dict
+
+    # Reload best adapter weights (current in-memory model may be from a later epoch)
+    adapter_file = ckpt_path / "adapter_model.safetensors"
+    if adapter_file.exists():
+        import safetensors.torch as sf
+        state = sf.load_file(str(adapter_file))
+    else:
+        state = torch.load(str(ckpt_path / "adapter_model.bin"), map_location="cpu")
+    set_peft_model_state_dict(model, state)
+    logger.info("Reloaded best adapter weights from %s", ckpt_path)
+
+    pairs = val_pairs[:max_samples] if max_samples else val_pairs
+    model.eval()
+
+    pass_base = pass_lora = n = 0
+
+    for pair in tqdm(pairs, desc="Pass@1 eval", ncols=90):
+        instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
+        chat = tokenizer.apply_chat_template(
+            [{"role": "user", "content": instruction}],
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+        input_ids = tokenizer(
+            chat, return_tensors="pt", truncation=True, max_length=1024,
+        )["input_ids"].to(input_device)
+
+        prompt_len = input_ids.shape[1]
+
+        # ── baseline: adapter OFF ──────────────────────────────────────────────
+        model.disable_adapter_layers()
+        out = model.generate(
+            input_ids, max_new_tokens=max_new_tokens,
+            do_sample=False, pad_token_id=tokenizer.eos_token_id,
+        )
+        text_base  = tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
+        code_base  = _extract_code_block(text_base)
+        pass_base += int(_run_test(code_base, pair))
+
+        # ── adapter ON ────────────────────────────────────────────────────────
+        model.enable_adapter_layers()
+        out = model.generate(
+            input_ids, max_new_tokens=max_new_tokens,
+            do_sample=False, pad_token_id=tokenizer.eos_token_id,
+        )
+        text_lora  = tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
+        code_lora  = _extract_code_block(text_lora)
+        pass_lora += int(_run_test(code_lora, pair))
+
+        n += 1
+
+    result = {
+        "n_evaluated":     n,
+        "pass1_baseline":  round(pass_base / n, 4) if n else 0.0,
+        "pass1_adapter":   round(pass_lora / n, 4) if n else 0.0,
+        "delta":           round((pass_lora - pass_base) / n, 4) if n else 0.0,
+    }
+    logger.info(
+        "Pass@1 — baseline=%.3f  adapter=%.3f  Δ=%+.3f  (n=%d)",
+        result["pass1_baseline"], result["pass1_adapter"],
+        result["delta"], n,
+    )
+    return result
+
+
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main() -> None:
     parser = argparse.ArgumentParser(description="LoRA SFT on mutation-recovery pairs")
@@ -293,6 +451,13 @@ def main() -> None:
     parser.add_argument("--gpus",          default=None,
                         help="CUDA_VISIBLE_DEVICES (e.g. '0,1,2,3')")
     parser.add_argument("--seed",          type=int,   default=42)
+    parser.add_argument("--dataVariant",   default="v1",
+                        choices=["v1", "v2", "combined"],
+                        help="Mutation data variant: v1 (original), v2 (variant2/), combined (both)")
+    parser.add_argument("--evalSamples",   type=int, default=None,
+                        help="Max val samples for pass@1 eval after training (default: all)")
+    parser.add_argument("--skipEval",      action="store_true",
+                        help="Skip pass@1 evaluation after training")
     args = parser.parse_args()
 
     if args.gpus is not None:
@@ -316,15 +481,24 @@ def main() -> None:
     logger.info("Training on mutation types: %s", sorted(mutation_types))
 
     # ── Load data ──────────────────────────────────────────────────────────────
-    logger.info("Loading SFT pairs...")
-    pairs = load_sft_pairs(data_dir, mutation_types)
-    random.shuffle(pairs)
+    logger.info("Loading SFT pairs (dataVariant=%s)...", args.dataVariant)
+    pairs = load_sft_pairs(data_dir, mutation_types, data_variant=args.dataVariant)
     logger.info("Total pairs: %d", len(pairs))
 
-    n_val       = max(1, int(len(pairs) * args.valSplit))
-    val_pairs   = pairs[:n_val]
-    train_pairs = pairs[n_val:]
-    logger.info("Train: %d  Val: %d", len(train_pairs), len(val_pairs))
+    # Split by task_id so no problem appears in both train and val
+    # (prevents data leakage when multiple variants of the same task exist)
+    unique_task_ids = sorted({p["task_id"] for p in pairs})
+    random.shuffle(unique_task_ids)
+    n_val_tasks = max(1, int(len(unique_task_ids) * args.valSplit))
+    val_task_ids   = set(unique_task_ids[:n_val_tasks])
+    train_task_ids = set(unique_task_ids[n_val_tasks:])
+
+    val_pairs   = [p for p in pairs if p["task_id"] in val_task_ids]
+    train_pairs = [p for p in pairs if p["task_id"] in train_task_ids]
+    random.shuffle(train_pairs)
+    logger.info("Train: %d pairs (%d tasks)  Val: %d pairs (%d tasks)",
+                len(train_pairs), len(train_task_ids),
+                len(val_pairs),   len(val_task_ids))
 
     # ── Tokenizer ──────────────────────────────────────────────────────────────
     logger.info("Loading tokenizer: %s", args.modelName)
@@ -451,6 +625,7 @@ def main() -> None:
     meta = {
         "model_name":     args.modelName,
         "mutation_types": sorted(mutation_types),
+        "data_variant":   args.dataVariant,
         "train_pairs":    len(train_pairs),
         "val_pairs":      len(val_pairs),
         "best_val_loss":  best_val_loss,
@@ -462,6 +637,28 @@ def main() -> None:
     }
     (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
     logger.info("Metadata → %s/training_meta.json", out_dir)
+
+    # ── Pass@1 evaluation on val set ───────────────────────────────────────────
+    if not args.skipEval:
+        logger.info("Running pass@1 evaluation on val set (%s samples)...",
+                    args.evalSamples or "all")
+        pass1_results = eval_pass1_on_val(
+            model          = model,
+            tokenizer      = tokenizer,
+            val_pairs      = val_pairs,
+            input_device   = input_device,
+            ckpt_path      = ckpt_path,
+            max_new_tokens = 512,
+            max_samples    = args.evalSamples,
+        )
+        meta["pass1_eval"] = pass1_results
+        (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
+        print(
+            f"\nPass@1 on val set (n={pass1_results['n_evaluated']}):\n"
+            f"  baseline : {pass1_results['pass1_baseline']:.3f}\n"
+            f"  adapter  : {pass1_results['pass1_adapter']:.3f}\n"
+            f"  Δ        : {pass1_results['delta']:+.3f}"
+        )
 
 
 if __name__ == "__main__":
