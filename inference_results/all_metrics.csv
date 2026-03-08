@@ -41,6 +41,7 @@ mistralai_Codestral-22B-v0.1,HumanEval,SF,164,70.7,96.3,25.6,results/large_model
 mistralai_Codestral-22B-v0.1,HumanEval,US,164,58.5,97.6,39.0,results/large_models/mistralai_Codestral-22B-v0.1__HumanEval_US_with_tests.json
 Qwen_Qwen2.5-Coder-32B-Instruct,LCB,LV,1000,31.7,31.8,0.1,results/large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_LV_with_tests.json
 Qwen_Qwen2.5-Coder-32B-Instruct,LCB,Orig,1000,32.0,32.1,0.1,results/large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public.json
+Qwen_Qwen2.5-Coder-32B-Instruct,LCB,SF,1000,31.2,31.3,0.1,results/large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_SF_with_tests.json
 Qwen_Qwen2.5-Coder-32B-Instruct,LCB,US,1000,30.6,30.7,0.1,results/large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_US_with_tests.json
 Qwen_Qwen2.5-Coder-7B-Instruct,LCB,LV,1000,22.2,22.3,0.1,results/small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_LV_with_tests.json
 Qwen_Qwen2.5-Coder-7B-Instruct,LCB,Orig,1000,20.5,20.6,0.1,results/small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public.json
@@ -54,6 +55,7 @@ claude-sonnet-4-20250514,LCB,LV,1000,49.9,50.0,0.1,results/claude/claude-sonnet-
 claude-sonnet-4-20250514,LCB,Orig,1000,51.1,51.2,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_public.json
 claude-sonnet-4-20250514,LCB,SF,1000,50.7,50.8,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_SF_with_tests.json
 claude-sonnet-4-20250514,LCB,US,1000,49.6,49.7,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_US_with_tests.json
+codellama_CodeLlama-34b-Instruct-hf,LCB,Orig,1000,13.6,13.7,0.1,results/large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,LV,1000,8.2,8.3,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_LV_with_tests.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,Orig,1000,8.1,8.2,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,SF,1000,7.8,7.9,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_SF_with_tests.json
