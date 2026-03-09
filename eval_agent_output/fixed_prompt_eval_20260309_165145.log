@@ -30,4 +30,6 @@ INFO: Dataset: ./eval_agent_output/HumanEval_US_fixed_prompts.jsonl
 INFO: ------------------------------------------------------------
 evaluating:   0%|                                       | 0/160 [00:00<?, ?it/s]HumanEval/0:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/0                     7/7  [OK]
 HumanEval/0:   1%|▏                           | 1/160 [01:37<4:17:04, 97.01s/it]HumanEval/1:   1%|▏                           | 1/160 [01:37<4:17:04, 97.01s/it]INFO: Task HumanEval/1                     4/4  [OK]
-HumanEval/1:   1%|▎                           | 2/160 [02:40<3:23:19, 77.21s/it]HumanEval/2:   1%|▎                           | 2/160 [02:40<3:23:19, 77.21s/it]
+HumanEval/1:   1%|▎                           | 2/160 [02:40<3:23:19, 77.21s/it]HumanEval/2:   1%|▎                           | 2/160 [02:40<3:23:19, 77.21s/it]INFO: Task HumanEval/2                     3/3  [OK]
+HumanEval/2:   2%|▌                           | 3/160 [03:55<3:19:51, 76.38s/it]HumanEval/3:   2%|▌                           | 3/160 [03:55<3:19:51, 76.38s/it]INFO: Task HumanEval/3                     6/6  [OK]
+HumanEval/3:   2%|▋                           | 4/160 [04:26<2:32:00, 58.46s/it]HumanEval/4:   2%|▋                           | 4/160 [04:26<2:32:00, 58.46s/it]
