@@ -1,0 +1,933 @@
+US Recovery Agent Eval — lun. 09 mars 2026 00:14:31 CET
+Gen model  : Qwen/Qwen2.5-Coder-7B-Instruct
+GPT model  : gpt-4o
+Output     : ./eval_agent_output
+────────────────────────────────
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-Coder-7B-Instruct "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/config.json "HTTP/1.1 200 OK"
+Loaded 160 samples from mutations/HumanEval_US_with_tests.jsonl
+Loading generation model: Qwen/Qwen2.5-Coder-7B-Instruct
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:   0%|          | 1/339 [00:00<00:00, 7371.36it/s, Materializing param=lm_head.weight]Loading weights:   0%|          | 1/339 [00:00<00:00, 3081.78it/s, Materializing param=lm_head.weight]Loading weights:   1%|          | 2/339 [00:00<00:51,  6.51it/s, Materializing param=lm_head.weight]  Loading weights:   1%|          | 2/339 [00:00<00:51,  6.51it/s, Materializing param=model.embed_tokens.weight]Loading weights:   1%|          | 2/339 [00:00<00:51,  6.51it/s, Materializing param=model.embed_tokens.weight]Loading weights:   1%|          | 3/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.input_layernorm.weight]Loading weights:   1%|          | 3/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.input_layernorm.weight]Loading weights:   1%|          | 4/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.down_proj.weight]  Loading weights:   1%|          | 4/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.down_proj.weight]Loading weights:   1%|▏         | 5/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]Loading weights:   1%|▏         | 5/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]Loading weights:   2%|▏         | 6/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.up_proj.weight]  Loading weights:   2%|▏         | 6/339 [00:00<00:51,  6.51it/s, Materializing param=model.layers.0.mlp.up_proj.weight]Loading weights:   2%|▏         | 7/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]Loading weights:   2%|▏         | 7/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]Loading weights:   2%|▏         | 8/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.k_proj.bias]          Loading weights:   2%|▏         | 8/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.k_proj.bias]Loading weights:   3%|▎         | 9/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]Loading weights:   3%|▎         | 9/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]Loading weights:   3%|▎         | 10/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]Loading weights:   3%|▎         | 10/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]Loading weights:   3%|▎         | 11/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.q_proj.bias]  Loading weights:   3%|▎         | 11/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.q_proj.bias]Loading weights:   4%|▎         | 12/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]Loading weights:   4%|▎         | 12/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]Loading weights:   4%|▍         | 13/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.v_proj.bias]  Loading weights:   4%|▍         | 13/339 [00:00<00:50,  6.51it/s, Materializing param=model.layers.0.self_attn.v_proj.bias]Loading weights:   4%|▍         | 14/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]Loading weights:   4%|▍         | 14/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]Loading weights:   4%|▍         | 15/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.input_layernorm.weight] Loading weights:   4%|▍         | 15/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.input_layernorm.weight]Loading weights:   5%|▍         | 16/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.down_proj.weight]  Loading weights:   5%|▍         | 16/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.down_proj.weight]Loading weights:   5%|▌         | 17/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]Loading weights:   5%|▌         | 17/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]Loading weights:   5%|▌         | 18/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.up_proj.weight]  Loading weights:   5%|▌         | 18/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.mlp.up_proj.weight]Loading weights:   6%|▌         | 19/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]Loading weights:   6%|▌         | 19/339 [00:00<00:49,  6.51it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]Loading weights:   6%|▌         | 20/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.k_proj.bias]          Loading weights:   6%|▌         | 20/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.k_proj.bias]Loading weights:   6%|▌         | 21/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]Loading weights:   6%|▌         | 21/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]Loading weights:   6%|▋         | 22/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]Loading weights:   6%|▋         | 22/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]Loading weights:   7%|▋         | 23/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.q_proj.bias]  Loading weights:   7%|▋         | 23/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.q_proj.bias]Loading weights:   7%|▋         | 24/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]Loading weights:   7%|▋         | 24/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]Loading weights:   7%|▋         | 25/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.v_proj.bias]  Loading weights:   7%|▋         | 25/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.v_proj.bias]Loading weights:   8%|▊         | 26/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]Loading weights:   8%|▊         | 26/339 [00:00<00:48,  6.51it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]Loading weights:   8%|▊         | 27/339 [00:00<00:47,  6.51it/s, Materializing param=model.layers.2.input_layernorm.weight] Loading weights:   8%|▊         | 27/339 [00:00<00:47,  6.51it/s, Materializing param=model.layers.2.input_layernorm.weight]Loading weights:   8%|▊         | 28/339 [00:00<00:47,  6.51it/s, Materializing param=model.layers.2.mlp.down_proj.weight]  Loading weights:   8%|▊         | 28/339 [00:00<00:47,  6.51it/s, Materializing param=model.layers.2.mlp.down_proj.weight]Loading weights:   9%|▊         | 29/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.mlp.down_proj.weight]Loading weights:   9%|▊         | 29/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]Loading weights:   9%|▊         | 29/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]Loading weights:   9%|▉         | 30/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.mlp.up_proj.weight]  Loading weights:   9%|▉         | 30/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.mlp.up_proj.weight]Loading weights:   9%|▉         | 31/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]Loading weights:   9%|▉         | 31/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]Loading weights:   9%|▉         | 32/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.k_proj.bias]          Loading weights:   9%|▉         | 32/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.k_proj.bias]Loading weights:  10%|▉         | 33/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]Loading weights:  10%|▉         | 33/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]Loading weights:  10%|█         | 34/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]Loading weights:  10%|█         | 34/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]Loading weights:  10%|█         | 35/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.q_proj.bias]  Loading weights:  10%|█         | 35/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.q_proj.bias]Loading weights:  11%|█         | 36/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]Loading weights:  11%|█         | 36/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]Loading weights:  11%|█         | 37/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.v_proj.bias]  Loading weights:  11%|█         | 37/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.v_proj.bias]Loading weights:  11%|█         | 38/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]Loading weights:  11%|█         | 38/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]Loading weights:  12%|█▏        | 39/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.input_layernorm.weight] Loading weights:  12%|█▏        | 39/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.input_layernorm.weight]Loading weights:  12%|█▏        | 40/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.down_proj.weight]  Loading weights:  12%|█▏        | 40/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.down_proj.weight]Loading weights:  12%|█▏        | 41/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]Loading weights:  12%|█▏        | 41/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]Loading weights:  12%|█▏        | 42/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.up_proj.weight]  Loading weights:  12%|█▏        | 42/339 [00:00<00:03, 83.79it/s, Materializing param=model.layers.3.mlp.up_proj.weight]Loading weights:  13%|█▎        | 43/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.mlp.up_proj.weight]Loading weights:  13%|█▎        | 43/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]Loading weights:  13%|█▎        | 43/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]Loading weights:  13%|█▎        | 44/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.k_proj.bias]          Loading weights:  13%|█▎        | 44/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.k_proj.bias]Loading weights:  13%|█▎        | 45/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]Loading weights:  13%|█▎        | 45/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]Loading weights:  14%|█▎        | 46/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]Loading weights:  14%|█▎        | 46/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]Loading weights:  14%|█▍        | 47/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.q_proj.bias]  Loading weights:  14%|█▍        | 47/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.q_proj.bias]Loading weights:  14%|█▍        | 48/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]Loading weights:  14%|█▍        | 48/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]Loading weights:  14%|█▍        | 49/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.v_proj.bias]  Loading weights:  14%|█▍        | 49/339 [00:00<00:03, 96.63it/s, Materializing param=model.layers.3.self_attn.v_proj.bias]Loading weights:  15%|█▍        | 50/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]Loading weights:  15%|█▍        | 50/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]Loading weights:  15%|█▌        | 51/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.input_layernorm.weight] Loading weights:  15%|█▌        | 51/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.input_layernorm.weight]Loading weights:  15%|█▌        | 52/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.down_proj.weight]  Loading weights:  15%|█▌        | 52/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.down_proj.weight]Loading weights:  16%|█▌        | 53/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]Loading weights:  16%|█▌        | 53/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]Loading weights:  16%|█▌        | 54/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.up_proj.weight]  Loading weights:  16%|█▌        | 54/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.mlp.up_proj.weight]Loading weights:  16%|█▌        | 55/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]Loading weights:  16%|█▌        | 55/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]Loading weights:  17%|█▋        | 56/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.k_proj.bias]          Loading weights:  17%|█▋        | 56/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.k_proj.bias]Loading weights:  17%|█▋        | 57/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]Loading weights:  17%|█▋        | 57/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]Loading weights:  17%|█▋        | 58/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]Loading weights:  17%|█▋        | 58/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]Loading weights:  17%|█▋        | 59/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.q_proj.bias]  Loading weights:  17%|█▋        | 59/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.q_proj.bias]Loading weights:  18%|█▊        | 60/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]Loading weights:  18%|█▊        | 60/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]Loading weights:  18%|█▊        | 61/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.v_proj.bias]  Loading weights:  18%|█▊        | 61/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.v_proj.bias]Loading weights:  18%|█▊        | 62/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]Loading weights:  18%|█▊        | 62/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]Loading weights:  19%|█▊        | 63/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.5.input_layernorm.weight] Loading weights:  19%|█▊        | 63/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.5.input_layernorm.weight]Loading weights:  19%|█▉        | 64/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.5.mlp.down_proj.weight]  Loading weights:  19%|█▉        | 64/339 [00:00<00:02, 96.63it/s, Materializing param=model.layers.5.mlp.down_proj.weight]Loading weights:  19%|█▉        | 65/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.mlp.down_proj.weight]Loading weights:  19%|█▉        | 65/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]Loading weights:  19%|█▉        | 65/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]Loading weights:  19%|█▉        | 66/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.mlp.up_proj.weight]  Loading weights:  19%|█▉        | 66/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.mlp.up_proj.weight]Loading weights:  20%|█▉        | 67/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]Loading weights:  20%|█▉        | 67/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]Loading weights:  20%|██        | 68/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.k_proj.bias]          Loading weights:  20%|██        | 68/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.k_proj.bias]Loading weights:  20%|██        | 69/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]Loading weights:  20%|██        | 69/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]Loading weights:  21%|██        | 70/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]Loading weights:  21%|██        | 70/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]Loading weights:  21%|██        | 71/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.q_proj.bias]  Loading weights:  21%|██        | 71/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.q_proj.bias]Loading weights:  21%|██        | 72/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]Loading weights:  21%|██        | 72/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]Loading weights:  22%|██▏       | 73/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.v_proj.bias]  Loading weights:  22%|██▏       | 73/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.v_proj.bias]Loading weights:  22%|██▏       | 74/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]Loading weights:  22%|██▏       | 74/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]Loading weights:  22%|██▏       | 75/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.input_layernorm.weight] Loading weights:  22%|██▏       | 75/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.input_layernorm.weight]Loading weights:  22%|██▏       | 76/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.down_proj.weight]  Loading weights:  22%|██▏       | 76/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.down_proj.weight]Loading weights:  23%|██▎       | 77/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]Loading weights:  23%|██▎       | 77/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]Loading weights:  23%|██▎       | 78/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.up_proj.weight]  Loading weights:  23%|██▎       | 78/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.mlp.up_proj.weight]Loading weights:  23%|██▎       | 79/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]Loading weights:  23%|██▎       | 79/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]Loading weights:  24%|██▎       | 80/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.self_attn.k_proj.bias]          Loading weights:  24%|██▎       | 80/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.self_attn.k_proj.bias]Loading weights:  24%|██▍       | 81/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]Loading weights:  24%|██▍       | 81/339 [00:00<00:02, 118.90it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]Loading weights:  24%|██▍       | 82/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]Loading weights:  24%|██▍       | 82/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]Loading weights:  24%|██▍       | 82/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]Loading weights:  24%|██▍       | 83/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.q_proj.bias]  Loading weights:  24%|██▍       | 83/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.q_proj.bias]Loading weights:  25%|██▍       | 84/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]Loading weights:  25%|██▍       | 84/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]Loading weights:  25%|██▌       | 85/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.v_proj.bias]  Loading weights:  25%|██▌       | 85/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.v_proj.bias]Loading weights:  25%|██▌       | 86/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]Loading weights:  25%|██▌       | 86/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]Loading weights:  26%|██▌       | 87/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.input_layernorm.weight] Loading weights:  26%|██▌       | 87/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.input_layernorm.weight]Loading weights:  26%|██▌       | 88/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.down_proj.weight]  Loading weights:  26%|██▌       | 88/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.down_proj.weight]Loading weights:  26%|██▋       | 89/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]Loading weights:  26%|██▋       | 89/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]Loading weights:  27%|██▋       | 90/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.up_proj.weight]  Loading weights:  27%|██▋       | 90/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.mlp.up_proj.weight]Loading weights:  27%|██▋       | 91/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]Loading weights:  27%|██▋       | 91/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]Loading weights:  27%|██▋       | 92/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.k_proj.bias]          Loading weights:  27%|██▋       | 92/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.k_proj.bias]Loading weights:  27%|██▋       | 93/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]Loading weights:  27%|██▋       | 93/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]Loading weights:  28%|██▊       | 94/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]Loading weights:  28%|██▊       | 94/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]Loading weights:  28%|██▊       | 95/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.q_proj.bias]  Loading weights:  28%|██▊       | 95/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.q_proj.bias]Loading weights:  28%|██▊       | 96/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]Loading weights:  28%|██▊       | 96/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]Loading weights:  29%|██▊       | 97/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.v_proj.bias]  Loading weights:  29%|██▊       | 97/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.v_proj.bias]Loading weights:  29%|██▉       | 98/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]Loading weights:  29%|██▉       | 98/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]Loading weights:  29%|██▉       | 99/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.8.input_layernorm.weight] Loading weights:  29%|██▉       | 99/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.8.input_layernorm.weight]Loading weights:  29%|██▉       | 100/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.8.mlp.down_proj.weight] Loading weights:  29%|██▉       | 100/339 [00:00<00:01, 132.68it/s, Materializing param=model.layers.8.mlp.down_proj.weight]Loading weights:  30%|██▉       | 101/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.mlp.down_proj.weight]Loading weights:  30%|██▉       | 101/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]Loading weights:  30%|██▉       | 101/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]Loading weights:  30%|███       | 102/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.mlp.up_proj.weight]  Loading weights:  30%|███       | 102/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.mlp.up_proj.weight]Loading weights:  30%|███       | 103/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]Loading weights:  30%|███       | 103/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]Loading weights:  31%|███       | 104/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.k_proj.bias]          Loading weights:  31%|███       | 104/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.k_proj.bias]Loading weights:  31%|███       | 105/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]Loading weights:  31%|███       | 105/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]Loading weights:  31%|███▏      | 106/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]Loading weights:  31%|███▏      | 106/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]Loading weights:  32%|███▏      | 107/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.q_proj.bias]  Loading weights:  32%|███▏      | 107/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.q_proj.bias]Loading weights:  32%|███▏      | 108/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]Loading weights:  32%|███▏      | 108/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]Loading weights:  32%|███▏      | 109/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.v_proj.bias]  Loading weights:  32%|███▏      | 109/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.v_proj.bias]Loading weights:  32%|███▏      | 110/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]Loading weights:  32%|███▏      | 110/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]Loading weights:  33%|███▎      | 111/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.9.input_layernorm.weight] Loading weights:  33%|███▎      | 111/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.9.input_layernorm.weight]Loading weights:  33%|███▎      | 112/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.down_proj.weight]  Loading weights:  33%|███▎      | 112/339 [00:00<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.down_proj.weight]Loading weights:  33%|███▎      | 113/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]Loading weights:  33%|███▎      | 113/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]Loading weights:  34%|███▎      | 114/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.up_proj.weight]  Loading weights:  34%|███▎      | 114/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.mlp.up_proj.weight]Loading weights:  34%|███▍      | 115/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]Loading weights:  34%|███▍      | 115/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]Loading weights:  34%|███▍      | 116/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.self_attn.k_proj.bias]          Loading weights:  34%|███▍      | 116/339 [00:01<00:01, 139.23it/s, Materializing param=model.layers.9.self_attn.k_proj.bias]Loading weights:  35%|███▍      | 117/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.k_proj.bias]Loading weights:  35%|███▍      | 117/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]Loading weights:  35%|███▍      | 117/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]Loading weights:  35%|███▍      | 118/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]Loading weights:  35%|███▍      | 118/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]Loading weights:  35%|███▌      | 119/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.q_proj.bias]  Loading weights:  35%|███▌      | 119/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.q_proj.bias]Loading weights:  35%|███▌      | 120/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]Loading weights:  35%|███▌      | 120/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]Loading weights:  36%|███▌      | 121/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.v_proj.bias]  Loading weights:  36%|███▌      | 121/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.v_proj.bias]Loading weights:  36%|███▌      | 122/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]Loading weights:  36%|███▌      | 122/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]Loading weights:  36%|███▋      | 123/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.input_layernorm.weight]Loading weights:  36%|███▋      | 123/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.input_layernorm.weight]Loading weights:  37%|███▋      | 124/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.down_proj.weight]  Loading weights:  37%|███▋      | 124/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.down_proj.weight]Loading weights:  37%|███▋      | 125/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]Loading weights:  37%|███▋      | 125/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]Loading weights:  37%|███▋      | 126/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.up_proj.weight]  Loading weights:  37%|███▋      | 126/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.mlp.up_proj.weight]Loading weights:  37%|███▋      | 127/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]Loading weights:  37%|███▋      | 127/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]Loading weights:  38%|███▊      | 128/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.k_proj.bias]          Loading weights:  38%|███▊      | 128/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.k_proj.bias]Loading weights:  38%|███▊      | 129/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]Loading weights:  38%|███▊      | 129/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]Loading weights:  38%|███▊      | 130/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]Loading weights:  38%|███▊      | 130/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]Loading weights:  39%|███▊      | 131/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.q_proj.bias]  Loading weights:  39%|███▊      | 131/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.q_proj.bias]Loading weights:  39%|███▉      | 132/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]Loading weights:  39%|███▉      | 132/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]Loading weights:  39%|███▉      | 133/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.v_proj.bias]  Loading weights:  39%|███▉      | 133/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.v_proj.bias]Loading weights:  40%|███▉      | 134/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]Loading weights:  40%|███▉      | 134/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]Loading weights:  40%|███▉      | 135/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.11.input_layernorm.weight] Loading weights:  40%|███▉      | 135/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.11.input_layernorm.weight]Loading weights:  40%|████      | 136/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.11.mlp.down_proj.weight]  Loading weights:  40%|████      | 136/339 [00:01<00:01, 140.34it/s, Materializing param=model.layers.11.mlp.down_proj.weight]Loading weights:  40%|████      | 137/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.mlp.down_proj.weight]Loading weights:  40%|████      | 137/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]Loading weights:  40%|████      | 137/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]Loading weights:  41%|████      | 138/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.mlp.up_proj.weight]  Loading weights:  41%|████      | 138/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.mlp.up_proj.weight]Loading weights:  41%|████      | 139/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]Loading weights:  41%|████      | 139/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]Loading weights:  41%|████▏     | 140/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.k_proj.bias]          Loading weights:  41%|████▏     | 140/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.k_proj.bias]Loading weights:  42%|████▏     | 141/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]Loading weights:  42%|████▏     | 141/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]Loading weights:  42%|████▏     | 142/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]Loading weights:  42%|████▏     | 142/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]Loading weights:  42%|████▏     | 143/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.q_proj.bias]  Loading weights:  42%|████▏     | 143/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.q_proj.bias]Loading weights:  42%|████▏     | 144/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]Loading weights:  42%|████▏     | 144/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]Loading weights:  43%|████▎     | 145/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.v_proj.bias]  Loading weights:  43%|████▎     | 145/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.v_proj.bias]Loading weights:  43%|████▎     | 146/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]Loading weights:  43%|████▎     | 146/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]Loading weights:  43%|████▎     | 147/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.input_layernorm.weight] Loading weights:  43%|████▎     | 147/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.input_layernorm.weight]Loading weights:  44%|████▎     | 148/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.down_proj.weight]  Loading weights:  44%|████▎     | 148/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.down_proj.weight]Loading weights:  44%|████▍     | 149/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]Loading weights:  44%|████▍     | 149/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]Loading weights:  44%|████▍     | 150/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.up_proj.weight]  Loading weights:  44%|████▍     | 150/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.mlp.up_proj.weight]Loading weights:  45%|████▍     | 151/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]Loading weights:  45%|████▍     | 151/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]Loading weights:  45%|████▍     | 152/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.self_attn.k_proj.bias]          Loading weights:  45%|████▍     | 152/339 [00:01<00:01, 146.38it/s, Materializing param=model.layers.12.self_attn.k_proj.bias]Loading weights:  45%|████▌     | 153/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.k_proj.bias]Loading weights:  45%|████▌     | 153/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]Loading weights:  45%|████▌     | 153/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]Loading weights:  45%|████▌     | 154/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]Loading weights:  45%|████▌     | 154/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]Loading weights:  46%|████▌     | 155/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.q_proj.bias]  Loading weights:  46%|████▌     | 155/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.q_proj.bias]Loading weights:  46%|████▌     | 156/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]Loading weights:  46%|████▌     | 156/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]Loading weights:  46%|████▋     | 157/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.v_proj.bias]  Loading weights:  46%|████▋     | 157/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.v_proj.bias]Loading weights:  47%|████▋     | 158/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]Loading weights:  47%|████▋     | 158/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]Loading weights:  47%|████▋     | 159/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.input_layernorm.weight] Loading weights:  47%|████▋     | 159/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.input_layernorm.weight]Loading weights:  47%|████▋     | 160/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.down_proj.weight]  Loading weights:  47%|████▋     | 160/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.down_proj.weight]Loading weights:  47%|████▋     | 161/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]Loading weights:  47%|████▋     | 161/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]Loading weights:  48%|████▊     | 162/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.up_proj.weight]  Loading weights:  48%|████▊     | 162/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.mlp.up_proj.weight]Loading weights:  48%|████▊     | 163/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]Loading weights:  48%|████▊     | 163/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]Loading weights:  48%|████▊     | 164/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.k_proj.bias]          Loading weights:  48%|████▊     | 164/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.k_proj.bias]Loading weights:  49%|████▊     | 165/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]Loading weights:  49%|████▊     | 165/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]Loading weights:  49%|████▉     | 166/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]Loading weights:  49%|████▉     | 166/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]Loading weights:  49%|████▉     | 167/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.q_proj.bias]  Loading weights:  49%|████▉     | 167/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.q_proj.bias]Loading weights:  50%|████▉     | 168/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]Loading weights:  50%|████▉     | 168/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]Loading weights:  50%|████▉     | 169/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.v_proj.bias]  Loading weights:  50%|████▉     | 169/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.v_proj.bias]Loading weights:  50%|█████     | 170/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]Loading weights:  50%|█████     | 170/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]Loading weights:  50%|█████     | 171/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.14.input_layernorm.weight] Loading weights:  50%|█████     | 171/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.14.input_layernorm.weight]Loading weights:  51%|█████     | 172/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.14.mlp.down_proj.weight]  Loading weights:  51%|█████     | 172/339 [00:01<00:01, 141.17it/s, Materializing param=model.layers.14.mlp.down_proj.weight]Loading weights:  51%|█████     | 173/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.mlp.down_proj.weight]Loading weights:  51%|█████     | 173/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]Loading weights:  51%|█████     | 173/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]Loading weights:  51%|█████▏    | 174/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.mlp.up_proj.weight]  Loading weights:  51%|█████▏    | 174/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.mlp.up_proj.weight]Loading weights:  52%|█████▏    | 175/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]Loading weights:  52%|█████▏    | 175/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]Loading weights:  52%|█████▏    | 176/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.k_proj.bias]          Loading weights:  52%|█████▏    | 176/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.k_proj.bias]Loading weights:  52%|█████▏    | 177/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]Loading weights:  52%|█████▏    | 177/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]Loading weights:  53%|█████▎    | 178/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]Loading weights:  53%|█████▎    | 178/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]Loading weights:  53%|█████▎    | 179/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.q_proj.bias]  Loading weights:  53%|█████▎    | 179/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.q_proj.bias]Loading weights:  53%|█████▎    | 180/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]Loading weights:  53%|█████▎    | 180/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]Loading weights:  53%|█████▎    | 181/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.v_proj.bias]  Loading weights:  53%|█████▎    | 181/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.v_proj.bias]Loading weights:  54%|█████▎    | 182/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]Loading weights:  54%|█████▎    | 182/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]Loading weights:  54%|█████▍    | 183/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.input_layernorm.weight] Loading weights:  54%|█████▍    | 183/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.input_layernorm.weight]Loading weights:  54%|█████▍    | 184/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.mlp.down_proj.weight]  Loading weights:  54%|█████▍    | 184/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.mlp.down_proj.weight]Loading weights:  55%|█████▍    | 185/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]Loading weights:  55%|█████▍    | 185/339 [00:01<00:01, 153.13it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]Loading weights:  55%|█████▍    | 186/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.mlp.up_proj.weight]  Loading weights:  55%|█████▍    | 186/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.mlp.up_proj.weight]Loading weights:  55%|█████▌    | 187/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]Loading weights:  55%|█████▌    | 187/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]Loading weights:  55%|█████▌    | 188/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.self_attn.k_proj.bias]          Loading weights:  55%|█████▌    | 188/339 [00:01<00:00, 153.13it/s, Materializing param=model.layers.15.self_attn.k_proj.bias]Loading weights:  56%|█████▌    | 189/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.k_proj.bias]Loading weights:  56%|█████▌    | 189/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]Loading weights:  56%|█████▌    | 189/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]Loading weights:  56%|█████▌    | 190/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]Loading weights:  56%|█████▌    | 190/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]Loading weights:  56%|█████▋    | 191/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.q_proj.bias]  Loading weights:  56%|█████▋    | 191/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.q_proj.bias]Loading weights:  57%|█████▋    | 192/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]Loading weights:  57%|█████▋    | 192/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]Loading weights:  57%|█████▋    | 193/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.v_proj.bias]  Loading weights:  57%|█████▋    | 193/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.v_proj.bias]Loading weights:  57%|█████▋    | 194/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]Loading weights:  57%|█████▋    | 194/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]Loading weights:  58%|█████▊    | 195/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.input_layernorm.weight] Loading weights:  58%|█████▊    | 195/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.input_layernorm.weight]Loading weights:  58%|█████▊    | 196/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.down_proj.weight]  Loading weights:  58%|█████▊    | 196/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.down_proj.weight]Loading weights:  58%|█████▊    | 197/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]Loading weights:  58%|█████▊    | 197/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]Loading weights:  58%|█████▊    | 198/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.up_proj.weight]  Loading weights:  58%|█████▊    | 198/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.mlp.up_proj.weight]Loading weights:  59%|█████▊    | 199/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]Loading weights:  59%|█████▊    | 199/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]Loading weights:  59%|█████▉    | 200/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.k_proj.bias]          Loading weights:  59%|█████▉    | 200/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.k_proj.bias]Loading weights:  59%|█████▉    | 201/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]Loading weights:  59%|█████▉    | 201/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]Loading weights:  60%|█████▉    | 202/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]Loading weights:  60%|█████▉    | 202/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]Loading weights:  60%|█████▉    | 203/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.q_proj.bias]  Loading weights:  60%|█████▉    | 203/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.q_proj.bias]Loading weights:  60%|██████    | 204/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]Loading weights:  60%|██████    | 204/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]Loading weights:  60%|██████    | 205/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.v_proj.bias]  Loading weights:  60%|██████    | 205/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.v_proj.bias]Loading weights:  61%|██████    | 206/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]Loading weights:  61%|██████    | 206/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]Loading weights:  61%|██████    | 207/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.17.input_layernorm.weight] Loading weights:  61%|██████    | 207/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.17.input_layernorm.weight]Loading weights:  61%|██████▏   | 208/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.17.mlp.down_proj.weight]  Loading weights:  61%|██████▏   | 208/339 [00:01<00:00, 150.22it/s, Materializing param=model.layers.17.mlp.down_proj.weight]Loading weights:  62%|██████▏   | 209/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.mlp.down_proj.weight]Loading weights:  62%|██████▏   | 209/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]Loading weights:  62%|██████▏   | 209/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]Loading weights:  62%|██████▏   | 210/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.mlp.up_proj.weight]  Loading weights:  62%|██████▏   | 210/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.mlp.up_proj.weight]Loading weights:  62%|██████▏   | 211/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]Loading weights:  62%|██████▏   | 211/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]Loading weights:  63%|██████▎   | 212/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.k_proj.bias]          Loading weights:  63%|██████▎   | 212/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.k_proj.bias]Loading weights:  63%|██████▎   | 213/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]Loading weights:  63%|██████▎   | 213/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]Loading weights:  63%|██████▎   | 214/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]Loading weights:  63%|██████▎   | 214/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]Loading weights:  63%|██████▎   | 215/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.q_proj.bias]  Loading weights:  63%|██████▎   | 215/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.q_proj.bias]Loading weights:  64%|██████▎   | 216/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]Loading weights:  64%|██████▎   | 216/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]Loading weights:  64%|██████▍   | 217/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.v_proj.bias]  Loading weights:  64%|██████▍   | 217/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.v_proj.bias]Loading weights:  64%|██████▍   | 218/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]Loading weights:  64%|██████▍   | 218/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]Loading weights:  65%|██████▍   | 219/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.input_layernorm.weight] Loading weights:  65%|██████▍   | 219/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.input_layernorm.weight]Loading weights:  65%|██████▍   | 220/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.down_proj.weight]  Loading weights:  65%|██████▍   | 220/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.down_proj.weight]Loading weights:  65%|██████▌   | 221/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]Loading weights:  65%|██████▌   | 221/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]Loading weights:  65%|██████▌   | 222/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.up_proj.weight]  Loading weights:  65%|██████▌   | 222/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.mlp.up_proj.weight]Loading weights:  66%|██████▌   | 223/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]Loading weights:  66%|██████▌   | 223/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]Loading weights:  66%|██████▌   | 224/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.self_attn.k_proj.bias]          Loading weights:  66%|██████▌   | 224/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.self_attn.k_proj.bias]Loading weights:  66%|██████▋   | 225/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]Loading weights:  66%|██████▋   | 225/339 [00:01<00:00, 148.49it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]Loading weights:  67%|██████▋   | 226/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]Loading weights:  67%|██████▋   | 226/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]Loading weights:  67%|██████▋   | 226/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]Loading weights:  67%|██████▋   | 227/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.q_proj.bias]  Loading weights:  67%|██████▋   | 227/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.q_proj.bias]Loading weights:  67%|██████▋   | 228/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]Loading weights:  67%|██████▋   | 228/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]Loading weights:  68%|██████▊   | 229/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.v_proj.bias]  Loading weights:  68%|██████▊   | 229/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.v_proj.bias]Loading weights:  68%|██████▊   | 230/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]Loading weights:  68%|██████▊   | 230/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]Loading weights:  68%|██████▊   | 231/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.input_layernorm.weight] Loading weights:  68%|██████▊   | 231/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.input_layernorm.weight]Loading weights:  68%|██████▊   | 232/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.down_proj.weight]  Loading weights:  68%|██████▊   | 232/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.down_proj.weight]Loading weights:  69%|██████▊   | 233/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]Loading weights:  69%|██████▊   | 233/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]Loading weights:  69%|██████▉   | 234/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.up_proj.weight]  Loading weights:  69%|██████▉   | 234/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.mlp.up_proj.weight]Loading weights:  69%|██████▉   | 235/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]Loading weights:  69%|██████▉   | 235/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]Loading weights:  70%|██████▉   | 236/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.k_proj.bias]          Loading weights:  70%|██████▉   | 236/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.k_proj.bias]Loading weights:  70%|██████▉   | 237/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]Loading weights:  70%|██████▉   | 237/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]Loading weights:  70%|███████   | 238/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]Loading weights:  70%|███████   | 238/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]Loading weights:  71%|███████   | 239/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.q_proj.bias]  Loading weights:  71%|███████   | 239/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.q_proj.bias]Loading weights:  71%|███████   | 240/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]Loading weights:  71%|███████   | 240/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]Loading weights:  71%|███████   | 241/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.v_proj.bias]  Loading weights:  71%|███████   | 241/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.v_proj.bias]Loading weights:  71%|███████▏  | 242/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]Loading weights:  71%|███████▏  | 242/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]Loading weights:  72%|███████▏  | 243/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.20.input_layernorm.weight] Loading weights:  72%|███████▏  | 243/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.20.input_layernorm.weight]Loading weights:  72%|███████▏  | 244/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.20.mlp.down_proj.weight]  Loading weights:  72%|███████▏  | 244/339 [00:01<00:00, 151.75it/s, Materializing param=model.layers.20.mlp.down_proj.weight]Loading weights:  72%|███████▏  | 245/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.mlp.down_proj.weight]Loading weights:  72%|███████▏  | 245/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]Loading weights:  72%|███████▏  | 245/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]Loading weights:  73%|███████▎  | 246/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.mlp.up_proj.weight]  Loading weights:  73%|███████▎  | 246/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.mlp.up_proj.weight]Loading weights:  73%|███████▎  | 247/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]Loading weights:  73%|███████▎  | 247/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]Loading weights:  73%|███████▎  | 248/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.k_proj.bias]          Loading weights:  73%|███████▎  | 248/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.k_proj.bias]Loading weights:  73%|███████▎  | 249/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]Loading weights:  73%|███████▎  | 249/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]Loading weights:  74%|███████▎  | 250/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]Loading weights:  74%|███████▎  | 250/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]Loading weights:  74%|███████▍  | 251/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.q_proj.bias]  Loading weights:  74%|███████▍  | 251/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.q_proj.bias]Loading weights:  74%|███████▍  | 252/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]Loading weights:  74%|███████▍  | 252/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]Loading weights:  75%|███████▍  | 253/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.v_proj.bias]  Loading weights:  75%|███████▍  | 253/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.v_proj.bias]Loading weights:  75%|███████▍  | 254/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]Loading weights:  75%|███████▍  | 254/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]Loading weights:  75%|███████▌  | 255/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.input_layernorm.weight] Loading weights:  75%|███████▌  | 255/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.input_layernorm.weight]Loading weights:  76%|███████▌  | 256/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.down_proj.weight]  Loading weights:  76%|███████▌  | 256/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.down_proj.weight]Loading weights:  76%|███████▌  | 257/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]Loading weights:  76%|███████▌  | 257/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]Loading weights:  76%|███████▌  | 258/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.up_proj.weight]  Loading weights:  76%|███████▌  | 258/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.mlp.up_proj.weight]Loading weights:  76%|███████▋  | 259/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]Loading weights:  76%|███████▋  | 259/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]Loading weights:  77%|███████▋  | 260/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.self_attn.k_proj.bias]          Loading weights:  77%|███████▋  | 260/339 [00:01<00:00, 157.07it/s, Materializing param=model.layers.21.self_attn.k_proj.bias]Loading weights:  77%|███████▋  | 261/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.k_proj.bias]Loading weights:  77%|███████▋  | 261/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]Loading weights:  77%|███████▋  | 261/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]Loading weights:  77%|███████▋  | 262/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]Loading weights:  77%|███████▋  | 262/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]Loading weights:  78%|███████▊  | 263/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.q_proj.bias]  Loading weights:  78%|███████▊  | 263/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.q_proj.bias]Loading weights:  78%|███████▊  | 264/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]Loading weights:  78%|███████▊  | 264/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]Loading weights:  78%|███████▊  | 265/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.v_proj.bias]  Loading weights:  78%|███████▊  | 265/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.v_proj.bias]Loading weights:  78%|███████▊  | 266/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]Loading weights:  78%|███████▊  | 266/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]Loading weights:  79%|███████▉  | 267/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.22.input_layernorm.weight] Loading weights:  79%|███████▉  | 267/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.22.input_layernorm.weight]Loading weights:  79%|███████▉  | 268/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.down_proj.weight]  Loading weights:  79%|███████▉  | 268/339 [00:01<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.down_proj.weight]Loading weights:  79%|███████▉  | 269/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]Loading weights:  79%|███████▉  | 269/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]Loading weights:  80%|███████▉  | 270/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.up_proj.weight]  Loading weights:  80%|███████▉  | 270/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.mlp.up_proj.weight]Loading weights:  80%|███████▉  | 271/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]Loading weights:  80%|███████▉  | 271/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]Loading weights:  80%|████████  | 272/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.k_proj.bias]          Loading weights:  80%|████████  | 272/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.k_proj.bias]Loading weights:  81%|████████  | 273/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]Loading weights:  81%|████████  | 273/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]Loading weights:  81%|████████  | 274/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]Loading weights:  81%|████████  | 274/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]Loading weights:  81%|████████  | 275/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.q_proj.bias]  Loading weights:  81%|████████  | 275/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.q_proj.bias]Loading weights:  81%|████████▏ | 276/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]Loading weights:  81%|████████▏ | 276/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]Loading weights:  82%|████████▏ | 277/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.v_proj.bias]  Loading weights:  82%|████████▏ | 277/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.v_proj.bias]Loading weights:  82%|████████▏ | 278/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]Loading weights:  82%|████████▏ | 278/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]Loading weights:  82%|████████▏ | 279/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.23.input_layernorm.weight] Loading weights:  82%|████████▏ | 279/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.23.input_layernorm.weight]Loading weights:  83%|████████▎ | 280/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.23.mlp.down_proj.weight]  Loading weights:  83%|████████▎ | 280/339 [00:02<00:00, 148.55it/s, Materializing param=model.layers.23.mlp.down_proj.weight]Loading weights:  83%|████████▎ | 281/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.mlp.down_proj.weight]Loading weights:  83%|████████▎ | 281/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]Loading weights:  83%|████████▎ | 281/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]Loading weights:  83%|████████▎ | 282/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.mlp.up_proj.weight]  Loading weights:  83%|████████▎ | 282/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.mlp.up_proj.weight]Loading weights:  83%|████████▎ | 283/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]Loading weights:  83%|████████▎ | 283/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]Loading weights:  84%|████████▍ | 284/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.k_proj.bias]          Loading weights:  84%|████████▍ | 284/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.k_proj.bias]Loading weights:  84%|████████▍ | 285/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]Loading weights:  84%|████████▍ | 285/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]Loading weights:  84%|████████▍ | 286/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]Loading weights:  84%|████████▍ | 286/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]Loading weights:  85%|████████▍ | 287/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.q_proj.bias]  Loading weights:  85%|████████▍ | 287/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.q_proj.bias]Loading weights:  85%|████████▍ | 288/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]Loading weights:  85%|████████▍ | 288/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]Loading weights:  85%|████████▌ | 289/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.v_proj.bias]  Loading weights:  85%|████████▌ | 289/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.v_proj.bias]Loading weights:  86%|████████▌ | 290/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]Loading weights:  86%|████████▌ | 290/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]Loading weights:  86%|████████▌ | 291/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.input_layernorm.weight] Loading weights:  86%|████████▌ | 291/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.input_layernorm.weight]Loading weights:  86%|████████▌ | 292/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.down_proj.weight]  Loading weights:  86%|████████▌ | 292/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.down_proj.weight]Loading weights:  86%|████████▋ | 293/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.gate_proj.weight]Loading weights:  86%|████████▋ | 293/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.gate_proj.weight]Loading weights:  87%|████████▋ | 294/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.up_proj.weight]  Loading weights:  87%|████████▋ | 294/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.mlp.up_proj.weight]Loading weights:  87%|████████▋ | 295/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.post_attention_layernorm.weight]Loading weights:  87%|████████▋ | 295/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.post_attention_layernorm.weight]Loading weights:  87%|████████▋ | 296/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.self_attn.k_proj.bias]          Loading weights:  87%|████████▋ | 296/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.self_attn.k_proj.bias]Loading weights:  88%|████████▊ | 297/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.self_attn.k_proj.weight]Loading weights:  88%|████████▊ | 297/339 [00:02<00:00, 158.87it/s, Materializing param=model.layers.24.self_attn.k_proj.weight]Loading weights:  88%|████████▊ | 298/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.k_proj.weight]Loading weights:  88%|████████▊ | 298/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.o_proj.weight]Loading weights:  88%|████████▊ | 298/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.o_proj.weight]Loading weights:  88%|████████▊ | 299/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.q_proj.bias]  Loading weights:  88%|████████▊ | 299/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.q_proj.bias]Loading weights:  88%|████████▊ | 300/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.q_proj.weight]Loading weights:  88%|████████▊ | 300/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.q_proj.weight]Loading weights:  89%|████████▉ | 301/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.v_proj.bias]  Loading weights:  89%|████████▉ | 301/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.v_proj.bias]Loading weights:  89%|████████▉ | 302/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.v_proj.weight]Loading weights:  89%|████████▉ | 302/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.24.self_attn.v_proj.weight]Loading weights:  89%|████████▉ | 303/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.input_layernorm.weight] Loading weights:  89%|████████▉ | 303/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.input_layernorm.weight]Loading weights:  90%|████████▉ | 304/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.down_proj.weight]  Loading weights:  90%|████████▉ | 304/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.down_proj.weight]Loading weights:  90%|████████▉ | 305/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.gate_proj.weight]Loading weights:  90%|████████▉ | 305/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.gate_proj.weight]Loading weights:  90%|█████████ | 306/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.up_proj.weight]  Loading weights:  90%|█████████ | 306/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.mlp.up_proj.weight]Loading weights:  91%|█████████ | 307/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.post_attention_layernorm.weight]Loading weights:  91%|█████████ | 307/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.post_attention_layernorm.weight]Loading weights:  91%|█████████ | 308/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.k_proj.bias]          Loading weights:  91%|█████████ | 308/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.k_proj.bias]Loading weights:  91%|█████████ | 309/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.k_proj.weight]Loading weights:  91%|█████████ | 309/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.k_proj.weight]Loading weights:  91%|█████████▏| 310/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.o_proj.weight]Loading weights:  91%|█████████▏| 310/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.o_proj.weight]Loading weights:  92%|█████████▏| 311/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.q_proj.bias]  Loading weights:  92%|█████████▏| 311/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.q_proj.bias]Loading weights:  92%|█████████▏| 312/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.q_proj.weight]Loading weights:  92%|█████████▏| 312/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.q_proj.weight]Loading weights:  92%|█████████▏| 313/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.v_proj.bias]  Loading weights:  92%|█████████▏| 313/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.v_proj.bias]Loading weights:  93%|█████████▎| 314/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.v_proj.weight]Loading weights:  93%|█████████▎| 314/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.25.self_attn.v_proj.weight]Loading weights:  93%|█████████▎| 315/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.26.input_layernorm.weight] Loading weights:  93%|█████████▎| 315/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.26.input_layernorm.weight]Loading weights:  93%|█████████▎| 316/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.26.mlp.down_proj.weight]  Loading weights:  93%|█████████▎| 316/339 [00:02<00:00, 152.41it/s, Materializing param=model.layers.26.mlp.down_proj.weight]Loading weights:  94%|█████████▎| 317/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.mlp.down_proj.weight]Loading weights:  94%|█████████▎| 317/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.mlp.gate_proj.weight]Loading weights:  94%|█████████▎| 317/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.mlp.gate_proj.weight]Loading weights:  94%|█████████▍| 318/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.mlp.up_proj.weight]  Loading weights:  94%|█████████▍| 318/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.mlp.up_proj.weight]Loading weights:  94%|█████████▍| 319/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.post_attention_layernorm.weight]Loading weights:  94%|█████████▍| 319/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.post_attention_layernorm.weight]Loading weights:  94%|█████████▍| 320/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.k_proj.bias]          Loading weights:  94%|█████████▍| 320/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.k_proj.bias]Loading weights:  95%|█████████▍| 321/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.k_proj.weight]Loading weights:  95%|█████████▍| 321/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.k_proj.weight]Loading weights:  95%|█████████▍| 322/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.o_proj.weight]Loading weights:  95%|█████████▍| 322/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.o_proj.weight]Loading weights:  95%|█████████▌| 323/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.q_proj.bias]  Loading weights:  95%|█████████▌| 323/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.q_proj.bias]Loading weights:  96%|█████████▌| 324/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.q_proj.weight]Loading weights:  96%|█████████▌| 324/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.q_proj.weight]Loading weights:  96%|█████████▌| 325/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.v_proj.bias]  Loading weights:  96%|█████████▌| 325/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.v_proj.bias]Loading weights:  96%|█████████▌| 326/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.v_proj.weight]Loading weights:  96%|█████████▌| 326/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.26.self_attn.v_proj.weight]Loading weights:  96%|█████████▋| 327/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.input_layernorm.weight] Loading weights:  96%|█████████▋| 327/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.input_layernorm.weight]Loading weights:  97%|█████████▋| 328/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.down_proj.weight]  Loading weights:  97%|█████████▋| 328/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.down_proj.weight]Loading weights:  97%|█████████▋| 329/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.gate_proj.weight]Loading weights:  97%|█████████▋| 329/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.gate_proj.weight]Loading weights:  97%|█████████▋| 330/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.up_proj.weight]  Loading weights:  97%|█████████▋| 330/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.mlp.up_proj.weight]Loading weights:  98%|█████████▊| 331/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.post_attention_layernorm.weight]Loading weights:  98%|█████████▊| 331/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.post_attention_layernorm.weight]Loading weights:  98%|█████████▊| 332/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.k_proj.bias]          Loading weights:  98%|█████████▊| 332/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.k_proj.bias]Loading weights:  98%|█████████▊| 333/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.k_proj.weight]Loading weights:  98%|█████████▊| 333/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.k_proj.weight]Loading weights:  99%|█████████▊| 334/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.o_proj.weight]Loading weights:  99%|█████████▊| 334/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.o_proj.weight]Loading weights:  99%|█████████▉| 335/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.q_proj.bias]  Loading weights:  99%|█████████▉| 335/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.q_proj.bias]Loading weights:  99%|█████████▉| 336/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.q_proj.weight]Loading weights:  99%|█████████▉| 336/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.q_proj.weight]Loading weights:  99%|█████████▉| 337/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.v_proj.bias]  Loading weights:  99%|█████████▉| 337/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.v_proj.bias]Loading weights: 100%|█████████▉| 338/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.v_proj.weight]Loading weights: 100%|█████████▉| 338/339 [00:02<00:00, 150.96it/s, Materializing param=model.layers.27.self_attn.v_proj.weight]Loading weights: 100%|██████████| 339/339 [00:02<00:00, 150.96it/s, Materializing param=model.norm.weight]                      Loading weights: 100%|██████████| 339/339 [00:02<00:00, 150.96it/s, Materializing param=model.norm.weight]Loading weights: 100%|██████████| 339/339 [00:02<00:00, 139.77it/s, Materializing param=model.norm.weight]
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242/generation_config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+  Model loaded.
+Recovery agent: gpt-4o
+
+HumanEval_US_with_tests:   0%|                                    | 0/160 [00:00<?, ?it/s]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] constraint identified (801 chars)
+    [agent] prompt restored (358 chars)
+HumanEval_US_with_tests:   1%|▏                         | 1/160 [00:38<1:40:55, 38.09s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (728 chars)
+    [agent] prompt restored (558 chars)
+HumanEval_US_with_tests:   1%|▎                         | 2/160 [01:30<2:02:55, 46.68s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (216 chars)
+    [agent] prompt restored (483 chars)
+HumanEval_US_with_tests:   2%|▍                         | 3/160 [02:09<1:52:17, 42.91s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (609 chars)
+    [agent] prompt restored (473 chars)
+HumanEval_US_with_tests:   2%|▋                         | 4/160 [02:45<1:44:18, 40.12s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (410 chars)
+    [agent] prompt restored (460 chars)
+HumanEval_US_with_tests:   3%|▊                         | 5/160 [03:28<1:46:44, 41.32s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (182 chars)
+    [agent] prompt restored (288 chars)
+HumanEval_US_with_tests:   4%|▉                         | 6/160 [04:10<1:46:36, 41.53s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (476 chars)
+    [agent] prompt restored (528 chars)
+HumanEval_US_with_tests:   4%|█▏                        | 7/160 [04:48<1:43:25, 40.56s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (491 chars)
+    [agent] prompt restored (457 chars)
+HumanEval_US_with_tests:   5%|█▎                        | 8/160 [05:42<1:53:17, 44.72s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (388 chars)
+    [agent] prompt restored (322 chars)
+HumanEval_US_with_tests:   6%|█▍                        | 9/160 [06:24<1:50:37, 43.96s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (269 chars)
+    [agent] prompt restored (310 chars)
+HumanEval_US_with_tests:   6%|█▌                       | 10/160 [06:56<1:40:42, 40.28s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (1501 chars)
+    [agent] prompt restored (615 chars)
+
+catac
+catac
+HumanEval_US_with_tests:   7%|█▋                       | 11/160 [08:01<1:58:06, 47.56s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (566 chars)
+    [agent] prompt restored (335 chars)
+HumanEval_US_with_tests:   8%|█▉                       | 12/160 [08:42<1:53:03, 45.84s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (194 chars)
+    [agent] prompt restored (400 chars)
+HumanEval_US_with_tests:   8%|██                       | 13/160 [09:19<1:45:43, 43.15s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (265 chars)
+    [agent] prompt restored (216 chars)
+1
+5
+HumanEval_US_with_tests:   9%|██▏                      | 14/160 [10:07<1:48:31, 44.60s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (260 chars)
+    [agent] prompt restored (235 chars)
+HumanEval_US_with_tests:   9%|██▎                      | 15/160 [10:59<1:52:49, 46.68s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (338 chars)
+    [agent] prompt restored (274 chars)
+HumanEval_US_with_tests:  10%|██▌                      | 16/160 [11:43<1:50:08, 45.89s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (782 chars)
+    [agent] prompt restored (287 chars)
+HumanEval_US_with_tests:  11%|██▋                      | 17/160 [12:13<1:38:09, 41.18s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (516 chars)
+    [agent] prompt restored (533 chars)
+HumanEval_US_with_tests:  11%|██▊                      | 18/160 [12:54<1:37:22, 41.15s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (170 chars)
+    [agent] prompt restored (351 chars)
+HumanEval_US_with_tests:  12%|██▉                      | 19/160 [13:49<1:46:11, 45.19s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (166 chars)
+    [agent] prompt restored (506 chars)
+one three five
+HumanEval_US_with_tests:  12%|███▏                     | 20/160 [14:42<1:51:19, 47.71s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (340 chars)
+    [agent] prompt restored (480 chars)
+HumanEval_US_with_tests:  13%|███▎                     | 21/160 [15:34<1:53:11, 48.86s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (537 chars)
+    [agent] prompt restored (393 chars)
+HumanEval_US_with_tests:  14%|███▍                     | 22/160 [16:29<1:56:37, 50.70s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (206 chars)
+    [agent] prompt restored (321 chars)
+HumanEval_US_with_tests:  14%|███▌                     | 23/160 [17:08<1:47:47, 47.21s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (118 chars)
+    [agent] prompt restored (196 chars)
+5
+HumanEval_US_with_tests:  15%|███▊                     | 24/160 [17:44<1:39:05, 43.72s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (249 chars)
+    [agent] prompt restored (460 chars)
+HumanEval_US_with_tests:  16%|███▉                     | 25/160 [18:22<1:34:36, 42.05s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (306 chars)
+    [agent] prompt restored (301 chars)
+HumanEval_US_with_tests:  16%|████                     | 26/160 [18:55<1:28:04, 39.44s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (167 chars)
+    [agent] prompt restored (201 chars)
+HumanEval_US_with_tests:  17%|████▏                    | 27/160 [19:28<1:23:04, 37.48s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (686 chars)
+    [agent] prompt restored (235 chars)
+HumanEval_US_with_tests:  18%|████▍                    | 28/160 [19:58<1:17:35, 35.27s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (707 chars)
+    [agent] prompt restored (363 chars)
+HumanEval_US_with_tests:  18%|████▌                    | 29/160 [20:38<1:19:46, 36.54s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (94 chars)
+    [agent] prompt restored (241 chars)
+HumanEval_US_with_tests:  19%|████▋                    | 30/160 [21:15<1:19:26, 36.67s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (220 chars)
+    [agent] prompt restored (373 chars)
+HumanEval_US_with_tests:  19%|████▊                    | 31/160 [22:01<1:25:26, 39.74s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (1031 chars)
+    [agent] prompt restored (815 chars)
+-2.0
+1.0
+HumanEval_US_with_tests:  20%|█████                    | 32/160 [23:33<1:57:52, 55.26s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (748 chars)
+    [agent] prompt restored (380 chars)
+[1, 2, 3]
+[2, 6, 3, 4, 8, 9, 5]
+HumanEval_US_with_tests:  21%|█████▏                   | 33/160 [24:39<2:03:41, 58.44s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (86 chars)
+    [agent] prompt restored (170 chars)
+HumanEval_US_with_tests:  21%|█████▎                   | 34/160 [25:19<1:51:11, 52.95s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (190 chars)
+    [agent] prompt restored (249 chars)
+HumanEval_US_with_tests:  22%|█████▍                   | 35/160 [26:18<1:54:12, 54.82s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (135 chars)
+    [agent] prompt restored (278 chars)
+0
+3
+3
+HumanEval_US_with_tests:  22%|█████▋                   | 36/160 [26:58<1:43:49, 50.24s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (443 chars)
+    [agent] prompt restored (368 chars)
+[1, 2, 3]
+[3, 6, 5, 4]
+HumanEval_US_with_tests:  23%|█████▊                   | 37/160 [27:50<1:44:22, 50.91s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (535 chars)
+    [agent] prompt restored (915 chars)
+HumanEval_US_with_tests:  24%|█████▉                   | 38/160 [28:32<1:37:59, 48.19s/it]INFO: Retrying request to /responses in 0.375155 seconds
+INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (552 chars)
+    [agent] prompt restored (265 chars)
+2
+3
+5
+13
+89
+HumanEval_US_with_tests:  24%|█████▊                  | 39/160 [39:40<7:52:09, 234.13s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (188 chars)
+    [agent] prompt restored (650 chars)
+HumanEval_US_with_tests:  25%|██████                  | 40/160 [40:48<6:08:32, 184.27s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (593 chars)
+    [agent] prompt restored (739 chars)
+HumanEval_US_with_tests:  26%|██████▏                 | 41/160 [42:04<5:01:13, 151.88s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (73 chars)
+    [agent] prompt restored (292 chars)
+HumanEval_US_with_tests:  26%|██████▎                 | 42/160 [43:01<4:02:24, 123.26s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (217 chars)
+    [agent] prompt restored (513 chars)
+HumanEval_US_with_tests:  27%|██████▋                  | 43/160 [43:44<3:13:34, 99.27s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (787 chars)
+    [agent] prompt restored (336 chars)
+HumanEval_US_with_tests:  28%|██████▉                  | 44/160 [44:38<2:45:55, 85.82s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (678 chars)
+    [agent] prompt restored (451 chars)
+4
+8
+14
+HumanEval_US_with_tests:  28%|███████                  | 45/160 [45:22<2:20:06, 73.10s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (620 chars)
+    [agent] prompt restored (319 chars)
+HumanEval_US_with_tests:  29%|███████▏                 | 46/160 [46:05<2:02:02, 64.23s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (73 chars)
+    [agent] prompt restored (232 chars)
+HumanEval_US_with_tests:  29%|███████▎                 | 47/160 [46:42<1:45:32, 56.04s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (338 chars)
+    [agent] prompt restored (470 chars)
+HumanEval_US_with_tests:  30%|███████▌                 | 48/160 [47:52<1:52:29, 60.26s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (140 chars)
+    [agent] prompt restored (418 chars)
+HumanEval_US_with_tests:  31%|███████▋                 | 49/160 [48:34<1:40:59, 54.59s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (128 chars)
+    [agent] prompt restored (277 chars)
+HumanEval_US_with_tests:  31%|███████▊                 | 50/160 [49:11<1:30:19, 49.26s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (1085 chars)
+    [agent] prompt restored (443 chars)
+HumanEval_US_with_tests:  32%|███████▉                 | 51/160 [49:44<1:21:00, 44.59s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (340 chars)
+    [agent] prompt restored (309 chars)
+HumanEval_US_with_tests:  32%|████████▏                | 52/160 [50:35<1:23:36, 46.45s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (767 chars)
+    [agent] prompt restored (359 chars)
+HumanEval_US_with_tests:  33%|████████▎                | 53/160 [51:09<1:15:59, 42.62s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (435 chars)
+    [agent] prompt restored (268 chars)
+HumanEval_US_with_tests:  34%|████████▍                | 54/160 [51:37<1:07:56, 38.45s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (431 chars)
+    [agent] prompt restored (243 chars)
+[1, 5, 653]
+[2, 3]
+HumanEval_US_with_tests:  34%|████████▌                | 55/160 [52:55<1:27:37, 50.07s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (171 chars)
+    [agent] prompt restored (231 chars)
+29
+2
+HumanEval_US_with_tests:  35%|████████▊                | 56/160 [54:02<1:35:42, 55.22s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (89 chars)
+    [agent] prompt restored (304 chars)
+HumanEval_US_with_tests:  36%|████████▉                | 57/160 [54:43<1:27:35, 51.02s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (373 chars)
+    [agent] prompt restored (354 chars)
+HumanEval_US_with_tests:  36%|█████████                | 58/160 [55:49<1:34:11, 55.41s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (149 chars)
+    [agent] prompt restored (330 chars)
+HumanEval_US_with_tests:  37%|█████████▏               | 59/160 [56:38<1:29:58, 53.45s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (227 chars)
+    [agent] prompt restored (448 chars)
+0
+4
+24
+HumanEval_US_with_tests:  38%|█████████▍               | 60/160 [57:25<1:25:56, 51.57s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (348 chars)
+    [agent] prompt restored (431 chars)
+HumanEval_US_with_tests:  38%|█████████▌               | 61/160 [58:10<1:22:09, 49.79s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (154 chars)
+    [agent] prompt restored (358 chars)
+21
+12
+HumanEval_US_with_tests:  39%|█████████▋               | 62/160 [58:58<1:20:01, 49.00s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (544 chars)
+    [agent] prompt restored (382 chars)
+HumanEval_US_with_tests:  39%|█████████▊               | 63/160 [59:31<1:11:37, 44.30s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (392 chars)
+    [agent] prompt restored (905 chars)
+HumanEval_US_with_tests:  40%|█████████▏             | 64/160 [1:00:06<1:06:32, 41.58s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (158 chars)
+    [agent] prompt restored (1142 chars)
+HumanEval_US_with_tests:  41%|█████████▎             | 65/160 [1:00:57<1:10:24, 44.47s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (227 chars)
+    [agent] prompt restored (568 chars)
+HumanEval_US_with_tests:  41%|█████████▍             | 66/160 [1:01:40<1:08:44, 43.88s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (217 chars)
+    [agent] prompt restored (436 chars)
+HumanEval_US_with_tests:  42%|█████████▋             | 67/160 [1:02:25<1:08:25, 44.15s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (141 chars)
+    [agent] prompt restored (474 chars)
+HumanEval_US_with_tests:  42%|█████████▊             | 68/160 [1:03:15<1:10:42, 46.11s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (750 chars)
+    [agent] prompt restored (843 chars)
+False
+False
+True
+True
+HumanEval_US_with_tests:  43%|█████████▉             | 69/160 [1:04:22<1:19:19, 52.30s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (500 chars)
+    [agent] prompt restored (456 chars)
+HumanEval_US_with_tests:  44%|██████████             | 70/160 [1:04:55<1:09:53, 46.60s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (272 chars)
+    [agent] prompt restored (648 chars)
+HumanEval_US_with_tests:  44%|██████████▏            | 71/160 [1:05:51<1:13:20, 49.44s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (487 chars)
+    [agent] prompt restored (249 chars)
+HumanEval_US_with_tests:  45%|██████████▎            | 72/160 [1:06:43<1:13:37, 50.20s/it]INFO: Retrying request to /responses in 0.435449 seconds
+INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (268 chars)
+    [agent] prompt restored (433 chars)
+HumanEval_US_with_tests:  46%|██████████            | 73/160 [1:17:24<5:29:44, 227.40s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (314 chars)
+    [agent] prompt restored (331 chars)
+True
+False
+False
+True
+True
+False
+HumanEval_US_with_tests:  46%|██████████▏           | 74/160 [1:18:15<4:09:47, 174.28s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (259 chars)
+    [agent] prompt restored (943 chars)
+HumanEval_US_with_tests:  47%|██████████▎           | 75/160 [1:19:07<3:14:55, 137.59s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (103 chars)
+    [agent] prompt restored (488 chars)
+db1111db
+db100000db
+HumanEval_US_with_tests:  48%|██████████▍           | 76/160 [1:19:52<2:33:48, 109.86s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (264 chars)
+    [agent] prompt restored (441 chars)
+HumanEval_US_with_tests:  48%|███████████            | 77/160 [1:20:23<1:59:20, 86.27s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (218 chars)
+    [agent] prompt restored (1209 chars)
+['A', 'B', 'C-', 'C', 'A-']
+HumanEval_US_with_tests:  49%|███████████▏           | 78/160 [1:21:22<1:46:45, 78.11s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (165 chars)
+    [agent] prompt restored (322 chars)
+HumanEval_US_with_tests:  49%|███████████▎           | 79/160 [1:22:19<1:36:52, 71.76s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (556 chars)
+    [agent] prompt restored (230 chars)
+HumanEval_US_with_tests:  50%|███████████▌           | 80/160 [1:23:10<1:27:21, 65.52s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (315 chars)
+    [agent] prompt restored (495 chars)
+HumanEval_US_with_tests:  51%|███████████▋           | 81/160 [1:23:45<1:14:16, 56.42s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (63 chars)
+    [agent] prompt restored (191 chars)
+HumanEval_US_with_tests:  51%|███████████▊           | 82/160 [1:24:14<1:02:33, 48.12s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (505 chars)
+    [agent] prompt restored (605 chars)
+HumanEval_US_with_tests:  52%|████████████▉            | 83/160 [1:24:51<57:21, 44.70s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (322 chars)
+    [agent] prompt restored (739 chars)
+[(0, 0), (1, 0), (1, 4), (2, 0), (2, 5)]
+[]
+[(2, 2)]
+HumanEval_US_with_tests:  52%|████████████           | 84/160 [1:25:54<1:03:50, 50.40s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (367 chars)
+    [agent] prompt restored (640 chars)
+HumanEval_US_with_tests:  53%|████████████▏          | 85/160 [1:26:56<1:07:06, 53.68s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (487 chars)
+    [agent] prompt restored (479 chars)
+lm
+ewhjklnop
+kj
+ix
+HumanEval_US_with_tests:  54%|████████████▎          | 86/160 [1:28:02<1:10:54, 57.50s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (82 chars)
+    [agent] prompt restored (380 chars)
+HumanEval_US_with_tests:  54%|█████████████▌           | 87/160 [1:28:30<59:08, 48.62s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (343 chars)
+    [agent] prompt restored (401 chars)
+HumanEval_US_with_tests:  55%|█████████████▊           | 88/160 [1:29:00<51:41, 43.07s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (326 chars)
+    [agent] prompt restored (418 chars)
+HumanEval_US_with_tests:  56%|█████████████▉           | 89/160 [1:29:51<53:46, 45.44s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (105 chars)
+    [agent] prompt restored (440 chars)
+TGST
+tHKS KS C MGSSCGG
+HumanEval_US_with_tests:  56%|██████████████           | 90/160 [1:30:46<56:23, 48.34s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (616 chars)
+    [agent] prompt restored (631 chars)
+HumanEval_US_with_tests:  57%|██████████████▏          | 91/160 [1:31:38<56:38, 49.26s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (246 chars)
+    [agent] prompt restored (617 chars)
+HumanEval_US_with_tests:  57%|██████████████▎          | 92/160 [1:32:16<52:07, 45.99s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (789 chars)
+    [agent] prompt restored (437 chars)
+HumanEval_US_with_tests:  58%|██████████████▌          | 93/160 [1:33:01<51:05, 45.76s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (150 chars)
+    [agent] prompt restored (447 chars)
+HumanEval_US_with_tests:  59%|██████████████▋          | 94/160 [1:33:49<51:03, 46.42s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (200 chars)
+    [agent] prompt restored (311 chars)
+HumanEval_US_with_tests:  59%|██████████████▊          | 95/160 [1:34:31<48:49, 45.07s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (343 chars)
+    [agent] prompt restored (698 chars)
+10
+15
+15
+-15
+HumanEval_US_with_tests:  60%|███████████████          | 96/160 [1:35:27<51:27, 48.24s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (410 chars)
+    [agent] prompt restored (527 chars)
+HumanEval_US_with_tests:  61%|███████████████▏         | 97/160 [1:36:14<50:24, 48.01s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (85 chars)
+    [agent] prompt restored (406 chars)
+HumanEval_US_with_tests:  61%|███████████████▎         | 98/160 [1:37:01<49:11, 47.61s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (194 chars)
+    [agent] prompt restored (334 chars)
+HumanEval_US_with_tests:  62%|███████████████▍         | 99/160 [1:37:45<47:20, 46.56s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (138 chars)
+    [agent] prompt restored (452 chars)
+HumanEval_US_with_tests:  62%|███████████████         | 100/160 [1:38:12<40:39, 40.65s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (209 chars)
+    [agent] prompt restored (420 chars)
+HumanEval_US_with_tests:  63%|███████████████▏        | 101/160 [1:39:08<44:34, 45.33s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (822 chars)
+    [agent] prompt restored (827 chars)
+['Eight', 'Five', 'Four', 'Three', 'Two', 'Two', 'One', 'One']
+[]
+['One']
+HumanEval_US_with_tests:  64%|███████████████▎        | 102/160 [1:40:10<48:42, 50.39s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (129 chars)
+    [agent] prompt restored (390 chars)
+HumanEval_US_with_tests:  64%|███████████████▍        | 103/160 [1:40:59<47:21, 49.85s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (156 chars)
+    [agent] prompt restored (756 chars)
+(1, 2)
+(4, 6)
+HumanEval_US_with_tests:  65%|███████████████▌        | 104/160 [1:42:00<49:44, 53.30s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (326 chars)
+    [agent] prompt restored (297 chars)
+HumanEval_US_with_tests:  66%|███████████████▊        | 105/160 [1:42:31<42:36, 46.49s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (612 chars)
+    [agent] prompt restored (1361 chars)
+True
+False
+HumanEval_US_with_tests:  66%|███████████████▉        | 106/160 [1:43:11<40:11, 44.66s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (606 chars)
+    [agent] prompt restored (784 chars)
+HumanEval_US_with_tests:  67%|████████████████        | 107/160 [1:43:55<39:17, 44.47s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (318 chars)
+    [agent] prompt restored (562 chars)
+HumanEval_US_with_tests:  68%|████████████████▏       | 108/160 [1:44:39<38:17, 44.18s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (442 chars)
+    [agent] prompt restored (784 chars)
+('bcd', False)
+('acdef', False)
+('cdedc', True)
+HumanEval_US_with_tests:  68%|████████████████▎       | 109/160 [1:45:31<39:31, 46.51s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (214 chars)
+    [agent] prompt restored (595 chars)
+HumanEval_US_with_tests:  69%|████████████████▌       | 110/160 [1:46:13<37:47, 45.35s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (169 chars)
+    [agent] prompt restored (249 chars)
+HumanEval_US_with_tests:  69%|████████████████▋       | 111/160 [1:47:21<42:32, 52.09s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (499 chars)
+    [agent] prompt restored (1100 chars)
+HumanEval_US_with_tests:  70%|████████████████▊       | 112/160 [1:47:49<35:57, 44.94s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (497 chars)
+    [agent] prompt restored (532 chars)
+HumanEval_US_with_tests:  71%|████████████████▉       | 113/160 [1:48:26<33:15, 42.45s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (726 chars)
+    [agent] prompt restored (815 chars)
+HumanEval_US_with_tests:  71%|█████████████████       | 114/160 [1:49:28<37:00, 48.27s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (936 chars)
+    [agent] prompt restored (665 chars)
+U
+U
+
+
+HumanEval_US_with_tests:  72%|█████████████████▎      | 115/160 [1:50:36<40:34, 54.11s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (138 chars)
+    [agent] prompt restored (633 chars)
+Yes
+No
+HumanEval_US_with_tests:  72%|█████████████████▍      | 116/160 [1:51:27<38:58, 53.14s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (214 chars)
+    [agent] prompt restored (645 chars)
+HumanEval_US_with_tests:  73%|█████████████████▌      | 117/160 [1:52:27<39:35, 55.25s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (71 chars)
+    [agent] prompt restored (284 chars)
+HumanEval_US_with_tests:  74%|█████████████████▋      | 118/160 [1:53:08<35:47, 51.14s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (671 chars)
+    [agent] prompt restored (394 chars)
+HumanEval_US_with_tests:  74%|█████████████████▊      | 119/160 [1:53:52<33:20, 48.78s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (142 chars)
+    [agent] prompt restored (878 chars)
+HumanEval_US_with_tests:  75%|██████████████████      | 120/160 [1:54:59<36:11, 54.30s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (129 chars)
+    [agent] prompt restored (710 chars)
+HumanEval_US_with_tests:  76%|██████████████████▏     | 121/160 [1:56:31<42:44, 65.77s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (645 chars)
+    [agent] prompt restored (434 chars)
+HumanEval_US_with_tests:  76%|██████████████████▎     | 122/160 [1:57:20<38:22, 60.58s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (499 chars)
+    [agent] prompt restored (600 chars)
+HumanEval_US_with_tests:  77%|██████████████████▍     | 123/160 [1:58:25<38:14, 62.03s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (242 chars)
+    [agent] prompt restored (938 chars)
+NO
+YES
+YES
+HumanEval_US_with_tests:  78%|██████████████████▌     | 124/160 [1:59:22<36:16, 60.46s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (306 chars)
+    [agent] prompt restored (357 chars)
+HumanEval_US_with_tests:  78%|██████████████████▊     | 125/160 [2:00:00<31:16, 53.63s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (867 chars)
+    [agent] prompt restored (1409 chars)
+[3]
+[1]
+HumanEval_US_with_tests:  79%|██████████████████▉     | 126/160 [2:01:07<32:41, 57.69s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (265 chars)
+    [agent] prompt restored (687 chars)
+[1, 3, 2, 8]
+HumanEval_US_with_tests:  79%|███████████████████     | 127/160 [2:01:48<29:02, 52.80s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (219 chars)
+    [agent] prompt restored (223 chars)
+HumanEval_US_with_tests:  80%|███████████████████▏    | 128/160 [2:02:41<28:14, 52.95s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (301 chars)
+    [agent] prompt restored (543 chars)
+False
+False
+False
+False
+False
+True
+HumanEval_US_with_tests:  81%|███████████████████▎    | 129/160 [2:03:03<22:32, 43.63s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (216 chars)
+    [agent] prompt restored (500 chars)
+HumanEval_US_with_tests:  81%|███████████████████▌    | 130/160 [2:03:48<21:56, 43.90s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (185 chars)
+    [agent] prompt restored (561 chars)
+HumanEval_US_with_tests:  82%|███████████████████▋    | 131/160 [2:04:30<20:56, 43.31s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (239 chars)
+    [agent] prompt restored (377 chars)
+HumanEval_US_with_tests:  82%|███████████████████▊    | 132/160 [2:04:58<18:09, 38.89s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (261 chars)
+    [agent] prompt restored (498 chars)
+HumanEval_US_with_tests:  83%|███████████████████▉    | 133/160 [2:05:52<19:29, 43.31s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (630 chars)
+    [agent] prompt restored (509 chars)
+HumanEval_US_with_tests:  84%|████████████████████    | 134/160 [2:06:34<18:38, 43.02s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (84 chars)
+    [agent] prompt restored (322 chars)
+HumanEval_US_with_tests:  84%|████████████████████▎   | 135/160 [2:07:22<18:32, 44.50s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (1219 chars)
+    [agent] prompt restored (333 chars)
+HumanEval_US_with_tests:  85%|████████████████████▍   | 136/160 [2:07:59<16:52, 42.17s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (277 chars)
+    [agent] prompt restored (683 chars)
+HumanEval_US_with_tests:  86%|████████████████████▌   | 137/160 [2:08:36<15:31, 40.52s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (111 chars)
+    [agent] prompt restored (818 chars)
+Yes
+No
+No
+No
+Yes
+No
+HumanEval_US_with_tests:  86%|████████████████████▋   | 138/160 [2:09:45<18:02, 49.23s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (948 chars)
+    [agent] prompt restored (697 chars)
+HumanEval_US_with_tests:  87%|████████████████████▊   | 139/160 [2:10:17<15:21, 43.90s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (196 chars)
+    [agent] prompt restored (685 chars)
+is
+go for
+HumanEval_US_with_tests:  88%|█████████████████████   | 140/160 [2:11:11<15:41, 47.05s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (888 chars)
+    [agent] prompt restored (693 chars)
+HumanEval_US_with_tests:  88%|█████████████████████▏  | 141/160 [2:11:47<13:52, 43.84s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (124 chars)
+    [agent] prompt restored (409 chars)
+[1, -1, 11, -11, -12]
+[]
+HumanEval_US_with_tests:  89%|█████████████████████▎  | 142/160 [2:12:48<14:40, 48.93s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (119 chars)
+    [agent] prompt restored (453 chars)
+HumanEval_US_with_tests:  89%|█████████████████████▍  | 143/160 [2:13:24<12:45, 45.02s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (351 chars)
+    [agent] prompt restored (482 chars)
+HumanEval_US_with_tests:  90%|█████████████████████▌  | 144/160 [2:14:05<11:39, 43.69s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (164 chars)
+    [agent] prompt restored (833 chars)
+HumanEval_US_with_tests:  91%|█████████████████████▊  | 145/160 [2:14:57<11:33, 46.25s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (141 chars)
+    [agent] prompt restored (724 chars)
+HumanEval_US_with_tests:  91%|█████████████████████▉  | 146/160 [2:15:43<10:45, 46.14s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (90 chars)
+    [agent] prompt restored (258 chars)
+HumanEval_US_with_tests:  92%|██████████████████████  | 147/160 [2:16:22<09:30, 43.91s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (218 chars)
+    [agent] prompt restored (510 chars)
+HumanEval_US_with_tests:  92%|██████████████████████▏ | 148/160 [2:17:11<09:07, 45.59s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (148 chars)
+    [agent] prompt restored (826 chars)
+HumanEval_US_with_tests:  93%|██████████████████████▎ | 149/160 [2:17:43<07:36, 41.47s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (122 chars)
+    [agent] prompt restored (1040 chars)
+HumanEval_US_with_tests:  94%|██████████████████████▌ | 150/160 [2:18:23<06:50, 41.07s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (252 chars)
+    [agent] prompt restored (621 chars)
+HumanEval_US_with_tests:  94%|██████████████████████▋ | 151/160 [2:19:04<06:08, 40.98s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (615 chars)
+    [agent] prompt restored (277 chars)
+HumanEval_US_with_tests:  95%|██████████████████████▊ | 152/160 [2:20:23<07:00, 52.50s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (244 chars)
+    [agent] prompt restored (365 chars)
+xix
+clii
+cdxxvi
+HumanEval_US_with_tests:  96%|██████████████████████▉ | 153/160 [2:21:32<06:42, 57.51s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (244 chars)
+    [agent] prompt restored (571 chars)
+HumanEval_US_with_tests:  96%|███████████████████████ | 154/160 [2:22:12<05:12, 52.06s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (190 chars)
+    [agent] prompt restored (430 chars)
+HumanEval_US_with_tests:  97%|███████████████████████▎| 155/160 [2:22:51<04:00, 48.17s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (108 chars)
+    [agent] prompt restored (999 chars)
+HumanEval_US_with_tests:  98%|███████████████████████▍| 156/160 [2:24:14<03:54, 58.59s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✓
+    [agent] constraint identified (1255 chars)
+    [agent] prompt restored (853 chars)
+HumanEval_US_with_tests:  98%|███████████████████████▌| 157/160 [2:25:11<02:54, 58.28s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (726 chars)
+    [agent] prompt restored (375 chars)
+HumanEval_US_with_tests:  99%|███████████████████████▋| 158/160 [2:25:44<01:40, 50.48s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (241 chars)
+    [agent] prompt restored (282 chars)
+HumanEval_US_with_tests:  99%|███████████████████████▊| 159/160 [2:26:36<00:51, 51.16s/it]INFO: HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+    [agent] real tests: ✗
+    [agent] constraint identified (245 chars)
+    [agent] prompt restored (331 chars)
+HumanEval_US_with_tests: 100%|████████████████████████| 160/160 [2:27:29<00:00, 51.61s/it]HumanEval_US_with_tests: 100%|████████████████████████| 160/160 [2:27:29<00:00, 55.31s/it]
+    [agent] real tests: ✓
+
+HumanEval_US_with_tests  n=160  pass@1=0.700
+Results → ./eval_agent_output/HumanEval_US_with_tests_agent.jsonl
+Summary → ./eval_agent_output/HumanEval_US_with_tests_agent_summary.json
+Done — lun. 09 mars 2026 02:42:15 CET
