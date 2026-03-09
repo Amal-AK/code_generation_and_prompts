@@ -45,12 +45,15 @@ from main_inference import (
 # ── Dataset configs ────────────────────────────────────────────────────────────
 DATASETS = [
     # (name,        mutation_file,                                  kind)
-    ("humaneval_LV", "mutations/humanEval_lv_with_tests.jsonl",   "humaneval"),
-    ("humaneval_SF", "mutations/humanEval_SF_with_tests.jsonl",   "humaneval"),
-    ("mbpp_LV",      "mutations/mbpp_LV_with_tests.jsonl",        "mbpp"),
-    ("mbpp_SF",      "mutations/mbpp_SF_with_tests.jsonl",        "mbpp"),
+    ("humaneval_LV", "mutations/humanEval_lv_with_tests.jsonl",    "humaneval"),
+    ("humaneval_SF", "mutations/humanEval_SF_with_tests.jsonl",    "humaneval"),
+    ("humaneval_US", "mutations/HumanEval_US_with_tests.jsonl",    "humaneval"),
+    ("mbpp_LV",      "mutations/mbpp_LV_with_tests.jsonl",         "mbpp"),
+    ("mbpp_SF",      "mutations/mbpp_SF_with_tests.jsonl",         "mbpp"),
+    ("mbpp_US",      "mutations/mbpp_US_with_tests.jsonl",         "mbpp"),
     ("lcb_LV",       "mutations/livecodebench_LV_with_tests.jsonl","lcb"),
     ("lcb_SF",       "mutations/livecodebench_SF_with_tests.jsonl","lcb"),
+    ("lcb_US",       "mutations/livecodebench_US_with_tests.jsonl","lcb"),
 ]
 
 LCB_ORIGINAL = "datasets/livecodebench/livecodebench_public.jsonl"
@@ -122,6 +125,7 @@ def evaluate_dataset(
     output_dir: str,
     difficulty_filter: Optional[dict] = None,   # {task_id: difficulty}
     difficulty: Optional[str] = None,            # e.g. "easy"
+    us_agent=None,                               # USRecoveryAgent or None
 ) -> dict:
     records = []
     with open(path) as f:
@@ -136,6 +140,8 @@ def evaluate_dataset(
                 if difficulty_filter.get(r.get("task_id")) != difficulty:
                     continue
             records.append(r)
+
+    is_us = name.endswith("_US")
 
     results = []
     for row in tqdm(records, desc=name, ncols=90):
@@ -156,7 +162,15 @@ def evaluate_dataset(
         code_ora  = generate_oracle(pipeline, original)
         pass_ora  = run_eval(code_ora, row, kind)
 
-        results.append({
+        # ── recovery agent (GPT-4o + code_interpreter) ────────────────────────
+        pass_agent   = None
+        fixed_prompt = None
+        if us_agent is not None:
+            agent_out    = us_agent.recover(mutated, row=row, kind=kind, entry_point=ep)
+            pass_agent   = agent_out["passed"]
+            fixed_prompt = agent_out["fixed_prompt"]
+
+        rec = {
             "task_id":       row.get("task_id"),
             "mutation_type": row.get("mutation_type"),
             "clf_pred":      pipe_out["mutation_type"],
@@ -165,7 +179,12 @@ def evaluate_dataset(
             "pass_baseline": pass_base,
             "pass_pipeline": pass_pipe,
             "pass_oracle":   pass_ora,
-        })
+        }
+        if us_agent is not None:
+            rec["pass_agent"]   = pass_agent
+            rec["fixed_prompt"] = fixed_prompt
+
+        results.append(rec)
 
     # ── summary ───────────────────────────────────────────────────────────────
     n          = len(results)
@@ -184,6 +203,12 @@ def evaluate_dataset(
         "delta_vs_base":    round(pipe_p1 - base_p1, 4),
         "delta_vs_oracle":  round(pipe_p1 - ora_p1,  4),
     }
+
+    if us_agent is not None:
+        agent_p1 = sum(r["pass_agent"] for r in results) / n if n else 0
+        summary["pass1_agent"]           = round(agent_p1, 4)
+        summary["delta_agent_vs_base"]   = round(agent_p1 - base_p1, 4)
+        summary["delta_agent_vs_oracle"] = round(agent_p1 - ora_p1,  4)
 
     # save per-record results
     os.makedirs(output_dir, exist_ok=True)
@@ -210,6 +235,10 @@ def main():
                         help="Comma-separated subset, e.g. humaneval_LV,lcb_SF, or 'all'")
     parser.add_argument("--difficulty",      default=None,
                         help="Filter LCB by difficulty: easy | medium | hard")
+    parser.add_argument("--gpt4Model",       default="gpt-4o",
+                        help="OpenAI model for US recovery agent (default: gpt-4o)")
+    parser.add_argument("--noAgent",         action="store_true",
+                        help="Disable the GPT-4 agent for US datasets")
     args = parser.parse_args()
 
     pipeline = FixingPipeline.from_checkpoints(
@@ -219,6 +248,12 @@ def main():
         clf_device           = args.device,
         confidence_threshold = args.threshold,
     )
+
+    us_agent = None
+    if not args.noAgent:
+        from recovery_agent import RecoveryAgent
+        us_agent = RecoveryAgent(pipeline=pipeline, model=args.gpt4Model)
+        print(f"Recovery agent (GPT-4o + code_interpreter): {args.gpt4Model}")
 
     requested = set(args.datasets.split(",")) if args.datasets != "all" else None
     diff_map  = load_lcb_difficulty(args.dataDir) if args.difficulty else None
@@ -234,15 +269,22 @@ def main():
         diff_filter = diff_map if kind == "lcb" else None
         summary = evaluate_dataset(pipeline, name, path, kind, args.outputDir,
                                    difficulty_filter=diff_filter,
-                                   difficulty=args.difficulty if kind == "lcb" else None)
+                                   difficulty=args.difficulty if kind == "lcb" else None,
+                                   us_agent=us_agent)
         all_summaries.append(summary)
 
+        agent_str = ""
+        if "pass1_agent" in summary:
+            agent_str = (f"  agent={summary['pass1_agent']:.3f}"
+                         f"  Δagent={summary['delta_agent_vs_base']:+.3f}"
+                         f"  Δoracle={summary['delta_agent_vs_oracle']:+.3f}")
         print(
             f"\n{name:20s}  n={summary['n']:>4}  "
             f"baseline={summary['pass1_baseline']:.3f}  "
             f"pipeline={summary['pass1_pipeline']:.3f}  "
             f"oracle={summary['pass1_oracle']:.3f}  "
             f"Δbase={summary['delta_vs_base']:+.3f}"
+            f"{agent_str}"
         )
 
     # save summary table

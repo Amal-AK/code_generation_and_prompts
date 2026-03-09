@@ -212,7 +212,7 @@ class FixingPipeline:
             lora_used     : whether the fixer LoRA was active
         """
         mut_type, confidence = self.classify(prompt)
-        use_lora = mut_type in ("LV", "SF") and confidence >= self.confidence_threshold
+        use_lora = mut_type == "LV" and confidence >= self.confidence_threshold
 
         if use_lora:
             func_name   = entry_point or extract_func_name(prompt)

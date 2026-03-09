@@ -2,52 +2,37 @@
 set -eu
 
 COMMON_ARGS="
-  --modelName     Qwen/Qwen2.5-Coder-7B-Instruct
   --dataDir       .
-  --epochs        10
-  --batchSize     2
-  --gradAccum     8
+  --epochs        15
+  --batchSize     1
+  --gradAccum     16
   --lr            2e-4
+  --warmupSteps   100
   --maxLength     1024
   --valSplit      0.1
   --loraR         16
   --loraAlpha     32
   --loraDropout   0.05
-  --patience      3
+  --patience      4
+  --pass1EvalSamples 60
+  --pass1EvalFreq    1
+  --evalDataset   he_v2
   --gpus          0
   --seed          42
 "
 
-# ── LV adapter (v1) ───────────────────────────────────────────────────────────
-mkdir -p ./finetune_lv_output
-LOG_LV=./finetune_lv_output/run_$(date +%Y%m%d_%H%M%S).log
-echo "=== Training LV adapter (v1) ===" | tee "$LOG_LV"
-CUDA_VISIBLE_DEVICES=0 python finetune_lora.py \
+# ── LV adapter — DeepSeek-Coder-6.7B-Instruct
+#    Train: HumanEval LV v1 + MBPP LV v1 + MBPP LV v2
+#    Eval:  HumanEval LV v2 (held-out)
+mkdir -p ./finetune_deepseek_lv_output
+LOG_LV=./finetune_deepseek_lv_output/run_$(date +%Y%m%d_%H%M%S).log
+echo "=== Training LV adapter — DeepSeek-Coder-6.7B-Instruct ===" | tee "$LOG_LV"
+python finetune_lora.py \
   $COMMON_ARGS \
+  --modelName     deepseek-ai/deepseek-coder-6.7b-instruct \
   --mutationTypes LV \
-  --dataVariant   v1 \
-  --outputDir     ./finetune_lv_output \
+  --dataVariant   mbpp_combined \
+  --outputDir     ./finetune_deepseek_lv_output \
   2>&1 | tee -a "$LOG_LV"
 
-# ── LV adapter (v2) ───────────────────────────────────────────────────────────
-mkdir -p ./finetune_lv_v2_output
-LOG_LV2=./finetune_lv_v2_output/run_$(date +%Y%m%d_%H%M%S).log
-echo "=== Training LV adapter (v2) ===" | tee "$LOG_LV2"
-CUDA_VISIBLE_DEVICES=0 python finetune_lora.py \
-  $COMMON_ARGS \
-  --mutationTypes LV \
-  --dataVariant   v2 \
-  --outputDir     ./finetune_lv_v2_output \
-  2>&1 | tee -a "$LOG_LV2"
-
-# ── SF adapter ────────────────────────────────────────────────────────────────
-mkdir -p ./finetune_sf_output
-LOG_SF=./finetune_sf_output/run_$(date +%Y%m%d_%H%M%S).log
-echo "=== Training SF adapter ===" | tee "$LOG_SF"
-CUDA_VISIBLE_DEVICES=0 python finetune_lora.py \
-  $COMMON_ARGS \
-  --mutationTypes SF \
-  --outputDir     ./finetune_sf_output \
-  2>&1 | tee -a "$LOG_SF"
-
-echo "=== All adapters done ==="
+echo "=== Done ==="

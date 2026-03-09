@@ -21,10 +21,10 @@ import sys
 # Configuration
 # --------------------
 MODEL_NAME = "gpt-5-mini"
-INPUT_FILE = "./datasets/humanEval/HumanEval.jsonl"
-BATCH_INPUT_FILE = "HumanEval_LV_input.jsonl"
-BATCH_OUTPUT_FILE = "HumanEval_LV_output.jsonl"
-OUTPUT_FILE = "mutations/variant2/humanEval_LV_v2_mutated.jsonl"
+INPUT_FILE = "./datasets/mbpp/mbpp.jsonl"
+BATCH_INPUT_FILE = "mbpp_LV_input.jsonl"
+BATCH_OUTPUT_FILE = "mbpp_LV_output.jsonl"
+OUTPUT_FILE = "mutations/variant2/mbpp_LV_v2_mutated.jsonl"
 POLL_INTERVAL = 10  # seconds
 # --------------------
 
@@ -133,11 +133,13 @@ WHAT TO REMOVE (pick one):
 - Input precondition: "starts with zero balance", "Ignore spaces", "positive", "non-empty"
 - Output edge-case: "return None if empty", "Empty sum equals 0"
 - Formula pinning behavior: "MAD = average |x - x_mean|"
+- Error/exception behavior: "raise ValueError if input is negative", "raise an exception if the list is empty", "assert x > 0"
+- Output type/format constraint: "return as a list", "return an integer", "rounded to 2 decimal places", "truncate", "round down"
 - One-sentence prompts: MUST always mutate — remove "first"/"last"/"minimum"/"maximum"/"distinct"/"non-repeated"/"sorted"/"consecutive"/"all"/"specific"/"singleton" or whichever word most limits scope.
 
-DO NOT: swap words for synonyms; remove examples or sample I/O; remove "using X" hints (lambda/regex/heap); remove the core concept definition; remove more than one thing; add or rewrite any text.
+DO NOT: swap words for synonyms; remove examples or sample I/O; remove the core concept definition; remove more than one thing; add or rewrite any text.
 
-IMPORTANT: applicable is ALWAYS true. Never return applicable=false. If nothing else fits, remove any scope-limiting word ("all", "specific", "each", "consecutive", "singleton", "minimum", "first").
+IMPORTANT: applicable is ALWAYS true. If nothing else fits, remove any scope-limiting word ("all", "specific", "each", "consecutive", "singleton", "minimum", "first").
 
 Delete the constraint completely, fix grammar if needed, keep everything else verbatim.
 mutated_prompt must contain ONLY the modified prompt — no instructions or meta-text.
@@ -205,7 +207,7 @@ def build_batch_input_line(task_id: str, prompt_text: str, mutation_type: str = 
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_prompt}
             ],
-            "response_format": {"type": "json_object"}
+            "response_format": {"type": "json_object"},
         }
     }
     return json.dumps(request_obj, ensure_ascii=False)
@@ -462,8 +464,16 @@ def main(args):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description="Batch mutant generator (OpenAI Batch API)")
-    p.add_argument("--input", type=str, default=INPUT_FILE, help="Path to input JSONL dataset (one object per line)")
-    p.add_argument("--poll-interval", type=int, default=POLL_INTERVAL, help="Seconds between batch status polls")
-    p.add_argument("--mutation_type", type=str, default='SF', help="which mutation type to apply: 'LV', 'SF', or 'US'")
+    p.add_argument("--input",         type=str, default=INPUT_FILE, help="Path to input JSONL dataset")
+    p.add_argument("--output",        type=str, default=None,       help="Path for final output JSONL (default: auto-named)")
+    p.add_argument("--poll-interval", type=int, default=POLL_INTERVAL)
+    p.add_argument("--mutation_type", type=str, default='LV',       help="LV, SF, or US")
     args = p.parse_args()
+
+    # Override module-level file paths based on input + mutation type
+    stem = os.path.splitext(os.path.basename(args.input))[0]
+    BATCH_INPUT_FILE  = f"{stem}_{args.mutation_type}_input.jsonl"
+    BATCH_OUTPUT_FILE = f"{stem}_{args.mutation_type}_output.jsonl"
+    OUTPUT_FILE       = args.output or f"mutations/variant2/{stem}_{args.mutation_type}_v2_mutated.jsonl"
+
     main(args)

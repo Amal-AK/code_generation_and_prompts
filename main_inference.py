@@ -426,22 +426,27 @@ def generate_from_dataset(args, gen, tokenizer):
         # Use mutated_name in the template if available else use original entry
         name_for_template = mutated_name or original_entry or default_name
 
+        func_line = (
+            f"Write **one** function named `{name_for_template}` that solves the task."
+            if name_for_template else
+            "Write **one** Python function that solves the task."
+        )
         prompt = textwrap.dedent(f"""
             You are a senior Python developer.
 
             Task:
             {row_prompt}
 
-            Write **one** function named `{name_for_template}` that solves the task.
+            {func_line}
             If helpers are needed, define them above the main function.
 
-            **Use only the Python standard library and place every required `import …` statement at the very top of the code block.**
+            **Use only the Python standard library and place every required `import` at the very top.**
 
-                    ⚠️ Return *only* valid Python code, wrapped in a single code block like this:
-                    ```python
-                    <your code here>
-                    ```
-                    """)
+            Return *only* valid Python code in a single code block:
+            ```python
+            <your code here>
+            ```
+        """).strip()
 
         try:
             # Generate and extract code

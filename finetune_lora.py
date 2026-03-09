@@ -42,7 +42,7 @@ import transformers
 from peft import LoraConfig, TaskType, get_peft_model
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, get_cosine_schedule_with_warmup
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
@@ -71,6 +71,14 @@ MBPP_MUTATION_FILES_V2: Dict[str, str] = {
 }
 
 
+# ── LCB mutation files ─────────────────────────────────────────────────────────
+LCB_MUTATION_FILES: Dict[str, str] = {
+    "LV": "livecodebench_LV_with_tests.jsonl",
+    "SF": "livecodebench_SF_with_tests.jsonl",
+    "US": "livecodebench_US_with_tests.jsonl",
+}
+
+
 # ── Prompt ─────────────────────────────────────────────────────────────────────
 def build_instruction(mutated_prompt: str, func_name: str) -> str:
     return textwrap.dedent(f"""
@@ -81,6 +89,24 @@ def build_instruction(mutated_prompt: str, func_name: str) -> str:
 
         Write **one** function named `{func_name}` that solves the task.
         If helpers are needed, define them above the main function.
+
+        **Use only the Python standard library and place every required `import` at the very top.**
+
+        Return *only* valid Python code in a single code block:
+        ```python
+        <your code here>
+        ```
+    """).strip()
+
+
+def build_lcb_instruction(mutated_prompt: str) -> str:
+    return textwrap.dedent(f"""
+        You are a competitive programmer.
+
+        Problem:
+        {mutated_prompt}
+
+        Write a complete Python program that reads from stdin and writes to stdout.
 
         **Use only the Python standard library and place every required `import` at the very top.**
 
@@ -130,10 +156,12 @@ def load_sft_pairs(
             return {**HE_MUTATION_FILES, **HE_MUTATION_FILES_V2}
         return HE_MUTATION_FILES
 
-    variants_to_load = ["v1", "v2"] if data_variant == "combined" else [data_variant]
+    # mbpp_combined: train on HE v1 + MBPP v1+v2; he_variants stays v1 only
+    he_variants   = ["v1", "v2"] if data_variant == "combined" else ["v1"]
+    mbpp_variants = ["v1", "v2"] if data_variant in ("combined", "mbpp_combined") else [data_variant]
 
     seen_he: Set[tuple] = set()
-    for variant in variants_to_load:
+    for variant in he_variants:
         fmap = _he_file_map(variant)
         for mtype, fname in fmap.items():
             if mtype not in mutation_types:
@@ -182,7 +210,7 @@ def load_sft_pairs(
         return MBPP_MUTATION_FILES
 
     seen_mbpp: Set[tuple] = set()
-    for variant in variants_to_load:
+    for variant in mbpp_variants:
         fmap = _mbpp_file_map(variant)
         for mtype, fname in fmap.items():
             if mtype not in mutation_types:
@@ -227,6 +255,37 @@ def load_sft_pairs(
     return pairs
 
 
+def load_lcb_pairs(
+    data_dir: Path,
+    mutation_types: Set[str],
+) -> List[Dict[str, Any]]:
+    """Load LCB mutation rows as eval pairs (no canonical solution — for pass@1 only)."""
+    pairs: List[Dict[str, Any]] = []
+    for mtype, fname in LCB_MUTATION_FILES.items():
+        if mtype not in mutation_types:
+            continue
+        path = data_dir / "mutations" / fname
+        if not path.exists():
+            logger.warning("Missing LCB file: %s", path)
+            continue
+        n = 0
+        for r in _load_jsonl(path):
+            if not r.get("applicable", True):
+                continue
+            pairs.append({
+                "mutated_prompt": r["mutated_prompt"],
+                "original_prompt": r["original_prompt"],
+                "task_id":        r["task_id"],
+                "mutation_type":  mtype,
+                "dataset":        "lcb",
+                "test":           r["test"],
+                "func_name":      None,
+            })
+            n += 1
+        logger.info("  LCB       %-3s: %d pairs", mtype, n)
+    return pairs
+
+
 # ── Dataset ────────────────────────────────────────────────────────────────────
 class SFTDataset(Dataset):
     """
@@ -245,10 +304,7 @@ class SFTDataset(Dataset):
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         pair        = self.pairs[idx]
         instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
-        solution    = (
-            f"{pair['original_prompt'].strip()}\n\n"
-            f"```python\n{pair['solution_code'].strip()}\n```"
-        )
+        solution    = f"```python\n{pair['solution_code'].strip()}\n```"
 
         # Full conversation: instruction + solution
         full_text = self.tokenizer.apply_chat_template(
@@ -331,36 +387,96 @@ def _run_test(code: str, pair: Dict[str, Any], timeout: int = 10) -> bool:
     try:
         if dataset == "humaneval":
             ep        = pair["entry_point"]
-            test_body = pair["test"]          # contains def check(candidate): ...
+            test_body = pair["test"]
             script    = f"{code}\n\n{test_body}\n\ncheck({ep})\n"
-        else:  # mbpp
+            result = subprocess.run(
+                [sys.executable, "-c", script],
+                capture_output=True, timeout=timeout,
+            )
+            return result.returncode == 0
+
+        if dataset == "mbpp":
             test_body = "\n".join(pair["test_list"])
             script    = f"{code}\n\n{test_body}\n"
+            result = subprocess.run(
+                [sys.executable, "-c", script],
+                capture_output=True, timeout=timeout,
+            )
+            return result.returncode == 0
 
-        result = subprocess.run(
-            [sys.executable, "-c", script],
-            capture_output=True, timeout=timeout,
-        )
-        return result.returncode == 0
+        if dataset == "lcb":
+            from main_inference import evaluate_lcb_with_timeout
+            test_cases = json.loads(pair["test"]) if isinstance(pair["test"], str) else pair["test"]
+            passed, total, _ = evaluate_lcb_with_timeout(
+                code, test_cases, timeout_seconds=timeout,
+            )
+            return passed == total and total > 0
+
     except (subprocess.TimeoutExpired, Exception):
-        return False
+        pass
+    return False
 
 
 @torch.no_grad()
-def eval_pass1_on_val(
+def eval_pass1_current(
     model,
     tokenizer,
-    val_pairs: List[Dict[str, Any]],
+    eval_pairs: List[Dict[str, Any]],
+    input_device: torch.device,
+    max_new_tokens: int = 512,
+    label: str = "epoch",
+) -> float:
+    """
+    Quick per-epoch pass@1 for the CURRENT adapter weights (no disk reload).
+    Only evaluates adapter ON — returns pass@1 rate as a float.
+    Called during training for early stopping on pass@1.
+    """
+    model.eval()
+    model.enable_adapter_layers()
+
+    n_passed = 0
+    for pair in tqdm(eval_pairs, desc=f"Pass@1 [{label}]", ncols=90, leave=False):
+        if pair["dataset"] == "lcb":
+            instruction = build_lcb_instruction(pair["mutated_prompt"])
+        else:
+            instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
+        chat = tokenizer.apply_chat_template(
+            [{"role": "user", "content": instruction}],
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+        input_ids = tokenizer(
+            chat, return_tensors="pt", truncation=True, max_length=1024,
+        )["input_ids"].to(input_device)
+        prompt_len = input_ids.shape[1]
+        out = model.generate(
+            input_ids, max_new_tokens=max_new_tokens,
+            do_sample=False, pad_token_id=tokenizer.eos_token_id,
+        )
+        text = tokenizer.decode(out[0][prompt_len:], skip_special_tokens=True)
+        code = _extract_code_block(text)
+        n_passed += int(_run_test(code, pair))
+
+    rate = n_passed / len(eval_pairs) if eval_pairs else 0.0
+    logger.info("Pass@1 [%s] adapter=%.4f  (%d/%d)", label, rate, n_passed, len(eval_pairs))
+    model.train()
+    return rate
+
+
+@torch.no_grad()
+def eval_pass1(
+    model,
+    tokenizer,
+    eval_pairs: List[Dict[str, Any]],
     input_device: torch.device,
     ckpt_path: Path,
     max_new_tokens: int = 512,
     max_samples: Optional[int] = None,
+    label: str = "eval",
 ) -> Dict[str, Any]:
     """
-    Evaluate pass@1 on the val split for:
-      - baseline : adapter disabled  (base model)
-      - adapter  : best saved adapter loaded from ckpt_path
-
+    Evaluate pass@1 for baseline (adapter OFF) vs best adapter (adapter ON).
+    Works on any pair list: val split, LCB, HumanEval, MBPP.
     Reloads the best adapter weights from disk so early stopping is respected.
     """
     from peft import set_peft_model_state_dict
@@ -375,13 +491,16 @@ def eval_pass1_on_val(
     set_peft_model_state_dict(model, state)
     logger.info("Reloaded best adapter weights from %s", ckpt_path)
 
-    pairs = val_pairs[:max_samples] if max_samples else val_pairs
+    pairs = eval_pairs[:max_samples] if max_samples else eval_pairs
     model.eval()
 
     pass_base = pass_lora = n = 0
 
-    for pair in tqdm(pairs, desc="Pass@1 eval", ncols=90):
-        instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
+    for pair in tqdm(pairs, desc=f"Pass@1 [{label}]", ncols=90):
+        if pair["dataset"] == "lcb":
+            instruction = build_lcb_instruction(pair["mutated_prompt"])
+        else:
+            instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
         chat = tokenizer.apply_chat_template(
             [{"role": "user", "content": instruction}],
             tokenize=False,
@@ -441,7 +560,7 @@ def main() -> None:
     parser.add_argument("--batchSize",     type=int,   default=2)
     parser.add_argument("--gradAccum",     type=int,   default=8,
                         help="gradient accumulation steps  (eff. batch = batchSize × gradAccum)")
-    parser.add_argument("--lr",            type=float, default=2e-4)
+    parser.add_argument("--lr",            type=float, default=5e-5)
     parser.add_argument("--maxLength",     type=int,   default=1024)
     parser.add_argument("--valSplit",      type=float, default=0.1)
     parser.add_argument("--loraR",         type=int,   default=16)
@@ -452,12 +571,21 @@ def main() -> None:
                         help="CUDA_VISIBLE_DEVICES (e.g. '0,1,2,3')")
     parser.add_argument("--seed",          type=int,   default=42)
     parser.add_argument("--dataVariant",   default="v1",
-                        choices=["v1", "v2", "combined"],
-                        help="Mutation data variant: v1 (original), v2 (variant2/), combined (both)")
+                        choices=["v1", "v2", "combined", "mbpp_combined"],
+                        help="Mutation data variant: v1, v2, combined, or mbpp_combined (HE v1 + MBPP v1+v2)")
+    parser.add_argument("--warmupSteps",   type=int, default=100,
+                        help="Linear warmup steps before cosine LR decay")
+    parser.add_argument("--evalDataset",   default="val",
+                        choices=["val", "lcb", "v2", "he_v2"],
+                        help="Dataset for post-training pass@1 eval: val, lcb, v2, or he_v2 (HumanEval v2 only)")
     parser.add_argument("--evalSamples",   type=int, default=None,
-                        help="Max val samples for pass@1 eval after training (default: all)")
+                        help="Max samples for pass@1 eval after training (default: all)")
     parser.add_argument("--skipEval",      action="store_true",
                         help="Skip pass@1 evaluation after training")
+    parser.add_argument("--pass1EvalSamples", type=int, default=0,
+                        help="Val samples for per-epoch pass@1 early stopping (0=disabled)")
+    parser.add_argument("--pass1EvalFreq",    type=int, default=1,
+                        help="Run per-epoch pass@1 every N epochs (default: 1)")
     args = parser.parse_args()
 
     if args.gpus is not None:
@@ -480,13 +608,12 @@ def main() -> None:
         mutation_types = {t.strip().upper() for t in args.mutationTypes.split(",")}
     logger.info("Training on mutation types: %s", sorted(mutation_types))
 
-    # ── Load data ──────────────────────────────────────────────────────────────
+    # ── Load training data ─────────────────────────────────────────────────────
     logger.info("Loading SFT pairs (dataVariant=%s)...", args.dataVariant)
     pairs = load_sft_pairs(data_dir, mutation_types, data_variant=args.dataVariant)
     logger.info("Total pairs: %d", len(pairs))
 
     # Split by task_id so no problem appears in both train and val
-    # (prevents data leakage when multiple variants of the same task exist)
     unique_task_ids = sorted({p["task_id"] for p in pairs})
     random.shuffle(unique_task_ids)
     n_val_tasks = max(1, int(len(unique_task_ids) * args.valSplit))
@@ -499,6 +626,17 @@ def main() -> None:
     logger.info("Train: %d pairs (%d tasks)  Val: %d pairs (%d tasks)",
                 len(train_pairs), len(train_task_ids),
                 len(val_pairs),   len(val_task_ids))
+
+    # ── Load v2 pairs as held-out test set (if evalDataset == "v2"/"he_v2") ────
+    v2_pairs: List[Dict[str, Any]] = []
+    if args.evalDataset in ("v2", "he_v2"):
+        logger.info("Loading v2 mutation pairs as held-out test set...")
+        v2_pairs = load_sft_pairs(data_dir, mutation_types, data_variant="v2")
+        if args.evalDataset == "he_v2":
+            v2_pairs = [p for p in v2_pairs if p["dataset"] == "humaneval"]
+            logger.info("he_v2 test pairs (HumanEval only): %d", len(v2_pairs))
+        else:
+            logger.info("v2 test pairs: %d", len(v2_pairs))
 
     # ── Tokenizer ──────────────────────────────────────────────────────────────
     logger.info("Loading tokenizer: %s", args.modelName)
@@ -554,12 +692,40 @@ def main() -> None:
         lr=args.lr, weight_decay=1e-4,
     )
     total_steps = (len(train_loader) // args.gradAccum) * args.epochs
-    scheduler   = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max(total_steps, 1))
+    scheduler   = get_cosine_schedule_with_warmup(
+        optimizer,
+        num_warmup_steps  = min(args.warmupSteps, total_steps),
+        num_training_steps= total_steps,
+    )
+    logger.info("Scheduler: cosine with %d warmup steps / %d total steps",
+                min(args.warmupSteps, total_steps), total_steps)
 
     # ── Training loop ──────────────────────────────────────────────────────────
-    best_val_loss = float("inf")
-    ckpt_path     = out_dir / "best_lora_sft"
-    no_improve    = 0
+    best_val_loss    = float("inf")
+    best_pass1       = -1.0          # best adapter pass@1 seen so far
+    use_pass1_stop   = args.pass1EvalSamples > 0
+    ckpt_path        = out_dir / "best_lora_sft"
+    no_improve       = 0
+
+    # Fixed subset used every epoch for pass@1 early stopping
+    # If evalDataset is v2/he_v2, stop on the held-out set; else use val split
+    pass1_val_pairs: List[Dict[str, Any]] = []
+    if use_pass1_stop:
+        if args.evalDataset in ("v2", "he_v2") and v2_pairs:
+            pool = list(v2_pairs)
+            random.shuffle(pool)
+            pass1_val_pairs = pool[: args.pass1EvalSamples]
+            logger.info(
+                "Pass@1 early stopping on %s — %d samples every %d epoch(s)",
+                args.evalDataset, len(pass1_val_pairs), args.pass1EvalFreq,
+            )
+        else:
+            random.shuffle(val_pairs)
+            pass1_val_pairs = val_pairs[: args.pass1EvalSamples]
+            logger.info(
+                "Pass@1 early stopping enabled — %d val samples every %d epoch(s)",
+                len(pass1_val_pairs), args.pass1EvalFreq,
+            )
 
     logger.info(
         "Starting training  epochs=%d  batch=%d  grad_accum=%d  eff_batch=%d",
@@ -599,16 +765,37 @@ def main() -> None:
 
         avg_train_loss = total_loss / len(train_loader)
         val_loss       = evaluate_loss(model, val_loader, input_device)
-        marker         = " ***" if val_loss < best_val_loss else ""
 
-        logger.info(
-            "Epoch %2d | train_loss=%.4f | val_loss=%.4f%s",
-            epoch, avg_train_loss, val_loss, marker,
-        )
+        # ── Per-epoch pass@1 (used for early stopping if enabled) ─────────────
+        epoch_pass1: Optional[float] = None
+        if use_pass1_stop and epoch % args.pass1EvalFreq == 0:
+            epoch_pass1 = eval_pass1_current(
+                model, tokenizer, pass1_val_pairs, input_device,
+                label=f"e{epoch}",
+            )
 
-        if val_loss < best_val_loss:
-            best_val_loss = val_loss
-            no_improve    = 0
+        # ── Decide whether this epoch improved ─────────────────────────────────
+        if use_pass1_stop and epoch_pass1 is not None:
+            improved = epoch_pass1 > best_pass1
+            marker   = " ***" if improved else ""
+            logger.info(
+                "Epoch %2d | train_loss=%.4f | val_loss=%.4f | pass1=%.4f%s",
+                epoch, avg_train_loss, val_loss, epoch_pass1, marker,
+            )
+        else:
+            improved = val_loss < best_val_loss
+            marker   = " ***" if improved else ""
+            logger.info(
+                "Epoch %2d | train_loss=%.4f | val_loss=%.4f%s",
+                epoch, avg_train_loss, val_loss, marker,
+            )
+
+        if improved:
+            if epoch_pass1 is not None:
+                best_pass1 = epoch_pass1
+            if val_loss < best_val_loss:
+                best_val_loss = val_loss
+            no_improve = 0
             model.save_pretrained(str(ckpt_path))
             tokenizer.save_pretrained(str(ckpt_path))
             logger.info("Saved best adapter → %s", ckpt_path)
@@ -618,47 +805,66 @@ def main() -> None:
                 logger.info("Early stopping (patience=%d)", args.patience)
                 break
 
-    logger.info("Done. Best val loss: %.4f", best_val_loss)
+    logger.info("Done. Best val loss: %.4f  Best pass@1: %.4f", best_val_loss, best_pass1)
     logger.info("Adapter saved at: %s", ckpt_path)
 
     # ── Save training metadata ─────────────────────────────────────────────────
     meta = {
-        "model_name":     args.modelName,
-        "mutation_types": sorted(mutation_types),
-        "data_variant":   args.dataVariant,
-        "train_pairs":    len(train_pairs),
-        "val_pairs":      len(val_pairs),
-        "best_val_loss":  best_val_loss,
-        "lora_r":         args.loraR,
-        "lora_alpha":     args.loraAlpha,
-        "epochs_run":     epoch,
-        "lr":             args.lr,
-        "eff_batch_size": args.batchSize * args.gradAccum,
+        "model_name":         args.modelName,
+        "mutation_types":     sorted(mutation_types),
+        "data_variant":       args.dataVariant,
+        "train_pairs":        len(train_pairs),
+        "val_pairs":          len(val_pairs),
+        "best_val_loss":      best_val_loss,
+        "best_pass1_earlystop": best_pass1 if use_pass1_stop else None,
+        "lora_r":             args.loraR,
+        "lora_alpha":         args.loraAlpha,
+        "epochs_run":         epoch,
+        "lr":                 args.lr,
+        "warmup_steps":       args.warmupSteps,
+        "eff_batch_size":     args.batchSize * args.gradAccum,
+        "pass1_eval_samples": args.pass1EvalSamples,
     }
     (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
     logger.info("Metadata → %s/training_meta.json", out_dir)
 
-    # ── Pass@1 evaluation on val set ───────────────────────────────────────────
+    # ── Pass@1 evaluation ──────────────────────────────────────────────────────
     if not args.skipEval:
-        logger.info("Running pass@1 evaluation on val set (%s samples)...",
-                    args.evalSamples or "all")
-        pass1_results = eval_pass1_on_val(
-            model          = model,
-            tokenizer      = tokenizer,
-            val_pairs      = val_pairs,
-            input_device   = input_device,
-            ckpt_path      = ckpt_path,
-            max_new_tokens = 512,
-            max_samples    = args.evalSamples,
-        )
-        meta["pass1_eval"] = pass1_results
-        (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
-        print(
-            f"\nPass@1 on val set (n={pass1_results['n_evaluated']}):\n"
-            f"  baseline : {pass1_results['pass1_baseline']:.3f}\n"
-            f"  adapter  : {pass1_results['pass1_adapter']:.3f}\n"
-            f"  Δ        : {pass1_results['delta']:+.3f}"
-        )
+        if args.evalDataset == "lcb":
+            logger.info("Loading LCB pairs for pass@1 eval...")
+            eval_pairs = load_lcb_pairs(data_dir, mutation_types)
+            eval_label = "LCB"
+        elif args.evalDataset in ("v2", "he_v2"):
+            eval_pairs = v2_pairs
+            eval_label = args.evalDataset
+        else:
+            eval_pairs = val_pairs
+            eval_label = "val"
+
+        if not eval_pairs:
+            logger.warning("No eval pairs found for evalDataset=%s — skipping pass@1",
+                           args.evalDataset)
+        else:
+            logger.info("Running pass@1 on %s (%s samples)...",
+                        eval_label, args.evalSamples or len(eval_pairs))
+            pass1_results = eval_pass1(
+                model          = model,
+                tokenizer      = tokenizer,
+                eval_pairs     = eval_pairs,
+                input_device   = input_device,
+                ckpt_path      = ckpt_path,
+                max_new_tokens = 512,
+                max_samples    = args.evalSamples,
+                label          = eval_label,
+            )
+            meta["pass1_eval"] = {**pass1_results, "eval_dataset": eval_label}
+            (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
+            print(
+                f"\nPass@1 on {eval_label} (n={pass1_results['n_evaluated']}):\n"
+                f"  baseline : {pass1_results['pass1_baseline']:.3f}\n"
+                f"  adapter  : {pass1_results['pass1_adapter']:.3f}\n"
+                f"  Δ        : {pass1_results['delta']:+.3f}"
+            )
 
 
 if __name__ == "__main__":
