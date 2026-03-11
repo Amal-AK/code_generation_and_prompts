@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+\begin{document}
+
+\small
+
+% ─────────────────────────────────────────────────────────
+% TABLE 1 — Root-cause summary
+% ─────────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Root-cause taxonomy of lexical-vagueness (LV) prompt mutations that induced a pass/fail transition on Qwen2.5-Coder-7B-Instruct evaluated on LiveCodeBench (52 instances). Each category characterises the linguistic mechanism through which surface-form reformulation redirected the model toward a correct solution.}
+\label{tab:root-causes}
+\begin{tabular}{p{4.0cm}p{1.0cm}p{1.0cm}p{8.4cm}}
+\toprule
+\textbf{Root Cause} & \textbf{Count} & \textbf{\%} & \textbf{Interpretation} \\
+\midrule
+
+\rowcolor[RGB]{220,235,255}
+Variable rename breaks overfit &
+14 & 27\% &
+Renaming key variables (e.g.\ \texttt{s}$\to$\texttt{seq}, \texttt{n,x}$\to$\texttt{a,b}) prevents retrieval of a memorised (incorrect) solution, forcing the model to reason from the problem description. \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{220,255,220}
+Terminology generalisation triggers better pattern &
+14 & 27\% &
+Replacing domain nouns with generic terms (``graph''$\to$``network'', ``boxes''$\to$``containers'') activates canonical algorithmic templates (BFS, knapsack, set-union) instead of problem-specific shortcuts. \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{240,220,255}
+Function rename changes approach &
+7 & 13\% &
+Introducing an explicit function signature (e.g.\ ``Implement \texttt{gather\_pairs(n)}'') anchors code structure, fixing ancillary bugs (wrong parsing, boundary errors) as a side-effect of rewriting from scratch. \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{255,245,200}
+Vague algorithm frees model &
+5 & 10\% &
+Softening algorithmic language (``find minimum''$\to$``smallest possible'') lets the model select a simpler, correct strategy (brute-force, enumerate-all) instead of an overfitted template (broken DP, wrong greedy). \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{255,225,210}
+Input-format change fixes parsing &
+5 & 10\% &
+Rephrasing the input description triggers regeneration of parsing code, correcting bugs such as wrong token iteration, index offsets, or \texttt{sys.stdin.read()} misuse. \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{255,235,200}
+Constraint rephrasing clarifies &
+4 & 8\% &
+More explicit constraint wording (``divisors smaller than $x$'', ``no empty spots'') disambiguates boundaries the original phrasing left unclear, preventing off-by-one errors. \\
+\addlinespace[3pt]
+
+\rowcolor[RGB]{230,230,230}
+Other (stochastic / unclear) &
+3 & 6\% &
+Surface-form change shifts the model's output stochastically onto a correct solution; no single linguistic feature is clearly responsible. \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip
+
+% ─────────────────────────────────────────────────────────
+% TABLE 2 — Code-change distribution
+% ─────────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Distribution of code-level changes observed in LV-generated solutions relative to the original (failing) solutions. Counts are not mutually exclusive.}
+\label{tab:code-changes}
+\begin{tabular}{p{4.8cm}p{1.0cm}p{1.0cm}p{7.6cm}}
+\toprule
+\textbf{Code Change Type} & \textbf{Count} & \textbf{\%} & \textbf{What it means} \\
+\midrule
+
+\rowcolor[RGB]{220,235,255}
+Logic bug fixed & 18 & 35\% &
+Core conditional or formula incorrect (inverted comparison, wrong operator). LV rewrite prompted the model to re-derive logic from scratch. \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{220,255,220}
+Algorithm changed & 14 & 27\% &
+Original relied on a wrong algorithm (broken DP, incorrect greedy). LV caused the model to adopt a correct alternative (BFS, DFS, subset-sum). \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{240,230,255}
+Cleaner / simpler approach & 10 & 19\% &
+LV code adopts a simpler strategy (brute-force, stdlib function) that is correct where the original overly complex solution was not. \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{255,240,200}
+Wrong formula replaced & 8 & 15\% &
+A specific sub-expression was incorrect (rounding, bit mask, divisor count); new wording prompted re-derivation of the correct formula. \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{255,225,210}
+Input parsing fixed & 6 & 12\% &
+Parsing regenerated; fixes include wrong token count, index offset, or \texttt{input()} vs \texttt{sys.stdin.read()} misuse. \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{255,245,200}
+Off-by-one fixed & 5 & 10\% &
+Index or boundary off by one (0-indexed vs.\ 1-indexed return, gap $=2$ vs $=3$). \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{230,230,230}
+Variable rename only & 3 & 6\% &
+Only identifiers changed; the original logic was sound but variable naming caused a collision or shadowing bug. \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\medskip
+
+% ─────────────────────────────────────────────────────────
+% TABLE 3 — Prompt-change types
+% ─────────────────────────────────────────────────────────
+\begin{table}[ht]
+\centering
+\caption{Taxonomy of prompt-level changes applied by the LV mutation strategy across 52 examples. Counts exceed 52 as multiple change types can co-occur in one prompt.}
+\label{tab:prompt-changes}
+\begin{tabular}{p{4.8cm}p{1.0cm}p{1.0cm}p{7.6cm}}
+\toprule
+\textbf{Prompt Change Type} & \textbf{Count} & \textbf{\%} & \textbf{Examples} \\
+\midrule
+
+\rowcolor[RGB]{220,235,255}
+Terminology generalised & 32 & 62\% &
+``integer''$\to$``whole number'', ``check''$\to$``decide'', ``remove''$\to$``drop'', ``reorder''$\to$``shuffle'', ``determine''$\to$``work out'' \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{220,255,220}
+Variable renamed & 28 & 54\% &
+\texttt{s}$\to$\texttt{seq}, \texttt{n,x}$\to$\texttt{a,b}, \texttt{low,high,k}$\to$\texttt{start,end,m}, \texttt{l,r}$\to$\texttt{a,b}, \texttt{A\_i}$\to$\texttt{C\_i} \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{240,230,255}
+Input name changed & 18 & 35\% &
+\texttt{purchaseAmount}$\to$\texttt{spendAmt}, \texttt{S}$\to$\texttt{T}, \texttt{A}$\to$\texttt{B}, parameter order swapped in description \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{255,240,200}
+Domain noun changed & 15 & 29\% &
+``graph/vertices/edges''$\to$``network/nodes/links'', ``boxes/balls''$\to$``containers/items'', ``snakes''$\to$``creatures'', ``sensors''$\to$``devices'' \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{240,220,255}
+Function renamed & 9 & 17\% &
+``find\_prime\_pairs''$\to$``gather\_pairs'', ``f(x,y)''$\to$``g(p,q)'', explicit routine signature introduced \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{255,245,200}
+Constraint rephrased & 8 & 15\% &
+``divisors except itself''$\to$``divisors smaller than $x$'', ``no gaps''$\to$``no empty spots'', ``exactly zero or two''$\to$``either zero or exactly two'' \\
+\addlinespace[2pt]
+
+\rowcolor[RGB]{230,230,230}
+Algorithm description vaguer & 6 & 12\% &
+``set of values''$\to$``collection of values'', ``minimum value''$\to$``smallest possible value'', ``perform operation''$\to$``apply local change'' \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

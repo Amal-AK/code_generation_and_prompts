@@ -1,0 +1,398 @@
+{
+  "summary": {
+    "total": 52,
+    "root_cause_distribution": {
+      "variable_rename_breaks_overfit": 14,
+      "function_rename_changes_approach": 7,
+      "vague_algorithm_freed_model": 5,
+      "constraint_rephrasing_clarified": 4,
+      "terminology_generalization_triggered_better_pattern": 14,
+      "input_format_change_fixed_parsing": 5,
+      "other": 3
+    },
+    "prompt_change_types": {
+      "variable_renamed": 28,
+      "function_renamed": 9,
+      "terminology_generalized": 32,
+      "algorithm_description_vaguer": 6,
+      "constraint_rephrased": 8,
+      "input_name_changed": 18,
+      "domain_noun_changed": 15
+    },
+    "code_change_types": {
+      "algorithm_changed": 14,
+      "logic_bug_fixed": 18,
+      "variable_renamed_only": 3,
+      "input_parsing_fixed": 6,
+      "cleaner_simpler_approach": 10,
+      "off_by_one_fixed": 5,
+      "wrong_formula_replaced": 8
+    }
+  },
+  "examples": [
+    {
+      "task_id": "1883_B",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original code had overcomplicated conditional logic with wrong early-exit conditions (k==n returns NO, k>n//2 returns NO) that are incorrect. The LV prompt renamed 's' to 'seq' and used vaguer language ('drop', 'shuffle'), leading the model to write a simpler, direct function: odd_count - k <= 1 without the wrong edge-case guards.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "2873",
+      "prompt_changes": ["function_renamed", "terminology_generalized", "input_name_changed"],
+      "code_changes": ["input_parsing_fixed", "logic_bug_fixed"],
+      "explanation": "Original code incorrectly reads multiple test cases (iterates data[1:]) despite the problem having a single input n; the function was named find_prime_pairs. LV renamed the function to gather_pairs(n) and used 'whole number' / 'routine', which caused the model to write single-input parsing (int(input().strip())) and also fixed the off-by-one in the sieve (range ends at n+1 instead of n).",
+      "root_cause": "function_rename_changes_approach"
+    },
+    {
+      "task_id": "2882",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "cleaner_simpler_approach"],
+      "explanation": "Original used a buggy 2D DP with wrong state transitions (iterating i,j independently instead of a 1D knapsack). Renaming n/x to a/b and using 'whole numbers'/'collections' freed the model from the memorized broken 2D-DP pattern and it produced a correct 1D subset-sum DP with reverse iteration.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "2955",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original used (amount+4)//10*10 which rounds 5 down instead of up (e.g. 15 rounds to 10 instead of 20). LV renamed purchaseAmount to spendAmt, which led the model to re-derive rounding from scratch with an if-else on modulo 5, correctly implementing the 'ties go to larger' rule.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "3017",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "cleaner_simpler_approach"],
+      "explanation": "Original used a digit-DP with a reference to undefined variable 'n' (scope bug from a memorized template). LV renamed low/high/k to start/end/m which caused the model to abandon the complex DP approach and use a simple brute-force loop with is_beautiful(), which correctly handles the (small) constraints.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc301_d",
+      "prompt_changes": ["terminology_generalized", "domain_noun_changed"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original only tried replacing each single '?' individually, missing combinations — it was a greedy that only sets one wildcard at a time. The vaguer LV prompt ('sequence', 'filling', 'placeholder') triggered the model to use itertools.product to enumerate all combinations of wildcard assignments, which is correct.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc302_e",
+      "prompt_changes": ["terminology_generalized", "domain_noun_changed"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original code had a bug where it never initialized isolated_count and used adj_list.remove(v) which is O(N) and also didn't properly maintain isolated set. LV's renaming to 'nodes'/'links'/'isolated' triggered a BFS-based approach tracking an explicit isolated_nodes set with correct O(1) degree accounting.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc306_c",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "off_by_one_fixed"],
+      "explanation": "Original used 0-based indices throughout but the problem uses 1-based positions, so middle_indices were off by one. LV renamed f(i) to g(i) and used 'position'/'appearance', and the model switched to enumerate with i+1 (1-based), fixing the position tracking.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc308_c",
+      "prompt_changes": ["variable_renamed", "domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "input_parsing_fixed"],
+      "explanation": "Original printed each index separately (printing the tuple's second element which was the float rate, not the index), and the loop was buggy. LV renamed A_i/B_i to X_i/Y_i and used 'entities'/'observed fraction', triggering cleaner index-based parsing and correct ' '.join print of sorted labels.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc310_e",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original computed XNOR (bitwise) using ~A[j] which in Python gives -1-A[j] (not 0/1 negation), giving completely wrong results for single-bit values. LV renamed i/j to p/q and used 'aggregate', and the model defined an explicit nand() function returning 1-(a&b), which correctly implements the NAND operation.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc312_c",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized", "constraint_rephrased"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original used a flawed two-pointer with incorrect logic (doesn't correctly count sellers/buyers at each price X). LV's 'vendors'/'purchasers' terminology triggered a binary search approach with correct counting of how many can offer/want at price mid.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc314_a",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original used float arithmetic (str(3.14159...)) which loses precision at high decimal places. LV's vaguer 'shorten'/'cut off' description led the model to store pi as a hardcoded string literal and slice it directly, avoiding floating-point precision loss.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc314_d",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "input_parsing_fixed"],
+      "explanation": "Original skipped incrementing index after type-2/3 operations (index += 1 instead of always +=3), misaligning all subsequent query reads. LV's 'updates'/'symbols'/'updates' framing led the model to always advance index by 3 regardless of operation type, fixing the parsing offset bug.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc322_a",
+      "prompt_changes": ["terminology_generalized", "function_renamed"],
+      "code_changes": ["off_by_one_fixed"],
+      "explanation": "Original returned n (0-based index) while the problem requires 1-based position. LV renamed the function to find_abc_pattern and used 'spot'/'index', and the model returned n+1, fixing the off-by-one indexing error.",
+      "root_cause": "function_rename_changes_approach"
+    },
+    {
+      "task_id": "abc325_c",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original DFS mutated the grid as visited-marking but didn't use a separate visited array, causing cells to be mis-marked as unvisited after backtracking. LV's 'devices'/'units'/'linked' triggered BFS with an explicit visited boolean array, correctly counting connected components.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc328_c",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "input_parsing_fixed"],
+      "explanation": "Original read queries starting at index 2 overwriting S, and the indexing was offset by 1 (queries at 2+2i instead of 3+2i). LV renamed S/Q/l/r to T/q/a/b, and the model correctly indexed queries starting at data[3], fixing the parsing overlap with the string S.",
+      "root_cause": "input_format_change_fixed_parsing"
+    },
+    {
+      "task_id": "abc329_f",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "cleaner_simpler_approach"],
+      "explanation": "Original iterated over dict items while deleting from the same dict, which in Python raises RuntimeError. LV's 'containers'/'items'/'transfer' terminology triggered use of set union (containers[b] |= containers[a]) which is both correct and efficient.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc330_c",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original only checked perfect-square y values (min_diff only updates when y*y==y_squared) and returned min_diff which may remain inf if no exact solution. LV's vaguer 'smallest possible value' led the model to also check y and y+1 neighbors for near-perfect squares, plus added an early return 0 when exact, covering all cases.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc333_c",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original capped repunits at 10^6 (max_val) which is too small — 111...1 (6 ones) is 111111 but e.g. 333rd value needs larger repunits. LV's 'value'/'formed' language led the model to generate repunits by string repetition ('1'*i) up to length 100, and use a set to deduplicate, covering all necessary sums.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc339_b",
+      "prompt_changes": ["domain_noun_changed", "variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original moved to (nx, ny) first and then checked/painted the new cell, not the current cell — the Langton's ant rule requires painting current cell before moving. LV's 'slot'/'default state'/'switch' terminology led the model to check and paint grid[x][y] first and then move, matching the correct rule order.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc341_e",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original treated S as an immutable string and rebuilt only the flipped range (losing rest of string) and index arithmetic was wrong. LV's 'sequence'/'toggle'/'symbols' language led the model to represent S as a list of chars with in-place toggle, correctly handling both query types.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc342_a",
+      "prompt_changes": ["terminology_generalized", "constraint_rephrased"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original code returns the index of the first character that differs from S[0], which fails when the odd character happens to be S[0] (e.g., 'aab' would return S[0]='a' and look for 'b', returning 2 correctly, but 'baa' would correctly fail, yet 'aba' should return 2 not the 'b' at index 0 edge). LV's 'stands out'/'elements' wording triggered a Counter-based approach that finds the character appearing once regardless of position.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc343_d",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original tried to sort events and track a sliding window of current_scores which was fundamentally wrong — it removed scores by index from events list causing index errors. LV's 'participants'/'totals'/'distinct' triggered a correct score_counts dict tracking each player's running total, updating counts incrementally.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc344_a",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "cleaner_simpler_approach"],
+      "explanation": "Original joined with '|' after splitting by '|', producing spurious '|' in output when the final segment is empty or when the join separator is wrong. LV's 'marks'/'portion' description triggered a direct parts[0]+parts[2] concatenation without the erroneous re-insertion of '|'.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc347_c",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original iterated over all possible starting days checking if all D_i are holidays, which is overly complex and has an off-by-one in the modulo check. LV's 'off-times'/'time units' led to a simpler insight: check if each D_i mod (A+B) < A (i.e. lands in off-time region when starting at day 0), which is the correct single-pass check.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc348_c",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original computed a wrong 'max_min_for_color' by averaging adjacent sorted values — the problem just wants the minimum value within each color group. LV's 'items'/'label'/'value' language led to a straightforward min_values dict tracking minimum per group and returning max of minimums.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc349_a",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original returned sum(A) but the correct answer is -sum(A) (since all scores must sum to 0, person N's score is the negative of the sum of others). LV's 'tallies'/'encounters' language led the model to re-derive the math and compute sum(scores)*(-1), correctly negating.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc349_b",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original checked len(freq_count)>2 which rejects valid good strings, and the two-key case had overly restrictive conditions. LV's 'sequence'/'qualifies' language triggered a fresh loop checking each frequency i from 1 to max: if freq_count[i] exists it must be exactly 2, which directly encodes the definition.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc353_e",
+      "prompt_changes": ["function_renamed", "variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original function f(x,y) used a generator with next() that returns '' when strings differ, then takes len('') = 0 always — it never returns the prefix length. Renaming to g(p,q) with 'initial segment'/'share' wording led the model to write a correct char-by-char comparison loop returning the index at first mismatch.",
+      "root_cause": "function_rename_changes_approach"
+    },
+    {
+      "task_id": "abc355_b",
+      "prompt_changes": ["terminology_generalized", "variable_renamed"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original checked C[i]-C[i-1]==1 (consecutive integers) instead of both being in set A — it was conflating 'consecutive integers' with 'consecutive elements from A'. LV's 'collections'/'adjacent entries'/'originate from' language triggered the correct check: C[i] in A and C[i+1] in A.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc357_b",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original applied .lower() when uppercase > lowercase (should be .upper()) and .upper() otherwise — the condition and action were swapped. LV's 'differing cases'/'change' description triggered re-reading the rule correctly: if uppercase > lowercase then convert to uppercase (all-caps), else to lowercase.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc357_e",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original tried to use cycle lengths for counting reachable pairs but the logic was completely wrong (comparing cycle lengths). LV's 'nodes'/'links'/'connected set' terminology triggered a BFS-based approach correctly computing all vertices reachable from each start vertex via DFS.",
+      "root_cause": "function_rename_changes_approach"
+    },
+    {
+      "task_id": "abc359_b",
+      "prompt_changes": ["variable_renamed"],
+      "code_changes": ["logic_bug_fixed", "off_by_one_fixed"],
+      "explanation": "Original checked abs(indices[0]-indices[1])==3 which means 2 people between them (indices differ by 3 means 2 in-between positions); should be ==2 for exactly 1 person in between. Renaming A to C (colors array variable) caused the model to re-derive the distance condition, using abs==2 correctly.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc361_b",
+      "prompt_changes": ["variable_renamed", "function_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original assumed inputs were already ordered (min corner first) and checked max(x1,x3)<min(x2,x4), but didn't sort coordinates within each cuboid first. LV renamed C(a,b,c,d,e,f) to B(p,q,r,s,t,u) and used 'box'/'corners', leading the model to write a check that works regardless of input order by comparing p<y (not sorted) with the correct overlap condition.",
+      "root_cause": "function_rename_changes_approach"
+    },
+    {
+      "task_id": "abc363_a",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original formula next_threshold=(current_symbols+1)*100 gives 200 for rating 1-99 which is wrong; it should be 100*(current_carets) for next boundary. LV's 'score'/'carets' terminology triggered explicit if-elif per range, with the correct boundary for each level (100, 200, 300 minus R).",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc363_b",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original added N to count each day (as if all N people simultaneously cross threshold) rather than growing each person's hair individually. LV's 'hair amount'/'tends to increase' led the model to simulate properly by incrementing each L[i] by 1 each day and recounting.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc364_e",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original counted max_eaten incorrectly: after the loop breaks at the failing dish, it counts all remaining perm items as eaten which is wrong. LV's 'items'/'sample'/'cumulative' language led the model to use an explicit counter that increments before the break check, correctly counting items sampled before stopping.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc365_e",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed"],
+      "explanation": "Original computed result += count[k]*(1<<k) outside the inner loop using k from the inner loop (after loop ends, k=31 always) rather than summing correctly. Renaming A/N to s/m and 'aggregate' wording led the model to directly sum prefix_xor[j+1]^prefix_xor[i] for all pairs, a clean O(N^2) approach without the broken bit-counting.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "3507",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "algorithm_changed"],
+      "explanation": "Original is_special counted total divisors including x itself (range goes to sqrt(x) counting pairs), so a number with 3 divisors (like 4=1,2,4) incorrectly shows count==4 (counts 1,2,4 as 1+1+1 but also 2*2 pair). LV renamed l/r to a/b and 'proper divisors' emphasis triggered correct logic: iterate i from 1 to x//2 and count proper divisors directly.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "abc369_b",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original had incorrect logic: when a hand is specified (L or R) it checked if the OTHER hand would be closer and switched, which misinterprets the problem (hand is fixed per press). LV's 'activate'/'fatigue increases' language led to a simpler model: just move the specified hand and add the distance, initializing both to 0 (handles first press with 0 cost).",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc371_b",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original stored all babies in family_babies and then checked len==1 for 'is first male' which fails because it includes female babies in the count. LV's 'births'/'gender'/'first male born' led the model to track family_born[family] counting only male births, correctly identifying the first male.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc372_e",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original only tracked direct neighbors in the adjacency list for type-2 queries (not all nodes in connected component), and sorted only adj_list[v] missing transitive connections. LV's 'network'/'connected set'/'associated' triggered BFS to find all nodes in the same component before finding k-th largest.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc378_d",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original BFS marked (nx,ny,step+1) as visited globally, which incorrectly prevents the same cell being reached via different paths at different steps (paths can't revisit cells but different paths are independent). LV's 'positions'/'unoccupied'/'obstructed' led to DFS with a per-path visited set, correctly counting non-self-intersecting paths.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "3676",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original returned (1<<pos)|(1<<(pos-1)-1) which adds an extra high bit instead of all-ones mask. For n=5 (3 bits), pos=3, returns 8|3=11 not 7. LV's 'solely of set bits'/'binary form' triggered the correct all-ones mask: (1<<pos)-1.",
+      "root_cause": "constraint_rephrasing_clarified"
+    },
+    {
+      "task_id": "abc388_b",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "input_parsing_fixed"],
+      "explanation": "Original referenced undefined variable 'lengths' in the comprehension (weight+k*length) when it only stored initial_weight. LV's 'creatures'/'report' language led the model to store (T,L) tuples and correctly compute T*(L+k) for each creature.",
+      "root_cause": "input_format_change_fixed_parsing"
+    },
+    {
+      "task_id": "abc389_b",
+      "prompt_changes": ["terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original started at N=isqrt(X)+1 and incremented, which starts way too high for small X (e.g. X=6, isqrt=2, starts at N=3 which happens to work by luck but breaks for larger inputs with wrong direction). LV's 'numeric value'/'determine' led to a simple N=1,2,3,... linear search which is correct and unambiguous.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "abc391_b",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "input_parsing_fixed"],
+      "explanation": "Original parsed S as a 2D array by splitting character-by-character per row (wrong for multi-char tokens), and T indexing was off (N*N+2+i*M to (i+1)*M doesn't account for N offset). LV's 'layout'/'pattern'/'locate' triggered treating each row string as a single token from data[], parsing S=data[2:N+2] and T=data[N+2:] correctly.",
+      "root_cause": "input_format_change_fixed_parsing"
+    },
+    {
+      "task_id": "abc400_a",
+      "prompt_changes": ["domain_noun_changed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original checked if A is a perfect square (B=sqrt(A)) which is completely wrong — the problem asks for B such that A*B=400, i.e. B=400/A. LV's 'gathering'/'rectangular grid'/'layout' led the model to correctly check 400%A==0 and return 400//A.",
+      "root_cause": "terminology_generalization_triggered_better_pattern"
+    },
+    {
+      "task_id": "abc400_e",
+      "prompt_changes": ["terminology_generalized", "algorithm_description_vaguer"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original tried to factor N by finding square root factors, which doesn't generalize to the full problem structure. LV's 'pair of prime divisors'/'exponent is even' led the model to write a full factorization via get_prime_factors and then check the conditions (exactly 2 distinct primes, all even exponents).",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "arc192_a",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["logic_bug_fixed", "wrong_formula_replaced"],
+      "explanation": "Original checked for consecutive 0s (A[i]==0 and A[i+1]==0) but the correct check is whether the ARC operation can clear all 0s, which requires consecutive 1s (so operation targets are available). LV renamed A to B and used 'list'/'acceptable' which led the model to check for consecutive 1s instead, correctly determining if the clearing operation can be applied.",
+      "root_cause": "variable_rename_breaks_overfit"
+    },
+    {
+      "task_id": "arc194_e",
+      "prompt_changes": ["terminology_generalized", "algorithm_description_vaguer"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original checked if count of '01' and '10' patterns match between S and T, which is an incorrect invariant for this operation. LV's 'local operations'/'contiguous window' language led the model to check structural matching — same count of 0s and 1s, plus verifying specific block patterns can be swapped, closer to actual invariant.",
+      "root_cause": "vague_algorithm_freed_model"
+    },
+    {
+      "task_id": "arc196_a",
+      "prompt_changes": ["variable_renamed", "terminology_generalized"],
+      "code_changes": ["algorithm_changed", "logic_bug_fixed"],
+      "explanation": "Original sorted and summed consecutive differences, which gives the range (max-min) not the max sum of absolute differences from pairing. LV renamed A to S/s and used 'reward'/'neighbouring items', leading the model to pair smallest with largest repeatedly (pop(0) and pop()), which correctly maximizes total absolute differences.",
+      "root_cause": "variable_rename_breaks_overfit"
+    }
+  ]
+}

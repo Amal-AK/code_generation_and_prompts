@@ -1,0 +1,13 @@
+Model,Dataset,Samples,SuccessExec,Pass@1_TRUE,SuccessExecRate,Pass@1_Rate
+Qwen/Qwen2.5-Coder-7B-Instruct,./datasets/livecodebench/livecodebench_public.jsonl,1000,206,205,0.206,0.205
+Qwen/Qwen2.5-Coder-7B-Instruct,./mutations/livecodebench_US_with_tests.jsonl,1000,204,203,0.204,0.203
+Qwen/Qwen2.5-Coder-7B-Instruct,./mutations/livecodebench_LV_with_tests.jsonl,1000,223,222,0.223,0.222
+Qwen/Qwen2.5-Coder-7B-Instruct,./mutations/livecodebench_SF_with_tests.jsonl,1000,206,205,0.206,0.205
+codellama/CodeLlama-7b-Instruct-hf,./datasets/livecodebench/livecodebench_public.jsonl,1000,82,81,0.082,0.081
+codellama/CodeLlama-7b-Instruct-hf,./mutations/livecodebench_US_with_tests.jsonl,1000,85,84,0.085,0.084
+codellama/CodeLlama-7b-Instruct-hf,./mutations/livecodebench_LV_with_tests.jsonl,1000,83,82,0.083,0.082
+codellama/CodeLlama-7b-Instruct-hf,./mutations/livecodebench_SF_with_tests.jsonl,1000,79,78,0.079,0.078
+deepseek-ai/deepseek-coder-6.7b-instruct,./datasets/livecodebench/livecodebench_public.jsonl,1000,164,163,0.164,0.163
+deepseek-ai/deepseek-coder-6.7b-instruct,./mutations/livecodebench_US_with_tests.jsonl,1000,161,160,0.161,0.16
+deepseek-ai/deepseek-coder-6.7b-instruct,./mutations/livecodebench_LV_with_tests.jsonl,1000,149,148,0.149,0.148
+deepseek-ai/deepseek-coder-6.7b-instruct,./mutations/livecodebench_SF_with_tests.jsonl,1000,153,152,0.153,0.152

@@ -1,3 +1,0 @@
-Model,Dataset,Samples,SuccessExec,Pass@1_TRUE,SuccessExecRate,Pass@1_Rate
-gpt-5-mini,./results/api/gpt-5-mini__livecodebench_public.json,1000,526,525,0.526,0.525
-gpt-5-mini,./results/api/gpt-5-mini__livecodebench_US_with_tests.json,1000,486,485,0.486,0.485

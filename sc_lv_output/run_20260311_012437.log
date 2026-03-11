@@ -1,0 +1,802 @@
+INFO: Loading deepseek-ai/deepseek-coder-6.7b-instruct …
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-6.7b-instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO: HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-6.7b-instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/config.json "HTTP/1.1 200 OK"
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<00:00, 13530.01it/s, Materializing param=lm_head.weight]Loading weights:   0%|          | 1/291 [00:00<00:00, 5562.74it/s, Materializing param=lm_head.weight] Loading weights:   1%|          | 2/291 [00:00<00:07, 38.45it/s, Materializing param=model.embed_tokens.weight]Loading weights:   1%|          | 2/291 [00:00<00:07, 38.35it/s, Materializing param=model.embed_tokens.weight]Loading weights:   1%|          | 3/291 [00:00<00:07, 41.14it/s, Materializing param=model.layers.0.input_layernorm.weight]Loading weights:   1%|          | 3/291 [00:00<00:07, 41.04it/s, Materializing param=model.layers.0.input_layernorm.weight]Loading weights:   1%|▏         | 4/291 [00:00<00:05, 52.01it/s, Materializing param=model.layers.0.mlp.down_proj.weight]  Loading weights:   1%|▏         | 4/291 [00:00<00:05, 51.86it/s, Materializing param=model.layers.0.mlp.down_proj.weight]Loading weights:   2%|▏         | 5/291 [00:00<00:04, 64.58it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]Loading weights:   2%|▏         | 5/291 [00:00<00:04, 64.50it/s, Materializing param=model.layers.0.mlp.gate_proj.weight]Loading weights:   2%|▏         | 6/291 [00:00<00:03, 77.19it/s, Materializing param=model.layers.0.mlp.up_proj.weight]  Loading weights:   2%|▏         | 6/291 [00:00<00:03, 77.11it/s, Materializing param=model.layers.0.mlp.up_proj.weight]Loading weights:   2%|▏         | 7/291 [00:00<00:03, 89.73it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]Loading weights:   2%|▏         | 7/291 [00:00<00:03, 89.63it/s, Materializing param=model.layers.0.post_attention_layernorm.weight]Loading weights:   3%|▎         | 8/291 [00:00<00:02, 102.19it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]       Loading weights:   3%|▎         | 8/291 [00:00<00:02, 102.08it/s, Materializing param=model.layers.0.self_attn.k_proj.weight]Loading weights:   3%|▎         | 9/291 [00:00<00:02, 104.55it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]Loading weights:   3%|▎         | 9/291 [00:00<00:02, 104.37it/s, Materializing param=model.layers.0.self_attn.o_proj.weight]Loading weights:   3%|▎         | 10/291 [00:00<00:02, 111.62it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]Loading weights:   3%|▎         | 10/291 [00:00<00:02, 111.49it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]Loading weights:   4%|▍         | 11/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.0.self_attn.q_proj.weight]Loading weights:   4%|▍         | 11/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]Loading weights:   4%|▍         | 11/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.0.self_attn.v_proj.weight]Loading weights:   4%|▍         | 12/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.input_layernorm.weight] Loading weights:   4%|▍         | 12/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.input_layernorm.weight]Loading weights:   4%|▍         | 13/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.down_proj.weight]  Loading weights:   4%|▍         | 13/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.down_proj.weight]Loading weights:   5%|▍         | 14/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]Loading weights:   5%|▍         | 14/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.gate_proj.weight]Loading weights:   5%|▌         | 15/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.up_proj.weight]  Loading weights:   5%|▌         | 15/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.mlp.up_proj.weight]Loading weights:   5%|▌         | 16/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]Loading weights:   5%|▌         | 16/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.post_attention_layernorm.weight]Loading weights:   6%|▌         | 17/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]        Loading weights:   6%|▌         | 17/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.k_proj.weight]Loading weights:   6%|▌         | 18/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]Loading weights:   6%|▌         | 18/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.o_proj.weight]Loading weights:   7%|▋         | 19/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]Loading weights:   7%|▋         | 19/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.q_proj.weight]Loading weights:   7%|▋         | 20/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]Loading weights:   7%|▋         | 20/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.1.self_attn.v_proj.weight]Loading weights:   7%|▋         | 21/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.input_layernorm.weight] Loading weights:   7%|▋         | 21/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.input_layernorm.weight]Loading weights:   8%|▊         | 22/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.mlp.down_proj.weight]  Loading weights:   8%|▊         | 22/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.mlp.down_proj.weight]Loading weights:   8%|▊         | 23/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]Loading weights:   8%|▊         | 23/291 [00:00<00:02, 104.83it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]Loading weights:   8%|▊         | 24/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.mlp.gate_proj.weight]Loading weights:   8%|▊         | 24/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.mlp.up_proj.weight]  Loading weights:   8%|▊         | 24/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.mlp.up_proj.weight]Loading weights:   9%|▊         | 25/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]Loading weights:   9%|▊         | 25/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.post_attention_layernorm.weight]Loading weights:   9%|▉         | 26/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]        Loading weights:   9%|▉         | 26/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.k_proj.weight]Loading weights:   9%|▉         | 27/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]Loading weights:   9%|▉         | 27/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.o_proj.weight]Loading weights:  10%|▉         | 28/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]Loading weights:  10%|▉         | 28/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.q_proj.weight]Loading weights:  10%|▉         | 29/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]Loading weights:  10%|▉         | 29/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.2.self_attn.v_proj.weight]Loading weights:  10%|█         | 30/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.input_layernorm.weight] Loading weights:  10%|█         | 30/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.input_layernorm.weight]Loading weights:  11%|█         | 31/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.down_proj.weight]  Loading weights:  11%|█         | 31/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.down_proj.weight]Loading weights:  11%|█         | 32/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]Loading weights:  11%|█         | 32/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.gate_proj.weight]Loading weights:  11%|█▏        | 33/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.up_proj.weight]  Loading weights:  11%|█▏        | 33/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.mlp.up_proj.weight]Loading weights:  12%|█▏        | 34/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]Loading weights:  12%|█▏        | 34/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.post_attention_layernorm.weight]Loading weights:  12%|█▏        | 35/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]        Loading weights:  12%|█▏        | 35/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.k_proj.weight]Loading weights:  12%|█▏        | 36/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]Loading weights:  12%|█▏        | 36/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.o_proj.weight]Loading weights:  13%|█▎        | 37/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]Loading weights:  13%|█▎        | 37/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.q_proj.weight]Loading weights:  13%|█▎        | 38/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]Loading weights:  13%|█▎        | 38/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.3.self_attn.v_proj.weight]Loading weights:  13%|█▎        | 39/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.4.input_layernorm.weight] Loading weights:  13%|█▎        | 39/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.4.input_layernorm.weight]Loading weights:  14%|█▎        | 40/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.4.mlp.down_proj.weight]  Loading weights:  14%|█▎        | 40/291 [00:00<00:02, 109.71it/s, Materializing param=model.layers.4.mlp.down_proj.weight]Loading weights:  14%|█▍        | 41/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.mlp.down_proj.weight]Loading weights:  14%|█▍        | 41/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]Loading weights:  14%|█▍        | 41/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.mlp.gate_proj.weight]Loading weights:  14%|█▍        | 42/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.mlp.up_proj.weight]  Loading weights:  14%|█▍        | 42/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.mlp.up_proj.weight]Loading weights:  15%|█▍        | 43/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]Loading weights:  15%|█▍        | 43/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.post_attention_layernorm.weight]Loading weights:  15%|█▌        | 44/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]        Loading weights:  15%|█▌        | 44/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.k_proj.weight]Loading weights:  15%|█▌        | 45/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]Loading weights:  15%|█▌        | 45/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.o_proj.weight]Loading weights:  16%|█▌        | 46/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]Loading weights:  16%|█▌        | 46/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.q_proj.weight]Loading weights:  16%|█▌        | 47/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]Loading weights:  16%|█▌        | 47/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.4.self_attn.v_proj.weight]Loading weights:  16%|█▋        | 48/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.input_layernorm.weight] Loading weights:  16%|█▋        | 48/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.input_layernorm.weight]Loading weights:  17%|█▋        | 49/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.down_proj.weight]  Loading weights:  17%|█▋        | 49/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.down_proj.weight]Loading weights:  17%|█▋        | 50/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]Loading weights:  17%|█▋        | 50/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.gate_proj.weight]Loading weights:  18%|█▊        | 51/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.up_proj.weight]  Loading weights:  18%|█▊        | 51/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.mlp.up_proj.weight]Loading weights:  18%|█▊        | 52/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]Loading weights:  18%|█▊        | 52/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.post_attention_layernorm.weight]Loading weights:  18%|█▊        | 53/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]        Loading weights:  18%|█▊        | 53/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.k_proj.weight]Loading weights:  19%|█▊        | 54/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]Loading weights:  19%|█▊        | 54/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.o_proj.weight]Loading weights:  19%|█▉        | 55/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]Loading weights:  19%|█▉        | 55/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.q_proj.weight]Loading weights:  19%|█▉        | 56/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]Loading weights:  19%|█▉        | 56/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.5.self_attn.v_proj.weight]Loading weights:  20%|█▉        | 57/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.6.input_layernorm.weight] Loading weights:  20%|█▉        | 57/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.6.input_layernorm.weight]Loading weights:  20%|█▉        | 58/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.6.mlp.down_proj.weight]  Loading weights:  20%|█▉        | 58/291 [00:00<00:01, 133.19it/s, Materializing param=model.layers.6.mlp.down_proj.weight]Loading weights:  20%|██        | 59/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.mlp.down_proj.weight]Loading weights:  20%|██        | 59/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]Loading weights:  20%|██        | 59/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.mlp.gate_proj.weight]Loading weights:  21%|██        | 60/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.mlp.up_proj.weight]  Loading weights:  21%|██        | 60/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.mlp.up_proj.weight]Loading weights:  21%|██        | 61/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]Loading weights:  21%|██        | 61/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.post_attention_layernorm.weight]Loading weights:  21%|██▏       | 62/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]        Loading weights:  21%|██▏       | 62/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.k_proj.weight]Loading weights:  22%|██▏       | 63/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]Loading weights:  22%|██▏       | 63/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.o_proj.weight]Loading weights:  22%|██▏       | 64/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]Loading weights:  22%|██▏       | 64/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.q_proj.weight]Loading weights:  22%|██▏       | 65/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]Loading weights:  22%|██▏       | 65/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.6.self_attn.v_proj.weight]Loading weights:  23%|██▎       | 66/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.input_layernorm.weight] Loading weights:  23%|██▎       | 66/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.input_layernorm.weight]Loading weights:  23%|██▎       | 67/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.down_proj.weight]  Loading weights:  23%|██▎       | 67/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.down_proj.weight]Loading weights:  23%|██▎       | 68/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]Loading weights:  23%|██▎       | 68/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.gate_proj.weight]Loading weights:  24%|██▎       | 69/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.up_proj.weight]  Loading weights:  24%|██▎       | 69/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.mlp.up_proj.weight]Loading weights:  24%|██▍       | 70/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]Loading weights:  24%|██▍       | 70/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.post_attention_layernorm.weight]Loading weights:  24%|██▍       | 71/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]        Loading weights:  24%|██▍       | 71/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.k_proj.weight]Loading weights:  25%|██▍       | 72/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]Loading weights:  25%|██▍       | 72/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.o_proj.weight]Loading weights:  25%|██▌       | 73/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]Loading weights:  25%|██▌       | 73/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.q_proj.weight]Loading weights:  25%|██▌       | 74/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]Loading weights:  25%|██▌       | 74/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.7.self_attn.v_proj.weight]Loading weights:  26%|██▌       | 75/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.8.input_layernorm.weight] Loading weights:  26%|██▌       | 75/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.8.input_layernorm.weight]Loading weights:  26%|██▌       | 76/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.8.mlp.down_proj.weight]  Loading weights:  26%|██▌       | 76/291 [00:00<00:01, 130.57it/s, Materializing param=model.layers.8.mlp.down_proj.weight]Loading weights:  26%|██▋       | 77/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.mlp.down_proj.weight]Loading weights:  26%|██▋       | 77/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]Loading weights:  26%|██▋       | 77/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.mlp.gate_proj.weight]Loading weights:  27%|██▋       | 78/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.mlp.up_proj.weight]  Loading weights:  27%|██▋       | 78/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.mlp.up_proj.weight]Loading weights:  27%|██▋       | 79/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]Loading weights:  27%|██▋       | 79/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.post_attention_layernorm.weight]Loading weights:  27%|██▋       | 80/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]        Loading weights:  27%|██▋       | 80/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.k_proj.weight]Loading weights:  28%|██▊       | 81/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]Loading weights:  28%|██▊       | 81/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.o_proj.weight]Loading weights:  28%|██▊       | 82/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]Loading weights:  28%|██▊       | 82/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.q_proj.weight]Loading weights:  29%|██▊       | 83/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]Loading weights:  29%|██▊       | 83/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.8.self_attn.v_proj.weight]Loading weights:  29%|██▉       | 84/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.input_layernorm.weight] Loading weights:  29%|██▉       | 84/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.input_layernorm.weight]Loading weights:  29%|██▉       | 85/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.down_proj.weight]  Loading weights:  29%|██▉       | 85/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.down_proj.weight]Loading weights:  30%|██▉       | 86/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]Loading weights:  30%|██▉       | 86/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.gate_proj.weight]Loading weights:  30%|██▉       | 87/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.up_proj.weight]  Loading weights:  30%|██▉       | 87/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.mlp.up_proj.weight]Loading weights:  30%|███       | 88/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]Loading weights:  30%|███       | 88/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.post_attention_layernorm.weight]Loading weights:  31%|███       | 89/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]        Loading weights:  31%|███       | 89/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.k_proj.weight]Loading weights:  31%|███       | 90/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]Loading weights:  31%|███       | 90/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.o_proj.weight]Loading weights:  31%|███▏      | 91/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]Loading weights:  31%|███▏      | 91/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.q_proj.weight]Loading weights:  32%|███▏      | 92/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]Loading weights:  32%|███▏      | 92/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.9.self_attn.v_proj.weight]Loading weights:  32%|███▏      | 93/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.10.input_layernorm.weight]Loading weights:  32%|███▏      | 93/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.10.input_layernorm.weight]Loading weights:  32%|███▏      | 94/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.10.mlp.down_proj.weight]  Loading weights:  32%|███▏      | 94/291 [00:00<00:01, 129.64it/s, Materializing param=model.layers.10.mlp.down_proj.weight]Loading weights:  33%|███▎      | 95/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.mlp.down_proj.weight]Loading weights:  33%|███▎      | 95/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]Loading weights:  33%|███▎      | 95/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.mlp.gate_proj.weight]Loading weights:  33%|███▎      | 96/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.mlp.up_proj.weight]  Loading weights:  33%|███▎      | 96/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.mlp.up_proj.weight]Loading weights:  33%|███▎      | 97/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]Loading weights:  33%|███▎      | 97/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.post_attention_layernorm.weight]Loading weights:  34%|███▎      | 98/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]        Loading weights:  34%|███▎      | 98/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.k_proj.weight]Loading weights:  34%|███▍      | 99/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]Loading weights:  34%|███▍      | 99/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.o_proj.weight]Loading weights:  34%|███▍      | 100/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]Loading weights:  34%|███▍      | 100/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.q_proj.weight]Loading weights:  35%|███▍      | 101/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]Loading weights:  35%|███▍      | 101/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.10.self_attn.v_proj.weight]Loading weights:  35%|███▌      | 102/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.input_layernorm.weight] Loading weights:  35%|███▌      | 102/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.input_layernorm.weight]Loading weights:  35%|███▌      | 103/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.down_proj.weight]  Loading weights:  35%|███▌      | 103/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.down_proj.weight]Loading weights:  36%|███▌      | 104/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]Loading weights:  36%|███▌      | 104/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.gate_proj.weight]Loading weights:  36%|███▌      | 105/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.up_proj.weight]  Loading weights:  36%|███▌      | 105/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.mlp.up_proj.weight]Loading weights:  36%|███▋      | 106/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]Loading weights:  36%|███▋      | 106/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.post_attention_layernorm.weight]Loading weights:  37%|███▋      | 107/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]        Loading weights:  37%|███▋      | 107/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.k_proj.weight]Loading weights:  37%|███▋      | 108/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]Loading weights:  37%|███▋      | 108/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.o_proj.weight]Loading weights:  37%|███▋      | 109/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]Loading weights:  37%|███▋      | 109/291 [00:00<00:01, 142.33it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]Loading weights:  38%|███▊      | 110/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.11.self_attn.q_proj.weight]Loading weights:  38%|███▊      | 110/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]Loading weights:  38%|███▊      | 110/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.11.self_attn.v_proj.weight]Loading weights:  38%|███▊      | 111/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.input_layernorm.weight] Loading weights:  38%|███▊      | 111/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.input_layernorm.weight]Loading weights:  38%|███▊      | 112/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.down_proj.weight]  Loading weights:  38%|███▊      | 112/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.down_proj.weight]Loading weights:  39%|███▉      | 113/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]Loading weights:  39%|███▉      | 113/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.gate_proj.weight]Loading weights:  39%|███▉      | 114/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.up_proj.weight]  Loading weights:  39%|███▉      | 114/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.mlp.up_proj.weight]Loading weights:  40%|███▉      | 115/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]Loading weights:  40%|███▉      | 115/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.post_attention_layernorm.weight]Loading weights:  40%|███▉      | 116/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]        Loading weights:  40%|███▉      | 116/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.k_proj.weight]Loading weights:  40%|████      | 117/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]Loading weights:  40%|████      | 117/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.o_proj.weight]Loading weights:  41%|████      | 118/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]Loading weights:  41%|████      | 118/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.q_proj.weight]Loading weights:  41%|████      | 119/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]Loading weights:  41%|████      | 119/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.12.self_attn.v_proj.weight]Loading weights:  41%|████      | 120/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.input_layernorm.weight] Loading weights:  41%|████      | 120/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.input_layernorm.weight]Loading weights:  42%|████▏     | 121/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.down_proj.weight]  Loading weights:  42%|████▏     | 121/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.down_proj.weight]Loading weights:  42%|████▏     | 122/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]Loading weights:  42%|████▏     | 122/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.gate_proj.weight]Loading weights:  42%|████▏     | 123/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.up_proj.weight]  Loading weights:  42%|████▏     | 123/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.mlp.up_proj.weight]Loading weights:  43%|████▎     | 124/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]Loading weights:  43%|████▎     | 124/291 [00:00<00:01, 143.84it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]Loading weights:  43%|████▎     | 125/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.post_attention_layernorm.weight]Loading weights:  43%|████▎     | 125/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]        Loading weights:  43%|████▎     | 125/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.k_proj.weight]Loading weights:  43%|████▎     | 126/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]Loading weights:  43%|████▎     | 126/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.o_proj.weight]Loading weights:  44%|████▎     | 127/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]Loading weights:  44%|████▎     | 127/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.q_proj.weight]Loading weights:  44%|████▍     | 128/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]Loading weights:  44%|████▍     | 128/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.13.self_attn.v_proj.weight]Loading weights:  44%|████▍     | 129/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.input_layernorm.weight] Loading weights:  44%|████▍     | 129/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.input_layernorm.weight]Loading weights:  45%|████▍     | 130/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.down_proj.weight]  Loading weights:  45%|████▍     | 130/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.down_proj.weight]Loading weights:  45%|████▌     | 131/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]Loading weights:  45%|████▌     | 131/291 [00:00<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.gate_proj.weight]Loading weights:  45%|████▌     | 132/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.up_proj.weight]  Loading weights:  45%|████▌     | 132/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.mlp.up_proj.weight]Loading weights:  46%|████▌     | 133/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]Loading weights:  46%|████▌     | 133/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.post_attention_layernorm.weight]Loading weights:  46%|████▌     | 134/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]        Loading weights:  46%|████▌     | 134/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.k_proj.weight]Loading weights:  46%|████▋     | 135/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]Loading weights:  46%|████▋     | 135/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.o_proj.weight]Loading weights:  47%|████▋     | 136/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]Loading weights:  47%|████▋     | 136/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.q_proj.weight]Loading weights:  47%|████▋     | 137/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]Loading weights:  47%|████▋     | 137/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.14.self_attn.v_proj.weight]Loading weights:  47%|████▋     | 138/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.15.input_layernorm.weight] Loading weights:  47%|████▋     | 138/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.15.input_layernorm.weight]Loading weights:  48%|████▊     | 139/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.15.mlp.down_proj.weight]  Loading weights:  48%|████▊     | 139/291 [00:01<00:01, 134.70it/s, Materializing param=model.layers.15.mlp.down_proj.weight]Loading weights:  48%|████▊     | 140/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.mlp.down_proj.weight]Loading weights:  48%|████▊     | 140/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]Loading weights:  48%|████▊     | 140/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.mlp.gate_proj.weight]Loading weights:  48%|████▊     | 141/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.mlp.up_proj.weight]  Loading weights:  48%|████▊     | 141/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.mlp.up_proj.weight]Loading weights:  49%|████▉     | 142/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]Loading weights:  49%|████▉     | 142/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.post_attention_layernorm.weight]Loading weights:  49%|████▉     | 143/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]        Loading weights:  49%|████▉     | 143/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.k_proj.weight]Loading weights:  49%|████▉     | 144/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]Loading weights:  49%|████▉     | 144/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.o_proj.weight]Loading weights:  50%|████▉     | 145/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]Loading weights:  50%|████▉     | 145/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.q_proj.weight]Loading weights:  50%|█████     | 146/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]Loading weights:  50%|█████     | 146/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.15.self_attn.v_proj.weight]Loading weights:  51%|█████     | 147/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.input_layernorm.weight] Loading weights:  51%|█████     | 147/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.input_layernorm.weight]Loading weights:  51%|█████     | 148/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.down_proj.weight]  Loading weights:  51%|█████     | 148/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.down_proj.weight]Loading weights:  51%|█████     | 149/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]Loading weights:  51%|█████     | 149/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.gate_proj.weight]Loading weights:  52%|█████▏    | 150/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.up_proj.weight]  Loading weights:  52%|█████▏    | 150/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.mlp.up_proj.weight]Loading weights:  52%|█████▏    | 151/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]Loading weights:  52%|█████▏    | 151/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.post_attention_layernorm.weight]Loading weights:  52%|█████▏    | 152/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]        Loading weights:  52%|█████▏    | 152/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.k_proj.weight]Loading weights:  53%|█████▎    | 153/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]Loading weights:  53%|█████▎    | 153/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.o_proj.weight]Loading weights:  53%|█████▎    | 154/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]Loading weights:  53%|█████▎    | 154/291 [00:01<00:01, 136.72it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]Loading weights:  53%|█████▎    | 155/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.16.self_attn.q_proj.weight]Loading weights:  53%|█████▎    | 155/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]Loading weights:  53%|█████▎    | 155/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.16.self_attn.v_proj.weight]Loading weights:  54%|█████▎    | 156/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.input_layernorm.weight] Loading weights:  54%|█████▎    | 156/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.input_layernorm.weight]Loading weights:  54%|█████▍    | 157/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.down_proj.weight]  Loading weights:  54%|█████▍    | 157/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.down_proj.weight]Loading weights:  54%|█████▍    | 158/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]Loading weights:  54%|█████▍    | 158/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.gate_proj.weight]Loading weights:  55%|█████▍    | 159/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.up_proj.weight]  Loading weights:  55%|█████▍    | 159/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.mlp.up_proj.weight]Loading weights:  55%|█████▍    | 160/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]Loading weights:  55%|█████▍    | 160/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.post_attention_layernorm.weight]Loading weights:  55%|█████▌    | 161/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]        Loading weights:  55%|█████▌    | 161/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.k_proj.weight]Loading weights:  56%|█████▌    | 162/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]Loading weights:  56%|█████▌    | 162/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.o_proj.weight]Loading weights:  56%|█████▌    | 163/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]Loading weights:  56%|█████▌    | 163/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.q_proj.weight]Loading weights:  56%|█████▋    | 164/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]Loading weights:  56%|█████▋    | 164/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.17.self_attn.v_proj.weight]Loading weights:  57%|█████▋    | 165/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.input_layernorm.weight] Loading weights:  57%|█████▋    | 165/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.input_layernorm.weight]Loading weights:  57%|█████▋    | 166/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.down_proj.weight]  Loading weights:  57%|█████▋    | 166/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.down_proj.weight]Loading weights:  57%|█████▋    | 167/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]Loading weights:  57%|█████▋    | 167/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.gate_proj.weight]Loading weights:  58%|█████▊    | 168/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.up_proj.weight]  Loading weights:  58%|█████▊    | 168/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.mlp.up_proj.weight]Loading weights:  58%|█████▊    | 169/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]Loading weights:  58%|█████▊    | 169/291 [00:01<00:00, 139.84it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]Loading weights:  58%|█████▊    | 170/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.post_attention_layernorm.weight]Loading weights:  58%|█████▊    | 170/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]        Loading weights:  58%|█████▊    | 170/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.k_proj.weight]Loading weights:  59%|█████▉    | 171/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]Loading weights:  59%|█████▉    | 171/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.o_proj.weight]Loading weights:  59%|█████▉    | 172/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]Loading weights:  59%|█████▉    | 172/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.q_proj.weight]Loading weights:  59%|█████▉    | 173/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]Loading weights:  59%|█████▉    | 173/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.18.self_attn.v_proj.weight]Loading weights:  60%|█████▉    | 174/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.input_layernorm.weight] Loading weights:  60%|█████▉    | 174/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.input_layernorm.weight]Loading weights:  60%|██████    | 175/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.down_proj.weight]  Loading weights:  60%|██████    | 175/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.down_proj.weight]Loading weights:  60%|██████    | 176/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]Loading weights:  60%|██████    | 176/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.gate_proj.weight]Loading weights:  61%|██████    | 177/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.up_proj.weight]  Loading weights:  61%|██████    | 177/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.mlp.up_proj.weight]Loading weights:  61%|██████    | 178/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]Loading weights:  61%|██████    | 178/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.post_attention_layernorm.weight]Loading weights:  62%|██████▏   | 179/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]        Loading weights:  62%|██████▏   | 179/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.k_proj.weight]Loading weights:  62%|██████▏   | 180/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]Loading weights:  62%|██████▏   | 180/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.o_proj.weight]Loading weights:  62%|██████▏   | 181/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]Loading weights:  62%|██████▏   | 181/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.q_proj.weight]Loading weights:  63%|██████▎   | 182/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]Loading weights:  63%|██████▎   | 182/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.19.self_attn.v_proj.weight]Loading weights:  63%|██████▎   | 183/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.20.input_layernorm.weight] Loading weights:  63%|██████▎   | 183/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.20.input_layernorm.weight]Loading weights:  63%|██████▎   | 184/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.20.mlp.down_proj.weight]  Loading weights:  63%|██████▎   | 184/291 [00:01<00:00, 131.71it/s, Materializing param=model.layers.20.mlp.down_proj.weight]Loading weights:  64%|██████▎   | 185/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.mlp.down_proj.weight]Loading weights:  64%|██████▎   | 185/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]Loading weights:  64%|██████▎   | 185/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.mlp.gate_proj.weight]Loading weights:  64%|██████▍   | 186/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.mlp.up_proj.weight]  Loading weights:  64%|██████▍   | 186/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.mlp.up_proj.weight]Loading weights:  64%|██████▍   | 187/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]Loading weights:  64%|██████▍   | 187/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.post_attention_layernorm.weight]Loading weights:  65%|██████▍   | 188/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]        Loading weights:  65%|██████▍   | 188/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.k_proj.weight]Loading weights:  65%|██████▍   | 189/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]Loading weights:  65%|██████▍   | 189/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.o_proj.weight]Loading weights:  65%|██████▌   | 190/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]Loading weights:  65%|██████▌   | 190/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.q_proj.weight]Loading weights:  66%|██████▌   | 191/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]Loading weights:  66%|██████▌   | 191/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.20.self_attn.v_proj.weight]Loading weights:  66%|██████▌   | 192/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.input_layernorm.weight] Loading weights:  66%|██████▌   | 192/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.input_layernorm.weight]Loading weights:  66%|██████▋   | 193/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.down_proj.weight]  Loading weights:  66%|██████▋   | 193/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.down_proj.weight]Loading weights:  67%|██████▋   | 194/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]Loading weights:  67%|██████▋   | 194/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.gate_proj.weight]Loading weights:  67%|██████▋   | 195/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.up_proj.weight]  Loading weights:  67%|██████▋   | 195/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.mlp.up_proj.weight]Loading weights:  67%|██████▋   | 196/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]Loading weights:  67%|██████▋   | 196/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.post_attention_layernorm.weight]Loading weights:  68%|██████▊   | 197/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]        Loading weights:  68%|██████▊   | 197/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.k_proj.weight]Loading weights:  68%|██████▊   | 198/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]Loading weights:  68%|██████▊   | 198/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.o_proj.weight]Loading weights:  68%|██████▊   | 199/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]Loading weights:  68%|██████▊   | 199/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.q_proj.weight]Loading weights:  69%|██████▊   | 200/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]Loading weights:  69%|██████▊   | 200/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.21.self_attn.v_proj.weight]Loading weights:  69%|██████▉   | 201/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.22.input_layernorm.weight] Loading weights:  69%|██████▉   | 201/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.22.input_layernorm.weight]Loading weights:  69%|██████▉   | 202/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.22.mlp.down_proj.weight]  Loading weights:  69%|██████▉   | 202/291 [00:01<00:00, 127.46it/s, Materializing param=model.layers.22.mlp.down_proj.weight]Loading weights:  70%|██████▉   | 203/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.mlp.down_proj.weight]Loading weights:  70%|██████▉   | 203/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]Loading weights:  70%|██████▉   | 203/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.mlp.gate_proj.weight]Loading weights:  70%|███████   | 204/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.mlp.up_proj.weight]  Loading weights:  70%|███████   | 204/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.mlp.up_proj.weight]Loading weights:  70%|███████   | 205/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]Loading weights:  70%|███████   | 205/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.post_attention_layernorm.weight]Loading weights:  71%|███████   | 206/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]        Loading weights:  71%|███████   | 206/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.k_proj.weight]Loading weights:  71%|███████   | 207/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]Loading weights:  71%|███████   | 207/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.o_proj.weight]Loading weights:  71%|███████▏  | 208/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]Loading weights:  71%|███████▏  | 208/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.q_proj.weight]Loading weights:  72%|███████▏  | 209/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]Loading weights:  72%|███████▏  | 209/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.22.self_attn.v_proj.weight]Loading weights:  72%|███████▏  | 210/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.input_layernorm.weight] Loading weights:  72%|███████▏  | 210/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.input_layernorm.weight]Loading weights:  73%|███████▎  | 211/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.down_proj.weight]  Loading weights:  73%|███████▎  | 211/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.down_proj.weight]Loading weights:  73%|███████▎  | 212/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]Loading weights:  73%|███████▎  | 212/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.gate_proj.weight]Loading weights:  73%|███████▎  | 213/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.up_proj.weight]  Loading weights:  73%|███████▎  | 213/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.mlp.up_proj.weight]Loading weights:  74%|███████▎  | 214/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]Loading weights:  74%|███████▎  | 214/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.post_attention_layernorm.weight]Loading weights:  74%|███████▍  | 215/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]        Loading weights:  74%|███████▍  | 215/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.k_proj.weight]Loading weights:  74%|███████▍  | 216/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]Loading weights:  74%|███████▍  | 216/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.o_proj.weight]Loading weights:  75%|███████▍  | 217/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]Loading weights:  75%|███████▍  | 217/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.q_proj.weight]Loading weights:  75%|███████▍  | 218/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]Loading weights:  75%|███████▍  | 218/291 [00:01<00:00, 140.75it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]Loading weights:  75%|███████▌  | 219/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.23.self_attn.v_proj.weight]Loading weights:  75%|███████▌  | 219/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.input_layernorm.weight] Loading weights:  75%|███████▌  | 219/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.input_layernorm.weight]Loading weights:  76%|███████▌  | 220/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.down_proj.weight]  Loading weights:  76%|███████▌  | 220/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.down_proj.weight]Loading weights:  76%|███████▌  | 221/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.gate_proj.weight]Loading weights:  76%|███████▌  | 221/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.gate_proj.weight]Loading weights:  76%|███████▋  | 222/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.up_proj.weight]  Loading weights:  76%|███████▋  | 222/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.mlp.up_proj.weight]Loading weights:  77%|███████▋  | 223/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.post_attention_layernorm.weight]Loading weights:  77%|███████▋  | 223/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.post_attention_layernorm.weight]Loading weights:  77%|███████▋  | 224/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.k_proj.weight]        Loading weights:  77%|███████▋  | 224/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.k_proj.weight]Loading weights:  77%|███████▋  | 225/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.o_proj.weight]Loading weights:  77%|███████▋  | 225/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.o_proj.weight]Loading weights:  78%|███████▊  | 226/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.q_proj.weight]Loading weights:  78%|███████▊  | 226/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.q_proj.weight]Loading weights:  78%|███████▊  | 227/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.v_proj.weight]Loading weights:  78%|███████▊  | 227/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.24.self_attn.v_proj.weight]Loading weights:  78%|███████▊  | 228/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.input_layernorm.weight] Loading weights:  78%|███████▊  | 228/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.input_layernorm.weight]Loading weights:  79%|███████▊  | 229/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.down_proj.weight]  Loading weights:  79%|███████▊  | 229/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.down_proj.weight]Loading weights:  79%|███████▉  | 230/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.gate_proj.weight]Loading weights:  79%|███████▉  | 230/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.gate_proj.weight]Loading weights:  79%|███████▉  | 231/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.up_proj.weight]  Loading weights:  79%|███████▉  | 231/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.mlp.up_proj.weight]Loading weights:  80%|███████▉  | 232/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.post_attention_layernorm.weight]Loading weights:  80%|███████▉  | 232/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.post_attention_layernorm.weight]Loading weights:  80%|████████  | 233/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.self_attn.k_proj.weight]        Loading weights:  80%|████████  | 233/291 [00:01<00:00, 140.99it/s, Materializing param=model.layers.25.self_attn.k_proj.weight]Loading weights:  80%|████████  | 234/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.k_proj.weight]Loading weights:  80%|████████  | 234/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.o_proj.weight]Loading weights:  80%|████████  | 234/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.o_proj.weight]Loading weights:  81%|████████  | 235/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.q_proj.weight]Loading weights:  81%|████████  | 235/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.q_proj.weight]Loading weights:  81%|████████  | 236/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.v_proj.weight]Loading weights:  81%|████████  | 236/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.25.self_attn.v_proj.weight]Loading weights:  81%|████████▏ | 237/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.input_layernorm.weight] Loading weights:  81%|████████▏ | 237/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.input_layernorm.weight]Loading weights:  82%|████████▏ | 238/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.down_proj.weight]  Loading weights:  82%|████████▏ | 238/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.down_proj.weight]Loading weights:  82%|████████▏ | 239/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.gate_proj.weight]Loading weights:  82%|████████▏ | 239/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.gate_proj.weight]Loading weights:  82%|████████▏ | 240/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.up_proj.weight]  Loading weights:  82%|████████▏ | 240/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.mlp.up_proj.weight]Loading weights:  83%|████████▎ | 241/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.post_attention_layernorm.weight]Loading weights:  83%|████████▎ | 241/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.post_attention_layernorm.weight]Loading weights:  83%|████████▎ | 242/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.k_proj.weight]        Loading weights:  83%|████████▎ | 242/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.k_proj.weight]Loading weights:  84%|████████▎ | 243/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.o_proj.weight]Loading weights:  84%|████████▎ | 243/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.o_proj.weight]Loading weights:  84%|████████▍ | 244/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.q_proj.weight]Loading weights:  84%|████████▍ | 244/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.q_proj.weight]Loading weights:  84%|████████▍ | 245/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.v_proj.weight]Loading weights:  84%|████████▍ | 245/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.26.self_attn.v_proj.weight]Loading weights:  85%|████████▍ | 246/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.input_layernorm.weight] Loading weights:  85%|████████▍ | 246/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.input_layernorm.weight]Loading weights:  85%|████████▍ | 247/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.mlp.down_proj.weight]  Loading weights:  85%|████████▍ | 247/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.mlp.down_proj.weight]Loading weights:  85%|████████▌ | 248/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.mlp.gate_proj.weight]Loading weights:  85%|████████▌ | 248/291 [00:01<00:00, 143.13it/s, Materializing param=model.layers.27.mlp.gate_proj.weight]Loading weights:  86%|████████▌ | 249/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.mlp.gate_proj.weight]Loading weights:  86%|████████▌ | 249/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.mlp.up_proj.weight]  Loading weights:  86%|████████▌ | 249/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.mlp.up_proj.weight]Loading weights:  86%|████████▌ | 250/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.post_attention_layernorm.weight]Loading weights:  86%|████████▌ | 250/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.post_attention_layernorm.weight]Loading weights:  86%|████████▋ | 251/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.k_proj.weight]        Loading weights:  86%|████████▋ | 251/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.k_proj.weight]Loading weights:  87%|████████▋ | 252/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.o_proj.weight]Loading weights:  87%|████████▋ | 252/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.o_proj.weight]Loading weights:  87%|████████▋ | 253/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.q_proj.weight]Loading weights:  87%|████████▋ | 253/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.q_proj.weight]Loading weights:  87%|████████▋ | 254/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.v_proj.weight]Loading weights:  87%|████████▋ | 254/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.27.self_attn.v_proj.weight]Loading weights:  88%|████████▊ | 255/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.input_layernorm.weight] Loading weights:  88%|████████▊ | 255/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.input_layernorm.weight]Loading weights:  88%|████████▊ | 256/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.down_proj.weight]  Loading weights:  88%|████████▊ | 256/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.down_proj.weight]Loading weights:  88%|████████▊ | 257/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.gate_proj.weight]Loading weights:  88%|████████▊ | 257/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.gate_proj.weight]Loading weights:  89%|████████▊ | 258/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.up_proj.weight]  Loading weights:  89%|████████▊ | 258/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.mlp.up_proj.weight]Loading weights:  89%|████████▉ | 259/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.post_attention_layernorm.weight]Loading weights:  89%|████████▉ | 259/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.post_attention_layernorm.weight]Loading weights:  89%|████████▉ | 260/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.k_proj.weight]        Loading weights:  89%|████████▉ | 260/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.k_proj.weight]Loading weights:  90%|████████▉ | 261/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.o_proj.weight]Loading weights:  90%|████████▉ | 261/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.o_proj.weight]Loading weights:  90%|█████████ | 262/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.q_proj.weight]Loading weights:  90%|█████████ | 262/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.q_proj.weight]Loading weights:  90%|█████████ | 263/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.v_proj.weight]Loading weights:  90%|█████████ | 263/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.28.self_attn.v_proj.weight]Loading weights:  91%|█████████ | 264/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.29.input_layernorm.weight] Loading weights:  91%|█████████ | 264/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.29.input_layernorm.weight]Loading weights:  91%|█████████ | 265/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.29.mlp.down_proj.weight]  Loading weights:  91%|█████████ | 265/291 [00:01<00:00, 137.37it/s, Materializing param=model.layers.29.mlp.down_proj.weight]Loading weights:  91%|█████████▏| 266/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.mlp.down_proj.weight]Loading weights:  91%|█████████▏| 266/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.mlp.gate_proj.weight]Loading weights:  91%|█████████▏| 266/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.mlp.gate_proj.weight]Loading weights:  92%|█████████▏| 267/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.mlp.up_proj.weight]  Loading weights:  92%|█████████▏| 267/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.mlp.up_proj.weight]Loading weights:  92%|█████████▏| 268/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.post_attention_layernorm.weight]Loading weights:  92%|█████████▏| 268/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.post_attention_layernorm.weight]Loading weights:  92%|█████████▏| 269/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.k_proj.weight]        Loading weights:  92%|█████████▏| 269/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.k_proj.weight]Loading weights:  93%|█████████▎| 270/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.o_proj.weight]Loading weights:  93%|█████████▎| 270/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.o_proj.weight]Loading weights:  93%|█████████▎| 271/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.q_proj.weight]Loading weights:  93%|█████████▎| 271/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.q_proj.weight]Loading weights:  93%|█████████▎| 272/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.v_proj.weight]Loading weights:  93%|█████████▎| 272/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.29.self_attn.v_proj.weight]Loading weights:  94%|█████████▍| 273/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.30.input_layernorm.weight] Loading weights:  94%|█████████▍| 273/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.30.input_layernorm.weight]Loading weights:  94%|█████████▍| 274/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.down_proj.weight]  Loading weights:  94%|█████████▍| 274/291 [00:01<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.down_proj.weight]Loading weights:  95%|█████████▍| 275/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.gate_proj.weight]Loading weights:  95%|█████████▍| 275/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.gate_proj.weight]Loading weights:  95%|█████████▍| 276/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.up_proj.weight]  Loading weights:  95%|█████████▍| 276/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.mlp.up_proj.weight]Loading weights:  95%|█████████▌| 277/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.post_attention_layernorm.weight]Loading weights:  95%|█████████▌| 277/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.post_attention_layernorm.weight]Loading weights:  96%|█████████▌| 278/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.k_proj.weight]        Loading weights:  96%|█████████▌| 278/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.k_proj.weight]Loading weights:  96%|█████████▌| 279/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.o_proj.weight]Loading weights:  96%|█████████▌| 279/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.o_proj.weight]Loading weights:  96%|█████████▌| 280/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.q_proj.weight]Loading weights:  96%|█████████▌| 280/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.q_proj.weight]Loading weights:  97%|█████████▋| 281/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.v_proj.weight]Loading weights:  97%|█████████▋| 281/291 [00:02<00:00, 139.98it/s, Materializing param=model.layers.30.self_attn.v_proj.weight]Loading weights:  97%|█████████▋| 282/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.30.self_attn.v_proj.weight]Loading weights:  97%|█████████▋| 282/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.input_layernorm.weight] Loading weights:  97%|█████████▋| 282/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.input_layernorm.weight]Loading weights:  97%|█████████▋| 283/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.down_proj.weight]  Loading weights:  97%|█████████▋| 283/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.down_proj.weight]Loading weights:  98%|█████████▊| 284/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.gate_proj.weight]Loading weights:  98%|█████████▊| 284/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.gate_proj.weight]Loading weights:  98%|█████████▊| 285/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.up_proj.weight]  Loading weights:  98%|█████████▊| 285/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.mlp.up_proj.weight]Loading weights:  98%|█████████▊| 286/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.post_attention_layernorm.weight]Loading weights:  98%|█████████▊| 286/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.post_attention_layernorm.weight]Loading weights:  99%|█████████▊| 287/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.k_proj.weight]        Loading weights:  99%|█████████▊| 287/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.k_proj.weight]Loading weights:  99%|█████████▉| 288/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.o_proj.weight]Loading weights:  99%|█████████▉| 288/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.o_proj.weight]Loading weights:  99%|█████████▉| 289/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.q_proj.weight]Loading weights:  99%|█████████▉| 289/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.q_proj.weight]Loading weights: 100%|█████████▉| 290/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.v_proj.weight]Loading weights: 100%|█████████▉| 290/291 [00:02<00:00, 144.58it/s, Materializing param=model.layers.31.self_attn.v_proj.weight]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 144.58it/s, Materializing param=model.norm.weight]                      Loading weights: 100%|██████████| 291/291 [00:02<00:00, 144.58it/s, Materializing param=model.norm.weight]Loading weights: 100%|██████████| 291/291 [00:02<00:00, 137.46it/s, Materializing param=model.norm.weight]
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-6.7b-instruct/e5d64addd26a6a1db0f9b863abf6ee3141936807/generation_config.json "HTTP/1.1 200 OK"
+INFO: HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+INFO: Model loaded.
+problems:   0%|                                                   | 0/164 [00:00<?, ?it/s]HumanEval/0:   0%|                                                | 0/164 [00:00<?, ?it/s]INFO: HumanEval/0 — model returned 10 solution(s)
+INFO:   HumanEval/0  solution 1/10  7/7  [OK]
+HumanEval/0:   1%|▏                                     | 1/164 [00:54<2:28:46, 54.76s/it]HumanEval/1:   1%|▏                                     | 1/164 [00:54<2:28:46, 54.76s/it]INFO: HumanEval/1 — model returned 10 solution(s)
+INFO:   HumanEval/1  solution 1/10  0/4  [OK]
+INFO:   HumanEval/1  solution 2/10  4/4  [OK]
+HumanEval/1:   1%|▍                                     | 2/164 [02:29<3:32:03, 78.54s/it]HumanEval/2:   1%|▍                                     | 2/164 [02:29<3:32:03, 78.54s/it]INFO: HumanEval/2 — model returned 10 solution(s)
+INFO:   HumanEval/2  solution 1/10  3/3  [OK]
+HumanEval/2:   2%|▋                                     | 3/164 [03:00<2:32:00, 56.65s/it]HumanEval/3:   2%|▋                                     | 3/164 [03:00<2:32:00, 56.65s/it]INFO: HumanEval/3 — model returned 10 solution(s)
+INFO:   HumanEval/3  solution 1/10  6/6  [OK]
+HumanEval/3:   2%|▉                                     | 4/164 [03:40<2:13:26, 50.04s/it]HumanEval/4:   2%|▉                                     | 4/164 [03:40<2:13:26, 50.04s/it]INFO: HumanEval/4 — model returned 10 solution(s)
+INFO:   HumanEval/4  solution 1/10  3/3  [OK]
+HumanEval/4:   3%|█▏                                    | 5/164 [04:18<2:00:53, 45.62s/it]HumanEval/5:   3%|█▏                                    | 5/164 [04:18<2:00:53, 45.62s/it]INFO: HumanEval/5 — model returned 10 solution(s)
+INFO:   HumanEval/5  solution 1/10  3/3  [OK]
+HumanEval/5:   4%|█▍                                    | 6/164 [05:01<1:57:41, 44.69s/it]HumanEval/6:   4%|█▍                                    | 6/164 [05:01<1:57:41, 44.69s/it]INFO: HumanEval/6 — model returned 10 solution(s)
+INFO:   HumanEval/6  solution 1/10  3/3  [OK]
+HumanEval/6:   4%|█▌                                    | 7/164 [06:22<2:27:59, 56.56s/it]HumanEval/7:   4%|█▌                                    | 7/164 [06:22<2:27:59, 56.56s/it]INFO: HumanEval/7 — model returned 10 solution(s)
+INFO:   HumanEval/7  solution 1/10  4/4  [OK]
+HumanEval/7:   5%|█▊                                    | 8/164 [06:57<2:09:17, 49.73s/it]HumanEval/8:   5%|█▊                                    | 8/164 [06:57<2:09:17, 49.73s/it]INFO: HumanEval/8 — model returned 10 solution(s)
+INFO:   HumanEval/8  solution 1/10  5/5  [OK]
+HumanEval/8:   5%|██                                    | 9/164 [07:41<2:04:18, 48.12s/it]HumanEval/9:   5%|██                                    | 9/164 [07:41<2:04:18, 48.12s/it]INFO: HumanEval/9 — model returned 10 solution(s)
+INFO:   HumanEval/9  solution 1/10  0/4  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/9  solution 2/10  4/4  [OK]
+HumanEval/9:   6%|██▎                                  | 10/164 [08:29<2:03:17, 48.03s/it]HumanEval/10:   6%|██▏                                 | 10/164 [08:29<2:03:17, 48.03s/it]INFO: HumanEval/10 — model returned 10 solution(s)
+INFO:   HumanEval/10  solution 1/10  0/5  [OK]
+INFO:   HumanEval/10  solution 2/10  0/5  [OK]
+INFO:   HumanEval/10  solution 3/10  0/5  [OK]
+INFO:   HumanEval/10  solution 4/10  0/5  [OK]
+INFO:   HumanEval/10  solution 5/10  0/5  [OK]
+INFO:   HumanEval/10  solution 6/10  0/5  [OK]
+INFO:   HumanEval/10  solution 7/10  0/5  [OK]
+INFO:   HumanEval/10  solution 8/10  0/5  [OK]
+INFO:   HumanEval/10  solution 9/10  0/5  [OK]
+INFO:   HumanEval/10  solution 10/10  0/5  [OK]
+HumanEval/10:   7%|██▍                                 | 11/164 [11:38<3:52:44, 91.27s/it]HumanEval/11:   7%|██▍                                 | 11/164 [11:38<3:52:44, 91.27s/it]INFO: HumanEval/11 — model returned 10 solution(s)
+INFO:   HumanEval/11  solution 1/10  3/3  [OK]
+HumanEval/11:   7%|██▋                                 | 12/164 [12:15<3:09:06, 74.65s/it]HumanEval/12:   7%|██▋                                 | 12/164 [12:15<3:09:06, 74.65s/it]INFO: HumanEval/12 — model returned 10 solution(s)
+INFO:   HumanEval/12  solution 1/10  3/3  [OK]
+HumanEval/12:   8%|██▊                                 | 13/164 [12:59<2:44:23, 65.32s/it]HumanEval/13:   8%|██▊                                 | 13/164 [12:59<2:44:23, 65.32s/it]INFO: HumanEval/13 — model returned 10 solution(s)
+INFO:   HumanEval/13  solution 1/10  4/4  [OK]
+HumanEval/13:   9%|███                                 | 14/164 [13:31<2:18:13, 55.29s/it]HumanEval/14:   9%|███                                 | 14/164 [13:31<2:18:13, 55.29s/it]INFO: HumanEval/14 — model returned 10 solution(s)
+INFO:   HumanEval/14  solution 1/10  0/3  [OK]
+INFO:   HumanEval/14  solution 2/10  3/3  [OK]
+HumanEval/14:   9%|███▎                                | 15/164 [14:09<2:04:17, 50.05s/it]HumanEval/15:   9%|███▎                                | 15/164 [14:09<2:04:17, 50.05s/it]INFO: HumanEval/15 — model returned 10 solution(s)
+INFO:   HumanEval/15  solution 1/10  3/3  [OK]
+HumanEval/15:  10%|███▌                                | 16/164 [14:40<1:49:41, 44.47s/it]HumanEval/16:  10%|███▌                                | 16/164 [14:40<1:49:41, 44.47s/it]INFO: HumanEval/16 — model returned 10 solution(s)
+INFO:   HumanEval/16  solution 1/10  5/5  [OK]
+HumanEval/16:  10%|███▋                                | 17/164 [15:09<1:37:08, 39.65s/it]HumanEval/17:  10%|███▋                                | 17/164 [15:09<1:37:08, 39.65s/it]INFO: HumanEval/17 — model returned 10 solution(s)
+INFO:   HumanEval/17  solution 1/10  5/5  [OK]
+HumanEval/17:  11%|███▉                                | 18/164 [16:19<1:58:46, 48.81s/it]HumanEval/18:  11%|███▉                                | 18/164 [16:19<1:58:46, 48.81s/it]INFO: HumanEval/18 — model returned 10 solution(s)
+INFO:   HumanEval/18  solution 1/10  0/4  [OK]
+INFO:   HumanEval/18  solution 2/10  4/4  [OK]
+HumanEval/18:  12%|████▏                               | 19/164 [17:03<1:54:34, 47.41s/it]HumanEval/19:  12%|████▏                               | 19/164 [17:03<1:54:34, 47.41s/it]INFO: HumanEval/19 — model returned 10 solution(s)
+INFO:   HumanEval/19  solution 1/10  5/5  [OK]
+HumanEval/19:  12%|████▍                               | 20/164 [18:54<2:39:22, 66.40s/it]HumanEval/20:  12%|████▍                               | 20/164 [18:54<2:39:22, 66.40s/it]INFO: HumanEval/20 — model returned 10 solution(s)
+INFO:   HumanEval/20  solution 1/10  5/5  [OK]
+HumanEval/20:  13%|████▌                               | 21/164 [20:09<2:44:47, 69.14s/it]HumanEval/21:  13%|████▌                               | 21/164 [20:09<2:44:47, 69.14s/it]INFO: HumanEval/21 — model returned 10 solution(s)
+INFO:   HumanEval/21  solution 1/10  5/5  [OK]
+HumanEval/21:  13%|████▊                               | 22/164 [21:06<2:34:49, 65.42s/it]HumanEval/22:  13%|████▊                               | 22/164 [21:06<2:34:49, 65.42s/it]INFO: HumanEval/22 — model returned 10 solution(s)
+INFO:   HumanEval/22  solution 1/10  3/3  [OK]
+HumanEval/22:  14%|█████                               | 23/164 [21:36<2:08:36, 54.73s/it]HumanEval/23:  14%|█████                               | 23/164 [21:36<2:08:36, 54.73s/it]INFO: HumanEval/23 — model returned 10 solution(s)
+INFO:   HumanEval/23  solution 1/10  3/3  [OK]
+HumanEval/23:  15%|█████▎                              | 24/164 [22:02<1:47:56, 46.26s/it]HumanEval/24:  15%|█████▎                              | 24/164 [22:02<1:47:56, 46.26s/it]INFO: HumanEval/24 — model returned 10 solution(s)
+INFO:   HumanEval/24  solution 1/10  5/5  [OK]
+HumanEval/24:  15%|█████▍                              | 25/164 [22:39<1:40:19, 43.31s/it]HumanEval/25:  15%|█████▍                              | 25/164 [22:39<1:40:19, 43.31s/it]INFO: HumanEval/25 — model returned 10 solution(s)
+INFO:   HumanEval/25  solution 1/10  8/8  [OK]
+HumanEval/25:  16%|█████▋                              | 26/164 [23:55<2:01:58, 53.04s/it]HumanEval/26:  16%|█████▋                              | 26/164 [23:55<2:01:58, 53.04s/it]INFO: HumanEval/26 — model returned 10 solution(s)
+INFO:   HumanEval/26  solution 1/10  0/3  [OK]
+INFO:   HumanEval/26  solution 2/10  3/3  [OK]
+HumanEval/26:  16%|█████▉                              | 27/164 [24:37<1:53:50, 49.85s/it]HumanEval/27:  16%|█████▉                              | 27/164 [24:37<1:53:50, 49.85s/it]INFO: HumanEval/27 — model returned 10 solution(s)
+INFO:   HumanEval/27  solution 1/10  3/3  [OK]
+HumanEval/27:  17%|██████▏                             | 28/164 [25:10<1:41:18, 44.70s/it]HumanEval/28:  17%|██████▏                             | 28/164 [25:10<1:41:18, 44.70s/it]INFO: HumanEval/28 — model returned 10 solution(s)
+INFO:   HumanEval/28  solution 1/10  3/3  [OK]
+HumanEval/28:  18%|██████▎                             | 29/164 [25:37<1:28:44, 39.44s/it]HumanEval/29:  18%|██████▎                             | 29/164 [25:37<1:28:44, 39.44s/it]INFO: HumanEval/29 — model returned 10 solution(s)
+INFO:   HumanEval/29  solution 1/10  2/2  [OK]
+HumanEval/29:  18%|██████▌                             | 30/164 [26:10<1:24:11, 37.70s/it]HumanEval/30:  18%|██████▌                             | 30/164 [26:10<1:24:11, 37.70s/it]INFO: HumanEval/30 — model returned 10 solution(s)
+INFO:   HumanEval/30  solution 1/10  4/4  [OK]
+HumanEval/30:  19%|██████▊                             | 31/164 [26:38<1:16:57, 34.72s/it]HumanEval/31:  19%|██████▊                             | 31/164 [26:38<1:16:57, 34.72s/it]INFO: HumanEval/31 — model returned 10 solution(s)
+INFO:   HumanEval/31  solution 1/10  13/13  [OK]
+HumanEval/31:  20%|███████                             | 32/164 [27:26<1:24:55, 38.60s/it]HumanEval/32:  20%|███████                             | 32/164 [27:26<1:24:55, 38.60s/it]INFO: HumanEval/32 — model returned 9 solution(s)
+INFO:   HumanEval/32  solution 1/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 2/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 3/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 4/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 5/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 6/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 7/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 8/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+INFO:   HumanEval/32  solution 9/9  0/1  [ERROR: TypeError: calc() missing 1 required positional argument: 'x']
+HumanEval/32:  20%|███████▏                            | 33/164 [31:24<3:34:59, 98.47s/it]HumanEval/33:  20%|███████▏                            | 33/164 [31:24<3:34:59, 98.47s/it]INFO: HumanEval/33 — model returned 10 solution(s)
+INFO:   HumanEval/33  solution 1/10  0/7  [ERROR: NameError: name 'sort_third' is not defined]
+INFO:   HumanEval/33  solution 2/10  0/7  [ERROR: NameError: name 'sort_third' is not defined]
+INFO:   HumanEval/33  solution 3/10  0/7  [ERROR: NameError: name 'sort_third' is not defined]
+INFO:   HumanEval/33  solution 4/10  0/7  [ERROR: NameError: name 'sort_third' is not defined]
+INFO:   HumanEval/33  solution 5/10  0/7  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/33  solution 6/10  0/7  [ERROR: NameError: name 'sort_third' is not defined]
+INFO:   HumanEval/33  solution 7/10  0/7  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/33  solution 8/10  0/7  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/33  solution 9/10  0/7  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/33  solution 10/10  0/7  [ERROR: IndexError: list index out of range]
+HumanEval/33:  21%|███████▎                           | 34/164 [33:27<3:49:18, 105.83s/it]HumanEval/34:  21%|███████▎                           | 34/164 [33:27<3:49:18, 105.83s/it]INFO: HumanEval/34 — model returned 10 solution(s)
+INFO:   HumanEval/34  solution 1/10  1/1  [OK]
+HumanEval/34:  21%|███████▋                            | 35/164 [34:04<3:03:09, 85.19s/it]HumanEval/35:  21%|███████▋                            | 35/164 [34:04<3:03:09, 85.19s/it]INFO: HumanEval/35 — model returned 10 solution(s)
+INFO:   HumanEval/35  solution 1/10  2/2  [OK]
+HumanEval/35:  22%|███████▉                            | 36/164 [35:37<3:06:50, 87.58s/it]HumanEval/36:  22%|███████▉                            | 36/164 [35:37<3:06:50, 87.58s/it]INFO: HumanEval/36 — model returned 10 solution(s)
+INFO:   HumanEval/36  solution 1/10  8/8  [OK]
+HumanEval/36:  23%|████████                            | 37/164 [36:29<2:42:17, 76.67s/it]HumanEval/37:  23%|████████                            | 37/164 [36:29<2:42:17, 76.67s/it]INFO: HumanEval/37 — model returned 10 solution(s)
+INFO:   HumanEval/37  solution 1/10  0/3  [OK]
+INFO:   HumanEval/37  solution 2/10  0/3  [OK]
+INFO:   HumanEval/37  solution 3/10  0/3  [OK]
+INFO:   HumanEval/37  solution 4/10  0/3  [OK]
+INFO:   HumanEval/37  solution 5/10  0/3  [OK]
+INFO:   HumanEval/37  solution 6/10  0/3  [OK]
+INFO:   HumanEval/37  solution 7/10  0/3  [OK]
+INFO:   HumanEval/37  solution 8/10  0/3  [OK]
+INFO:   HumanEval/37  solution 9/10  0/3  [OK]
+INFO:   HumanEval/37  solution 10/10  0/3  [OK]
+HumanEval/37:  23%|████████▎                           | 38/164 [37:58<2:48:55, 80.44s/it]HumanEval/38:  23%|████████▎                           | 38/164 [37:58<2:48:55, 80.44s/it]INFO: HumanEval/38 — model returned 10 solution(s)
+INFO:   HumanEval/38  solution 1/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 2/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 3/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 4/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 5/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 6/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 7/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 8/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 9/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 10/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+HumanEval/38:  24%|████████▎                          | 39/164 [40:31<3:33:01, 102.25s/it]HumanEval/39:  24%|████████▎                          | 39/164 [40:31<3:33:01, 102.25s/it]INFO: HumanEval/39 — model returned 10 solution(s)
+INFO:   HumanEval/39  solution 1/10  10/10  [OK]
+HumanEval/39:  24%|████████▌                          | 40/164 [42:16<3:33:04, 103.10s/it]HumanEval/40:  24%|████████▌                          | 40/164 [42:16<3:33:04, 103.10s/it]INFO: HumanEval/40 — model returned 10 solution(s)
+INFO:   HumanEval/40  solution 1/10  9/9  [OK]
+HumanEval/40:  25%|█████████                           | 41/164 [43:18<3:06:03, 90.76s/it]HumanEval/41:  25%|█████████                           | 41/164 [43:18<3:06:03, 90.76s/it]INFO: HumanEval/41 — model returned 10 solution(s)
+INFO:   HumanEval/41  solution 1/10  5/5  [OK]
+HumanEval/41:  26%|█████████▏                          | 42/164 [43:43<2:24:40, 71.16s/it]HumanEval/42:  26%|█████████▏                          | 42/164 [43:43<2:24:40, 71.16s/it]INFO: HumanEval/42 — model returned 10 solution(s)
+INFO:   HumanEval/42  solution 1/10  3/3  [OK]
+HumanEval/42:  26%|█████████▍                          | 43/164 [44:18<2:01:28, 60.24s/it]HumanEval/43:  26%|█████████▍                          | 43/164 [44:18<2:01:28, 60.24s/it]INFO: HumanEval/43 — model returned 10 solution(s)
+INFO:   HumanEval/43  solution 1/10  9/9  [OK]
+HumanEval/43:  27%|█████████▋                          | 44/164 [44:52<1:44:46, 52.39s/it]HumanEval/44:  27%|█████████▋                          | 44/164 [44:52<1:44:46, 52.39s/it]INFO: HumanEval/44 — model returned 10 solution(s)
+INFO:   HumanEval/44  solution 1/10  0/7  [OK]
+INFO:   HumanEval/44  solution 2/10  0/7  [OK]
+INFO:   HumanEval/44  solution 3/10  0/7  [OK]
+INFO:   HumanEval/44  solution 4/10  0/7  [OK]
+INFO:   HumanEval/44  solution 5/10  0/7  [OK]
+INFO:   HumanEval/44  solution 6/10  0/7  [OK]
+INFO:   HumanEval/44  solution 7/10  0/7  [OK]
+INFO:   HumanEval/44  solution 8/10  0/7  [OK]
+INFO:   HumanEval/44  solution 9/10  0/7  [OK]
+INFO:   HumanEval/44  solution 10/10  0/7  [OK]
+HumanEval/44:  27%|█████████▉                          | 45/164 [46:15<2:02:08, 61.59s/it]HumanEval/45:  27%|█████████▉                          | 45/164 [46:15<2:02:08, 61.59s/it]INFO: HumanEval/45 — model returned 10 solution(s)
+INFO:   HumanEval/45  solution 1/10  3/3  [OK]
+HumanEval/45:  28%|██████████                          | 46/164 [46:44<1:41:49, 51.77s/it]HumanEval/46:  28%|██████████                          | 46/164 [46:44<1:41:49, 51.77s/it]INFO: HumanEval/46 — model returned 10 solution(s)
+INFO:   HumanEval/46  solution 1/10  4/4  [OK]
+HumanEval/46:  29%|██████████▎                         | 47/164 [47:57<1:53:18, 58.11s/it]HumanEval/47:  29%|██████████▎                         | 47/164 [47:57<1:53:18, 58.11s/it]INFO: HumanEval/47 — model returned 10 solution(s)
+INFO:   HumanEval/47  solution 1/10  5/5  [OK]
+HumanEval/47:  29%|██████████▌                         | 48/164 [48:51<1:49:48, 56.80s/it]HumanEval/48:  29%|██████████▌                         | 48/164 [48:51<1:49:48, 56.80s/it]INFO: HumanEval/48 — model returned 10 solution(s)
+INFO:   HumanEval/48  solution 1/10  7/7  [OK]
+HumanEval/48:  30%|██████████▊                         | 49/164 [50:18<2:06:23, 65.94s/it]HumanEval/49:  30%|██████████▊                         | 49/164 [50:18<2:06:23, 65.94s/it]INFO: HumanEval/49 — model returned 10 solution(s)
+INFO:   HumanEval/49  solution 1/10  7/7  [OK]
+HumanEval/49:  30%|██████████▉                         | 50/164 [50:45<1:43:12, 54.32s/it]HumanEval/50:  30%|██████████▉                         | 50/164 [50:45<1:43:12, 54.32s/it]INFO: HumanEval/50 — model returned 10 solution(s)
+INFO:   HumanEval/50  solution 1/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 2/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 3/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 4/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 5/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 6/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 7/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 8/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 9/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 10/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+HumanEval/50:  31%|███████████▏                        | 51/164 [53:23<2:40:49, 85.40s/it]HumanEval/51:  31%|███████████▏                        | 51/164 [53:23<2:40:49, 85.40s/it]INFO: HumanEval/51 — model returned 10 solution(s)
+INFO:   HumanEval/51  solution 1/10  0/7  [OK]
+INFO:   HumanEval/51  solution 2/10  0/7  [OK]
+INFO:   HumanEval/51  solution 3/10  0/7  [OK]
+INFO:   HumanEval/51  solution 4/10  0/7  [OK]
+INFO:   HumanEval/51  solution 5/10  0/7  [OK]
+INFO:   HumanEval/51  solution 6/10  0/7  [OK]
+INFO:   HumanEval/51  solution 7/10  0/7  [OK]
+INFO:   HumanEval/51  solution 8/10  0/7  [OK]
+INFO:   HumanEval/51  solution 9/10  0/7  [OK]
+INFO:   HumanEval/51  solution 10/10  0/7  [OK]
+HumanEval/51:  32%|███████████▍                        | 52/164 [54:44<2:36:40, 83.93s/it]HumanEval/52:  32%|███████████▍                        | 52/164 [54:44<2:36:40, 83.93s/it]INFO: HumanEval/52 — model returned 10 solution(s)
+INFO:   HumanEval/52  solution 1/10  6/6  [OK]
+HumanEval/52:  32%|███████████▋                        | 53/164 [55:11<2:03:56, 66.99s/it]HumanEval/53:  32%|███████████▋                        | 53/164 [55:11<2:03:56, 66.99s/it]INFO: HumanEval/53 — model returned 10 solution(s)
+INFO:   HumanEval/53  solution 1/10  6/6  [OK]
+HumanEval/53:  33%|███████████▊                        | 54/164 [55:36<1:39:47, 54.44s/it]HumanEval/54:  33%|███████████▊                        | 54/164 [55:36<1:39:47, 54.44s/it]INFO: HumanEval/54 — model returned 10 solution(s)
+INFO:   HumanEval/54  solution 1/10  7/7  [OK]
+HumanEval/54:  34%|████████████                        | 55/164 [56:15<1:30:27, 49.79s/it]HumanEval/55:  34%|████████████                        | 55/164 [56:15<1:30:27, 49.79s/it]INFO: HumanEval/55 — model returned 10 solution(s)
+INFO:   HumanEval/55  solution 1/10  0/5  [OK]
+INFO:   HumanEval/55  solution 2/10  5/5  [OK]
+HumanEval/55:  34%|████████████▎                       | 56/164 [57:02<1:27:45, 48.75s/it]HumanEval/56:  34%|████████████▎                       | 56/164 [57:02<1:27:45, 48.75s/it]INFO: HumanEval/56 — model returned 10 solution(s)
+INFO:   HumanEval/56  solution 1/10  12/12  [OK]
+HumanEval/56:  35%|████████████▌                       | 57/164 [57:58<1:31:08, 51.10s/it]HumanEval/57:  35%|████████████▌                       | 57/164 [57:58<1:31:08, 51.10s/it]INFO: HumanEval/57 — model returned 10 solution(s)
+INFO:   HumanEval/57  solution 1/10  0/8  [OK]
+INFO:   HumanEval/57  solution 2/10  8/8  [OK]
+HumanEval/57:  35%|████████████▋                       | 58/164 [58:58<1:34:45, 53.64s/it]HumanEval/58:  35%|████████████▋                       | 58/164 [58:58<1:34:45, 53.64s/it]INFO: HumanEval/58 — model returned 10 solution(s)
+INFO:   HumanEval/58  solution 1/10  4/4  [OK]
+HumanEval/58:  36%|████████████▉                       | 59/164 [59:28<1:21:28, 46.56s/it]HumanEval/59:  36%|████████████▉                       | 59/164 [59:28<1:21:28, 46.56s/it]INFO: HumanEval/59 — model returned 10 solution(s)
+INFO:   HumanEval/59  solution 1/10  0/5  [OK]
+INFO:   HumanEval/59  solution 2/10  0/5  [OK]
+INFO:   HumanEval/59  solution 3/10  0/5  [OK]
+INFO:   HumanEval/59  solution 4/10  0/5  [OK]
+INFO:   HumanEval/59  solution 5/10  0/5  [OK]
+INFO:   HumanEval/59  solution 6/10  0/5  [OK]
+INFO:   HumanEval/59  solution 7/10  0/5  [OK]
+INFO:   HumanEval/59  solution 8/10  0/5  [OK]
+INFO:   HumanEval/59  solution 9/10  0/5  [OK]
+INFO:   HumanEval/59  solution 10/10  0/5  [OK]
+HumanEval/59:  37%|████████████▍                     | 60/164 [1:01:23<1:56:36, 67.28s/it]HumanEval/60:  37%|████████████▍                     | 60/164 [1:01:23<1:56:36, 67.28s/it]INFO: HumanEval/60 — model returned 10 solution(s)
+INFO:   HumanEval/60  solution 1/10  5/5  [OK]
+HumanEval/60:  37%|████████████▋                     | 61/164 [1:01:54<1:36:23, 56.15s/it]HumanEval/61:  37%|████████████▋                     | 61/164 [1:01:54<1:36:23, 56.15s/it]INFO: HumanEval/61 — model returned 10 solution(s)
+INFO:   HumanEval/61  solution 1/10  12/12  [OK]
+HumanEval/61:  38%|████████████▊                     | 62/164 [1:02:43<1:32:16, 54.28s/it]HumanEval/62:  38%|████████████▊                     | 62/164 [1:02:43<1:32:16, 54.28s/it]INFO: HumanEval/62 — model returned 10 solution(s)
+INFO:   HumanEval/62  solution 1/10  5/5  [OK]
+HumanEval/62:  38%|█████████████                     | 63/164 [1:03:19<1:21:57, 48.69s/it]HumanEval/63:  38%|█████████████                     | 63/164 [1:03:19<1:21:57, 48.69s/it]INFO: HumanEval/63 — model returned 10 solution(s)
+INFO:   HumanEval/63  solution 1/10  7/7  [OK]
+HumanEval/63:  39%|█████████████▎                    | 64/164 [1:04:15<1:24:51, 50.91s/it]HumanEval/64:  39%|█████████████▎                    | 64/164 [1:04:15<1:24:51, 50.91s/it]INFO: HumanEval/64 — model returned 10 solution(s)
+INFO:   HumanEval/64  solution 1/10  8/8  [OK]
+HumanEval/64:  40%|█████████████▍                    | 65/164 [1:05:24<1:33:01, 56.38s/it]HumanEval/65:  40%|█████████████▍                    | 65/164 [1:05:24<1:33:01, 56.38s/it]INFO: HumanEval/65 — model returned 10 solution(s)
+INFO:   HumanEval/65  solution 1/10  5/5  [OK]
+HumanEval/65:  40%|█████████████▋                    | 66/164 [1:06:13<1:28:08, 53.96s/it]HumanEval/66:  40%|█████████████▋                    | 66/164 [1:06:13<1:28:08, 53.96s/it]INFO: HumanEval/66 — model returned 10 solution(s)
+INFO:   HumanEval/66  solution 1/10  10/10  [OK]
+HumanEval/66:  41%|█████████████▉                    | 67/164 [1:06:43<1:16:01, 47.03s/it]HumanEval/67:  41%|█████████████▉                    | 67/164 [1:06:43<1:16:01, 47.03s/it]INFO: HumanEval/67 — model returned 10 solution(s)
+INFO:   HumanEval/67  solution 1/10  0/7  [ERROR: ValueError: invalid literal for int() with base 10: 'and']
+INFO:   HumanEval/67  solution 2/10  0/7  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/67  solution 3/10  7/7  [OK]
+HumanEval/67:  41%|██████████████                    | 68/164 [1:07:55<1:27:10, 54.48s/it]HumanEval/68:  41%|██████████████                    | 68/164 [1:07:55<1:27:10, 54.48s/it]INFO: HumanEval/68 — model returned 10 solution(s)
+INFO:   HumanEval/68  solution 1/10  10/10  [OK]
+HumanEval/68:  42%|██████████████▎                   | 69/164 [1:09:02<1:31:58, 58.09s/it]HumanEval/69:  42%|██████████████▎                   | 69/164 [1:09:02<1:31:58, 58.09s/it]INFO: HumanEval/69 — model returned 10 solution(s)
+INFO:   HumanEval/69  solution 1/10  0/25  [OK]
+INFO:   HumanEval/69  solution 2/10  0/25  [OK]
+INFO:   HumanEval/69  solution 3/10  0/25  [OK]
+INFO:   HumanEval/69  solution 4/10  25/25  [OK]
+HumanEval/69:  43%|██████████████▌                   | 70/164 [1:10:33<1:46:40, 68.09s/it]HumanEval/70:  43%|██████████████▌                   | 70/164 [1:10:33<1:46:40, 68.09s/it]INFO: HumanEval/70 — model returned 10 solution(s)
+INFO:   HumanEval/70  solution 1/10  10/10  [OK]
+HumanEval/70:  43%|██████████████▋                   | 71/164 [1:11:27<1:38:54, 63.81s/it]HumanEval/71:  43%|██████████████▋                   | 71/164 [1:11:27<1:38:54, 63.81s/it]INFO: HumanEval/71 — model returned 10 solution(s)
+INFO:   HumanEval/71  solution 1/10  9/9  [OK]
+HumanEval/71:  44%|██████████████▉                   | 72/164 [1:12:42<1:43:02, 67.21s/it]HumanEval/72:  44%|██████████████▉                   | 72/164 [1:12:42<1:43:02, 67.21s/it]INFO: HumanEval/72 — model returned 10 solution(s)
+INFO:   HumanEval/72  solution 1/10  6/6  [OK]
+HumanEval/72:  45%|███████████████▏                  | 73/164 [1:13:26<1:31:06, 60.07s/it]HumanEval/73:  45%|███████████████▏                  | 73/164 [1:13:26<1:31:06, 60.07s/it]INFO: HumanEval/73 — model returned 10 solution(s)
+INFO:   HumanEval/73  solution 1/10  8/8  [OK]
+HumanEval/73:  45%|███████████████▎                  | 74/164 [1:14:06<1:21:01, 54.02s/it]HumanEval/74:  45%|███████████████▎                  | 74/164 [1:14:06<1:21:01, 54.02s/it]INFO: HumanEval/74 — model returned 10 solution(s)
+INFO:   HumanEval/74  solution 1/10  0/11  [OK]
+INFO:   HumanEval/74  solution 2/10  0/11  [OK]
+INFO:   HumanEval/74  solution 3/10  0/11  [OK]
+INFO:   HumanEval/74  solution 4/10  0/11  [OK]
+INFO:   HumanEval/74  solution 5/10  0/11  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/74  solution 6/10  0/11  [OK]
+INFO:   HumanEval/74  solution 7/10  0/11  [OK]
+INFO:   HumanEval/74  solution 8/10  0/11  [OK]
+INFO:   HumanEval/74  solution 9/10  0/11  [OK]
+INFO:   HumanEval/74  solution 10/10  0/11  [OK]
+HumanEval/74:  46%|███████████████▌                  | 75/164 [1:15:24<1:31:11, 61.47s/it]HumanEval/75:  46%|███████████████▌                  | 75/164 [1:15:24<1:31:11, 61.47s/it]INFO: HumanEval/75 — model returned 10 solution(s)
+INFO:   HumanEval/75  solution 1/10  0/10  [OK]
+INFO:   HumanEval/75  solution 2/10  0/10  [OK]
+INFO:   HumanEval/75  solution 3/10  0/10  [OK]
+INFO:   HumanEval/75  solution 4/10  0/10  [OK]
+INFO:   HumanEval/75  solution 5/10  0/10  [OK]
+INFO:   HumanEval/75  solution 6/10  0/10  [OK]
+INFO:   HumanEval/75  solution 7/10  0/10  [OK]
+INFO:   HumanEval/75  solution 8/10  0/10  [OK]
+INFO:   HumanEval/75  solution 9/10  0/10  [OK]
+INFO:   HumanEval/75  solution 10/10  0/10  [OK]
+HumanEval/75:  46%|███████████████▊                  | 76/164 [1:18:01<2:11:47, 89.86s/it]HumanEval/76:  46%|███████████████▊                  | 76/164 [1:18:01<2:11:47, 89.86s/it]INFO: HumanEval/76 — model returned 10 solution(s)
+INFO:   HumanEval/76  solution 1/10  10/10  [OK]
+HumanEval/76:  47%|███████████████▉                  | 77/164 [1:18:45<1:50:28, 76.19s/it]HumanEval/77:  47%|███████████████▉                  | 77/164 [1:18:45<1:50:28, 76.19s/it]INFO: HumanEval/77 — model returned 10 solution(s)
+INFO:   HumanEval/77  solution 1/10  0/8  [ERROR: TypeError: type complex doesn't define __round__ method]
+INFO:   HumanEval/77  solution 2/10  0/8  [ERROR: ValueError: math domain error]
+INFO:   HumanEval/77  solution 3/10  8/8  [OK]
+HumanEval/77:  48%|████████████████▏                 | 78/164 [1:19:36<1:38:36, 68.79s/it]HumanEval/78:  48%|████████████████▏                 | 78/164 [1:19:36<1:38:36, 68.79s/it]INFO: HumanEval/78 — model returned 10 solution(s)
+INFO:   HumanEval/78  solution 1/10  7/7  [OK]
+HumanEval/78:  48%|████████████████▍                 | 79/164 [1:20:24<1:28:38, 62.57s/it]HumanEval/79:  48%|████████████████▍                 | 79/164 [1:20:24<1:28:38, 62.57s/it]INFO: HumanEval/79 — model returned 10 solution(s)
+INFO:   HumanEval/79  solution 1/10  5/5  [OK]
+HumanEval/79:  49%|████████████████▌                 | 80/164 [1:20:56<1:14:34, 53.26s/it]HumanEval/80:  49%|████████████████▌                 | 80/164 [1:20:56<1:14:34, 53.26s/it]INFO: HumanEval/80 — model returned 10 solution(s)
+INFO:   HumanEval/80  solution 1/10  8/8  [OK]
+HumanEval/80:  49%|████████████████▊                 | 81/164 [1:21:57<1:17:06, 55.74s/it]HumanEval/81:  49%|████████████████▊                 | 81/164 [1:21:57<1:17:06, 55.74s/it]INFO: HumanEval/81 — model returned 10 solution(s)
+INFO:   HumanEval/81  solution 1/10  7/7  [OK]
+HumanEval/81:  50%|█████████████████                 | 82/164 [1:24:49<2:03:34, 90.42s/it]HumanEval/82:  50%|█████████████████                 | 82/164 [1:24:49<2:03:34, 90.42s/it]INFO: HumanEval/82 — model returned 10 solution(s)
+INFO:   HumanEval/82  solution 1/10  16/16  [OK]
+HumanEval/82:  51%|█████████████████▏                | 83/164 [1:25:50<1:50:23, 81.77s/it]HumanEval/83:  51%|█████████████████▏                | 83/164 [1:25:50<1:50:23, 81.77s/it]INFO: HumanEval/83 — model returned 10 solution(s)
+INFO:   HumanEval/83  solution 1/10  0/7  [OK]
+INFO:   HumanEval/83  solution 2/10  0/7  [OK]
+INFO:   HumanEval/83  solution 3/10  0/7  [OK]
+INFO:   HumanEval/83  solution 4/10  0/7  [OK]
+INFO:   HumanEval/83  solution 5/10  0/7  [OK]
+INFO:   HumanEval/83  solution 6/10  0/7  [OK]
+INFO:   HumanEval/83  solution 7/10  0/7  [OK]
+INFO:   HumanEval/83  solution 8/10  0/7  [OK]
+INFO:   HumanEval/83  solution 9/10  0/7  [OK]
+INFO:   HumanEval/83  solution 10/10  0/7  [OK]
+HumanEval/83:  51%|█████████████████▍                | 84/164 [1:27:22<1:52:54, 84.69s/it]HumanEval/84:  51%|█████████████████▍                | 84/164 [1:27:22<1:52:54, 84.69s/it]INFO: HumanEval/84 — model returned 10 solution(s)
+INFO:   HumanEval/84  solution 1/10  0/7  [OK]
+INFO:   HumanEval/84  solution 2/10  0/7  [OK]
+INFO:   HumanEval/84  solution 3/10  0/7  [OK]
+INFO:   HumanEval/84  solution 4/10  0/7  [OK]
+INFO:   HumanEval/84  solution 5/10  0/7  [OK]
+INFO:   HumanEval/84  solution 6/10  0/7  [OK]
+INFO:   HumanEval/84  solution 7/10  0/7  [OK]
+INFO:   HumanEval/84  solution 8/10  0/7  [OK]
+INFO:   HumanEval/84  solution 9/10  0/7  [OK]
+INFO:   HumanEval/84  solution 10/10  0/7  [OK]
+HumanEval/84:  52%|█████████████████▌                | 85/164 [1:28:37<1:47:38, 81.75s/it]HumanEval/85:  52%|█████████████████▌                | 85/164 [1:28:37<1:47:38, 81.75s/it]INFO: HumanEval/85 — model returned 10 solution(s)
+INFO:   HumanEval/85  solution 1/10  0/4  [OK]
+INFO:   HumanEval/85  solution 2/10  0/4  [OK]
+INFO:   HumanEval/85  solution 3/10  0/4  [OK]
+INFO:   HumanEval/85  solution 4/10  0/4  [OK]
+INFO:   HumanEval/85  solution 5/10  0/4  [OK]
+INFO:   HumanEval/85  solution 6/10  0/4  [OK]
+INFO:   HumanEval/85  solution 7/10  0/4  [OK]
+INFO:   HumanEval/85  solution 8/10  0/4  [OK]
+INFO:   HumanEval/85  solution 9/10  0/4  [OK]
+INFO:   HumanEval/85  solution 10/10  0/4  [OK]
+HumanEval/85:  52%|█████████████████▊                | 86/164 [1:30:02<1:47:43, 82.87s/it]HumanEval/86:  52%|█████████████████▊                | 86/164 [1:30:02<1:47:43, 82.87s/it]INFO: HumanEval/86 — model returned 10 solution(s)
+INFO:   HumanEval/86  solution 1/10  0/8  [OK]
+INFO:   HumanEval/86  solution 2/10  8/8  [OK]
+HumanEval/86:  53%|██████████████████                | 87/164 [1:30:51<1:33:13, 72.64s/it]HumanEval/87:  53%|██████████████████                | 87/164 [1:30:51<1:33:13, 72.64s/it]INFO: HumanEval/87 — model returned 10 solution(s)
+INFO:   HumanEval/87  solution 1/10  7/7  [OK]
+HumanEval/87:  54%|██████████████████▏               | 88/164 [1:32:00<1:30:36, 71.53s/it]HumanEval/88:  54%|██████████████████▏               | 88/164 [1:32:00<1:30:36, 71.53s/it]INFO: HumanEval/88 — model returned 10 solution(s)
+INFO:   HumanEval/88  solution 1/10  9/9  [OK]
+HumanEval/88:  54%|██████████████████▍               | 89/164 [1:33:10<1:28:58, 71.17s/it]HumanEval/89:  54%|██████████████████▍               | 89/164 [1:33:10<1:28:58, 71.17s/it]INFO: HumanEval/89 — model returned 10 solution(s)
+INFO:   HumanEval/89  solution 1/10  0/8  [OK]
+INFO:   HumanEval/89  solution 2/10  0/8  [OK]
+INFO:   HumanEval/89  solution 3/10  8/8  [OK]
+HumanEval/89:  55%|██████████████████▋               | 90/164 [1:34:01<1:20:02, 64.90s/it]HumanEval/90:  55%|██████████████████▋               | 90/164 [1:34:01<1:20:02, 64.90s/it]INFO: HumanEval/90 — model returned 10 solution(s)
+INFO:   HumanEval/90  solution 1/10  0/8  [OK]
+INFO:   HumanEval/90  solution 2/10  0/8  [OK]
+INFO:   HumanEval/90  solution 3/10  0/8  [OK]
+INFO:   HumanEval/90  solution 4/10  0/8  [OK]
+INFO:   HumanEval/90  solution 5/10  0/8  [OK]
+INFO:   HumanEval/90  solution 6/10  0/8  [OK]
+INFO:   HumanEval/90  solution 7/10  0/8  [OK]
+INFO:   HumanEval/90  solution 8/10  0/8  [ERROR: ValueError: min() iterable argument is empty]
+INFO:   HumanEval/90  solution 9/10  0/8  [ERROR: ValueError: min() iterable argument is empty]
+INFO:   HumanEval/90  solution 10/10  0/8  [ERROR: ValueError: min() iterable argument is empty]
+HumanEval/90:  55%|██████████████████▊               | 91/164 [1:35:27<1:26:52, 71.40s/it]HumanEval/91:  55%|██████████████████▊               | 91/164 [1:35:27<1:26:52, 71.40s/it]INFO: HumanEval/91 — model returned 10 solution(s)
+INFO:   HumanEval/91  solution 1/10  0/7  [OK]
+INFO:   HumanEval/91  solution 2/10  0/7  [OK]
+INFO:   HumanEval/91  solution 3/10  0/7  [OK]
+INFO:   HumanEval/91  solution 4/10  0/7  [OK]
+INFO:   HumanEval/91  solution 5/10  0/7  [OK]
+INFO:   HumanEval/91  solution 6/10  0/7  [OK]
+INFO:   HumanEval/91  solution 7/10  0/7  [OK]
+INFO:   HumanEval/91  solution 8/10  0/7  [OK]
+INFO:   HumanEval/91  solution 9/10  0/7  [OK]
+INFO:   HumanEval/91  solution 10/10  0/7  [OK]
+HumanEval/91:  56%|███████████████████               | 92/164 [1:36:45<1:28:01, 73.35s/it]HumanEval/92:  56%|███████████████████               | 92/164 [1:36:45<1:28:01, 73.35s/it]INFO: HumanEval/92 — model returned 10 solution(s)
+INFO:   HumanEval/92  solution 1/10  10/10  [OK]
+HumanEval/92:  57%|███████████████████▎              | 93/164 [1:37:44<1:21:45, 69.09s/it]HumanEval/93:  57%|███████████████████▎              | 93/164 [1:37:44<1:21:45, 69.09s/it]INFO: HumanEval/93 — model returned 10 solution(s)
+INFO:   HumanEval/93  solution 1/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 2/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 3/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 4/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 5/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 6/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 7/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 8/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 9/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+INFO:   HumanEval/93  solution 10/10  0/5  [ERROR: ValueError: the first two maketrans arguments must have equal length]
+HumanEval/93:  57%|███████████████████▍              | 94/164 [1:39:43<1:38:06, 84.09s/it]HumanEval/94:  57%|███████████████████▍              | 94/164 [1:39:43<1:38:06, 84.09s/it]INFO: HumanEval/94 — model returned 10 solution(s)
+INFO:   HumanEval/94  solution 1/10  9/9  [OK]
+HumanEval/94:  58%|███████████████████▋              | 95/164 [1:41:09<1:37:13, 84.55s/it]HumanEval/95:  58%|███████████████████▋              | 95/164 [1:41:09<1:37:13, 84.55s/it]INFO: HumanEval/95 — model returned 10 solution(s)
+INFO:   HumanEval/95  solution 1/10  0/7  [ERROR: AttributeError: 'int' object has no attribute 'lower']
+INFO:   HumanEval/95  solution 2/10  0/7  [OK]
+INFO:   HumanEval/95  solution 3/10  0/7  [OK]
+INFO:   HumanEval/95  solution 4/10  0/7  [OK]
+INFO:   HumanEval/95  solution 5/10  0/7  [OK]
+INFO:   HumanEval/95  solution 6/10  0/7  [OK]
+INFO:   HumanEval/95  solution 7/10  0/7  [OK]
+INFO:   HumanEval/95  solution 8/10  0/7  [OK]
+INFO:   HumanEval/95  solution 9/10  0/7  [OK]
+INFO:   HumanEval/95  solution 10/10  0/7  [OK]
+HumanEval/95:  59%|███████████████████▉              | 96/164 [1:43:05<1:46:42, 94.15s/it]HumanEval/96:  59%|███████████████████▉              | 96/164 [1:43:05<1:46:42, 94.15s/it]INFO: HumanEval/96 — model returned 10 solution(s)
+INFO:   HumanEval/96  solution 1/10  10/10  [OK]
+HumanEval/96:  59%|████████████████████              | 97/164 [1:44:12<1:35:45, 85.75s/it]HumanEval/97:  59%|████████████████████              | 97/164 [1:44:12<1:35:45, 85.75s/it]INFO: HumanEval/97 — model returned 10 solution(s)
+INFO:   HumanEval/97  solution 1/10  8/8  [OK]
+HumanEval/97:  60%|████████████████████▎             | 98/164 [1:44:46<1:17:27, 70.42s/it]HumanEval/98:  60%|████████████████████▎             | 98/164 [1:44:46<1:17:27, 70.42s/it]INFO: HumanEval/98 — model returned 10 solution(s)
+INFO:   HumanEval/98  solution 1/10  8/8  [OK]
+HumanEval/98:  60%|████████████████████▌             | 99/164 [1:45:34<1:09:03, 63.74s/it]HumanEval/99:  60%|████████████████████▌             | 99/164 [1:45:34<1:09:03, 63.74s/it]INFO: HumanEval/99 — model returned 10 solution(s)
+INFO:   HumanEval/99  solution 1/10  0/5  [OK]
+INFO:   HumanEval/99  solution 2/10  0/5  [OK]
+INFO:   HumanEval/99  solution 3/10  0/5  [OK]
+INFO:   HumanEval/99  solution 4/10  0/5  [OK]
+INFO:   HumanEval/99  solution 5/10  0/5  [OK]
+INFO:   HumanEval/99  solution 6/10  0/5  [OK]
+INFO:   HumanEval/99  solution 7/10  0/5  [OK]
+INFO:   HumanEval/99  solution 8/10  0/5  [OK]
+INFO:   HumanEval/99  solution 9/10  0/5  [OK]
+INFO:   HumanEval/99  solution 10/10  0/5  [OK]
+HumanEval/99:  61%|████████████████████             | 100/164 [1:47:31<1:24:49, 79.52s/it]HumanEval/100:  61%|███████████████████▌            | 100/164 [1:47:31<1:24:49, 79.52s/it]INFO: HumanEval/100 — model returned 10 solution(s)
+INFO:   HumanEval/100  solution 1/10  6/6  [OK]
+HumanEval/100:  62%|███████████████████▋            | 101/164 [1:48:30<1:17:02, 73.37s/it]HumanEval/101:  62%|███████████████████▋            | 101/164 [1:48:30<1:17:02, 73.37s/it]INFO: HumanEval/101 — model returned 10 solution(s)
+INFO:   HumanEval/101  solution 1/10  0/8  [OK]
+INFO:   HumanEval/101  solution 2/10  0/8  [OK]
+INFO:   HumanEval/101  solution 3/10  0/8  [OK]
+INFO:   HumanEval/101  solution 4/10  0/8  [OK]
+INFO:   HumanEval/101  solution 5/10  0/8  [OK]
+INFO:   HumanEval/101  solution 6/10  0/8  [OK]
+INFO:   HumanEval/101  solution 7/10  0/8  [OK]
+INFO:   HumanEval/101  solution 8/10  0/8  [OK]
+INFO:   HumanEval/101  solution 9/10  0/8  [OK]
+INFO:   HumanEval/101  solution 10/10  0/8  [OK]
+HumanEval/101:  62%|███████████████████▉            | 102/164 [1:49:41<1:15:16, 72.84s/it]HumanEval/102:  62%|███████████████████▉            | 102/164 [1:49:41<1:15:16, 72.84s/it]INFO: HumanEval/102 — model returned 10 solution(s)
+INFO:   HumanEval/102  solution 1/10  8/8  [OK]
+HumanEval/102:  63%|████████████████████            | 103/164 [1:50:24<1:04:44, 63.68s/it]HumanEval/103:  63%|████████████████████            | 103/164 [1:50:24<1:04:44, 63.68s/it]INFO: HumanEval/103 — model returned 10 solution(s)
+INFO:   HumanEval/103  solution 1/10  12/12  [OK]
+HumanEval/103:  63%|████████████████████▎           | 104/164 [1:51:21<1:01:52, 61.87s/it]HumanEval/104:  63%|████████████████████▎           | 104/164 [1:51:21<1:01:52, 61.87s/it]INFO: HumanEval/104 — model returned 10 solution(s)
+INFO:   HumanEval/104  solution 1/10  5/5  [OK]
+HumanEval/104:  64%|█████████████████████▊            | 105/164 [1:52:15<58:29, 59.49s/it]HumanEval/105:  64%|█████████████████████▊            | 105/164 [1:52:15<58:29, 59.49s/it]INFO: HumanEval/105 — model returned 10 solution(s)
+INFO:   HumanEval/105  solution 1/10  7/7  [OK]
+HumanEval/105:  65%|████████████████████▋           | 106/164 [1:53:25<1:00:27, 62.55s/it]HumanEval/106:  65%|████████████████████▋           | 106/164 [1:53:25<1:00:27, 62.55s/it]INFO: HumanEval/106 — model returned 10 solution(s)
+INFO:   HumanEval/106  solution 1/10  4/4  [OK]
+HumanEval/106:  65%|████████████████████▉           | 107/164 [1:55:01<1:09:06, 72.74s/it]HumanEval/107:  65%|████████████████████▉           | 107/164 [1:55:01<1:09:06, 72.74s/it]INFO: HumanEval/107 — model returned 10 solution(s)
+INFO:   HumanEval/107  solution 1/10  8/8  [OK]
+HumanEval/107:  66%|█████████████████████           | 108/164 [1:56:36<1:13:55, 79.21s/it]HumanEval/108:  66%|█████████████████████           | 108/164 [1:56:36<1:13:55, 79.21s/it]INFO: HumanEval/108 — model returned 10 solution(s)
+INFO:   HumanEval/108  solution 1/10  0/9  [ERROR: ValueError: invalid literal for int() with base 10: '-']
+INFO:   HumanEval/108  solution 2/10  0/9  [OK]
+INFO:   HumanEval/108  solution 3/10  0/9  [OK]
+INFO:   HumanEval/108  solution 4/10  0/9  [OK]
+INFO:   HumanEval/108  solution 5/10  0/9  [OK]
+INFO:   HumanEval/108  solution 6/10  0/9  [OK]
+INFO:   HumanEval/108  solution 7/10  0/9  [OK]
+INFO:   HumanEval/108  solution 8/10  0/9  [OK]
+INFO:   HumanEval/108  solution 9/10  0/9  [OK]
+INFO:   HumanEval/108  solution 10/10  0/9  [OK]
+HumanEval/108:  66%|█████████████████████▎          | 109/164 [1:58:11<1:17:06, 84.11s/it]HumanEval/109:  66%|█████████████████████▎          | 109/164 [1:58:11<1:17:06, 84.11s/it]INFO: HumanEval/109 — model returned 10 solution(s)
+INFO:   HumanEval/109  solution 1/10  0/5  [OK]
+INFO:   HumanEval/109  solution 2/10  5/5  [OK]
+HumanEval/109:  67%|█████████████████████▍          | 110/164 [1:59:14<1:10:02, 77.82s/it]HumanEval/110:  67%|█████████████████████▍          | 110/164 [1:59:14<1:10:02, 77.82s/it]INFO: HumanEval/110 — model returned 10 solution(s)
+INFO:   HumanEval/110  solution 1/10  0/7  [OK]
+INFO:   HumanEval/110  solution 2/10  0/7  [OK]
+INFO:   HumanEval/110  solution 3/10  0/7  [OK]
+INFO:   HumanEval/110  solution 4/10  0/7  [OK]
+INFO:   HumanEval/110  solution 5/10  0/7  [OK]
+INFO:   HumanEval/110  solution 6/10  0/7  [OK]
+INFO:   HumanEval/110  solution 7/10  0/7  [OK]
+INFO:   HumanEval/110  solution 8/10  0/7  [OK]
+INFO:   HumanEval/110  solution 9/10  0/7  [OK]
+INFO:   HumanEval/110  solution 10/10  0/7  [OK]
+HumanEval/110:  68%|█████████████████████▋          | 111/164 [2:01:04<1:17:10, 87.37s/it]HumanEval/111:  68%|█████████████████████▋          | 111/164 [2:01:04<1:17:10, 87.37s/it]INFO: HumanEval/111 — model returned 10 solution(s)
+INFO:   HumanEval/111  solution 1/10  8/8  [OK]
+HumanEval/111:  68%|█████████████████████▊          | 112/164 [2:02:04<1:08:36, 79.17s/it]HumanEval/112:  68%|█████████████████████▊          | 112/164 [2:02:04<1:08:36, 79.17s/it]INFO: HumanEval/112 — model returned 10 solution(s)
+INFO:   HumanEval/112  solution 1/10  9/9  [OK]
+HumanEval/112:  69%|███████████████████████▍          | 113/164 [2:02:46<57:51, 68.07s/it]HumanEval/113:  69%|███████████████████████▍          | 113/164 [2:02:46<57:51, 68.07s/it]INFO: HumanEval/113 — model returned 10 solution(s)
+INFO:   HumanEval/113  solution 1/10  4/4  [OK]
+HumanEval/113:  70%|███████████████████████▋          | 114/164 [2:03:50<55:36, 66.73s/it]HumanEval/114:  70%|███████████████████████▋          | 114/164 [2:03:50<55:36, 66.73s/it]INFO: HumanEval/114 — model returned 10 solution(s)
+INFO:   HumanEval/114  solution 1/10  0/12  [OK]
+INFO:   HumanEval/114  solution 2/10  0/12  [OK]
+INFO:   HumanEval/114  solution 3/10  0/12  [OK]
+INFO:   HumanEval/114  solution 4/10  0/12  [OK]
+INFO:   HumanEval/114  solution 5/10  0/12  [OK]
+INFO:   HumanEval/114  solution 6/10  0/12  [OK]
+INFO:   HumanEval/114  solution 7/10  0/12  [OK]
+INFO:   HumanEval/114  solution 8/10  0/12  [OK]
+INFO:   HumanEval/114  solution 9/10  0/12  [OK]
+INFO:   HumanEval/114  solution 10/10  0/12  [OK]
+HumanEval/114:  70%|███████████████████████▊          | 115/164 [2:05:02<55:45, 68.28s/it]HumanEval/115:  70%|███████████████████████▊          | 115/164 [2:05:02<55:45, 68.28s/it]INFO: HumanEval/115 — model returned 10 solution(s)
+INFO:   HumanEval/115  solution 1/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 2/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 3/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 4/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 5/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 6/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 7/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 8/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 9/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 10/10  0/7  [ERROR: NameError: name 'math' is not defined]
+HumanEval/115:  71%|██████████████████████▋         | 116/164 [2:06:44<1:02:47, 78.48s/it]HumanEval/116:  71%|██████████████████████▋         | 116/164 [2:06:44<1:02:47, 78.48s/it]INFO: HumanEval/116 — model returned 10 solution(s)
+INFO:   HumanEval/116  solution 1/10  10/10  [OK]
+HumanEval/116:  71%|████████████████████████▎         | 117/164 [2:07:15<50:17, 64.19s/it]HumanEval/117:  71%|████████████████████████▎         | 117/164 [2:07:15<50:17, 64.19s/it]INFO: HumanEval/117 — model returned 10 solution(s)
+INFO:   HumanEval/117  solution 1/10  7/7  [OK]
+HumanEval/117:  72%|████████████████████████▍         | 118/164 [2:08:25<50:29, 65.87s/it]HumanEval/118:  72%|████████████████████████▍         | 118/164 [2:08:25<50:29, 65.87s/it]INFO: HumanEval/118 — model returned 10 solution(s)
+INFO:   HumanEval/118  solution 1/10  14/14  [OK]
+HumanEval/118:  73%|████████████████████████▋         | 119/164 [2:09:22<47:30, 63.34s/it]HumanEval/119:  73%|████████████████████████▋         | 119/164 [2:09:22<47:30, 63.34s/it]INFO: HumanEval/119 — model returned 10 solution(s)
+INFO:   HumanEval/119  solution 1/10  0/12  [OK]
+INFO:   HumanEval/119  solution 2/10  0/12  [OK]
+INFO:   HumanEval/119  solution 3/10  0/12  [OK]
+INFO:   HumanEval/119  solution 4/10  0/12  [OK]
+INFO:   HumanEval/119  solution 5/10  0/12  [OK]
+INFO:   HumanEval/119  solution 6/10  0/12  [OK]
+INFO:   HumanEval/119  solution 7/10  0/12  [OK]
+INFO:   HumanEval/119  solution 8/10  0/12  [OK]
+INFO:   HumanEval/119  solution 9/10  0/12  [OK]
+INFO:   HumanEval/119  solution 10/10  0/12  [OK]
+HumanEval/119:  73%|████████████████████████▉         | 120/164 [2:10:54<52:42, 71.87s/it]HumanEval/120:  73%|████████████████████████▉         | 120/164 [2:10:54<52:42, 71.87s/it]INFO: HumanEval/120 — model returned 10 solution(s)
+INFO:   HumanEval/120  solution 1/10  0/11  [OK]
+INFO:   HumanEval/120  solution 2/10  0/11  [OK]
+INFO:   HumanEval/120  solution 3/10  0/11  [OK]
+INFO:   HumanEval/120  solution 4/10  0/11  [OK]
+INFO:   HumanEval/120  solution 5/10  0/11  [OK]
+INFO:   HumanEval/120  solution 6/10  0/11  [OK]
+INFO:   HumanEval/120  solution 7/10  0/11  [OK]
+INFO:   HumanEval/120  solution 8/10  0/11  [OK]
+INFO:   HumanEval/120  solution 9/10  0/11  [OK]
+INFO:   HumanEval/120  solution 10/10  0/11  [OK]
+HumanEval/120:  74%|█████████████████████████         | 121/164 [2:12:08<51:55, 72.45s/it]HumanEval/121:  74%|█████████████████████████         | 121/164 [2:12:08<51:55, 72.45s/it]INFO: HumanEval/121 — model returned 10 solution(s)
+INFO:   HumanEval/121  solution 1/10  7/7  [OK]
+HumanEval/121:  74%|█████████████████████████▎        | 122/164 [2:12:40<42:11, 60.28s/it]HumanEval/122:  74%|█████████████████████████▎        | 122/164 [2:12:40<42:11, 60.28s/it]INFO: HumanEval/122 — model returned 10 solution(s)
+INFO:   HumanEval/122  solution 1/10  0/5  [OK]
+INFO:   HumanEval/122  solution 2/10  0/5  [OK]
+INFO:   HumanEval/122  solution 3/10  0/5  [OK]
+INFO:   HumanEval/122  solution 4/10  0/5  [OK]
+INFO:   HumanEval/122  solution 5/10  0/5  [OK]
+INFO:   HumanEval/122  solution 6/10  0/5  [ERROR: ValueError: invalid literal for int() with base 10: '']
+INFO:   HumanEval/122  solution 7/10  0/5  [ERROR: ValueError: invalid literal for int() with base 10: '']
+INFO:   HumanEval/122  solution 8/10  0/5  [OK]
+INFO:   HumanEval/122  solution 9/10  0/5  [OK]
+INFO:   HumanEval/122  solution 10/10  0/5  [ERROR: ValueError: invalid literal for int() with base 10: '']
+HumanEval/122:  75%|█████████████████████████▌        | 123/164 [2:14:00<45:22, 66.41s/it]HumanEval/123:  75%|█████████████████████████▌        | 123/164 [2:14:00<45:22, 66.41s/it]INFO: HumanEval/123 — model returned 10 solution(s)
+INFO:   HumanEval/123  solution 1/10  0/4  [OK]
+INFO:   HumanEval/123  solution 2/10  0/4  [OK]
+INFO:   HumanEval/123  solution 3/10  0/4  [OK]
+INFO:   HumanEval/123  solution 4/10  0/4  [OK]
+INFO:   HumanEval/123  solution 5/10  0/4  [OK]
+INFO:   HumanEval/123  solution 6/10  0/4  [OK]
+INFO:   HumanEval/123  solution 7/10  0/4  [OK]
+INFO:   HumanEval/123  solution 8/10  0/4  [OK]
+INFO:   HumanEval/123  solution 9/10  0/4  [OK]
+INFO:   HumanEval/123  solution 10/10  0/4  [OK]
+HumanEval/123:  76%|█████████████████████████▋        | 124/164 [2:15:42<51:24, 77.10s/it]HumanEval/124:  76%|█████████████████████████▋        | 124/164 [2:15:42<51:24, 77.10s/it]INFO: HumanEval/124 — model returned 10 solution(s)
+INFO:   HumanEval/124  solution 1/10  16/16  [OK]
+HumanEval/124:  76%|█████████████████████████▉        | 125/164 [2:17:04<51:03, 78.54s/it]HumanEval/125:  76%|█████████████████████████▉        | 125/164 [2:17:04<51:03, 78.54s/it]INFO: HumanEval/125 — model returned 10 solution(s)
+INFO:   HumanEval/125  solution 1/10  8/8  [OK]
+HumanEval/125:  77%|██████████████████████████        | 126/164 [2:17:58<45:00, 71.05s/it]HumanEval/126:  77%|██████████████████████████        | 126/164 [2:17:58<45:00, 71.05s/it]INFO: HumanEval/126 — model returned 10 solution(s)
+INFO:   HumanEval/126  solution 1/10  0/13  [OK]
+INFO:   HumanEval/126  solution 2/10  0/13  [OK]
+INFO:   HumanEval/126  solution 3/10  0/13  [OK]
+INFO:   HumanEval/126  solution 4/10  0/13  [OK]
+INFO:   HumanEval/126  solution 5/10  0/13  [OK]
+INFO:   HumanEval/126  solution 6/10  0/13  [OK]
+INFO:   HumanEval/126  solution 7/10  0/13  [OK]
+INFO:   HumanEval/126  solution 8/10  0/13  [OK]
+INFO:   HumanEval/126  solution 9/10  0/13  [OK]
+INFO:   HumanEval/126  solution 10/10  0/13  [OK]
+HumanEval/126:  77%|██████████████████████████▎       | 127/164 [2:19:18<45:31, 73.82s/it]HumanEval/127:  77%|██████████████████████████▎       | 127/164 [2:19:18<45:31, 73.82s/it]INFO: HumanEval/127 — model returned 10 solution(s)
+INFO:   HumanEval/127  solution 1/10  0/8  [OK]
+INFO:   HumanEval/127  solution 2/10  0/8  [OK]
+INFO:   HumanEval/127  solution 3/10  0/8  [OK]
+INFO:   HumanEval/127  solution 4/10  0/8  [OK]
+INFO:   HumanEval/127  solution 5/10  0/8  [OK]
+INFO:   HumanEval/127  solution 6/10  0/8  [OK]
+INFO:   HumanEval/127  solution 7/10  0/8  [OK]
+INFO:   HumanEval/127  solution 8/10  0/8  [OK]
+INFO:   HumanEval/127  solution 9/10  0/8  [OK]
+INFO:   HumanEval/127  solution 10/10  0/8  [OK]
+HumanEval/127:  78%|██████████████████████████▌       | 128/164 [2:21:38<56:09, 93.60s/it]HumanEval/128:  78%|██████████████████████████▌       | 128/164 [2:21:38<56:09, 93.60s/it]INFO: HumanEval/128 — model returned 10 solution(s)
+INFO:   HumanEval/128  solution 1/10  0/10  [OK]
+INFO:   HumanEval/128  solution 2/10  0/10  [OK]
+INFO:   HumanEval/128  solution 3/10  0/10  [OK]
+INFO:   HumanEval/128  solution 4/10  0/10  [OK]
+INFO:   HumanEval/128  solution 5/10  0/10  [OK]
+INFO:   HumanEval/128  solution 6/10  0/10  [OK]
+INFO:   HumanEval/128  solution 7/10  0/10  [OK]
+INFO:   HumanEval/128  solution 8/10  0/10  [OK]
+INFO:   HumanEval/128  solution 9/10  0/10  [OK]
+INFO:   HumanEval/128  solution 10/10  0/10  [OK]
+HumanEval/128:  79%|██████████████████████████▋       | 129/164 [2:23:02<53:00, 90.88s/it]HumanEval/129:  79%|██████████████████████████▋       | 129/164 [2:23:02<53:00, 90.88s/it]INFO: HumanEval/129 — model returned 10 solution(s)
+INFO:   HumanEval/129  solution 1/10  0/11  [OK]
+INFO:   HumanEval/129  solution 2/10  0/11  [OK]
+INFO:   HumanEval/129  solution 3/10  0/11  [OK]
+INFO:   HumanEval/129  solution 4/10  0/11  [OK]
+INFO:   HumanEval/129  solution 5/10  0/11  [OK]
+INFO:   HumanEval/129  solution 6/10  0/11  [OK]
+INFO:   HumanEval/129  solution 7/10  0/11  [OK]
+INFO:   HumanEval/129  solution 8/10  0/11  [OK]
+INFO:   HumanEval/129  solution 9/10  0/11  [OK]
+INFO:   HumanEval/129  solution 10/10  0/11  [OK]
+HumanEval/129:  79%|████████████████████████▌      | 130/164 [2:26:20<1:09:36, 122.83s/it]HumanEval/130:  79%|████████████████████████▌      | 130/164 [2:26:20<1:09:36, 122.83s/it]INFO: HumanEval/130 — model returned 10 solution(s)
+INFO:   HumanEval/130  solution 1/10  0/10  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/130  solution 2/10  0/10  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/130  solution 3/10  0/10  [OK]
+INFO:   HumanEval/130  solution 4/10  0/10  [OK]
+INFO:   HumanEval/130  solution 5/10  0/10  [OK]
+INFO:   HumanEval/130  solution 6/10  0/10  [OK]
+INFO:   HumanEval/130  solution 7/10  0/10  [OK]
+INFO:   HumanEval/130  solution 8/10  0/10  [OK]
+INFO:   HumanEval/130  solution 9/10  0/10  [OK]
+INFO:   HumanEval/130  solution 10/10  0/10  [OK]
+HumanEval/130:  80%|████████████████████████▊      | 131/164 [2:28:29<1:08:38, 124.80s/it]HumanEval/131:  80%|████████████████████████▊      | 131/164 [2:28:29<1:08:38, 124.80s/it]INFO: HumanEval/131 — model returned 10 solution(s)
+INFO:   HumanEval/131  solution 1/10  7/7  [OK]
+HumanEval/131:  80%|██████████████████████████▌      | 132/164 [2:29:16<54:07, 101.50s/it]HumanEval/132:  80%|██████████████████████████▌      | 132/164 [2:29:16<54:07, 101.50s/it]INFO: HumanEval/132 — model returned 10 solution(s)
+INFO:   HumanEval/132  solution 1/10  0/14  [OK]
+INFO:   HumanEval/132  solution 2/10  0/14  [OK]
+INFO:   HumanEval/132  solution 3/10  0/14  [OK]
+INFO:   HumanEval/132  solution 4/10  0/14  [OK]
+INFO:   HumanEval/132  solution 5/10  0/14  [OK]
+INFO:   HumanEval/132  solution 6/10  0/14  [OK]
+INFO:   HumanEval/132  solution 7/10  0/14  [OK]
+INFO:   HumanEval/132  solution 8/10  0/14  [OK]
+INFO:   HumanEval/132  solution 9/10  0/14  [OK]
+INFO:   HumanEval/132  solution 10/10  0/14  [OK]
+HumanEval/132:  81%|██████████████████████████▊      | 133/164 [2:30:54<51:49, 100.29s/it]HumanEval/133:  81%|██████████████████████████▊      | 133/164 [2:30:54<51:49, 100.29s/it]INFO: HumanEval/133 — model returned 10 solution(s)
+INFO:   HumanEval/133  solution 1/10  0/12  [OK]
+INFO:   HumanEval/133  solution 2/10  0/12  [OK]
+INFO:   HumanEval/133  solution 3/10  0/12  [OK]
+INFO:   HumanEval/133  solution 4/10  0/12  [OK]
+INFO:   HumanEval/133  solution 5/10  0/12  [OK]
+INFO:   HumanEval/133  solution 6/10  0/12  [OK]
+INFO:   HumanEval/133  solution 7/10  0/12  [OK]
+INFO:   HumanEval/133  solution 8/10  0/12  [OK]
+INFO:   HumanEval/133  solution 9/10  0/12  [OK]
+INFO:   HumanEval/133  solution 10/10  0/12  [OK]
+HumanEval/133:  82%|███████████████████████████▊      | 134/164 [2:32:13<46:57, 93.91s/it]HumanEval/134:  82%|███████████████████████████▊      | 134/164 [2:32:13<46:57, 93.91s/it]INFO: HumanEval/134 — model returned 10 solution(s)
+INFO:   HumanEval/134  solution 1/10  11/11  [OK]
+HumanEval/134:  82%|███████████████████████████▉      | 135/164 [2:33:08<39:47, 82.34s/it]HumanEval/135:  82%|███████████████████████████▉      | 135/164 [2:33:08<39:47, 82.34s/it]INFO: HumanEval/135 — model returned 10 solution(s)
+INFO:   HumanEval/135  solution 1/10  0/5  [OK]
+INFO:   HumanEval/135  solution 2/10  0/5  [OK]
+INFO:   HumanEval/135  solution 3/10  0/5  [OK]
+INFO:   HumanEval/135  solution 4/10  0/5  [OK]
+INFO:   HumanEval/135  solution 5/10  0/5  [OK]
+INFO:   HumanEval/135  solution 6/10  0/5  [OK]
+INFO:   HumanEval/135  solution 7/10  0/5  [OK]
+INFO:   HumanEval/135  solution 8/10  0/5  [OK]
+INFO:   HumanEval/135  solution 9/10  0/5  [OK]
+INFO:   HumanEval/135  solution 10/10  0/5  [OK]
+HumanEval/135:  83%|████████████████████████████▏     | 136/164 [2:34:39<39:39, 84.99s/it]HumanEval/136:  83%|████████████████████████████▏     | 136/164 [2:34:39<39:39, 84.99s/it]INFO: HumanEval/136 — model returned 10 solution(s)
+INFO:   HumanEval/136  solution 1/10  12/12  [OK]
+HumanEval/136:  84%|████████████████████████████▍     | 137/164 [2:35:29<33:25, 74.29s/it]HumanEval/137:  84%|████████████████████████████▍     | 137/164 [2:35:29<33:25, 74.29s/it]INFO: HumanEval/137 — model returned 10 solution(s)
+INFO:   HumanEval/137  solution 1/10  0/9  [OK]
+INFO:   HumanEval/137  solution 2/10  0/9  [OK]
+INFO:   HumanEval/137  solution 3/10  0/9  [OK]
+INFO:   HumanEval/137  solution 4/10  0/9  [OK]
+INFO:   HumanEval/137  solution 5/10  0/9  [OK]
+INFO:   HumanEval/137  solution 6/10  0/9  [OK]
+INFO:   HumanEval/137  solution 7/10  0/9  [OK]
+INFO:   HumanEval/137  solution 8/10  0/9  [OK]
+INFO:   HumanEval/137  solution 9/10  0/9  [OK]
+INFO:   HumanEval/137  solution 10/10  0/9  [OK]
+HumanEval/137:  84%|████████████████████████████▌     | 138/164 [2:37:24<37:34, 86.72s/it]HumanEval/138:  84%|████████████████████████████▌     | 138/164 [2:37:24<37:34, 86.72s/it]INFO: HumanEval/138 — model returned 10 solution(s)
+INFO:   HumanEval/138  solution 1/10  0/8  [OK]
+INFO:   HumanEval/138  solution 2/10  0/8  [OK]
+INFO:   HumanEval/138  solution 3/10  0/8  [OK]
+INFO:   HumanEval/138  solution 4/10  0/8  [OK]
+INFO:   HumanEval/138  solution 5/10  0/8  [OK]
+INFO:   HumanEval/138  solution 6/10  0/8  [OK]
+INFO:   HumanEval/138  solution 7/10  0/8  [OK]
+INFO:   HumanEval/138  solution 8/10  0/8  [OK]
+INFO:   HumanEval/138  solution 9/10  0/8  [OK]
+INFO:   HumanEval/138  solution 10/10  0/8  [OK]
+HumanEval/138:  85%|████████████████████████████▊     | 139/164 [2:38:42<34:56, 83.85s/it]HumanEval/139:  85%|████████████████████████████▊     | 139/164 [2:38:42<34:56, 83.85s/it]INFO: HumanEval/139 — model returned 10 solution(s)
+INFO:   HumanEval/139  solution 1/10  4/4  [OK]
+HumanEval/139:  85%|█████████████████████████████     | 140/164 [2:39:36<29:59, 74.99s/it]HumanEval/140:  85%|█████████████████████████████     | 140/164 [2:39:36<29:59, 74.99s/it]INFO: HumanEval/140 — model returned 10 solution(s)
+INFO:   HumanEval/140  solution 1/10  0/5  [OK]
+INFO:   HumanEval/140  solution 2/10  0/5  [OK]
+INFO:   HumanEval/140  solution 3/10  5/5  [OK]
+HumanEval/140:  86%|█████████████████████████████▏    | 141/164 [2:40:13<24:21, 63.54s/it]HumanEval/141:  86%|█████████████████████████████▏    | 141/164 [2:40:13<24:21, 63.54s/it]INFO: HumanEval/141 — model returned 10 solution(s)
+INFO:   HumanEval/141  solution 1/10  0/26  [OK]
+INFO:   HumanEval/141  solution 2/10  0/26  [OK]
+INFO:   HumanEval/141  solution 3/10  0/26  [OK]
+INFO:   HumanEval/141  solution 4/10  0/26  [OK]
+INFO:   HumanEval/141  solution 5/10  0/26  [OK]
+INFO:   HumanEval/141  solution 6/10  0/26  [OK]
+INFO:   HumanEval/141  solution 7/10  0/26  [OK]
+INFO:   HumanEval/141  solution 8/10  0/26  [OK]
+INFO:   HumanEval/141  solution 9/10  0/26  [OK]
+INFO:   HumanEval/141  solution 10/10  0/26  [OK]
+HumanEval/141:  87%|█████████████████████████████▍    | 142/164 [2:42:27<31:01, 84.63s/it]HumanEval/142:  87%|█████████████████████████████▍    | 142/164 [2:42:27<31:01, 84.63s/it]INFO: HumanEval/142 — model returned 10 solution(s)
+INFO:   HumanEval/142  solution 1/10  0/11  [OK]
+INFO:   HumanEval/142  solution 2/10  0/11  [OK]
+INFO:   HumanEval/142  solution 3/10  0/11  [OK]
+INFO:   HumanEval/142  solution 4/10  11/11  [OK]
+HumanEval/142:  87%|█████████████████████████████▋    | 143/164 [2:43:25<26:52, 76.81s/it]HumanEval/143:  87%|█████████████████████████████▋    | 143/164 [2:43:25<26:52, 76.81s/it]INFO: HumanEval/143 — model returned 10 solution(s)
+INFO:   HumanEval/143  solution 1/10  7/7  [OK]
+HumanEval/143:  88%|█████████████████████████████▊    | 144/164 [2:44:35<24:56, 74.81s/it]HumanEval/144:  88%|█████████████████████████████▊    | 144/164 [2:44:35<24:56, 74.81s/it]INFO: HumanEval/144 — model returned 10 solution(s)
+INFO:   HumanEval/144  solution 1/10  0/13  [OK]
+INFO:   HumanEval/144  solution 2/10  13/13  [OK]
+HumanEval/144:  88%|██████████████████████████████    | 145/164 [2:45:40<22:41, 71.66s/it]HumanEval/145:  88%|██████████████████████████████    | 145/164 [2:45:40<22:41, 71.66s/it]INFO: HumanEval/145 — model returned 10 solution(s)
+INFO:   HumanEval/145  solution 1/10  0/7  [OK]
+INFO:   HumanEval/145  solution 2/10  0/7  [OK]
+INFO:   HumanEval/145  solution 3/10  0/7  [OK]
+INFO:   HumanEval/145  solution 4/10  0/7  [OK]
+INFO:   HumanEval/145  solution 5/10  0/7  [OK]
+INFO:   HumanEval/145  solution 6/10  0/7  [OK]
+INFO:   HumanEval/145  solution 7/10  0/7  [OK]
+INFO:   HumanEval/145  solution 8/10  0/7  [OK]
+INFO:   HumanEval/145  solution 9/10  0/7  [OK]
+INFO:   HumanEval/145  solution 10/10  0/7  [OK]
+HumanEval/145:  89%|██████████████████████████████▎   | 146/164 [2:47:03<22:34, 75.27s/it]HumanEval/146:  89%|██████████████████████████████▎   | 146/164 [2:47:03<22:34, 75.27s/it]INFO: HumanEval/146 — model returned 10 solution(s)
+INFO:   HumanEval/146  solution 1/10  0/7  [OK]
+INFO:   HumanEval/146  solution 2/10  0/7  [OK]
+INFO:   HumanEval/146  solution 3/10  0/7  [OK]
+INFO:   HumanEval/146  solution 4/10  0/7  [OK]
+INFO:   HumanEval/146  solution 5/10  0/7  [OK]
+INFO:   HumanEval/146  solution 6/10  0/7  [OK]
+INFO:   HumanEval/146  solution 7/10  0/7  [OK]
+INFO:   HumanEval/146  solution 8/10  0/7  [OK]
+INFO:   HumanEval/146  solution 9/10  0/7  [OK]
+INFO:   HumanEval/146  solution 10/10  0/7  [OK]
+HumanEval/146:  90%|██████████████████████████████▍   | 147/164 [2:48:42<23:21, 82.42s/it]HumanEval/147:  90%|██████████████████████████████▍   | 147/164 [2:48:42<23:21, 82.42s/it]INFO: HumanEval/147 — model returned 10 solution(s)
+INFO:   HumanEval/147  solution 1/10  4/4  [OK]
+HumanEval/147:  90%|██████████████████████████████▋   | 148/164 [2:49:51<20:51, 78.25s/it]HumanEval/148:  90%|██████████████████████████████▋   | 148/164 [2:49:51<20:51, 78.25s/it]INFO: HumanEval/148 — model returned 10 solution(s)
+INFO:   HumanEval/148  solution 1/10  7/7  [OK]
+HumanEval/148:  91%|██████████████████████████████▉   | 149/164 [2:51:01<18:58, 75.91s/it]HumanEval/149:  91%|██████████████████████████████▉   | 149/164 [2:51:01<18:58, 75.91s/it]INFO: HumanEval/149 — model returned 10 solution(s)
+INFO:   HumanEval/149  solution 1/10  7/7  [OK]
+HumanEval/149:  91%|███████████████████████████████   | 150/164 [2:51:54<16:05, 68.93s/it]HumanEval/150:  91%|███████████████████████████████   | 150/164 [2:51:54<16:05, 68.93s/it]INFO: HumanEval/150 — model returned 10 solution(s)
+INFO:   HumanEval/150  solution 1/10  10/10  [OK]
+HumanEval/150:  92%|███████████████████████████████▎  | 151/164 [2:53:17<15:52, 73.30s/it]HumanEval/151:  92%|███████████████████████████████▎  | 151/164 [2:53:17<15:52, 73.30s/it]INFO: HumanEval/151 — model returned 10 solution(s)
+INFO:   HumanEval/151  solution 1/10  0/7  [OK]
+INFO:   HumanEval/151  solution 2/10  0/7  [OK]
+INFO:   HumanEval/151  solution 3/10  0/7  [OK]
+INFO:   HumanEval/151  solution 4/10  0/7  [OK]
+INFO:   HumanEval/151  solution 5/10  7/7  [OK]
+HumanEval/151:  93%|███████████████████████████████▌  | 152/164 [2:54:15<13:42, 68.52s/it]HumanEval/152:  93%|███████████████████████████████▌  | 152/164 [2:54:15<13:42, 68.52s/it]INFO: HumanEval/152 — model returned 10 solution(s)
+INFO:   HumanEval/152  solution 1/10  5/5  [OK]
+HumanEval/152:  93%|███████████████████████████████▋  | 153/164 [2:54:44<10:22, 56.61s/it]HumanEval/153:  93%|███████████████████████████████▋  | 153/164 [2:54:44<10:22, 56.61s/it]INFO: HumanEval/153 — model returned 10 solution(s)
+INFO:   HumanEval/153  solution 1/10  9/9  [OK]
+HumanEval/153:  94%|███████████████████████████████▉  | 154/164 [2:55:44<09:38, 57.87s/it]HumanEval/154:  94%|███████████████████████████████▉  | 154/164 [2:55:44<09:38, 57.87s/it]INFO: HumanEval/154 — model returned 10 solution(s)
+INFO:   HumanEval/154  solution 1/10  0/6  [OK]
+INFO:   HumanEval/154  solution 2/10  6/6  [OK]
+HumanEval/154:  95%|████████████████████████████████▏ | 155/164 [2:56:26<07:57, 53.03s/it]HumanEval/155:  95%|████████████████████████████████▏ | 155/164 [2:56:26<07:57, 53.03s/it]INFO: HumanEval/155 — model returned 10 solution(s)
+INFO:   HumanEval/155  solution 1/10  9/9  [OK]
+HumanEval/155:  95%|████████████████████████████████▎ | 156/164 [2:57:20<07:06, 53.36s/it]HumanEval/156:  95%|████████████████████████████████▎ | 156/164 [2:57:20<07:06, 53.36s/it]INFO: HumanEval/156 — model returned 10 solution(s)
+INFO:   HumanEval/156  solution 1/10  15/15  [OK]
+HumanEval/156:  96%|████████████████████████████████▌ | 157/164 [2:59:00<07:50, 67.15s/it]HumanEval/157:  96%|████████████████████████████████▌ | 157/164 [2:59:00<07:50, 67.15s/it]INFO: HumanEval/157 — model returned 10 solution(s)
+INFO:   HumanEval/157  solution 1/10  11/11  [OK]
+HumanEval/157:  96%|████████████████████████████████▊ | 158/164 [2:59:42<05:57, 59.58s/it]HumanEval/158:  96%|████████████████████████████████▊ | 158/164 [2:59:42<05:57, 59.58s/it]INFO: HumanEval/158 — model returned 10 solution(s)
+INFO:   HumanEval/158  solution 1/10  0/10  [OK]
+INFO:   HumanEval/158  solution 2/10  0/10  [OK]
+INFO:   HumanEval/158  solution 3/10  0/10  [OK]
+INFO:   HumanEval/158  solution 4/10  0/10  [OK]
+INFO:   HumanEval/158  solution 5/10  0/10  [OK]
+INFO:   HumanEval/158  solution 6/10  0/10  [OK]
+INFO:   HumanEval/158  solution 7/10  0/10  [OK]
+INFO:   HumanEval/158  solution 8/10  0/10  [OK]
+INFO:   HumanEval/158  solution 9/10  0/10  [OK]
+INFO:   HumanEval/158  solution 10/10  0/10  [OK]
+HumanEval/158:  97%|████████████████████████████████▉ | 159/164 [3:00:53<05:16, 63.23s/it]HumanEval/159:  97%|████████████████████████████████▉ | 159/164 [3:00:53<05:16, 63.23s/it]INFO: HumanEval/159 — model returned 10 solution(s)
+INFO:   HumanEval/159  solution 1/10  8/8  [OK]
+HumanEval/159:  98%|█████████████████████████████████▏| 160/164 [3:01:30<03:40, 55.14s/it]HumanEval/160:  98%|█████████████████████████████████▏| 160/164 [3:01:30<03:40, 55.14s/it]INFO: HumanEval/160 — model returned 10 solution(s)
+INFO:   HumanEval/160  solution 1/10  0/4  [OK]
+INFO:   HumanEval/160  solution 2/10  0/4  [OK]
+INFO:   HumanEval/160  solution 3/10  0/4  [OK]
+INFO:   HumanEval/160  solution 4/10  0/4  [OK]
+INFO:   HumanEval/160  solution 5/10  0/4  [OK]
+INFO:   HumanEval/160  solution 6/10  0/4  [OK]
+INFO:   HumanEval/160  solution 7/10  0/4  [OK]
+INFO:   HumanEval/160  solution 8/10  0/4  [OK]
+INFO:   HumanEval/160  solution 9/10  0/4  [OK]
+INFO:   HumanEval/160  solution 10/10  0/4  [OK]
+HumanEval/160:  98%|█████████████████████████████████▍| 161/164 [3:03:45<03:57, 79.20s/it]HumanEval/161:  98%|█████████████████████████████████▍| 161/164 [3:03:45<03:57, 79.20s/it]INFO: HumanEval/161 — model returned 10 solution(s)
+INFO:   HumanEval/161  solution 1/10  8/8  [OK]
+HumanEval/161:  99%|█████████████████████████████████▌| 162/164 [3:04:24<02:14, 67.29s/it]HumanEval/162:  99%|█████████████████████████████████▌| 162/164 [3:04:24<02:14, 67.29s/it]INFO: HumanEval/162 — model returned 10 solution(s)
+INFO:   HumanEval/162  solution 1/10  5/5  [OK]
+HumanEval/162:  99%|█████████████████████████████████▊| 163/164 [3:05:04<00:58, 58.98s/it]HumanEval/163:  99%|█████████████████████████████████▊| 163/164 [3:05:04<00:58, 58.98s/it]INFO: HumanEval/163 — model returned 10 solution(s)
+INFO:   HumanEval/163  solution 1/10  0/5  [OK]
+INFO:   HumanEval/163  solution 2/10  0/5  [OK]
+INFO:   HumanEval/163  solution 3/10  0/5  [OK]
+INFO:   HumanEval/163  solution 4/10  0/5  [OK]
+INFO:   HumanEval/163  solution 5/10  0/5  [OK]
+INFO:   HumanEval/163  solution 6/10  0/5  [OK]
+INFO:   HumanEval/163  solution 7/10  0/5  [OK]
+INFO:   HumanEval/163  solution 8/10  0/5  [OK]
+INFO:   HumanEval/163  solution 9/10  0/5  [OK]
+INFO:   HumanEval/163  solution 10/10  0/5  [OK]
+HumanEval/163: 100%|██████████████████████████████████| 164/164 [3:06:23<00:00, 64.84s/it]HumanEval/163: 100%|██████████████████████████████████| 164/164 [3:06:23<00:00, 68.19s/it]
+
+============================================================
+Interpretation-aware Self-Consistency — LV
+Model  : deepseek-ai/deepseek-coder-6.7b-instruct
+N      : 10 interpretations requested
+Dataset: mutations/humanEval_lv_with_tests.jsonl   problems=164
+============================================================
+
+Solution k    First solve    Cumulative pass@k
+--------------------------------------------
+  k=1          102             62.2%
+  k=2          11              68.9%
+  k=3          4               71.3%
+  k=4          2               72.6%
+  k=5          1               73.2%
+  k=6          0               73.2%
+  k=7          0               73.2%
+  k=8          0               73.2%
+  k=9          0               73.2%
+  k=10         0               73.2%
+
+  Never solved : 44  (26.8%)
+
+  pass@1 (sol 1 only) = 62.2%
+  pass@10 (any solution) = 73.2%
+============================================================
+
+Results → results/self_consistency/deepseek-ai_deepseek-coder-6.7b-instruct__humanEval_lv_sc10.jsonl

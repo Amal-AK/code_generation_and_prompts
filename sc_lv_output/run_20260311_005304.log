@@ -134,4 +134,540 @@ INFO:   HumanEval/34  solution 1/10  1/1  [OK]
 INFO:   HumanEval/35  solution 1/10  2/2  [OK]
 HumanEval/35:  22%|███████▉                            | 36/164 [26:37<1:47:10, 50.24s/it]HumanEval/36:  22%|███████▉                            | 36/164 [26:37<1:47:10, 50.24s/it]INFO: HumanEval/36 — model returned 10 solution(s)
 INFO:   HumanEval/36  solution 1/10  8/8  [OK]
-HumanEval/36:  23%|████████                            | 37/164 [27:18<1:40:40, 47.56s/it]HumanEval/37:  23%|████████                            | 37/164 [27:18<1:40:40, 47.56s/it]
+HumanEval/36:  23%|████████                            | 37/164 [27:18<1:40:40, 47.56s/it]HumanEval/37:  23%|████████                            | 37/164 [27:18<1:40:40, 47.56s/it]INFO: HumanEval/37 — model returned 10 solution(s)
+INFO:   HumanEval/37  solution 1/10  0/3  [OK]
+INFO:   HumanEval/37  solution 2/10  0/3  [OK]
+INFO:   HumanEval/37  solution 3/10  0/3  [OK]
+INFO:   HumanEval/37  solution 4/10  0/3  [OK]
+INFO:   HumanEval/37  solution 5/10  0/3  [OK]
+INFO:   HumanEval/37  solution 6/10  0/3  [OK]
+INFO:   HumanEval/37  solution 7/10  0/3  [OK]
+INFO:   HumanEval/37  solution 8/10  0/3  [OK]
+INFO:   HumanEval/37  solution 9/10  0/3  [OK]
+INFO:   HumanEval/37  solution 10/10  0/3  [OK]
+HumanEval/37:  23%|████████▎                           | 38/164 [28:36<1:58:44, 56.55s/it]HumanEval/38:  23%|████████▎                           | 38/164 [28:36<1:58:44, 56.55s/it]INFO: HumanEval/38 — model returned 10 solution(s)
+INFO:   HumanEval/38  solution 1/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 2/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 3/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 4/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 5/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 6/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 7/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 8/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 9/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+INFO:   HumanEval/38  solution 10/10  0/1  [ERROR: NameError: name 'encode_cyclic' is not defined]
+HumanEval/38:  24%|████████▌                           | 39/164 [31:03<2:54:06, 83.57s/it]HumanEval/39:  24%|████████▌                           | 39/164 [31:03<2:54:06, 83.57s/it]INFO: HumanEval/39 — model returned 10 solution(s)
+INFO:   HumanEval/39  solution 1/10  10/10  [OK]
+HumanEval/39:  24%|████████▊                           | 40/164 [32:31<2:55:41, 85.01s/it]HumanEval/40:  24%|████████▊                           | 40/164 [32:31<2:55:41, 85.01s/it]INFO: HumanEval/40 — model returned 10 solution(s)
+INFO:   HumanEval/40  solution 1/10  9/9  [OK]
+HumanEval/40:  25%|█████████                           | 41/164 [33:16<2:29:50, 73.09s/it]HumanEval/41:  25%|█████████                           | 41/164 [33:16<2:29:50, 73.09s/it]INFO: HumanEval/41 — model returned 10 solution(s)
+INFO:   HumanEval/41  solution 1/10  5/5  [OK]
+HumanEval/41:  26%|█████████▏                          | 42/164 [33:37<1:56:47, 57.44s/it]HumanEval/42:  26%|█████████▏                          | 42/164 [33:37<1:56:47, 57.44s/it]INFO: HumanEval/42 — model returned 10 solution(s)
+INFO:   HumanEval/42  solution 1/10  3/3  [OK]
+HumanEval/42:  26%|█████████▍                          | 43/164 [34:01<1:35:21, 47.28s/it]HumanEval/43:  26%|█████████▍                          | 43/164 [34:01<1:35:21, 47.28s/it]INFO: HumanEval/43 — model returned 10 solution(s)
+INFO:   HumanEval/43  solution 1/10  0/9  [ERROR: NameError: name 'combinations' is not defined]
+INFO:   HumanEval/43  solution 2/10  9/9  [OK]
+HumanEval/43:  27%|█████████▋                          | 44/164 [34:40<1:29:54, 44.96s/it]HumanEval/44:  27%|█████████▋                          | 44/164 [34:40<1:29:54, 44.96s/it]INFO: HumanEval/44 — model returned 10 solution(s)
+INFO:   HumanEval/44  solution 1/10  0/7  [ERROR: ValueError: invalid literal for int() with base 3: '8']
+INFO:   HumanEval/44  solution 2/10  0/7  [OK]
+INFO:   HumanEval/44  solution 3/10  0/7  [OK]
+INFO:   HumanEval/44  solution 4/10  7/7  [OK]
+HumanEval/44:  27%|█████████▉                          | 45/164 [35:29<1:31:30, 46.14s/it]HumanEval/45:  27%|█████████▉                          | 45/164 [35:29<1:31:30, 46.14s/it]INFO: HumanEval/45 — model returned 10 solution(s)
+INFO:   HumanEval/45  solution 1/10  3/3  [OK]
+HumanEval/45:  28%|██████████                          | 46/164 [35:58<1:20:18, 40.83s/it]HumanEval/46:  28%|██████████                          | 46/164 [35:58<1:20:18, 40.83s/it]INFO: HumanEval/46 — model returned 10 solution(s)
+INFO:   HumanEval/46  solution 1/10  4/4  [OK]
+HumanEval/46:  29%|██████████▎                         | 47/164 [37:02<1:33:29, 47.94s/it]HumanEval/47:  29%|██████████▎                         | 47/164 [37:02<1:33:29, 47.94s/it]INFO: HumanEval/47 — model returned 10 solution(s)
+INFO:   HumanEval/47  solution 1/10  0/5  [OK]
+INFO:   HumanEval/47  solution 2/10  5/5  [OK]
+HumanEval/47:  29%|██████████▌                         | 48/164 [37:45<1:29:45, 46.43s/it]HumanEval/48:  29%|██████████▌                         | 48/164 [37:45<1:29:45, 46.43s/it]INFO: HumanEval/48 — model returned 10 solution(s)
+INFO:   HumanEval/48  solution 1/10  7/7  [OK]
+HumanEval/48:  30%|██████████▊                         | 49/164 [38:13<1:18:05, 40.74s/it]HumanEval/49:  30%|██████████▊                         | 49/164 [38:13<1:18:05, 40.74s/it]INFO: HumanEval/49 — model returned 10 solution(s)
+INFO:   HumanEval/49  solution 1/10  7/7  [OK]
+HumanEval/49:  30%|██████████▉                         | 50/164 [38:42<1:10:58, 37.36s/it]HumanEval/50:  30%|██████████▉                         | 50/164 [38:42<1:10:58, 37.36s/it]INFO: HumanEval/50 — model returned 10 solution(s)
+INFO:   HumanEval/50  solution 1/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 2/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 3/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 4/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 5/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 6/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 7/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 8/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 9/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+INFO:   HumanEval/50  solution 10/10  0/1  [ERROR: NameError: name 'encode_shift' is not defined]
+HumanEval/50:  31%|███████████▏                        | 51/164 [40:32<1:51:31, 59.22s/it]HumanEval/51:  31%|███████████▏                        | 51/164 [40:32<1:51:31, 59.22s/it]INFO: HumanEval/51 — model returned 10 solution(s)
+INFO:   HumanEval/51  solution 1/10  7/7  [OK]
+HumanEval/51:  32%|███████████▍                        | 52/164 [41:14<1:40:55, 54.07s/it]HumanEval/52:  32%|███████████▍                        | 52/164 [41:14<1:40:55, 54.07s/it]INFO: HumanEval/52 — model returned 10 solution(s)
+INFO:   HumanEval/52  solution 1/10  6/6  [OK]
+HumanEval/52:  32%|███████████▋                        | 53/164 [41:40<1:24:04, 45.44s/it]HumanEval/53:  32%|███████████▋                        | 53/164 [41:40<1:24:04, 45.44s/it]INFO: HumanEval/53 — model returned 10 solution(s)
+INFO:   HumanEval/53  solution 1/10  6/6  [OK]
+HumanEval/53:  33%|███████████▊                        | 54/164 [42:03<1:10:59, 38.72s/it]HumanEval/54:  33%|███████████▊                        | 54/164 [42:03<1:10:59, 38.72s/it]INFO: HumanEval/54 — model returned 10 solution(s)
+INFO:   HumanEval/54  solution 1/10  7/7  [OK]
+HumanEval/54:  34%|████████████                        | 55/164 [42:29<1:03:24, 34.91s/it]HumanEval/55:  34%|████████████                        | 55/164 [42:29<1:03:24, 34.91s/it]INFO: HumanEval/55 — model returned 10 solution(s)
+INFO:   HumanEval/55  solution 1/10  0/5  [OK]
+INFO:   HumanEval/55  solution 2/10  0/5  [OK]
+INFO:   HumanEval/55  solution 3/10  0/5  [OK]
+INFO:   HumanEval/55  solution 4/10  0/5  [OK]
+INFO:   HumanEval/55  solution 5/10  0/5  [OK]
+INFO:   HumanEval/55  solution 6/10  0/5  [ERROR: IndexError: list index out of range]
+INFO:   HumanEval/55  solution 7/10  0/5  [OK]
+INFO:   HumanEval/55  solution 8/10  0/5  [OK]
+INFO:   HumanEval/55  solution 9/10  0/5  [OK]
+INFO:   HumanEval/55  solution 10/10  0/5  [ERROR: IndexError: list index out of range]
+HumanEval/55:  34%|████████████▎                       | 56/164 [43:44<1:24:28, 46.93s/it]HumanEval/56:  34%|████████████▎                       | 56/164 [43:44<1:24:28, 46.93s/it]INFO: HumanEval/56 — model returned 10 solution(s)
+INFO:   HumanEval/56  solution 1/10  0/12  [OK]
+INFO:   HumanEval/56  solution 2/10  12/12  [OK]
+HumanEval/56:  35%|████████████▌                       | 57/164 [44:38<1:27:35, 49.12s/it]HumanEval/57:  35%|████████████▌                       | 57/164 [44:38<1:27:35, 49.12s/it]INFO: HumanEval/57 — model returned 10 solution(s)
+INFO:   HumanEval/57  solution 1/10  8/8  [OK]
+HumanEval/57:  35%|████████████▋                       | 58/164 [45:13<1:19:11, 44.82s/it]HumanEval/58:  35%|████████████▋                       | 58/164 [45:13<1:19:11, 44.82s/it]INFO: HumanEval/58 — model returned 10 solution(s)
+INFO:   HumanEval/58  solution 1/10  4/4  [OK]
+HumanEval/58:  36%|████████████▉                       | 59/164 [45:38<1:08:15, 39.00s/it]HumanEval/59:  36%|████████████▉                       | 59/164 [45:38<1:08:15, 39.00s/it]INFO: HumanEval/59 — model returned 10 solution(s)
+INFO:   HumanEval/59  solution 1/10  5/5  [OK]
+HumanEval/59:  37%|█████████████▏                      | 60/164 [46:49<1:24:06, 48.52s/it]HumanEval/60:  37%|█████████████▏                      | 60/164 [46:49<1:24:06, 48.52s/it]INFO: HumanEval/60 — model returned 10 solution(s)
+INFO:   HumanEval/60  solution 1/10  5/5  [OK]
+HumanEval/60:  37%|█████████████▍                      | 61/164 [47:18<1:13:25, 42.77s/it]HumanEval/61:  37%|█████████████▍                      | 61/164 [47:18<1:13:25, 42.77s/it]INFO: HumanEval/61 — model returned 10 solution(s)
+INFO:   HumanEval/61  solution 1/10  12/12  [OK]
+HumanEval/61:  38%|█████████████▌                      | 62/164 [48:27<1:25:57, 50.57s/it]HumanEval/62:  38%|█████████████▌                      | 62/164 [48:27<1:25:57, 50.57s/it]INFO: HumanEval/62 — model returned 10 solution(s)
+INFO:   HumanEval/62  solution 1/10  0/5  [OK]
+INFO:   HumanEval/62  solution 2/10  0/5  [OK]
+INFO:   HumanEval/62  solution 3/10  0/5  [OK]
+INFO:   HumanEval/62  solution 4/10  5/5  [OK]
+HumanEval/62:  38%|█████████████▊                      | 63/164 [49:11<1:21:36, 48.48s/it]HumanEval/63:  38%|█████████████▊                      | 63/164 [49:11<1:21:36, 48.48s/it]INFO: HumanEval/63 — model returned 10 solution(s)
+INFO:   HumanEval/63  solution 1/10  7/7  [OK]
+HumanEval/63:  39%|██████████████                      | 64/164 [50:02<1:22:08, 49.29s/it]HumanEval/64:  39%|██████████████                      | 64/164 [50:02<1:22:08, 49.29s/it]INFO: HumanEval/64 — model returned 10 solution(s)
+INFO:   HumanEval/64  solution 1/10  8/8  [OK]
+HumanEval/64:  40%|██████████████▎                     | 65/164 [50:47<1:19:09, 47.97s/it]HumanEval/65:  40%|██████████████▎                     | 65/164 [50:47<1:19:09, 47.97s/it]INFO: HumanEval/65 — model returned 10 solution(s)
+INFO:   HumanEval/65  solution 1/10  0/5  [OK]
+INFO:   HumanEval/65  solution 2/10  5/5  [OK]
+HumanEval/65:  40%|██████████████▍                     | 66/164 [51:32<1:16:54, 47.09s/it]HumanEval/66:  40%|██████████████▍                     | 66/164 [51:32<1:16:54, 47.09s/it]INFO: HumanEval/66 — model returned 10 solution(s)
+INFO:   HumanEval/66  solution 1/10  10/10  [OK]
+HumanEval/66:  41%|██████████████▋                     | 67/164 [51:59<1:06:34, 41.18s/it]HumanEval/67:  41%|██████████████▋                     | 67/164 [51:59<1:06:34, 41.18s/it]INFO: HumanEval/67 — model returned 10 solution(s)
+INFO:   HumanEval/67  solution 1/10  7/7  [OK]
+HumanEval/67:  41%|██████████████▉                     | 68/164 [52:41<1:06:24, 41.50s/it]HumanEval/68:  41%|██████████████▉                     | 68/164 [52:41<1:06:24, 41.50s/it]INFO: HumanEval/68 — model returned 10 solution(s)
+INFO:   HumanEval/68  solution 1/10  10/10  [OK]
+HumanEval/68:  42%|███████████████▏                    | 69/164 [53:42<1:14:59, 47.36s/it]HumanEval/69:  42%|███████████████▏                    | 69/164 [53:42<1:14:59, 47.36s/it]INFO: HumanEval/69 — model returned 10 solution(s)
+INFO:   HumanEval/69  solution 1/10  25/25  [OK]
+HumanEval/69:  43%|███████████████▎                    | 70/164 [54:30<1:14:32, 47.57s/it]HumanEval/70:  43%|███████████████▎                    | 70/164 [54:30<1:14:32, 47.57s/it]INFO: HumanEval/70 — model returned 10 solution(s)
+INFO:   HumanEval/70  solution 1/10  10/10  [OK]
+HumanEval/70:  43%|███████████████▌                    | 71/164 [55:12<1:10:43, 45.63s/it]HumanEval/71:  43%|███████████████▌                    | 71/164 [55:12<1:10:43, 45.63s/it]INFO: HumanEval/71 — model returned 10 solution(s)
+INFO:   HumanEval/71  solution 1/10  9/9  [OK]
+HumanEval/71:  44%|███████████████▊                    | 72/164 [56:19<1:19:53, 52.10s/it]HumanEval/72:  44%|███████████████▊                    | 72/164 [56:19<1:19:53, 52.10s/it]INFO: HumanEval/72 — model returned 10 solution(s)
+INFO:   HumanEval/72  solution 1/10  6/6  [OK]
+HumanEval/72:  45%|████████████████                    | 73/164 [56:47<1:08:01, 44.85s/it]HumanEval/73:  45%|████████████████                    | 73/164 [56:47<1:08:01, 44.85s/it]INFO: HumanEval/73 — model returned 10 solution(s)
+INFO:   HumanEval/73  solution 1/10  8/8  [OK]
+HumanEval/73:  45%|████████████████▏                   | 74/164 [57:18<1:01:17, 40.86s/it]HumanEval/74:  45%|████████████████▏                   | 74/164 [57:18<1:01:17, 40.86s/it]INFO: HumanEval/74 — model returned 10 solution(s)
+INFO:   HumanEval/74  solution 1/10  11/11  [OK]
+HumanEval/74:  46%|████████████████▍                   | 75/164 [58:00<1:00:56, 41.09s/it]HumanEval/75:  46%|████████████████▍                   | 75/164 [58:00<1:00:56, 41.09s/it]INFO: HumanEval/75 — model returned 10 solution(s)
+INFO:   HumanEval/75  solution 1/10  10/10  [OK]
+HumanEval/75:  46%|████████████████▋                   | 76/164 [59:41<1:26:29, 58.97s/it]HumanEval/76:  46%|████████████████▋                   | 76/164 [59:41<1:26:29, 58.97s/it]INFO: HumanEval/76 — model returned 10 solution(s)
+INFO:   HumanEval/76  solution 1/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 2/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 3/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 4/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 5/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 6/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 7/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 8/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 9/10  0/10  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/76  solution 10/10  0/10  [ERROR: NameError: name 'math' is not defined]
+HumanEval/76:  47%|███████████████▉                  | 77/164 [1:00:57<1:33:01, 64.15s/it]HumanEval/77:  47%|███████████████▉                  | 77/164 [1:00:57<1:33:01, 64.15s/it]INFO: HumanEval/77 — model returned 10 solution(s)
+INFO:   HumanEval/77  solution 1/10  0/8  [ERROR: TypeError: type complex doesn't define __round__ method]
+INFO:   HumanEval/77  solution 2/10  8/8  [OK]
+HumanEval/77:  48%|████████████████▏                 | 78/164 [1:01:32<1:19:36, 55.54s/it]HumanEval/78:  48%|████████████████▏                 | 78/164 [1:01:32<1:19:36, 55.54s/it]INFO: HumanEval/78 — model returned 10 solution(s)
+INFO:   HumanEval/78  solution 1/10  7/7  [OK]
+HumanEval/78:  48%|████████████████▍                 | 79/164 [1:02:16<1:13:29, 51.87s/it]HumanEval/79:  48%|████████████████▍                 | 79/164 [1:02:16<1:13:29, 51.87s/it]INFO: HumanEval/79 — model returned 10 solution(s)
+INFO:   HumanEval/79  solution 1/10  5/5  [OK]
+HumanEval/79:  49%|████████████████▌                 | 80/164 [1:02:53<1:06:39, 47.61s/it]HumanEval/80:  49%|████████████████▌                 | 80/164 [1:02:53<1:06:39, 47.61s/it]INFO: HumanEval/80 — model returned 10 solution(s)
+INFO:   HumanEval/80  solution 1/10  8/8  [OK]
+HumanEval/80:  49%|████████████████▊                 | 81/164 [1:03:35<1:03:33, 45.95s/it]HumanEval/81:  49%|████████████████▊                 | 81/164 [1:03:35<1:03:33, 45.95s/it]INFO: HumanEval/81 — model returned 10 solution(s)
+INFO:   HumanEval/81  solution 1/10  7/7  [OK]
+HumanEval/81:  50%|█████████████████                 | 82/164 [1:05:59<1:42:42, 75.15s/it]HumanEval/82:  50%|█████████████████                 | 82/164 [1:05:59<1:42:42, 75.15s/it]INFO: HumanEval/82 — model returned 10 solution(s)
+INFO:   HumanEval/82  solution 1/10  16/16  [OK]
+HumanEval/82:  51%|█████████████████▏                | 83/164 [1:06:46<1:30:16, 66.87s/it]HumanEval/83:  51%|█████████████████▏                | 83/164 [1:06:46<1:30:16, 66.87s/it]INFO: HumanEval/83 — model returned 10 solution(s)
+INFO:   HumanEval/83  solution 1/10  0/7  [OK]
+INFO:   HumanEval/83  solution 2/10  0/7  [OK]
+INFO:   HumanEval/83  solution 3/10  0/7  [OK]
+INFO:   HumanEval/83  solution 4/10  0/7  [OK]
+INFO:   HumanEval/83  solution 5/10  0/7  [OK]
+INFO:   HumanEval/83  solution 6/10  0/7  [OK]
+INFO:   HumanEval/83  solution 7/10  0/7  [OK]
+INFO:   HumanEval/83  solution 8/10  0/7  [OK]
+INFO:   HumanEval/83  solution 9/10  0/7  [OK]
+INFO:   HumanEval/83  solution 10/10  0/7  [OK]
+HumanEval/83:  51%|█████████████████▍                | 84/164 [1:08:14<1:37:37, 73.21s/it]HumanEval/84:  51%|█████████████████▍                | 84/164 [1:08:14<1:37:37, 73.21s/it]INFO: HumanEval/84 — model returned 10 solution(s)
+INFO:   HumanEval/84  solution 1/10  0/7  [OK]
+INFO:   HumanEval/84  solution 2/10  0/7  [OK]
+INFO:   HumanEval/84  solution 3/10  0/7  [OK]
+INFO:   HumanEval/84  solution 4/10  0/7  [OK]
+INFO:   HumanEval/84  solution 5/10  0/7  [OK]
+INFO:   HumanEval/84  solution 6/10  0/7  [OK]
+INFO:   HumanEval/84  solution 7/10  0/7  [OK]
+INFO:   HumanEval/84  solution 8/10  0/7  [OK]
+INFO:   HumanEval/84  solution 9/10  0/7  [OK]
+INFO:   HumanEval/84  solution 10/10  0/7  [OK]
+HumanEval/84:  52%|█████████████████▌                | 85/164 [1:09:25<1:35:36, 72.61s/it]HumanEval/85:  52%|█████████████████▌                | 85/164 [1:09:25<1:35:36, 72.61s/it]INFO: HumanEval/85 — model returned 10 solution(s)
+INFO:   HumanEval/85  solution 1/10  0/4  [OK]
+INFO:   HumanEval/85  solution 2/10  0/4  [OK]
+INFO:   HumanEval/85  solution 3/10  0/4  [OK]
+INFO:   HumanEval/85  solution 4/10  0/4  [OK]
+INFO:   HumanEval/85  solution 5/10  0/4  [OK]
+INFO:   HumanEval/85  solution 6/10  0/4  [OK]
+INFO:   HumanEval/85  solution 7/10  0/4  [OK]
+INFO:   HumanEval/85  solution 8/10  4/4  [OK]
+HumanEval/85:  52%|█████████████████▊                | 86/164 [1:10:33<1:32:32, 71.18s/it]HumanEval/86:  52%|█████████████████▊                | 86/164 [1:10:33<1:32:32, 71.18s/it]INFO: HumanEval/86 — model returned 10 solution(s)
+INFO:   HumanEval/86  solution 1/10  0/8  [OK]
+INFO:   HumanEval/86  solution 2/10  0/8  [OK]
+INFO:   HumanEval/86  solution 3/10  8/8  [OK]
+HumanEval/86:  53%|██████████████████                | 87/164 [1:11:19<1:21:35, 63.58s/it]HumanEval/87:  53%|██████████████████                | 87/164 [1:11:19<1:21:35, 63.58s/it]INFO: HumanEval/87 — model returned 10 solution(s)
+INFO:   HumanEval/87  solution 1/10  7/7  [OK]
+HumanEval/87:  54%|██████████████████▏               | 88/164 [1:12:11<1:16:12, 60.16s/it]HumanEval/88:  54%|██████████████████▏               | 88/164 [1:12:11<1:16:12, 60.16s/it]INFO: HumanEval/88 — model returned 10 solution(s)
+INFO:   HumanEval/88  solution 1/10  0/9  [OK]
+INFO:   HumanEval/88  solution 2/10  0/9  [OK]
+INFO:   HumanEval/88  solution 3/10  0/9  [OK]
+INFO:   HumanEval/88  solution 4/10  0/9  [OK]
+INFO:   HumanEval/88  solution 5/10  0/9  [OK]
+INFO:   HumanEval/88  solution 6/10  0/9  [OK]
+INFO:   HumanEval/88  solution 7/10  0/9  [OK]
+INFO:   HumanEval/88  solution 8/10  0/9  [OK]
+INFO:   HumanEval/88  solution 9/10  0/9  [OK]
+INFO:   HumanEval/88  solution 10/10  0/9  [OK]
+HumanEval/88:  54%|██████████████████▍               | 89/164 [1:13:46<1:28:17, 70.63s/it]HumanEval/89:  54%|██████████████████▍               | 89/164 [1:13:46<1:28:17, 70.63s/it]INFO: HumanEval/89 — model returned 10 solution(s)
+INFO:   HumanEval/89  solution 1/10  0/8  [OK]
+INFO:   HumanEval/89  solution 2/10  0/8  [OK]
+INFO:   HumanEval/89  solution 3/10  8/8  [OK]
+HumanEval/89:  55%|██████████████████▋               | 90/164 [1:14:32<1:17:58, 63.22s/it]HumanEval/90:  55%|██████████████████▋               | 90/164 [1:14:32<1:17:58, 63.22s/it]INFO: HumanEval/90 — model returned 10 solution(s)
+INFO:   HumanEval/90  solution 1/10  8/8  [OK]
+HumanEval/90:  55%|██████████████████▊               | 91/164 [1:15:14<1:08:59, 56.71s/it]HumanEval/91:  55%|██████████████████▊               | 91/164 [1:15:14<1:08:59, 56.71s/it]INFO: HumanEval/91 — model returned 10 solution(s)
+INFO:   HumanEval/91  solution 1/10  0/7  [OK]
+INFO:   HumanEval/91  solution 2/10  0/7  [OK]
+INFO:   HumanEval/91  solution 3/10  0/7  [OK]
+INFO:   HumanEval/91  solution 4/10  0/7  [OK]
+INFO:   HumanEval/91  solution 5/10  0/7  [OK]
+INFO:   HumanEval/91  solution 6/10  0/7  [OK]
+INFO:   HumanEval/91  solution 7/10  0/7  [OK]
+INFO:   HumanEval/91  solution 8/10  0/7  [OK]
+INFO:   HumanEval/91  solution 9/10  0/7  [OK]
+INFO:   HumanEval/91  solution 10/10  0/7  [OK]
+HumanEval/91:  56%|███████████████████               | 92/164 [1:16:39<1:18:29, 65.41s/it]HumanEval/92:  56%|███████████████████               | 92/164 [1:16:39<1:18:29, 65.41s/it]INFO: HumanEval/92 — model returned 10 solution(s)
+INFO:   HumanEval/92  solution 1/10  10/10  [OK]
+HumanEval/92:  57%|███████████████████▎              | 93/164 [1:17:24<1:10:11, 59.32s/it]HumanEval/93:  57%|███████████████████▎              | 93/164 [1:17:24<1:10:11, 59.32s/it]INFO: HumanEval/93 — model returned 10 solution(s)
+INFO:   HumanEval/93  solution 1/10  0/5  [OK]
+INFO:   HumanEval/93  solution 2/10  0/5  [OK]
+INFO:   HumanEval/93  solution 3/10  0/5  [OK]
+INFO:   HumanEval/93  solution 4/10  0/5  [OK]
+INFO:   HumanEval/93  solution 5/10  0/5  [OK]
+INFO:   HumanEval/93  solution 6/10  0/5  [OK]
+INFO:   HumanEval/93  solution 7/10  0/5  [OK]
+INFO:   HumanEval/93  solution 8/10  0/5  [OK]
+INFO:   HumanEval/93  solution 9/10  0/5  [OK]
+INFO:   HumanEval/93  solution 10/10  0/5  [OK]
+HumanEval/93:  57%|███████████████████▍              | 94/164 [1:19:08<1:24:45, 72.66s/it]HumanEval/94:  57%|███████████████████▍              | 94/164 [1:19:08<1:24:45, 72.66s/it]INFO: HumanEval/94 — model returned 10 solution(s)
+INFO:   HumanEval/94  solution 1/10  9/9  [OK]
+HumanEval/94:  58%|███████████████████▋              | 95/164 [1:20:22<1:23:58, 73.02s/it]HumanEval/95:  58%|███████████████████▋              | 95/164 [1:20:22<1:23:58, 73.02s/it]INFO: HumanEval/95 — model returned 10 solution(s)
+INFO:   HumanEval/95  solution 1/10  0/7  [ERROR: AttributeError: 'int' object has no attribute 'islower']
+INFO:   HumanEval/95  solution 2/10  7/7  [OK]
+HumanEval/95:  59%|███████████████████▉              | 96/164 [1:21:40<1:24:32, 74.60s/it]HumanEval/96:  59%|███████████████████▉              | 96/164 [1:21:40<1:24:32, 74.60s/it]INFO: HumanEval/96 — model returned 10 solution(s)
+INFO:   HumanEval/96  solution 1/10  10/10  [OK]
+HumanEval/96:  59%|████████████████████              | 97/164 [1:22:30<1:14:48, 67.00s/it]HumanEval/97:  59%|████████████████████              | 97/164 [1:22:30<1:14:48, 67.00s/it]INFO: HumanEval/97 — model returned 10 solution(s)
+INFO:   HumanEval/97  solution 1/10  8/8  [OK]
+HumanEval/97:  60%|████████████████████▎             | 98/164 [1:22:58<1:00:58, 55.44s/it]HumanEval/98:  60%|████████████████████▎             | 98/164 [1:22:58<1:00:58, 55.44s/it]INFO: HumanEval/98 — model returned 10 solution(s)
+INFO:   HumanEval/98  solution 1/10  8/8  [OK]
+HumanEval/98:  60%|█████████████████████▋              | 99/164 [1:23:47<57:52, 53.43s/it]HumanEval/99:  60%|█████████████████████▋              | 99/164 [1:23:47<57:52, 53.43s/it]INFO: HumanEval/99 — model returned 10 solution(s)
+INFO:   HumanEval/99  solution 1/10  0/5  [OK]
+INFO:   HumanEval/99  solution 2/10  0/5  [OK]
+INFO:   HumanEval/99  solution 3/10  0/5  [OK]
+INFO:   HumanEval/99  solution 4/10  0/5  [OK]
+INFO:   HumanEval/99  solution 5/10  0/5  [OK]
+INFO:   HumanEval/99  solution 6/10  0/5  [OK]
+INFO:   HumanEval/99  solution 7/10  0/5  [OK]
+INFO:   HumanEval/99  solution 8/10  0/5  [OK]
+INFO:   HumanEval/99  solution 9/10  0/5  [OK]
+INFO:   HumanEval/99  solution 10/10  0/5  [OK]
+HumanEval/99:  61%|████████████████████             | 100/164 [1:25:15<1:07:58, 63.73s/it]HumanEval/100:  61%|███████████████████▌            | 100/164 [1:25:15<1:07:58, 63.73s/it]INFO: HumanEval/100 — model returned 10 solution(s)
+INFO:   HumanEval/100  solution 1/10  6/6  [OK]
+HumanEval/100:  62%|████████████████████▉             | 101/164 [1:25:55<59:31, 56.69s/it]HumanEval/101:  62%|████████████████████▉             | 101/164 [1:25:55<59:31, 56.69s/it]INFO: HumanEval/101 — model returned 10 solution(s)
+INFO:   HumanEval/101  solution 1/10  0/8  [OK]
+INFO:   HumanEval/101  solution 2/10  0/8  [OK]
+INFO:   HumanEval/101  solution 3/10  0/8  [OK]
+INFO:   HumanEval/101  solution 4/10  0/8  [OK]
+INFO:   HumanEval/101  solution 5/10  0/8  [OK]
+INFO:   HumanEval/101  solution 6/10  0/8  [OK]
+INFO:   HumanEval/101  solution 7/10  0/8  [OK]
+INFO:   HumanEval/101  solution 8/10  0/8  [OK]
+INFO:   HumanEval/101  solution 9/10  0/8  [OK]
+INFO:   HumanEval/101  solution 10/10  0/8  [OK]
+HumanEval/101:  62%|███████████████████▉            | 102/164 [1:27:01<1:01:30, 59.53s/it]HumanEval/102:  62%|███████████████████▉            | 102/164 [1:27:01<1:01:30, 59.53s/it]INFO: HumanEval/102 — model returned 10 solution(s)
+INFO:   HumanEval/102  solution 1/10  8/8  [OK]
+HumanEval/102:  63%|█████████████████████▎            | 103/164 [1:27:44<55:24, 54.51s/it]HumanEval/103:  63%|█████████████████████▎            | 103/164 [1:27:44<55:24, 54.51s/it]INFO: HumanEval/103 — model returned 10 solution(s)
+INFO:   HumanEval/103  solution 1/10  12/12  [OK]
+HumanEval/103:  63%|█████████████████████▌            | 104/164 [1:28:25<50:25, 50.42s/it]HumanEval/104:  63%|█████████████████████▌            | 104/164 [1:28:25<50:25, 50.42s/it]INFO: HumanEval/104 — model returned 10 solution(s)
+INFO:   HumanEval/104  solution 1/10  5/5  [OK]
+HumanEval/104:  64%|█████████████████████▊            | 105/164 [1:29:06<46:46, 47.57s/it]HumanEval/105:  64%|█████████████████████▊            | 105/164 [1:29:06<46:46, 47.57s/it]INFO: HumanEval/105 — model returned 10 solution(s)
+INFO:   HumanEval/105  solution 1/10  7/7  [OK]
+HumanEval/105:  65%|█████████████████████▉            | 106/164 [1:30:10<50:53, 52.65s/it]HumanEval/106:  65%|█████████████████████▉            | 106/164 [1:30:10<50:53, 52.65s/it]INFO: HumanEval/106 — model returned 10 solution(s)
+INFO:   HumanEval/106  solution 1/10  0/4  [OK]
+INFO:   HumanEval/106  solution 2/10  0/4  [OK]
+INFO:   HumanEval/106  solution 3/10  0/4  [OK]
+INFO:   HumanEval/106  solution 4/10  0/4  [OK]
+INFO:   HumanEval/106  solution 5/10  0/4  [OK]
+INFO:   HumanEval/106  solution 6/10  0/4  [OK]
+INFO:   HumanEval/106  solution 7/10  0/4  [OK]
+INFO:   HumanEval/106  solution 8/10  0/4  [OK]
+INFO:   HumanEval/106  solution 9/10  0/4  [OK]
+INFO:   HumanEval/106  solution 10/10  0/4  [OK]
+HumanEval/106:  65%|████████████████████▉           | 107/164 [1:31:59<1:06:02, 69.51s/it]HumanEval/107:  65%|████████████████████▉           | 107/164 [1:31:59<1:06:02, 69.51s/it]INFO: HumanEval/107 — model returned 10 solution(s)
+INFO:   HumanEval/107  solution 1/10  8/8  [OK]
+HumanEval/107:  66%|█████████████████████           | 108/164 [1:33:02<1:03:11, 67.70s/it]HumanEval/108:  66%|█████████████████████           | 108/164 [1:33:02<1:03:11, 67.70s/it]INFO: HumanEval/108 — model returned 10 solution(s)
+INFO:   HumanEval/108  solution 1/10  0/9  [OK]
+INFO:   HumanEval/108  solution 2/10  0/9  [OK]
+INFO:   HumanEval/108  solution 3/10  0/9  [OK]
+INFO:   HumanEval/108  solution 4/10  0/9  [OK]
+INFO:   HumanEval/108  solution 5/10  0/9  [OK]
+INFO:   HumanEval/108  solution 6/10  0/9  [OK]
+INFO:   HumanEval/108  solution 7/10  0/9  [ERROR: ValueError: invalid literal for int() with base 10: '-']
+INFO:   HumanEval/108  solution 8/10  0/9  [ERROR: ValueError: invalid literal for int() with base 10: '-']
+INFO:   HumanEval/108  solution 9/10  0/9  [OK]
+INFO:   HumanEval/108  solution 10/10  0/9  [OK]
+HumanEval/108:  66%|█████████████████████▎          | 109/164 [1:34:23<1:05:27, 71.40s/it]HumanEval/109:  66%|█████████████████████▎          | 109/164 [1:34:23<1:05:27, 71.40s/it]INFO: HumanEval/109 — model returned 10 solution(s)
+INFO:   HumanEval/109  solution 1/10  5/5  [OK]
+HumanEval/109:  67%|██████████████████████▊           | 110/164 [1:35:10<57:45, 64.17s/it]HumanEval/110:  67%|██████████████████████▊           | 110/164 [1:35:10<57:45, 64.17s/it]INFO: HumanEval/110 — model returned 10 solution(s)
+INFO:   HumanEval/110  solution 1/10  7/7  [OK]
+HumanEval/110:  68%|███████████████████████           | 111/164 [1:36:06<54:40, 61.90s/it]HumanEval/111:  68%|███████████████████████           | 111/164 [1:36:06<54:40, 61.90s/it]INFO: HumanEval/111 — model returned 10 solution(s)
+INFO:   HumanEval/111  solution 1/10  0/8  [ERROR: NameError: name 'Counter' is not defined]
+INFO:   HumanEval/111  solution 2/10  8/8  [OK]
+HumanEval/111:  68%|███████████████████████▏          | 112/164 [1:37:15<55:29, 64.03s/it]HumanEval/112:  68%|███████████████████████▏          | 112/164 [1:37:15<55:29, 64.03s/it]INFO: HumanEval/112 — model returned 10 solution(s)
+INFO:   HumanEval/112  solution 1/10  9/9  [OK]
+HumanEval/112:  69%|███████████████████████▍          | 113/164 [1:37:51<47:16, 55.62s/it]HumanEval/113:  69%|███████████████████████▍          | 113/164 [1:37:51<47:16, 55.62s/it]INFO: HumanEval/113 — model returned 10 solution(s)
+INFO:   HumanEval/113  solution 1/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 2/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 3/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 4/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 5/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 6/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 7/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 8/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 9/10  0/4  [ERROR: NameError: name 's' is not defined]
+INFO:   HumanEval/113  solution 10/10  0/4  [ERROR: NameError: name 's' is not defined]
+HumanEval/113:  70%|██████████████████████▏         | 114/164 [1:40:03<1:05:26, 78.52s/it]HumanEval/114:  70%|██████████████████████▏         | 114/164 [1:40:03<1:05:26, 78.52s/it]INFO: HumanEval/114 — model returned 10 solution(s)
+INFO:   HumanEval/114  solution 1/10  0/12  [OK]
+INFO:   HumanEval/114  solution 2/10  0/12  [OK]
+INFO:   HumanEval/114  solution 3/10  12/12  [OK]
+HumanEval/114:  70%|███████████████████████▊          | 115/164 [1:40:40<53:49, 65.91s/it]HumanEval/115:  70%|███████████████████████▊          | 115/164 [1:40:40<53:49, 65.91s/it]INFO: HumanEval/115 — model returned 10 solution(s)
+INFO:   HumanEval/115  solution 1/10  0/7  [OK]
+INFO:   HumanEval/115  solution 2/10  0/7  [ERROR: NameError: name 'math' is not defined]
+INFO:   HumanEval/115  solution 3/10  7/7  [OK]
+HumanEval/115:  71%|████████████████████████          | 116/164 [1:41:18<45:57, 57.45s/it]HumanEval/116:  71%|████████████████████████          | 116/164 [1:41:18<45:57, 57.45s/it]INFO: HumanEval/116 — model returned 10 solution(s)
+INFO:   HumanEval/116  solution 1/10  10/10  [OK]
+HumanEval/116:  71%|████████████████████████▎         | 117/164 [1:41:49<38:47, 49.53s/it]HumanEval/117:  71%|████████████████████████▎         | 117/164 [1:41:49<38:47, 49.53s/it]INFO: HumanEval/117 — model returned 10 solution(s)
+INFO:   HumanEval/117  solution 1/10  7/7  [OK]
+HumanEval/117:  72%|████████████████████████▍         | 118/164 [1:42:45<39:33, 51.60s/it]HumanEval/118:  72%|████████████████████████▍         | 118/164 [1:42:45<39:33, 51.60s/it]INFO: HumanEval/118 — model returned 10 solution(s)
+INFO:   HumanEval/118  solution 1/10  14/14  [OK]
+HumanEval/118:  73%|████████████████████████▋         | 119/164 [1:43:44<40:16, 53.69s/it]HumanEval/119:  73%|████████████████████████▋         | 119/164 [1:43:44<40:16, 53.69s/it]INFO: HumanEval/119 — model returned 10 solution(s)
+INFO:   HumanEval/119  solution 1/10  12/12  [OK]
+HumanEval/119:  73%|████████████████████████▉         | 120/164 [1:45:14<47:29, 64.77s/it]HumanEval/120:  73%|████████████████████████▉         | 120/164 [1:45:14<47:29, 64.77s/it]INFO: HumanEval/120 — model returned 10 solution(s)
+INFO:   HumanEval/120  solution 1/10  0/11  [OK]
+INFO:   HumanEval/120  solution 2/10  0/11  [OK]
+INFO:   HumanEval/120  solution 3/10  0/11  [OK]
+INFO:   HumanEval/120  solution 4/10  0/11  [OK]
+INFO:   HumanEval/120  solution 5/10  0/11  [OK]
+INFO:   HumanEval/120  solution 6/10  0/11  [OK]
+INFO:   HumanEval/120  solution 7/10  0/11  [OK]
+INFO:   HumanEval/120  solution 8/10  0/11  [OK]
+INFO:   HumanEval/120  solution 9/10  0/11  [OK]
+INFO:   HumanEval/120  solution 10/10  0/11  [OK]
+HumanEval/120:  74%|█████████████████████████         | 121/164 [1:46:29<48:31, 67.70s/it]HumanEval/121:  74%|█████████████████████████         | 121/164 [1:46:29<48:31, 67.70s/it]INFO: HumanEval/121 — model returned 10 solution(s)
+INFO:   HumanEval/121  solution 1/10  7/7  [OK]
+HumanEval/121:  74%|█████████████████████████▎        | 122/164 [1:46:59<39:35, 56.57s/it]HumanEval/122:  74%|█████████████████████████▎        | 122/164 [1:46:59<39:35, 56.57s/it]INFO: HumanEval/122 — model returned 10 solution(s)
+INFO:   HumanEval/122  solution 1/10  5/5  [OK]
+HumanEval/122:  75%|█████████████████████████▌        | 123/164 [1:47:33<34:00, 49.78s/it]HumanEval/123:  75%|█████████████████████████▌        | 123/164 [1:47:33<34:00, 49.78s/it]INFO: HumanEval/123 — model returned 10 solution(s)
+INFO:   HumanEval/123  solution 1/10  4/4  [OK]
+HumanEval/123:  76%|█████████████████████████▋        | 124/164 [1:48:32<34:56, 52.42s/it]HumanEval/124:  76%|█████████████████████████▋        | 124/164 [1:48:32<34:56, 52.42s/it]INFO: HumanEval/124 — model returned 10 solution(s)
+INFO:   HumanEval/124  solution 1/10  16/16  [OK]
+HumanEval/124:  76%|█████████████████████████▉        | 125/164 [1:49:59<40:53, 62.92s/it]HumanEval/125:  76%|█████████████████████████▉        | 125/164 [1:49:59<40:53, 62.92s/it]INFO: HumanEval/125 — model returned 10 solution(s)
+INFO:   HumanEval/125  solution 1/10  8/8  [OK]
+HumanEval/125:  77%|██████████████████████████        | 126/164 [1:50:53<38:01, 60.04s/it]HumanEval/126:  77%|██████████████████████████        | 126/164 [1:50:53<38:01, 60.04s/it]INFO: HumanEval/126 — model returned 10 solution(s)
+INFO:   HumanEval/126  solution 1/10  0/13  [OK]
+INFO:   HumanEval/126  solution 2/10  0/13  [OK]
+INFO:   HumanEval/126  solution 3/10  0/13  [OK]
+INFO:   HumanEval/126  solution 4/10  0/13  [OK]
+INFO:   HumanEval/126  solution 5/10  0/13  [OK]
+INFO:   HumanEval/126  solution 6/10  0/13  [OK]
+INFO:   HumanEval/126  solution 7/10  0/13  [OK]
+INFO:   HumanEval/126  solution 8/10  0/13  [OK]
+INFO:   HumanEval/126  solution 9/10  0/13  [OK]
+INFO:   HumanEval/126  solution 10/10  0/13  [OK]
+HumanEval/126:  77%|██████████████████████████▎       | 127/164 [1:52:34<44:44, 72.55s/it]HumanEval/127:  77%|██████████████████████████▎       | 127/164 [1:52:34<44:44, 72.55s/it]INFO: HumanEval/127 — model returned 10 solution(s)
+INFO:   HumanEval/127  solution 1/10  0/8  [OK]
+INFO:   HumanEval/127  solution 2/10  0/8  [OK]
+INFO:   HumanEval/127  solution 3/10  0/8  [OK]
+INFO:   HumanEval/127  solution 4/10  0/8  [OK]
+INFO:   HumanEval/127  solution 5/10  0/8  [OK]
+INFO:   HumanEval/127  solution 6/10  0/8  [OK]
+INFO:   HumanEval/127  solution 7/10  0/8  [OK]
+INFO:   HumanEval/127  solution 8/10  0/8  [OK]
+INFO:   HumanEval/127  solution 9/10  0/8  [OK]
+INFO:   HumanEval/127  solution 10/10  0/8  [OK]
+HumanEval/127:  78%|██████████████████████████▌       | 128/164 [1:54:43<53:33, 89.27s/it]HumanEval/128:  78%|██████████████████████████▌       | 128/164 [1:54:43<53:33, 89.27s/it]INFO: HumanEval/128 — model returned 10 solution(s)
+INFO:   HumanEval/128  solution 1/10  10/10  [OK]
+HumanEval/128:  79%|██████████████████████████▋       | 129/164 [1:55:33<45:14, 77.56s/it]HumanEval/129:  79%|██████████████████████████▋       | 129/164 [1:55:33<45:14, 77.56s/it]INFO: HumanEval/129 — model returned 10 solution(s)
+INFO:   HumanEval/129  solution 1/10  11/11  [OK]
+HumanEval/129:  79%|██████████████████████████▏      | 130/164 [1:58:08<57:03, 100.70s/it]HumanEval/130:  79%|██████████████████████████▏      | 130/164 [1:58:08<57:03, 100.70s/it]INFO: HumanEval/130 — model returned 10 solution(s)
+INFO:   HumanEval/130  solution 1/10  0/10  [OK]
+INFO:   HumanEval/130  solution 2/10  0/10  [OK]
+INFO:   HumanEval/130  solution 3/10  0/10  [OK]
+INFO:   HumanEval/130  solution 4/10  0/10  [OK]
+INFO:   HumanEval/130  solution 5/10  0/10  [OK]
+INFO:   HumanEval/130  solution 6/10  0/10  [OK]
+INFO:   HumanEval/130  solution 7/10  0/10  [OK]
+INFO:   HumanEval/130  solution 8/10  0/10  [OK]
+INFO:   HumanEval/130  solution 9/10  0/10  [OK]
+INFO:   HumanEval/130  solution 10/10  0/10  [OK]
+HumanEval/130:  80%|██████████████████████████▎      | 131/164 [1:59:55<56:31, 102.76s/it]HumanEval/131:  80%|██████████████████████████▎      | 131/164 [1:59:55<56:31, 102.76s/it]INFO: HumanEval/131 — model returned 10 solution(s)
+INFO:   HumanEval/131  solution 1/10  7/7  [OK]
+HumanEval/131:  80%|███████████████████████████▎      | 132/164 [2:00:44<46:14, 86.71s/it]HumanEval/132:  80%|███████████████████████████▎      | 132/164 [2:00:44<46:14, 86.71s/it]INFO: HumanEval/132 — model returned 10 solution(s)
+INFO:   HumanEval/132  solution 1/10  0/14  [OK]
+INFO:   HumanEval/132  solution 2/10  0/14  [OK]
+INFO:   HumanEval/132  solution 3/10  0/14  [OK]
+INFO:   HumanEval/132  solution 4/10  0/14  [OK]
+INFO:   HumanEval/132  solution 5/10  0/14  [OK]
+INFO:   HumanEval/132  solution 6/10  0/14  [OK]
+INFO:   HumanEval/132  solution 7/10  0/14  [OK]
+INFO:   HumanEval/132  solution 8/10  0/14  [OK]
+INFO:   HumanEval/132  solution 9/10  0/14  [OK]
+INFO:   HumanEval/132  solution 10/10  0/14  [OK]
+HumanEval/132:  81%|███████████████████████████▌      | 133/164 [2:02:20<46:07, 89.28s/it]HumanEval/133:  81%|███████████████████████████▌      | 133/164 [2:02:20<46:07, 89.28s/it]INFO: HumanEval/133 — model returned 10 solution(s)
+INFO:   HumanEval/133  solution 1/10  12/12  [OK]
+HumanEval/133:  82%|███████████████████████████▊      | 134/164 [2:02:49<35:34, 71.15s/it]HumanEval/134:  82%|███████████████████████████▊      | 134/164 [2:02:49<35:34, 71.15s/it]INFO: HumanEval/134 — model returned 10 solution(s)
+INFO:   HumanEval/134  solution 1/10  0/11  [OK]
+INFO:   HumanEval/134  solution 2/10  11/11  [OK]
+HumanEval/134:  82%|███████████████████████████▉      | 135/164 [2:03:38<31:11, 64.54s/it]HumanEval/135:  82%|███████████████████████████▉      | 135/164 [2:03:38<31:11, 64.54s/it]INFO: HumanEval/135 — model returned 10 solution(s)
+INFO:   HumanEval/135  solution 1/10  5/5  [OK]
+HumanEval/135:  83%|████████████████████████████▏     | 136/164 [2:04:16<26:23, 56.57s/it]HumanEval/136:  83%|████████████████████████████▏     | 136/164 [2:04:16<26:23, 56.57s/it]INFO: HumanEval/136 — model returned 10 solution(s)
+INFO:   HumanEval/136  solution 1/10  12/12  [OK]
+HumanEval/136:  84%|████████████████████████████▍     | 137/164 [2:05:06<24:40, 54.85s/it]HumanEval/137:  84%|████████████████████████████▍     | 137/164 [2:05:06<24:40, 54.85s/it]INFO: HumanEval/137 — model returned 10 solution(s)
+INFO:   HumanEval/137  solution 1/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+INFO:   HumanEval/137  solution 2/10  0/9  [OK]
+INFO:   HumanEval/137  solution 3/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+INFO:   HumanEval/137  solution 4/10  0/9  [OK]
+INFO:   HumanEval/137  solution 5/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+INFO:   HumanEval/137  solution 6/10  0/9  [OK]
+INFO:   HumanEval/137  solution 7/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+INFO:   HumanEval/137  solution 8/10  0/9  [OK]
+INFO:   HumanEval/137  solution 9/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+INFO:   HumanEval/137  solution 10/10  0/9  [ERROR: AttributeError: 'int' object has no attribute 'replace']
+HumanEval/137:  84%|████████████████████████████▌     | 138/164 [2:06:47<29:43, 68.59s/it]HumanEval/138:  84%|████████████████████████████▌     | 138/164 [2:06:47<29:43, 68.59s/it]INFO: HumanEval/138 — model returned 10 solution(s)
+INFO:   HumanEval/138  solution 1/10  8/8  [OK]
+HumanEval/138:  85%|████████████████████████████▊     | 139/164 [2:07:14<23:18, 55.94s/it]HumanEval/139:  85%|████████████████████████████▊     | 139/164 [2:07:14<23:18, 55.94s/it]INFO: HumanEval/139 — model returned 10 solution(s)
+INFO:   HumanEval/139  solution 1/10  4/4  [OK]
+HumanEval/139:  85%|█████████████████████████████     | 140/164 [2:07:50<19:59, 49.98s/it]HumanEval/140:  85%|█████████████████████████████     | 140/164 [2:07:50<19:59, 49.98s/it]INFO: HumanEval/140 — model returned 10 solution(s)
+INFO:   HumanEval/140  solution 1/10  0/5  [OK]
+INFO:   HumanEval/140  solution 2/10  5/5  [OK]
+HumanEval/140:  86%|█████████████████████████████▏    | 141/164 [2:08:45<19:48, 51.65s/it]HumanEval/141:  86%|█████████████████████████████▏    | 141/164 [2:08:45<19:48, 51.65s/it]INFO: HumanEval/141 — model returned 10 solution(s)
+INFO:   HumanEval/141  solution 1/10  0/26  [OK]
+INFO:   HumanEval/141  solution 2/10  26/26  [OK]
+HumanEval/141:  87%|█████████████████████████████▍    | 142/164 [2:10:00<21:27, 58.52s/it]HumanEval/142:  87%|█████████████████████████████▍    | 142/164 [2:10:00<21:27, 58.52s/it]INFO: HumanEval/142 — model returned 10 solution(s)
+INFO:   HumanEval/142  solution 1/10  0/11  [OK]
+INFO:   HumanEval/142  solution 2/10  0/11  [OK]
+INFO:   HumanEval/142  solution 3/10  0/11  [OK]
+INFO:   HumanEval/142  solution 4/10  0/11  [OK]
+INFO:   HumanEval/142  solution 5/10  0/11  [OK]
+INFO:   HumanEval/142  solution 6/10  0/11  [OK]
+INFO:   HumanEval/142  solution 7/10  0/11  [OK]
+INFO:   HumanEval/142  solution 8/10  0/11  [OK]
+INFO:   HumanEval/142  solution 9/10  0/11  [OK]
+INFO:   HumanEval/142  solution 10/10  0/11  [OK]
+HumanEval/142:  87%|█████████████████████████████▋    | 143/164 [2:11:51<26:01, 74.34s/it]HumanEval/143:  87%|█████████████████████████████▋    | 143/164 [2:11:51<26:01, 74.34s/it]INFO: HumanEval/143 — model returned 10 solution(s)
+INFO:   HumanEval/143  solution 1/10  7/7  [OK]
+HumanEval/143:  88%|█████████████████████████████▊    | 144/164 [2:12:57<23:55, 71.80s/it]HumanEval/144:  88%|█████████████████████████████▊    | 144/164 [2:12:57<23:55, 71.80s/it]INFO: HumanEval/144 — model returned 10 solution(s)
+INFO:   HumanEval/144  solution 1/10  13/13  [OK]
+HumanEval/144:  88%|██████████████████████████████    | 145/164 [2:13:48<20:45, 65.54s/it]HumanEval/145:  88%|██████████████████████████████    | 145/164 [2:13:48<20:45, 65.54s/it]INFO: HumanEval/145 — model returned 10 solution(s)
+INFO:   HumanEval/145  solution 1/10  0/7  [OK]
+INFO:   HumanEval/145  solution 2/10  0/7  [OK]
+INFO:   HumanEval/145  solution 3/10  0/7  [OK]
+INFO:   HumanEval/145  solution 4/10  0/7  [OK]
+INFO:   HumanEval/145  solution 5/10  0/7  [OK]
+INFO:   HumanEval/145  solution 6/10  0/7  [ERROR: TypeError: 'cmp' is an invalid keyword argument for sort()]
+INFO:   HumanEval/145  solution 7/10  0/7  [ERROR: TypeError: 'cmp' is an invalid keyword argument for sort()]
+INFO:   HumanEval/145  solution 8/10  0/7  [ERROR: TypeError: 'cmp' is an invalid keyword argument for sort()]
+INFO:   HumanEval/145  solution 9/10  0/7  [ERROR: TypeError: 'cmp' is an invalid keyword argument for sort()]
+INFO:   HumanEval/145  solution 10/10  0/7  [ERROR: TypeError: 'cmp' is an invalid keyword argument for sort()]
+HumanEval/145:  89%|██████████████████████████████▎   | 146/164 [2:15:06<20:46, 69.27s/it]HumanEval/146:  89%|██████████████████████████████▎   | 146/164 [2:15:06<20:46, 69.27s/it]INFO: HumanEval/146 — model returned 10 solution(s)
+INFO:   HumanEval/146  solution 1/10  7/7  [OK]
+HumanEval/146:  90%|██████████████████████████████▍   | 147/164 [2:15:54<17:49, 62.92s/it]HumanEval/147:  90%|██████████████████████████████▍   | 147/164 [2:15:54<17:49, 62.92s/it]INFO: HumanEval/147 — model returned 10 solution(s)
+INFO:   HumanEval/147  solution 1/10  4/4  [OK]
+HumanEval/147:  90%|██████████████████████████████▋   | 148/164 [2:17:09<17:45, 66.62s/it]HumanEval/148:  90%|██████████████████████████████▋   | 148/164 [2:17:09<17:45, 66.62s/it]INFO: HumanEval/148 — model returned 10 solution(s)
+INFO:   HumanEval/148  solution 1/10  7/7  [OK]
+HumanEval/148:  91%|██████████████████████████████▉   | 149/164 [2:18:30<17:42, 70.82s/it]HumanEval/149:  91%|██████████████████████████████▉   | 149/164 [2:18:30<17:42, 70.82s/it]INFO: HumanEval/149 — model returned 10 solution(s)
+INFO:   HumanEval/149  solution 1/10  7/7  [OK]
+HumanEval/149:  91%|███████████████████████████████   | 150/164 [2:19:06<14:06, 60.49s/it]HumanEval/150:  91%|███████████████████████████████   | 150/164 [2:19:06<14:06, 60.49s/it]INFO: HumanEval/150 — model returned 10 solution(s)
+INFO:   HumanEval/150  solution 1/10  0/10  [OK]
+INFO:   HumanEval/150  solution 2/10  0/10  [OK]
+INFO:   HumanEval/150  solution 3/10  10/10  [OK]
+HumanEval/150:  92%|███████████████████████████████▎  | 151/164 [2:20:08<13:12, 60.96s/it]HumanEval/151:  92%|███████████████████████████████▎  | 151/164 [2:20:08<13:12, 60.96s/it]INFO: HumanEval/151 — model returned 10 solution(s)
+INFO:   HumanEval/151  solution 1/10  0/7  [OK]
+INFO:   HumanEval/151  solution 2/10  0/7  [OK]
+INFO:   HumanEval/151  solution 3/10  0/7  [OK]
+INFO:   HumanEval/151  solution 4/10  7/7  [OK]
+HumanEval/151:  93%|███████████████████████████████▌  | 152/164 [2:20:58<11:30, 57.57s/it]HumanEval/152:  93%|███████████████████████████████▌  | 152/164 [2:20:58<11:30, 57.57s/it]INFO: HumanEval/152 — model returned 10 solution(s)
+INFO:   HumanEval/152  solution 1/10  5/5  [OK]
+HumanEval/152:  93%|███████████████████████████████▋  | 153/164 [2:21:31<09:13, 50.33s/it]HumanEval/153:  93%|███████████████████████████████▋  | 153/164 [2:21:31<09:13, 50.33s/it]INFO: HumanEval/153 — model returned 10 solution(s)
+INFO:   HumanEval/153  solution 1/10  9/9  [OK]
+HumanEval/153:  94%|███████████████████████████████▉  | 154/164 [2:22:55<10:04, 60.42s/it]HumanEval/154:  94%|███████████████████████████████▉  | 154/164 [2:22:55<10:04, 60.42s/it]INFO: HumanEval/154 — model returned 10 solution(s)
+INFO:   HumanEval/154  solution 1/10  0/6  [OK]
+INFO:   HumanEval/154  solution 2/10  6/6  [OK]
+HumanEval/154:  95%|████████████████████████████████▏ | 155/164 [2:23:31<07:56, 52.91s/it]HumanEval/155:  95%|████████████████████████████████▏ | 155/164 [2:23:31<07:56, 52.91s/it]INFO: HumanEval/155 — model returned 10 solution(s)
+INFO:   HumanEval/155  solution 1/10  9/9  [OK]
+HumanEval/155:  95%|████████████████████████████████▎ | 156/164 [2:24:26<07:08, 53.56s/it]HumanEval/156:  95%|████████████████████████████████▎ | 156/164 [2:24:26<07:08, 53.56s/it]INFO: HumanEval/156 — model returned 10 solution(s)
+INFO:   HumanEval/156  solution 1/10  15/15  [OK]
+HumanEval/156:  96%|████████████████████████████████▌ | 157/164 [2:26:16<08:14, 70.61s/it]HumanEval/157:  96%|████████████████████████████████▌ | 157/164 [2:26:16<08:14, 70.61s/it]INFO: HumanEval/157 — model returned 10 solution(s)
+INFO:   HumanEval/157  solution 1/10  11/11  [OK]
+HumanEval/157:  96%|████████████████████████████████▊ | 158/164 [2:27:05<06:25, 64.21s/it]HumanEval/158:  96%|████████████████████████████████▊ | 158/164 [2:27:05<06:25, 64.21s/it]INFO: HumanEval/158 — model returned 10 solution(s)
+INFO:   HumanEval/158  solution 1/10  0/10  [OK]
+INFO:   HumanEval/158  solution 2/10  10/10  [OK]
+HumanEval/158:  97%|████████████████████████████████▉ | 159/164 [2:27:38<04:34, 54.82s/it]HumanEval/159:  97%|████████████████████████████████▉ | 159/164 [2:27:38<04:34, 54.82s/it]INFO: HumanEval/159 — model returned 10 solution(s)
+INFO:   HumanEval/159  solution 1/10  8/8  [OK]
+HumanEval/159:  98%|█████████████████████████████████▏| 160/164 [2:28:16<03:19, 49.75s/it]HumanEval/160:  98%|█████████████████████████████████▏| 160/164 [2:28:16<03:19, 49.75s/it]INFO: HumanEval/160 — model returned 10 solution(s)
+INFO:   HumanEval/160  solution 1/10  4/4  [OK]
+HumanEval/160:  98%|█████████████████████████████████▍| 161/164 [2:29:31<02:51, 57.22s/it]HumanEval/161:  98%|█████████████████████████████████▍| 161/164 [2:29:31<02:51, 57.22s/it]INFO: HumanEval/161 — model returned 10 solution(s)
+INFO:   HumanEval/161  solution 1/10  8/8  [OK]
+HumanEval/161:  99%|█████████████████████████████████▌| 162/164 [2:30:12<01:44, 52.28s/it]HumanEval/162:  99%|█████████████████████████████████▌| 162/164 [2:30:12<01:44, 52.28s/it]INFO: HumanEval/162 — model returned 10 solution(s)
+INFO:   HumanEval/162  solution 1/10  5/5  [OK]
+HumanEval/162:  99%|█████████████████████████████████▊| 163/164 [2:30:45<00:46, 46.64s/it]HumanEval/163:  99%|█████████████████████████████████▊| 163/164 [2:30:45<00:46, 46.64s/it]INFO: HumanEval/163 — model returned 10 solution(s)
+INFO:   HumanEval/163  solution 1/10  0/5  [OK]
+INFO:   HumanEval/163  solution 2/10  0/5  [OK]
+INFO:   HumanEval/163  solution 3/10  0/5  [OK]
+INFO:   HumanEval/163  solution 4/10  0/5  [OK]
+INFO:   HumanEval/163  solution 5/10  0/5  [OK]
+INFO:   HumanEval/163  solution 6/10  0/5  [OK]
+INFO:   HumanEval/163  solution 7/10  0/5  [OK]
+INFO:   HumanEval/163  solution 8/10  0/5  [OK]
+INFO:   HumanEval/163  solution 9/10  0/5  [OK]
+INFO:   HumanEval/163  solution 10/10  0/5  [OK]
+HumanEval/163: 100%|██████████████████████████████████| 164/164 [2:32:18<00:00, 60.46s/it]HumanEval/163: 100%|██████████████████████████████████| 164/164 [2:32:18<00:00, 55.72s/it]
+
+============================================================
+Interpretation-aware Self-Consistency — LV
+Model  : Qwen/Qwen2.5-Coder-7B-Instruct
+N      : 10 interpretations requested
+Dataset: mutations/humanEval_lv_with_tests.jsonl   problems=164
+============================================================
+
+Solution k    First solve    Cumulative pass@k
+--------------------------------------------
+  k=1          111             67.7%
+  k=2          15              76.8%
+  k=3          6               80.5%
+  k=4          3               82.3%
+  k=5          0               82.3%
+  k=6          0               82.3%
+  k=7          0               82.3%
+  k=8          1               82.9%
+  k=9          0               82.9%
+  k=10         0               82.9%
+
+  Never solved : 28  (17.1%)
+
+  pass@1 (sol 1 only) = 67.7%
+  pass@10 (any solution) = 82.9%
+============================================================
+
+Results → results/self_consistency/Qwen_Qwen2.5-Coder-7B-Instruct__humanEval_lv_sc10.jsonl

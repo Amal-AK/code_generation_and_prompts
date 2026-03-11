@@ -1,0 +1,2 @@
+Model,Dataset,Samples,SuccessExec,Pass@1_TRUE,SuccessExecRate,Pass@1_Rate
+claude-sonnet-4-20250514,./results/claude/claude-sonnet-4-20250514__livecodebench_public.json,1000,512,511,0.512,0.511
