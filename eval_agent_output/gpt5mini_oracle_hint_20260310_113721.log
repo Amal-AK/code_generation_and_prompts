@@ -1,0 +1,351 @@
+gpt-5-mini oracle hint eval — mar. 10 mars 2026 11:37:21 CET
+Input : ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl
+Output: ./results/agent_fixed
+────────────────────────────────────
+INFO: ============================================================
+INFO: Dataset: ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl
+INFO: ============================================================
+INFO: Submitting 160 prompts to gpt-5-mini ...
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 10/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 20/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 30/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 40/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 50/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 60/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 70/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 80/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 90/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 100/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 110/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 120/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 130/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 140/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 150/160 done
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Direct calls: 160/160 done
+evaluating:   0%|                                       | 0/160 [00:00<?, ?it/s]HumanEval/0:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/0                     7/7  [OK]
+HumanEval/1:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/1                     4/4  [OK]
+HumanEval/2:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/2                     3/3  [OK]
+HumanEval/3:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/3                     6/6  [OK]
+HumanEval/4:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/4                     3/3  [OK]
+HumanEval/5:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/5                     3/3  [OK]
+HumanEval/6:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/6                     3/3  [OK]
+HumanEval/7:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/7                     4/4  [OK]
+HumanEval/8:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/8                     5/5  [OK]
+HumanEval/9:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/9                     4/4  [OK]
+HumanEval/10:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/10                    5/5  [OK]
+HumanEval/11:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/11                    3/3  [OK]
+HumanEval/12:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/12                    3/3  [OK]
+HumanEval/13:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/13                    4/4  [OK]
+HumanEval/14:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/14                    3/3  [OK]
+HumanEval/14:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]HumanEval/15:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/15                    3/3  [OK]
+HumanEval/16:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/16                    5/5  [OK]
+HumanEval/17:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/17                    5/5  [OK]
+HumanEval/18:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/18                    4/4  [OK]
+HumanEval/19:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/19                    5/5  [OK]
+HumanEval/20:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/20                    0/5  [OK]
+HumanEval/21:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/21                    5/5  [OK]
+HumanEval/22:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/22                    3/3  [OK]
+HumanEval/24:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/24                    5/5  [OK]
+HumanEval/25:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/25                    8/8  [OK]
+HumanEval/26:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/26                    3/3  [OK]
+HumanEval/27:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/27                    3/3  [OK]
+HumanEval/28:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/28                    3/3  [OK]
+HumanEval/29:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/29                    2/2  [OK]
+HumanEval/30:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/30                    4/4  [OK]
+HumanEval/31:   9%|██▌                        | 15/160 [00:00<00:01, 142.48it/s]INFO: Task HumanEval/31                    13/13  [OK]
+HumanEval/31:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]HumanEval/32:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/32                    0/1  [Function not found]
+HumanEval/33:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/33                    7/7  [OK]
+HumanEval/34:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/34                    1/1  [OK]
+HumanEval/35:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/35                    2/2  [OK]
+HumanEval/36:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/36                    8/8  [OK]
+HumanEval/37:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/37                    3/3  [OK]
+HumanEval/38:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/38                    0/1  [OK]
+HumanEval/39:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/39                    10/10  [OK]
+HumanEval/40:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/40                    9/9  [OK]
+HumanEval/41:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/41                    5/5  [OK]
+HumanEval/42:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/42                    3/3  [OK]
+HumanEval/43:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/43                    9/9  [OK]
+HumanEval/44:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/44                    7/7  [OK]
+HumanEval/46:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/46                    0/4  [Function not found]
+HumanEval/47:  19%|█████▏                     | 31/160 [00:00<00:00, 146.98it/s]INFO: Task HumanEval/47                    0/5  [Function not found]
+HumanEval/47:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]HumanEval/49:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/49                    7/7  [OK]
+HumanEval/50:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/50                    0/1  [OK]
+HumanEval/51:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/51                    7/7  [OK]
+HumanEval/52:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/52                    6/6  [OK]
+HumanEval/54:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/54                    7/7  [OK]
+HumanEval/55:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/55                    5/5  [OK]
+HumanEval/56:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/56                    12/12  [OK]
+HumanEval/57:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/57                    8/8  [OK]
+HumanEval/58:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/58                    4/4  [OK]
+HumanEval/59:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/59                    5/5  [OK]
+HumanEval/60:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/60                    5/5  [OK]
+HumanEval/61:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/61                    12/12  [OK]
+HumanEval/62:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/62                    5/5  [OK]
+HumanEval/63:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/63                    0/7  [Function not found]
+HumanEval/64:  29%|███████▊                   | 46/160 [00:00<00:00, 128.73it/s]INFO: Task HumanEval/64                    0/8  [OK]
+HumanEval/64:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]HumanEval/65:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/65                    0/5  [OK]
+HumanEval/66:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/66                    10/10  [OK]
+HumanEval/67:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/67                    7/7  [OK]
+HumanEval/68:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/68                    10/10  [OK]
+HumanEval/69:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/69                    0/25  [Function not found]
+HumanEval/70:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/70                    10/10  [OK]
+HumanEval/71:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/71                    9/9  [OK]
+HumanEval/72:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/72                    6/6  [OK]
+HumanEval/73:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/73                    8/8  [OK]
+HumanEval/74:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/74                    0/11  [OK]
+HumanEval/75:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/75                    0/10  [Function not found]
+HumanEval/76:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/76                    0/10  [OK]
+HumanEval/77:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/77                    8/8  [OK]
+HumanEval/78:  38%|██████████▎                | 61/160 [00:00<00:00, 133.41it/s]INFO: Task HumanEval/78                    0/7  [ERROR: AttributeError: 'list' object has no attribute 'upper']
+HumanEval/78:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]HumanEval/79:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/79                    5/5  [OK]
+HumanEval/80:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/80                    8/8  [OK]
+HumanEval/81:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/81                    0/7  [Function not found]
+HumanEval/82:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/82                    16/16  [OK]
+HumanEval/83:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/83                    7/7  [OK]
+HumanEval/84:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/84                    7/7  [OK]
+HumanEval/85:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/85                    4/4  [OK]
+HumanEval/86:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/86                    0/8  [Function not found]
+HumanEval/87:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/87                    7/7  [OK]
+HumanEval/88:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/88                    9/9  [OK]
+HumanEval/89:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/89                    8/8  [OK]
+HumanEval/90:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/90                    8/8  [OK]
+HumanEval/91:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/91                    7/7  [OK]
+HumanEval/92:  47%|████████████▋              | 75/160 [00:00<00:00, 132.27it/s]INFO: Task HumanEval/92                    10/10  [OK]
+HumanEval/92:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]HumanEval/93:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/93                    5/5  [OK]
+HumanEval/94:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/94                    9/9  [OK]
+HumanEval/95:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/95                    0/7  [OK]
+HumanEval/96:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/96                    10/10  [OK]
+HumanEval/97:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/97                    8/8  [OK]
+HumanEval/98:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/98                    0/8  [OK]
+HumanEval/99:  56%|███████████████            | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/99                    5/5  [OK]
+HumanEval/100:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/100                   6/6  [OK]
+HumanEval/101:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/101                   8/8  [OK]
+HumanEval/102:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/102                   8/8  [OK]
+HumanEval/103:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/103                   12/12  [OK]
+HumanEval/104:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/104                   5/5  [OK]
+HumanEval/105:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/105                   7/7  [OK]
+HumanEval/106:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/106                   4/4  [OK]
+HumanEval/107:  56%|██████████████▍           | 89/160 [00:00<00:00, 131.22it/s]INFO: Task HumanEval/107                   8/8  [OK]
+HumanEval/107:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]HumanEval/108:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/108                   0/9  [OK]
+HumanEval/109:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/109                   5/5  [OK]
+HumanEval/110:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/110                   7/7  [OK]
+HumanEval/111:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/111                   8/8  [OK]
+HumanEval/112:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/112                   9/9  [OK]
+HumanEval/113:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/113                   4/4  [OK]
+HumanEval/114:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/114                   12/12  [OK]
+HumanEval/115:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/115                   7/7  [OK]
+HumanEval/116:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/116                   0/10  [Function not found]
+HumanEval/117:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/117                   7/7  [OK]
+HumanEval/118:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/118                   14/14  [OK]
+HumanEval/119:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/119                   12/12  [OK]
+HumanEval/120:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/120                   11/11  [OK]
+HumanEval/121:  65%|████████████████▎        | 104/160 [00:00<00:00, 135.68it/s]INFO: Task HumanEval/121                   7/7  [OK]
+HumanEval/121:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]HumanEval/122:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/122                   5/5  [OK]
+HumanEval/123:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/123                   4/4  [OK]
+HumanEval/124:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/124                   16/16  [OK]
+HumanEval/125:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/125                   0/8  [Function not found]
+HumanEval/126:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/126                   13/13  [OK]
+HumanEval/127:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/127                   8/8  [OK]
+HumanEval/128:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/128                   10/10  [OK]
+HumanEval/129:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/129                   0/11  [Function not found]
+HumanEval/130:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/130                   0/10  [Function not found]
+HumanEval/131:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/131                   7/7  [OK]
+HumanEval/132:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/132                   0/14  [Function not found]
+HumanEval/133:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/133                   12/12  [OK]
+HumanEval/134:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/134                   11/11  [OK]
+HumanEval/135:  74%|██████████████████▍      | 118/160 [00:00<00:00, 136.00it/s]INFO: Task HumanEval/135                   5/5  [OK]
+HumanEval/135:  82%|████████████████████▋    | 132/160 [00:00<00:00, 131.69it/s]HumanEval/136:  82%|████████████████████▋    | 132/160 [00:00<00:00, 131.69it/s]INFO: Task HumanEval/136                   12/12  [OK]
+HumanEval/137:  82%|████████████████████▋    | 132/160 [00:00<00:00, 131.69it/s]INFO: Task HumanEval/137                   0/9  [Function not found]
+HumanEval/138:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/138                   8/8  [OK]
+HumanEval/139:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/139                   4/4  [OK]
+HumanEval/140:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/140                   0/5  [OK]
+HumanEval/141:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/141                   26/26  [OK]
+HumanEval/142:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/142                   11/11  [OK]
+HumanEval/143:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/143                   7/7  [OK]
+HumanEval/144:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/144                   13/13  [OK]
+HumanEval/145:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/145                   0/7  [Function not found]
+HumanEval/146:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/146                   0/7  [OK]
+HumanEval/147:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/147                   0/4  [Function not found]
+HumanEval/148:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/148                   7/7  [OK]
+HumanEval/149:  82%|████████████████████▋    | 132/160 [00:01<00:00, 131.69it/s]INFO: Task HumanEval/149                   7/7  [OK]
+HumanEval/149:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]HumanEval/150:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/150                   10/10  [OK]
+HumanEval/151:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/151                   7/7  [OK]
+HumanEval/152:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/152                   5/5  [OK]
+HumanEval/153:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/153                   9/9  [OK]
+HumanEval/154:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/154                   0/6  [Function not found]
+HumanEval/155:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/155                   9/9  [OK]
+HumanEval/156:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/156                   15/15  [OK]
+HumanEval/157:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/157                   11/11  [OK]
+HumanEval/158:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/158                   10/10  [OK]
+HumanEval/159:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/159                   8/8  [OK]
+HumanEval/160:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/160                   4/4  [OK]
+HumanEval/161:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/161                   0/8  [OK]
+HumanEval/162:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/162                   0/5  [OK]
+HumanEval/163:  91%|██████████████████████▊  | 146/160 [00:01<00:00, 130.25it/s]INFO: Task HumanEval/163                   5/5  [OK]
+HumanEval/163: 100%|█████████████████████████| 160/160 [00:01<00:00, 132.51it/s]HumanEval/163: 100%|█████████████████████████| 160/160 [00:01<00:00, 133.37it/s]
+INFO: Summary: {'Model': 'gpt-5-mini', 'Dataset': './eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl', 'Samples': 160, 'SuccessExec': 142, 'Pass@1_TRUE': 128, 'Runnable_FALSE': 14, 'SuccessExecRate': 0.887, 'Pass@1_Rate': 0.8, 'Runnable_FALSE_Rate': 0.087}
+INFO: Combined summary saved.
+
+     Model                                                    Dataset  Samples  SuccessExec  Pass@1_TRUE  Runnable_FALSE  SuccessExecRate  Pass@1_Rate  Runnable_FALSE_Rate
+gpt-5-mini ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl      160          142          128              14            0.887          0.8                0.087
+Done — mar. 10 mars 2026 12:29:11 CET

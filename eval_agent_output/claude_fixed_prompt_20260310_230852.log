@@ -1,0 +1,34 @@
+Claude Sonnet 4 fixed-prompt eval — mar. 10 mars 2026 23:08:52 CET
+Input : ./eval_agent_output/HumanEval_US_fixed_prompts.jsonl
+Output: ./results/agent_fixed
+────────────────────────────────────
+INFO: ============================================================
+INFO: Dataset: ./eval_agent_output/HumanEval_US_fixed_prompts.jsonl
+INFO: ============================================================
+INFO: Submitting 160 prompts to claude-sonnet-4-20250514 ...
+Traceback (most recent call last):
+  File "/home/aakli/generation/fixing/claude_inference.py", line 642, in <module>
+    main()
+  File "/home/aakli/generation/fixing/claude_inference.py", line 624, in main
+    responses = run_anthropic_batch(prompts_by_id, args.model, args.maxTokens)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aakli/generation/fixing/claude_inference.py", line 294, in run_anthropic_batch
+    batch = client.messages.batches.create(requests=requests)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 80, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/_base_client.py", line 1058, in request
+    request = self._build_request(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/_base_client.py", line 521, in _build_request
+    headers = self._build_headers(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/_base_client.py", line 451, in _build_headers
+    self._validate_headers(headers_dict, custom_headers)
+  File "/home/aakli/.conda/envs/fixing/lib/python3.12/site-packages/anthropic/_client.py", line 196, in _validate_headers
+    raise TypeError(
+TypeError: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"

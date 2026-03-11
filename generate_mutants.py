@@ -21,10 +21,10 @@ import sys
 # Configuration
 # --------------------
 MODEL_NAME = "gpt-5-mini"
-INPUT_FILE = "./datasets/mbpp/mbpp.jsonl"
-BATCH_INPUT_FILE = "mbpp_LV_input.jsonl"
-BATCH_OUTPUT_FILE = "mbpp_LV_output.jsonl"
-OUTPUT_FILE = "mutations/variant2/mbpp_LV_v2_mutated.jsonl"
+INPUT_FILE = "./datasets/apps/apps_easy.jsonl"
+BATCH_INPUT_FILE = "apps_easy_LV_input.jsonl"
+BATCH_OUTPUT_FILE = "apps_easy_LV_output.jsonl"
+OUTPUT_FILE = "mutations/apps_LV_mutated.jsonl"
 POLL_INTERVAL = 10  # seconds
 # --------------------
 
@@ -474,6 +474,6 @@ if __name__ == "__main__":
     stem = os.path.splitext(os.path.basename(args.input))[0]
     BATCH_INPUT_FILE  = f"{stem}_{args.mutation_type}_input.jsonl"
     BATCH_OUTPUT_FILE = f"{stem}_{args.mutation_type}_output.jsonl"
-    OUTPUT_FILE       = args.output or f"mutations/variant2/{stem}_{args.mutation_type}_v2_mutated.jsonl"
+    OUTPUT_FILE       = args.output or f"mutations/{stem}_{args.mutation_type}_mutated.jsonl"
 
     main(args)

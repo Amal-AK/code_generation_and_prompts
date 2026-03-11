@@ -8,7 +8,7 @@ INPUT="./eval_agent_output/HumanEval_US_fixed_prompts.jsonl"
 
 mkdir -p "$OUT_DIR" "./eval_agent_output"
 
-export CUDA_VISIBLE_DEVICES=0
+export CUDA_VISIBLE_DEVICES=1
 
 echo "Fixed-prompt eval on all models — $(date)" | tee "$LOG"
 echo "Input : $INPUT"                             | tee -a "$LOG"

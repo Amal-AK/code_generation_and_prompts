@@ -1,4 +1,2 @@
 Model,Dataset,Samples,SuccessExec,Pass@1_TRUE,Runnable_FALSE,SuccessExecRate,Pass@1_Rate,Runnable_FALSE_Rate
-Qwen/Qwen2.5-Coder-7B-Instruct,./eval_agent_output/HumanEval_US_fixed_prompts.jsonl,160,155,107,48,0.969,0.669,0.3
-deepseek-ai/deepseek-coder-6.7b-instruct,./eval_agent_output/HumanEval_US_fixed_prompts.jsonl,160,156,104,52,0.975,0.65,0.325
-codellama/CodeLlama-7b-Instruct-hf,./eval_agent_output/HumanEval_US_fixed_prompts.jsonl,160,142,52,90,0.887,0.325,0.562
+claude-sonnet-4-20250514,./eval_agent_output/HumanEval_US_fixed_prompts.jsonl,160,157,127,30,0.981,0.794,0.188

@@ -1,0 +1,8 @@
+Claude Sonnet 4 oracle hint eval — mar. 10 mars 2026 13:13:19 CET
+Input : ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl
+Output: ./results/agent_fixed
+────────────────────────────────────
+Traceback (most recent call last):
+  File "/home/aakli/generation/fixing/claude_inference.py", line 37, in <module>
+    import anthropic
+ModuleNotFoundError: No module named 'anthropic'

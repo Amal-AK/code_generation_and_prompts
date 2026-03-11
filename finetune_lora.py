@@ -78,6 +78,11 @@ LCB_MUTATION_FILES: Dict[str, str] = {
     "US": "livecodebench_US_with_tests.jsonl",
 }
 
+# ── APPS mutation files ─────────────────────────────────────────────────────────
+APPS_MUTATION_FILES: Dict[str, str] = {
+    "LV": "apps_LV_with_tests.jsonl",
+}
+
 
 # ── Prompt ─────────────────────────────────────────────────────────────────────
 def build_instruction(mutated_prompt: str, func_name: str) -> str:
@@ -156,9 +161,12 @@ def load_sft_pairs(
             return {**HE_MUTATION_FILES, **HE_MUTATION_FILES_V2}
         return HE_MUTATION_FILES
 
-    # mbpp_combined: train on HE v1 + MBPP v1+v2; he_variants stays v1 only
-    he_variants   = ["v1", "v2"] if data_variant == "combined" else ["v1"]
-    mbpp_variants = ["v1", "v2"] if data_variant in ("combined", "mbpp_combined") else [data_variant]
+    # apps_combined: MBPP v1+v2 only — HumanEval fully held out for eval
+    # mbpp_combined: HE v1 + MBPP v1+v2
+    # combined:      HE v1+v2 + MBPP v1+v2
+    he_variants   = [] if data_variant == "apps_combined" else (
+                    ["v1", "v2"] if data_variant == "combined" else ["v1"])
+    mbpp_variants = ["v1", "v2"] if data_variant in ("combined", "mbpp_combined", "apps_combined") else [data_variant]
 
     seen_he: Set[tuple] = set()
     for variant in he_variants:
@@ -255,6 +263,78 @@ def load_sft_pairs(
     return pairs
 
 
+def load_apps_sft_pairs(
+    data_dir: Path,
+    mutation_types: Set[str],
+) -> List[Dict[str, Any]]:
+    """Load APPS LV pairs with solutions for SFT training (stdin/stdout style like LCB)."""
+    pairs: List[Dict[str, Any]] = []
+    for mtype, fname in APPS_MUTATION_FILES.items():
+        if mtype not in mutation_types:
+            continue
+        path = data_dir / "mutations" / fname
+        if not path.exists():
+            logger.warning("Missing APPS file: %s", path)
+            continue
+        n = 0
+        for r in _load_jsonl(path):
+            if not r.get("applicable", True):
+                continue
+            solution = r.get("solution", "")
+            if not solution:
+                continue
+            pairs.append({
+                "mutated_prompt":  r["mutated_prompt"],
+                "original_prompt": r["original_prompt"],
+                "solution_code":   solution,
+                "func_name":       None,   # stdin/stdout — no function name
+                "task_id":         r["task_id"],
+                "mutation_type":   mtype,
+                "dataset":         "apps",
+                "test":            r["test"],
+            })
+            n += 1
+        logger.info("  APPS      %-3s: %d pairs", mtype, n)
+    return pairs
+
+
+def load_he_eval_pairs(
+    data_dir: Path,
+    mutation_types: Set[str],
+) -> List[Dict[str, Any]]:
+    """Load HumanEval LV v1 pairs for eval (used when HumanEval is held out of training)."""
+    he_orig: Dict[str, Any] = {
+        r["task_id"]: r
+        for r in _load_jsonl(data_dir / "datasets/humanEval/HumanEval.jsonl")
+    }
+    pairs: List[Dict[str, Any]] = []
+    for mtype, fname in HE_MUTATION_FILES.items():
+        if mtype not in mutation_types:
+            continue
+        path = data_dir / "mutations" / fname
+        if not path.exists():
+            continue
+        for r in _load_jsonl(path):
+            if not r.get("applicable", True):
+                continue
+            orig = he_orig.get(r["task_id"])
+            if orig is None:
+                continue
+            pairs.append({
+                "mutated_prompt":  r["mutated_prompt"],
+                "original_prompt": r["original_prompt"],
+                "solution_code":   orig["prompt"] + orig["canonical_solution"],
+                "func_name":       orig["entry_point"],
+                "task_id":         r["task_id"],
+                "mutation_type":   mtype,
+                "dataset":         "humaneval",
+                "test":            orig["test"],
+                "entry_point":     orig["entry_point"],
+            })
+    logger.info("  HumanEval eval pairs (v1): %d", len(pairs))
+    return pairs
+
+
 def load_lcb_pairs(
     data_dir: Path,
     mutation_types: Set[str],
@@ -302,9 +382,16 @@ class SFTDataset(Dataset):
         return len(self.pairs)
 
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
-        pair        = self.pairs[idx]
-        instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
-        solution    = f"```python\n{pair['solution_code'].strip()}\n```"
+        pair = self.pairs[idx]
+        if pair.get("func_name") is None:
+            instruction = build_lcb_instruction(pair["mutated_prompt"])
+        else:
+            instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
+        # Target: clarified original prompt followed by the solution code
+        solution = (
+            f"## Clarified problem:\n{pair['original_prompt'].strip()}\n\n"
+            f"## Solution:\n```python\n{pair['solution_code'].strip()}\n```"
+        )
 
         # Full conversation: instruction + solution
         full_text = self.tokenizer.apply_chat_template(
@@ -404,7 +491,7 @@ def _run_test(code: str, pair: Dict[str, Any], timeout: int = 10) -> bool:
             )
             return result.returncode == 0
 
-        if dataset == "lcb":
+        if dataset in ("lcb", "apps"):
             from main_inference import evaluate_lcb_with_timeout
             test_cases = json.loads(pair["test"]) if isinstance(pair["test"], str) else pair["test"]
             passed, total, _ = evaluate_lcb_with_timeout(
@@ -436,7 +523,7 @@ def eval_pass1_current(
 
     n_passed = 0
     for pair in tqdm(eval_pairs, desc=f"Pass@1 [{label}]", ncols=90, leave=False):
-        if pair["dataset"] == "lcb":
+        if pair["dataset"] in ("lcb", "apps") or pair.get("func_name") is None:
             instruction = build_lcb_instruction(pair["mutated_prompt"])
         else:
             instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
@@ -497,7 +584,7 @@ def eval_pass1(
     pass_base = pass_lora = n = 0
 
     for pair in tqdm(pairs, desc=f"Pass@1 [{label}]", ncols=90):
-        if pair["dataset"] == "lcb":
+        if pair["dataset"] in ("lcb", "apps") or pair.get("func_name") is None:
             instruction = build_lcb_instruction(pair["mutated_prompt"])
         else:
             instruction = build_instruction(pair["mutated_prompt"], pair["func_name"])
@@ -571,13 +658,13 @@ def main() -> None:
                         help="CUDA_VISIBLE_DEVICES (e.g. '0,1,2,3')")
     parser.add_argument("--seed",          type=int,   default=42)
     parser.add_argument("--dataVariant",   default="v1",
-                        choices=["v1", "v2", "combined", "mbpp_combined"],
-                        help="Mutation data variant: v1, v2, combined, or mbpp_combined (HE v1 + MBPP v1+v2)")
+                        choices=["v1", "v2", "combined", "mbpp_combined", "apps_combined"],
+                        help="Mutation data variant: apps_combined = MBPP v1+v2 + APPS (HumanEval fully held out)")
     parser.add_argument("--warmupSteps",   type=int, default=100,
                         help="Linear warmup steps before cosine LR decay")
     parser.add_argument("--evalDataset",   default="val",
-                        choices=["val", "lcb", "v2", "he_v2"],
-                        help="Dataset for post-training pass@1 eval: val, lcb, v2, or he_v2 (HumanEval v2 only)")
+                        choices=["val", "lcb", "v2", "he_v2", "he_v1"],
+                        help="Dataset for post-training pass@1 eval: he_v1 = HumanEval LV v1 (use when HE held out of training)")
     parser.add_argument("--evalSamples",   type=int, default=None,
                         help="Max samples for pass@1 eval after training (default: all)")
     parser.add_argument("--skipEval",      action="store_true",
@@ -611,6 +698,10 @@ def main() -> None:
     # ── Load training data ─────────────────────────────────────────────────────
     logger.info("Loading SFT pairs (dataVariant=%s)...", args.dataVariant)
     pairs = load_sft_pairs(data_dir, mutation_types, data_variant=args.dataVariant)
+    if args.dataVariant == "apps_combined":
+        apps_pairs = load_apps_sft_pairs(data_dir, mutation_types)
+        pairs.extend(apps_pairs)
+        logger.info("Added %d APPS pairs", len(apps_pairs))
     logger.info("Total pairs: %d", len(pairs))
 
     # Split by task_id so no problem appears in both train and val
@@ -627,7 +718,7 @@ def main() -> None:
                 len(train_pairs), len(train_task_ids),
                 len(val_pairs),   len(val_task_ids))
 
-    # ── Load v2 pairs as held-out test set (if evalDataset == "v2"/"he_v2") ────
+    # ── Load held-out eval pairs ───────────────────────────────────────────────
     v2_pairs: List[Dict[str, Any]] = []
     if args.evalDataset in ("v2", "he_v2"):
         logger.info("Loading v2 mutation pairs as held-out test set...")
@@ -637,6 +728,9 @@ def main() -> None:
             logger.info("he_v2 test pairs (HumanEval only): %d", len(v2_pairs))
         else:
             logger.info("v2 test pairs: %d", len(v2_pairs))
+    elif args.evalDataset == "he_v1":
+        logger.info("Loading HumanEval LV v1 as held-out eval set...")
+        v2_pairs = load_he_eval_pairs(data_dir, mutation_types)
 
     # ── Tokenizer ──────────────────────────────────────────────────────────────
     logger.info("Loading tokenizer: %s", args.modelName)
@@ -711,7 +805,7 @@ def main() -> None:
     # If evalDataset is v2/he_v2, stop on the held-out set; else use val split
     pass1_val_pairs: List[Dict[str, Any]] = []
     if use_pass1_stop:
-        if args.evalDataset in ("v2", "he_v2") and v2_pairs:
+        if args.evalDataset in ("v2", "he_v2", "he_v1") and v2_pairs:
             pool = list(v2_pairs)
             random.shuffle(pool)
             pass1_val_pairs = pool[: args.pass1EvalSamples]
@@ -834,7 +928,7 @@ def main() -> None:
             logger.info("Loading LCB pairs for pass@1 eval...")
             eval_pairs = load_lcb_pairs(data_dir, mutation_types)
             eval_label = "LCB"
-        elif args.evalDataset in ("v2", "he_v2"):
+        elif args.evalDataset in ("v2", "he_v2", "he_v1"):
             eval_pairs = v2_pairs
             eval_label = args.evalDataset
         else:

@@ -1,0 +1,192 @@
+Claude Sonnet 4 oracle hint eval — mar. 10 mars 2026 13:14:13 CET
+Input : ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl
+Output: ./results/agent_fixed
+────────────────────────────────────
+INFO: ============================================================
+INFO: Dataset: ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl
+INFO: ============================================================
+INFO: Submitting 160 prompts to claude-sonnet-4-20250514 ...
+INFO: HTTP Request: POST https://api.anthropic.com/v1/messages/batches "HTTP/1.1 200 OK"
+INFO: Batch job created: msgbatch_01L9TwebsVgahZnQsLuyLzv6  (160 requests)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: in_progress  (processing=160  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: in_progress  (processing=160  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: in_progress  (processing=160  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: in_progress  (processing=160  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: in_progress  (processing=160  succeeded=0  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: Batch msgbatch_01L9TwebsVgahZnQsLuyLzv6: ended  (processing=0  succeeded=160  errored=0)
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6 "HTTP/1.1 200 OK"
+INFO: HTTP Request: GET https://api.anthropic.com/v1/messages/batches/msgbatch_01L9TwebsVgahZnQsLuyLzv6/results "HTTP/1.1 200 OK"
+INFO: Batch complete: 160/160 responses
+evaluating:   0%|                                       | 0/160 [00:00<?, ?it/s]HumanEval/0:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/0                     7/7  [OK]
+HumanEval/1:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/1                     4/4  [OK]
+HumanEval/2:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/2                     3/3  [OK]
+HumanEval/3:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/3                     6/6  [OK]
+HumanEval/4:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/4                     3/3  [OK]
+HumanEval/5:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/5                     3/3  [OK]
+HumanEval/6:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/6                     3/3  [OK]
+HumanEval/7:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/7                     4/4  [OK]
+HumanEval/8:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/8                     5/5  [OK]
+HumanEval/9:   0%|                                      | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/9                     4/4  [OK]
+HumanEval/10:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/10                    0/5  [OK]
+HumanEval/11:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/11                    3/3  [OK]
+HumanEval/12:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/12                    3/3  [OK]
+HumanEval/13:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/13                    4/4  [OK]
+HumanEval/14:   0%|                                     | 0/160 [00:00<?, ?it/s]INFO: Task HumanEval/14                    3/3  [OK]
+HumanEval/14:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]HumanEval/15:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/15                    3/3  [OK]
+HumanEval/16:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/16                    5/5  [OK]
+HumanEval/17:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/17                    5/5  [OK]
+HumanEval/18:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/18                    4/4  [OK]
+HumanEval/19:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/19                    5/5  [OK]
+HumanEval/20:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/20                    5/5  [OK]
+HumanEval/21:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/21                    5/5  [OK]
+HumanEval/22:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/22                    3/3  [OK]
+HumanEval/24:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/24                    5/5  [OK]
+HumanEval/25:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/25                    8/8  [OK]
+HumanEval/26:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/26                    3/3  [OK]
+HumanEval/27:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/27                    3/3  [OK]
+HumanEval/28:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/28                    3/3  [OK]
+HumanEval/29:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/29                    2/2  [OK]
+HumanEval/30:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/30                    4/4  [OK]
+HumanEval/31:   9%|██▌                        | 15/160 [00:00<00:00, 145.96it/s]INFO: Task HumanEval/31                    13/13  [OK]
+HumanEval/31:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]HumanEval/32:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/32                    0/1  [ERROR: TypeError: poly() missing 1 required positional argument: 'x']
+HumanEval/33:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/33                    7/7  [OK]
+HumanEval/34:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/34                    1/1  [OK]
+HumanEval/35:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/35                    2/2  [OK]
+HumanEval/36:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/36                    0/8  [OK]
+HumanEval/37:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/37                    3/3  [OK]
+HumanEval/38:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/38                    0/1  [OK]
+HumanEval/39:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/39                    10/10  [OK]
+HumanEval/40:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/40                    9/9  [OK]
+HumanEval/41:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/41                    5/5  [OK]
+HumanEval/42:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/42                    3/3  [OK]
+HumanEval/43:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/43                    9/9  [OK]
+HumanEval/44:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/44                    7/7  [OK]
+HumanEval/46:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/46                    4/4  [OK]
+HumanEval/47:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/47                    5/5  [OK]
+HumanEval/49:  19%|█████▏                     | 31/160 [00:00<00:00, 149.99it/s]INFO: Task HumanEval/49                    7/7  [OK]
+HumanEval/49:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]HumanEval/50:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/50                    0/1  [OK]
+HumanEval/51:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/51                    7/7  [OK]
+HumanEval/52:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/52                    6/6  [OK]
+HumanEval/54:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/54                    7/7  [OK]
+HumanEval/55:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/55                    5/5  [OK]
+HumanEval/56:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/56                    12/12  [OK]
+HumanEval/57:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/57                    8/8  [OK]
+HumanEval/58:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/58                    4/4  [OK]
+HumanEval/59:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/59                    5/5  [OK]
+HumanEval/60:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/60                    5/5  [OK]
+HumanEval/61:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/61                    12/12  [OK]
+HumanEval/62:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/62                    5/5  [OK]
+HumanEval/63:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/63                    7/7  [OK]
+HumanEval/64:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/64                    0/8  [OK]
+HumanEval/65:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/65                    0/5  [OK]
+HumanEval/66:  29%|███████▉                   | 47/160 [00:00<00:00, 150.12it/s]INFO: Task HumanEval/66                    10/10  [OK]
+HumanEval/66:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]HumanEval/67:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/67                    7/7  [OK]
+HumanEval/68:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/68                    10/10  [OK]
+HumanEval/69:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/69                    0/25  [OK]
+HumanEval/70:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/70                    10/10  [OK]
+HumanEval/71:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/71                    0/9  [OK]
+HumanEval/72:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/72                    6/6  [OK]
+HumanEval/73:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/73                    8/8  [OK]
+HumanEval/74:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/74                    11/11  [OK]
+HumanEval/75:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/75                    0/10  [OK]
+HumanEval/76:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/76                    0/10  [OK]
+HumanEval/77:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/77                    8/8  [OK]
+HumanEval/78:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/78                    0/7  [ERROR: AttributeError: 'list' object has no attribute 'upper']
+HumanEval/79:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/79                    5/5  [OK]
+HumanEval/80:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/80                    8/8  [OK]
+HumanEval/81:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/81                    7/7  [OK]
+HumanEval/82:  39%|██████████▋                | 63/160 [00:00<00:00, 150.04it/s]INFO: Task HumanEval/82                    16/16  [OK]
+HumanEval/82:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]HumanEval/83:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/83                    7/7  [OK]
+HumanEval/84:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/84                    7/7  [OK]
+HumanEval/85:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/85                    4/4  [OK]
+HumanEval/86:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/86                    8/8  [OK]
+HumanEval/87:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/87                    7/7  [OK]
+HumanEval/88:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/88                    9/9  [OK]
+HumanEval/89:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/89                    8/8  [OK]
+HumanEval/90:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/90                    8/8  [OK]
+HumanEval/91:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/91                    7/7  [OK]
+HumanEval/92:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/92                    10/10  [OK]
+HumanEval/93:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/93                    5/5  [OK]
+HumanEval/94:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/94                    9/9  [OK]
+HumanEval/95:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/95                    7/7  [OK]
+HumanEval/96:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/96                    10/10  [OK]
+HumanEval/97:  49%|█████████████▎             | 79/160 [00:00<00:00, 149.66it/s]INFO: Task HumanEval/97                    8/8  [OK]
+HumanEval/97:  59%|███████████████▊           | 94/160 [00:00<00:00, 149.70it/s]HumanEval/98:  59%|███████████████▊           | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/98                    8/8  [OK]
+HumanEval/99:  59%|███████████████▊           | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/99                    5/5  [OK]
+HumanEval/100:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/100                   6/6  [OK]
+HumanEval/101:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/101                   8/8  [OK]
+HumanEval/102:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/102                   8/8  [OK]
+HumanEval/103:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/103                   12/12  [OK]
+HumanEval/104:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/104                   5/5  [OK]
+HumanEval/105:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/105                   7/7  [OK]
+HumanEval/106:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/106                   4/4  [OK]
+HumanEval/107:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/107                   8/8  [OK]
+HumanEval/108:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/108                   0/9  [OK]
+HumanEval/109:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/109                   0/5  [OK]
+HumanEval/110:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/110                   7/7  [OK]
+HumanEval/111:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/111                   8/8  [OK]
+HumanEval/112:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/112                   9/9  [OK]
+HumanEval/113:  59%|███████████████▎          | 94/160 [00:00<00:00, 149.70it/s]INFO: Task HumanEval/113                   4/4  [OK]
+HumanEval/113:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]HumanEval/114:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/114                   12/12  [OK]
+HumanEval/115:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/115                   7/7  [OK]
+HumanEval/116:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/116                   0/10  [OK]
+HumanEval/117:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/117                   7/7  [OK]
+HumanEval/118:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/118                   14/14  [OK]
+HumanEval/119:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/119                   12/12  [OK]
+HumanEval/120:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/120                   0/11  [OK]
+HumanEval/121:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/121                   7/7  [OK]
+HumanEval/122:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/122                   5/5  [OK]
+HumanEval/123:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/123                   4/4  [OK]
+HumanEval/124:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/124                   0/16  [OK]
+HumanEval/125:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/125                   0/8  [OK]
+HumanEval/126:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/126                   13/13  [OK]
+HumanEval/127:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/127                   8/8  [OK]
+HumanEval/128:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/128                   10/10  [OK]
+HumanEval/129:  69%|█████████████████▏       | 110/160 [00:00<00:00, 150.01it/s]INFO: Task HumanEval/129                   11/11  [OK]
+HumanEval/129:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]HumanEval/130:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/130                   0/10  [ERROR: IndexError: list index out of range]
+HumanEval/131:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/131                   7/7  [OK]
+HumanEval/132:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/132                   0/14  [OK]
+HumanEval/133:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/133                   12/12  [OK]
+HumanEval/134:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/134                   11/11  [OK]
+HumanEval/135:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/135                   5/5  [OK]
+HumanEval/136:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/136                   12/12  [OK]
+HumanEval/137:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/137                   9/9  [OK]
+HumanEval/138:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/138                   8/8  [OK]
+HumanEval/139:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/139                   4/4  [OK]
+HumanEval/140:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/140                   0/5  [OK]
+HumanEval/141:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/141                   26/26  [OK]
+HumanEval/142:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/142                   11/11  [OK]
+HumanEval/143:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/143                   7/7  [OK]
+HumanEval/144:  79%|███████████████████▋     | 126/160 [00:00<00:00, 149.32it/s]INFO: Task HumanEval/144                   13/13  [OK]
+HumanEval/144:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]HumanEval/145:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/145                   0/7  [OK]
+HumanEval/146:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/146                   0/7  [OK]
+HumanEval/147:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/147                   4/4  [OK]
+HumanEval/148:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/148                   7/7  [OK]
+HumanEval/149:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/149                   7/7  [OK]
+HumanEval/150:  88%|██████████████████████   | 141/160 [00:00<00:00, 149.46it/s]INFO: Task HumanEval/150                   10/10  [OK]
+HumanEval/151:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/151                   7/7  [OK]
+HumanEval/152:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/152                   5/5  [OK]
+HumanEval/153:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/153                   9/9  [OK]
+HumanEval/154:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/154                   0/6  [OK]
+HumanEval/155:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/155                   9/9  [OK]
+HumanEval/156:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/156                   15/15  [OK]
+HumanEval/157:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/157                   11/11  [OK]
+HumanEval/158:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/158                   10/10  [OK]
+HumanEval/159:  88%|██████████████████████   | 141/160 [00:01<00:00, 149.46it/s]INFO: Task HumanEval/159                   8/8  [OK]
+HumanEval/159:  98%|████████████████████████▍| 156/160 [00:01<00:00, 142.07it/s]HumanEval/160:  98%|████████████████████████▍| 156/160 [00:01<00:00, 142.07it/s]INFO: Task HumanEval/160                   4/4  [OK]
+HumanEval/161:  98%|████████████████████████▍| 156/160 [00:01<00:00, 142.07it/s]INFO: Task HumanEval/161                   8/8  [OK]
+HumanEval/162:  98%|████████████████████████▍| 156/160 [00:01<00:00, 142.07it/s]INFO: Task HumanEval/162                   0/5  [OK]
+HumanEval/163:  98%|████████████████████████▍| 156/160 [00:01<00:00, 142.07it/s]INFO: Task HumanEval/163                   5/5  [OK]
+HumanEval/163: 100%|█████████████████████████| 160/160 [00:01<00:00, 147.19it/s]
+INFO: Summary: {'Model': 'claude-sonnet-4-20250514', 'Dataset': './eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl', 'Samples': 160, 'SuccessExec': 157, 'Pass@1_TRUE': 135, 'Runnable_FALSE': 22, 'SuccessExecRate': 0.981, 'Pass@1_Rate': 0.844, 'Runnable_FALSE_Rate': 0.138}
+INFO: Combined summary saved.
+
+                   Model                                                    Dataset  Samples  SuccessExec  Pass@1_TRUE  Runnable_FALSE  SuccessExecRate  Pass@1_Rate  Runnable_FALSE_Rate
+claude-sonnet-4-20250514 ./eval_agent_output/HumanEval_US_oracle_hint_prompts.jsonl      160          157          135              22            0.981        0.844                0.138
+Done — mar. 10 mars 2026 13:16:47 CET

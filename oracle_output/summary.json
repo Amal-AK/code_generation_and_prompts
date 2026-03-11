@@ -1,0 +1,82 @@
+[
+  {
+    "model": "Qwen_Qwen2.5-Coder-32B-Instruct",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.2988,
+    "pass1_baseline": 0.7317,
+    "delta_vs_baseline": -0.4329
+  },
+  {
+    "model": "Qwen_Qwen2.5-Coder-7B-Instruct",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.5976,
+    "pass1_baseline": 0.6768,
+    "delta_vs_baseline": -0.0792
+  },
+  {
+    "model": "Qwen_Qwen2.5-Coder-7B-Instruct",
+    "dataset": "humanEval_SF_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.811,
+    "pass1_baseline": 0.8171,
+    "delta_vs_baseline": -0.0061
+  },
+  {
+    "model": "Qwen_Qwen2.5-Coder-7B-Instruct",
+    "dataset": "humanEval_lv_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.7622,
+    "pass1_baseline": 0.7561,
+    "delta_vs_baseline": 0.0061
+  },
+  {
+    "model": "bigcode_starcoder2-15b-instruct-v0.1",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.5122,
+    "pass1_baseline": 0.5122,
+    "delta_vs_baseline": 0.0
+  },
+  {
+    "model": "codellama_CodeLlama-34b-Instruct-hf",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.2073,
+    "pass1_baseline": 0.4207,
+    "delta_vs_baseline": -0.2134
+  },
+  {
+    "model": "codellama_CodeLlama-7b-Instruct-hf",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.2866,
+    "pass1_baseline": 0.2927,
+    "delta_vs_baseline": -0.0061
+  },
+  {
+    "model": "deepseek-ai_deepseek-coder-33b-instruct",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.5854,
+    "pass1_baseline": 0.6159,
+    "delta_vs_baseline": -0.0305
+  },
+  {
+    "model": "deepseek-ai_deepseek-coder-6.7b-instruct",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.5732,
+    "pass1_baseline": 0.5732,
+    "delta_vs_baseline": 0.0
+  },
+  {
+    "model": "mistralai_Codestral-22B-v0.1",
+    "dataset": "HumanEval_US_with_tests",
+    "n": 164,
+    "pass1_oracle": 0.5671,
+    "pass1_baseline": 0.5854,
+    "delta_vs_baseline": -0.0183
+  }
+]
