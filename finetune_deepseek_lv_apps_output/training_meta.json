@@ -1,20 +1,7 @@
 {
   "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
-  "mutation_types": [
-    "LV"
-  ],
-  "data_variant": "apps_combined",
-  "train_pairs": 1912,
-  "val_pairs": 211,
-  "best_val_loss": 0.28640088180319667,
-  "best_pass1_earlystop": 0.5166666666666667,
-  "lora_r": 16,
-  "lora_alpha": 32,
-  "epochs_run": 5,
-  "lr": 0.0002,
-  "warmup_steps": 100,
-  "eff_batch_size": 16,
-  "pass1_eval_samples": 60,
+  "eval_only": true,
+  "adapter_path": "finetune_deepseek_lv_apps_output/best_lora_sft",
   "pass1_eval": {
     "n_evaluated": 163,
     "pass1_baseline": 0.4663,
