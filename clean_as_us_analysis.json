@@ -1,0 +1,1155 @@
+[
+  {
+    "task_id": "LiveCodeBench/1883_C",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 277,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc390_f",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 160,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc354_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc378_g",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 165,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": 578,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": 301,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc314_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc346_e",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 677,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/2873",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": true,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc338_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 732,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc398_g",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc378_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc187_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 466,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": 382,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc377_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc195_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 332,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc371_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc381_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": true,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/3632",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc186_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc195_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc194_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc379_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 518,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc378_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc366_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 780,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": 253,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc334_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": true,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc332_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 438,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc374_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": true,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 240,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc391_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc182_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 510,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc385_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 335,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc371_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 557,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": 99,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc196_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc196_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 662,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": 944,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc379_f",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc186_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc382_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc335_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc301_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc307_e",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/3463",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 908,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc314_c",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 273,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc385_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc315_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc376_e",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 642,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc376_f",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc326_a",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 157,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/arc193_d",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": false,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": false
+    }
+  },
+  {
+    "task_id": 474,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": true,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": true,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": true,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": true,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc395_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": true,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": false,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": false,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": "LiveCodeBench/abc392_b",
+    "source": "livecodebench_public.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__livecodebench_public": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__livecodebench_public": true,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public": true,
+      "claude/claude-sonnet-4-20250514__livecodebench_public": true,
+      "large_models/mistralai_Codestral-22B-v0.1__livecodebench_public": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__livecodebench_public": true,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__livecodebench_public": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public": true,
+      "api/gpt-5-mini__livecodebench_public": true
+    }
+  },
+  {
+    "task_id": 142,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": true,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": true,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  },
+  {
+    "task_id": 592,
+    "source": "mbpp.jsonl",
+    "pass_results": {
+      "small_models/Qwen_Qwen2.5-Coder-7B-Instruct__mbpp": false,
+      "small_models/codellama_CodeLlama-7b-Instruct-hf__mbpp": false,
+      "small_models/deepseek-ai_deepseek-coder-6.7b-instruct__mbpp": false,
+      "claude/claude-sonnet-4-20250514__mbpp": false,
+      "large_models/Qwen_Qwen2.5-Coder-32B-Instruct__mbpp": false,
+      "large_models/codellama_CodeLlama-34b-Instruct-hf__mbpp": false,
+      "large_models/bigcode_starcoder2-15b-instruct-v0.1__mbpp": false,
+      "large_models/mistralai_Codestral-22B-v0.1__mbpp": false,
+      "large_models/deepseek-ai_deepseek-coder-33b-instruct__mbpp": false,
+      "api/gpt-5-mini__mbpp": false
+    }
+  }
+]
