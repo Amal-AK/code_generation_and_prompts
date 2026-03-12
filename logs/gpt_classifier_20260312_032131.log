@@ -1,0 +1,64 @@
+
+Loading data...
+  humanEval_lv_with_tests.jsonl:   163 LV
+  humanEval_SF_with_tests.jsonl:   164 SF
+  HumanEval_US_with_tests.jsonl:   160 US
+  mbpp_LV_with_tests.jsonl:   974 LV
+  mbpp_SF_with_tests.jsonl:   974 SF
+  mbpp_US_with_tests.jsonl:   974 US
+  livecodebench_LV_with_tests.jsonl:  1054 LV
+  livecodebench_SF_with_tests.jsonl:  1055 SF
+  livecodebench_US_with_tests.jsonl:  1055 US
+  HumanEval.jsonl:   164 CLEAN
+  mbpp.jsonl:   974 CLEAN
+  livecodebench_public.jsonl:  1055 CLEAN
+
+Total: 8766  |  Test split (first 20%): 1753
+Test set distribution: LV=428  SF=428  US=441  CLEAN=456
+Building batch input file...
+  Written 1753 requests to gpt_classifier_output/batch_input.jsonl
+Uploading batch input file...
+  File ID: file-JjY2bxwUvSvSQuEFcw1NuU
+Creating batch job...
+  Batch ID: batch_69b22330a2a08190aa20c6335644fb53  Status: validating
+  Batch metadata saved to gpt_classifier_output/batch_meta.json
+Polling batch status...
+  Status: in_progress  completed=9/1753  failed=0
+  Status: in_progress  completed=412/1753  failed=0
+  Status: in_progress  completed=858/1753  failed=0
+  Status: in_progress  completed=1448/1753  failed=0
+  Status: in_progress  completed=1684/1753  failed=0
+  Status: finalizing  completed=1753/1753  failed=0
+  Status: finalizing  completed=1753/1753  failed=0
+  Status: finalizing  completed=1753/1753  failed=0
+  Status: completed  completed=1753/1753  failed=0
+Downloading batch output...
+  Saved to gpt_classifier_output/batch_output.jsonl
+
+============================================================
+Model: gpt-5-mini
+
+MCC:        0.2811
+F1 macro:   0.4689
+F1 weighted:0.4681
+
+Classification report:
+              precision    recall  f1-score   support
+
+          LV       0.28      0.29      0.28       428
+          SF       0.87      0.66      0.75       428
+          US       0.40      0.37      0.38       441
+       CLEAN       0.40      0.53      0.46       456
+
+    accuracy                           0.46      1753
+   macro avg       0.49      0.46      0.47      1753
+weighted avg       0.49      0.46      0.47      1753
+
+Confusion matrix:
+          LV     SF     US  CLEAN
+  LV      122     20     92    194
+  SF       82    283     37     26
+  US      133     12    162    134
+  CLEAN    93     12    111    240
+
+Summary saved to gpt_classifier_output/summary.json

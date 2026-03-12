@@ -4,6 +4,7 @@
 !**/best_lora_classifier.pt
 # best_full_classifier.pt is ~5.8GB, exceeds GitHub's 2GB LFS limit - not tracked
 *.safetensors
+!finetune_deepseek_lv_apps_output/best_lora_sft/adapter_model.safetensors
 
 # Generated embeddings and labels (can be regenerated)
 **/embeddings.npy
@@ -14,3 +15,5 @@ __pycache__/
 *.pyc
 .env
 lora_7b_output/
+datasets/apps/apps_easy.jsonl
+mutations/apps_LV_with_tests.jsonl

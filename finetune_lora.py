@@ -673,6 +673,8 @@ def main() -> None:
                         help="Val samples for per-epoch pass@1 early stopping (0=disabled)")
     parser.add_argument("--pass1EvalFreq",    type=int, default=1,
                         help="Run per-epoch pass@1 every N epochs (default: 1)")
+    parser.add_argument("--evalOnly",      action="store_true",
+                        help="Skip training; load saved adapter from outputDir and run pass@1 eval")
     args = parser.parse_args()
 
     if args.gpus is not None:
@@ -766,161 +768,163 @@ def main() -> None:
 
     # Input device = first GPU (device_map="auto" places embeddings on cuda:0)
     input_device = next(model.parameters()).device
+    ckpt_path    = out_dir / "best_lora_sft"
 
-    # ── DataLoaders ────────────────────────────────────────────────────────────
-    train_ds = SFTDataset(train_pairs, tokenizer, args.maxLength)
-    val_ds   = SFTDataset(val_pairs,   tokenizer, args.maxLength)
+    if args.evalOnly:
+        logger.info("evalOnly=True — skipping training, loading adapter from %s", ckpt_path)
+        meta = {"model_name": args.modelName, "eval_only": True, "adapter_path": str(ckpt_path)}
+    else:
+        # ── DataLoaders ────────────────────────────────────────────────────────
+        train_ds = SFTDataset(train_pairs, tokenizer, args.maxLength)
+        val_ds   = SFTDataset(val_pairs,   tokenizer, args.maxLength)
 
-    train_loader = DataLoader(
-        train_ds, batch_size=args.batchSize, shuffle=True,
-        collate_fn=SFTDataset.collate_fn, num_workers=2, pin_memory=True,
-    )
-    val_loader = DataLoader(
-        val_ds, batch_size=args.batchSize, shuffle=False,
-        collate_fn=SFTDataset.collate_fn, num_workers=2, pin_memory=True,
-    )
+        train_loader = DataLoader(
+            train_ds, batch_size=args.batchSize, shuffle=True,
+            collate_fn=SFTDataset.collate_fn, num_workers=2, pin_memory=True,
+        )
+        val_loader = DataLoader(
+            val_ds, batch_size=args.batchSize, shuffle=False,
+            collate_fn=SFTDataset.collate_fn, num_workers=2, pin_memory=True,
+        )
 
-    # ── Optimizer + scheduler ──────────────────────────────────────────────────
-    optimizer   = torch.optim.AdamW(
-        filter(lambda p: p.requires_grad, model.parameters()),
-        lr=args.lr, weight_decay=1e-4,
-    )
-    total_steps = (len(train_loader) // args.gradAccum) * args.epochs
-    scheduler   = get_cosine_schedule_with_warmup(
-        optimizer,
-        num_warmup_steps  = min(args.warmupSteps, total_steps),
-        num_training_steps= total_steps,
-    )
-    logger.info("Scheduler: cosine with %d warmup steps / %d total steps",
-                min(args.warmupSteps, total_steps), total_steps)
+        # ── Optimizer + scheduler ──────────────────────────────────────────────
+        optimizer   = torch.optim.AdamW(
+            filter(lambda p: p.requires_grad, model.parameters()),
+            lr=args.lr, weight_decay=1e-4,
+        )
+        total_steps = (len(train_loader) // args.gradAccum) * args.epochs
+        scheduler   = get_cosine_schedule_with_warmup(
+            optimizer,
+            num_warmup_steps  = min(args.warmupSteps, total_steps),
+            num_training_steps= total_steps,
+        )
+        logger.info("Scheduler: cosine with %d warmup steps / %d total steps",
+                    min(args.warmupSteps, total_steps), total_steps)
 
-    # ── Training loop ──────────────────────────────────────────────────────────
-    best_val_loss    = float("inf")
-    best_pass1       = -1.0          # best adapter pass@1 seen so far
-    use_pass1_stop   = args.pass1EvalSamples > 0
-    ckpt_path        = out_dir / "best_lora_sft"
-    no_improve       = 0
+        # ── Training loop ──────────────────────────────────────────────────────
+        best_val_loss    = float("inf")
+        best_pass1       = -1.0
+        use_pass1_stop   = args.pass1EvalSamples > 0
+        no_improve       = 0
 
-    # Fixed subset used every epoch for pass@1 early stopping
-    # If evalDataset is v2/he_v2, stop on the held-out set; else use val split
-    pass1_val_pairs: List[Dict[str, Any]] = []
-    if use_pass1_stop:
-        if args.evalDataset in ("v2", "he_v2", "he_v1") and v2_pairs:
-            pool = list(v2_pairs)
-            random.shuffle(pool)
-            pass1_val_pairs = pool[: args.pass1EvalSamples]
-            logger.info(
-                "Pass@1 early stopping on %s — %d samples every %d epoch(s)",
-                args.evalDataset, len(pass1_val_pairs), args.pass1EvalFreq,
-            )
-        else:
-            random.shuffle(val_pairs)
-            pass1_val_pairs = val_pairs[: args.pass1EvalSamples]
-            logger.info(
-                "Pass@1 early stopping enabled — %d val samples every %d epoch(s)",
-                len(pass1_val_pairs), args.pass1EvalFreq,
-            )
+        pass1_val_pairs: List[Dict[str, Any]] = []
+        if use_pass1_stop:
+            if args.evalDataset in ("v2", "he_v2", "he_v1") and v2_pairs:
+                pool = list(v2_pairs)
+                random.shuffle(pool)
+                pass1_val_pairs = pool[: args.pass1EvalSamples]
+                logger.info(
+                    "Pass@1 early stopping on %s — %d samples every %d epoch(s)",
+                    args.evalDataset, len(pass1_val_pairs), args.pass1EvalFreq,
+                )
+            else:
+                random.shuffle(val_pairs)
+                pass1_val_pairs = val_pairs[: args.pass1EvalSamples]
+                logger.info(
+                    "Pass@1 early stopping enabled — %d val samples every %d epoch(s)",
+                    len(pass1_val_pairs), args.pass1EvalFreq,
+                )
 
-    logger.info(
-        "Starting training  epochs=%d  batch=%d  grad_accum=%d  eff_batch=%d",
-        args.epochs, args.batchSize, args.gradAccum,
-        args.batchSize * args.gradAccum,
-    )
+        logger.info(
+            "Starting training  epochs=%d  batch=%d  grad_accum=%d  eff_batch=%d",
+            args.epochs, args.batchSize, args.gradAccum,
+            args.batchSize * args.gradAccum,
+        )
 
-    for epoch in range(1, args.epochs + 1):
-        model.train()
-        total_loss = 0.0
-        optimizer.zero_grad()
-
-        pbar = tqdm(train_loader, desc=f"Epoch {epoch}/{args.epochs}", ncols=90, leave=False)
-        for batch_idx, batch in enumerate(pbar):
-            input_ids      = batch["input_ids"].to(input_device)
-            attention_mask = batch["attention_mask"].to(input_device)
-            labels         = batch["labels"].to(input_device)
-
-            out  = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-            loss = out.loss / args.gradAccum
-            loss.backward()
-            total_loss += out.loss.item()
-
-            if (batch_idx + 1) % args.gradAccum == 0:
-                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-                optimizer.step()
-                scheduler.step()
-                optimizer.zero_grad()
-
-            pbar.set_postfix(loss=f"{total_loss / (batch_idx + 1):.4f}")
-
-        # Flush any remaining gradient accumulation at end of epoch
-        if (len(train_loader) % args.gradAccum) != 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            optimizer.step()
+        for epoch in range(1, args.epochs + 1):
+            model.train()
+            total_loss = 0.0
             optimizer.zero_grad()
 
-        avg_train_loss = total_loss / len(train_loader)
-        val_loss       = evaluate_loss(model, val_loader, input_device)
+            pbar = tqdm(train_loader, desc=f"Epoch {epoch}/{args.epochs}", ncols=90, leave=False)
+            for batch_idx, batch in enumerate(pbar):
+                input_ids      = batch["input_ids"].to(input_device)
+                attention_mask = batch["attention_mask"].to(input_device)
+                labels         = batch["labels"].to(input_device)
 
-        # ── Per-epoch pass@1 (used for early stopping if enabled) ─────────────
-        epoch_pass1: Optional[float] = None
-        if use_pass1_stop and epoch % args.pass1EvalFreq == 0:
-            epoch_pass1 = eval_pass1_current(
-                model, tokenizer, pass1_val_pairs, input_device,
-                label=f"e{epoch}",
-            )
+                out  = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+                loss = out.loss / args.gradAccum
+                loss.backward()
+                total_loss += out.loss.item()
 
-        # ── Decide whether this epoch improved ─────────────────────────────────
-        if use_pass1_stop and epoch_pass1 is not None:
-            improved = epoch_pass1 > best_pass1
-            marker   = " ***" if improved else ""
-            logger.info(
-                "Epoch %2d | train_loss=%.4f | val_loss=%.4f | pass1=%.4f%s",
-                epoch, avg_train_loss, val_loss, epoch_pass1, marker,
-            )
-        else:
-            improved = val_loss < best_val_loss
-            marker   = " ***" if improved else ""
-            logger.info(
-                "Epoch %2d | train_loss=%.4f | val_loss=%.4f%s",
-                epoch, avg_train_loss, val_loss, marker,
-            )
+                if (batch_idx + 1) % args.gradAccum == 0:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                    optimizer.step()
+                    scheduler.step()
+                    optimizer.zero_grad()
 
-        if improved:
-            if epoch_pass1 is not None:
-                best_pass1 = epoch_pass1
-            if val_loss < best_val_loss:
-                best_val_loss = val_loss
-            no_improve = 0
-            model.save_pretrained(str(ckpt_path))
-            tokenizer.save_pretrained(str(ckpt_path))
-            logger.info("Saved best adapter → %s", ckpt_path)
-        else:
-            no_improve += 1
-            if no_improve >= args.patience:
-                logger.info("Early stopping (patience=%d)", args.patience)
-                break
+                pbar.set_postfix(loss=f"{total_loss / (batch_idx + 1):.4f}")
 
-    logger.info("Done. Best val loss: %.4f  Best pass@1: %.4f", best_val_loss, best_pass1)
-    logger.info("Adapter saved at: %s", ckpt_path)
+            # Flush any remaining gradient accumulation at end of epoch
+            if (len(train_loader) % args.gradAccum) != 0:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                optimizer.step()
+                optimizer.zero_grad()
 
-    # ── Save training metadata ─────────────────────────────────────────────────
-    meta = {
-        "model_name":         args.modelName,
-        "mutation_types":     sorted(mutation_types),
-        "data_variant":       args.dataVariant,
-        "train_pairs":        len(train_pairs),
-        "val_pairs":          len(val_pairs),
-        "best_val_loss":      best_val_loss,
-        "best_pass1_earlystop": best_pass1 if use_pass1_stop else None,
-        "lora_r":             args.loraR,
-        "lora_alpha":         args.loraAlpha,
-        "epochs_run":         epoch,
-        "lr":                 args.lr,
-        "warmup_steps":       args.warmupSteps,
-        "eff_batch_size":     args.batchSize * args.gradAccum,
-        "pass1_eval_samples": args.pass1EvalSamples,
-    }
-    (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
-    logger.info("Metadata → %s/training_meta.json", out_dir)
+            avg_train_loss = total_loss / len(train_loader)
+            val_loss       = evaluate_loss(model, val_loader, input_device)
+
+            # ── Per-epoch pass@1 (used for early stopping if enabled) ──────────
+            epoch_pass1: Optional[float] = None
+            if use_pass1_stop and epoch % args.pass1EvalFreq == 0:
+                epoch_pass1 = eval_pass1_current(
+                    model, tokenizer, pass1_val_pairs, input_device,
+                    label=f"e{epoch}",
+                )
+
+            # ── Decide whether this epoch improved ─────────────────────────────
+            if use_pass1_stop and epoch_pass1 is not None:
+                improved = epoch_pass1 > best_pass1
+                marker   = " ***" if improved else ""
+                logger.info(
+                    "Epoch %2d | train_loss=%.4f | val_loss=%.4f | pass1=%.4f%s",
+                    epoch, avg_train_loss, val_loss, epoch_pass1, marker,
+                )
+            else:
+                improved = val_loss < best_val_loss
+                marker   = " ***" if improved else ""
+                logger.info(
+                    "Epoch %2d | train_loss=%.4f | val_loss=%.4f%s",
+                    epoch, avg_train_loss, val_loss, marker,
+                )
+
+            if improved:
+                if epoch_pass1 is not None:
+                    best_pass1 = epoch_pass1
+                if val_loss < best_val_loss:
+                    best_val_loss = val_loss
+                no_improve = 0
+                model.save_pretrained(str(ckpt_path))
+                tokenizer.save_pretrained(str(ckpt_path))
+                logger.info("Saved best adapter → %s", ckpt_path)
+            else:
+                no_improve += 1
+                if no_improve >= args.patience:
+                    logger.info("Early stopping (patience=%d)", args.patience)
+                    break
+
+        logger.info("Done. Best val loss: %.4f  Best pass@1: %.4f", best_val_loss, best_pass1)
+        logger.info("Adapter saved at: %s", ckpt_path)
+
+        # ── Save training metadata ─────────────────────────────────────────────
+        meta = {
+            "model_name":         args.modelName,
+            "mutation_types":     sorted(mutation_types),
+            "data_variant":       args.dataVariant,
+            "train_pairs":        len(train_pairs),
+            "val_pairs":          len(val_pairs),
+            "best_val_loss":      best_val_loss,
+            "best_pass1_earlystop": best_pass1 if use_pass1_stop else None,
+            "lora_r":             args.loraR,
+            "lora_alpha":         args.loraAlpha,
+            "epochs_run":         epoch,
+            "lr":                 args.lr,
+            "warmup_steps":       args.warmupSteps,
+            "eff_batch_size":     args.batchSize * args.gradAccum,
+            "pass1_eval_samples": args.pass1EvalSamples,
+        }
+        (out_dir / "training_meta.json").write_text(json.dumps(meta, indent=2))
+        logger.info("Metadata → %s/training_meta.json", out_dir)
 
     # ── Pass@1 evaluation ──────────────────────────────────────────────────────
     if not args.skipEval:

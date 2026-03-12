@@ -14,5 +14,12 @@
   "lr": 0.0002,
   "warmup_steps": 100,
   "eff_batch_size": 16,
-  "pass1_eval_samples": 60
+  "pass1_eval_samples": 60,
+  "pass1_eval": {
+    "n_evaluated": 163,
+    "pass1_baseline": 0.4663,
+    "pass1_adapter": 0.5215,
+    "delta": 0.0552,
+    "eval_dataset": "he_v1"
+  }
 }
