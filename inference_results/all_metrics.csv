@@ -55,7 +55,14 @@ claude-sonnet-4-20250514,LCB,LV,1000,49.9,50.0,0.1,results/claude/claude-sonnet-
 claude-sonnet-4-20250514,LCB,Orig,1000,51.1,51.2,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_public.json
 claude-sonnet-4-20250514,LCB,SF,1000,50.7,50.8,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_SF_with_tests.json
 claude-sonnet-4-20250514,LCB,US,1000,49.6,49.7,0.1,results/claude/claude-sonnet-4-20250514__livecodebench_US_with_tests.json
+codellama_CodeLlama-34b-Instruct-hf,LCB,LV,1000,13.1,13.2,0.1,results/large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_LV_with_tests.json
 codellama_CodeLlama-34b-Instruct-hf,LCB,Orig,1000,13.6,13.7,0.1,results/large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_public.json
+codellama_CodeLlama-34b-Instruct-hf,LCB,SF,1000,12.4,12.5,0.1,results/large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_SF_with_tests.json
+codellama_CodeLlama-34b-Instruct-hf,LCB,US,1000,11.6,11.7,0.1,results/large_models/codellama_CodeLlama-34b-Instruct-hf__livecodebench_US_with_tests.json
+deepseek-ai_deepseek-coder-33b-instruct,LCB,LV,1000,19.9,20.0,0.1,results/large_models/deepseek-ai_deepseek-coder-33b-instruct__livecodebench_LV_with_tests.json
+deepseek-ai_deepseek-coder-33b-instruct,LCB,Orig,1000,20.3,20.4,0.1,results/large_models/deepseek-ai_deepseek-coder-33b-instruct__livecodebench_public.json
+deepseek-ai_deepseek-coder-33b-instruct,LCB,SF,1000,18.8,18.9,0.1,results/large_models/deepseek-ai_deepseek-coder-33b-instruct__livecodebench_SF_with_tests.json
+deepseek-ai_deepseek-coder-33b-instruct,LCB,US,1000,19.4,19.5,0.1,results/large_models/deepseek-ai_deepseek-coder-33b-instruct__livecodebench_US_with_tests.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,LV,1000,8.2,8.3,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_LV_with_tests.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,Orig,1000,8.1,8.2,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_public.json
 codellama_CodeLlama-7b-Instruct-hf,LCB,SF,1000,7.8,7.9,0.1,results/small_models/codellama_CodeLlama-7b-Instruct-hf__livecodebench_SF_with_tests.json
