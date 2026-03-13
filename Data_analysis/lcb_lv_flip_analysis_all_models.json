@@ -1,0 +1,82 @@
+[
+  {
+    "model": "Qwen2.5-Coder-32B",
+    "orig_pass": 320,
+    "lv_pass": 317,
+    "fail_orig_pass_lv": 45,
+    "pass_orig_fail_lv": 48,
+    "net": -3
+  },
+  {
+    "model": "CodeLlama-34B",
+    "orig_pass": 136,
+    "lv_pass": 131,
+    "fail_orig_pass_lv": 36,
+    "pass_orig_fail_lv": 41,
+    "net": -5
+  },
+  {
+    "model": "DeepSeek-33B",
+    "orig_pass": 203,
+    "lv_pass": 199,
+    "fail_orig_pass_lv": 36,
+    "pass_orig_fail_lv": 40,
+    "net": -4
+  },
+  {
+    "model": "StarCoder2-15B",
+    "orig_pass": 68,
+    "lv_pass": 73,
+    "fail_orig_pass_lv": 33,
+    "pass_orig_fail_lv": 28,
+    "net": 5
+  },
+  {
+    "model": "Codestral-22B",
+    "orig_pass": 230,
+    "lv_pass": 227,
+    "fail_orig_pass_lv": 45,
+    "pass_orig_fail_lv": 48,
+    "net": -3
+  },
+  {
+    "model": "Qwen2.5-Coder-7B",
+    "orig_pass": 205,
+    "lv_pass": 222,
+    "fail_orig_pass_lv": 52,
+    "pass_orig_fail_lv": 35,
+    "net": 17
+  },
+  {
+    "model": "CodeLlama-7B",
+    "orig_pass": 81,
+    "lv_pass": 82,
+    "fail_orig_pass_lv": 18,
+    "pass_orig_fail_lv": 17,
+    "net": 1
+  },
+  {
+    "model": "DeepSeek-6.7B",
+    "orig_pass": 163,
+    "lv_pass": 148,
+    "fail_orig_pass_lv": 32,
+    "pass_orig_fail_lv": 47,
+    "net": -15
+  },
+  {
+    "model": "GPT-4o-mini",
+    "orig_pass": 525,
+    "lv_pass": 525,
+    "fail_orig_pass_lv": 62,
+    "pass_orig_fail_lv": 62,
+    "net": 0
+  },
+  {
+    "model": "Claude-Sonnet-4",
+    "orig_pass": 511,
+    "lv_pass": 499,
+    "fail_orig_pass_lv": 52,
+    "pass_orig_fail_lv": 64,
+    "net": -12
+  }
+]

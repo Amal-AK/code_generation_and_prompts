@@ -9,14 +9,7 @@ python main_inference.py \
         "deepseek-ai/deepseek-coder-6.7b-instruct" \
         "Qwen/Qwen2.5-Coder-7B-Instruct" \
     --inputFiles \
-        "./datasets/humanEval/HumanEval.jsonl" \
-        "./mutations/HumanEval_US_with_tests.jsonl" \
-        "./mutations/humanEval_lv_with_tests.jsonl" \
-        "./mutations/humanEval_SF_with_tests.jsonl" \
-        "./datasets/mbpp/mbpp.jsonl" \
-        "./mutations/mbpp_US_with_tests.jsonl" \
-        "./mutations/mbpp_LV_with_tests.jsonl" \
-        "./mutations/mbpp_SF_with_tests.jsonl" \
+        "./mutations/humanEval_LV_restored_fname_with_tests.jsonl" \
     --outputDir   "./results/small_models" \
     --maxNewTokens 512 \
     --timeout      50 \

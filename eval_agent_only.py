@@ -150,7 +150,7 @@ def main():
             if task_id in done_ids:
                 continue
 
-            mutated = row["mutated_prompt"]
+            mutated = row.get("mutated_prompt") or row.get("prompt", "")
             ep      = row.get("entry_point")
 
             try:

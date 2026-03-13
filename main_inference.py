@@ -126,10 +126,15 @@ def generate_response(prompt: str,
 
 
 def extract_code(txt: str) -> str:
-    # Accept optional whitespace between language tag and code
+    # Markdown fenced code block
     m = re.search(r"```(?:\w+)?\s*\n(.*?)```", txt, re.DOTALL | re.IGNORECASE)
-    code = m.group(1) if m else txt
-    return textwrap.dedent(code).strip()
+    if m:
+        return textwrap.dedent(m.group(1)).strip()
+    # CodeLlama-style [PYTHON]...[/PYTHON] tags
+    m = re.search(r"\[PYTHON\](.*?)\[/PYTHON\]", txt, re.DOTALL | re.IGNORECASE)
+    if m:
+        return textwrap.dedent(m.group(1)).strip()
+    return textwrap.dedent(txt).strip()
 
 
 # ─────────────────────────────── test‑code converters ─────────────────────────────────
